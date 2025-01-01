@@ -1,4 +1,4 @@
-import 'log_provider.dart';
+import 'log_record.dart';
 
 abstract class Logger {
   void emit(LogRecord logRecord);

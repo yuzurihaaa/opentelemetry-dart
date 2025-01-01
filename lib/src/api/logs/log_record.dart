@@ -29,22 +29,12 @@ enum Severity {
   FATAL4,
 }
 
-class LogRecord {
-  final Severity? severityNumber;
-  final Int64? timeStampt;
-  final Int64? observedTimestamp;
-  final String severityText;
-  final dynamic logBody;
-  final List<Attribute> attributes;
-  final Context? context;
-
-  LogRecord({
-    required this.severityNumber,
-    required this.timeStampt,
-    required this.observedTimestamp,
-    required this.severityText,
-    required this.logBody,
-    required this.attributes,
-    required this.context,
-  });
+abstract class LogRecord {
+  Severity? get severityNumber;
+  Int64? get timeStamp;
+  Int64? get observedTimestamp;
+  String get severityText;
+  dynamic get logBody;
+  List<Attribute> get attributes;
+  Context? get context;
 }
