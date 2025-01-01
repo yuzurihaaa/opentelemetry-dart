@@ -4,6 +4,7 @@
 export 'src/api/common/attribute.dart' show Attribute;
 export 'src/api/common/resource_attributes.dart' show ResourceAttributes;
 export 'src/api/common/semantic_attributes.dart' show SemanticAttributes;
+export 'src/api/common/export_result.dart' show ExportResult, ExportResultCode;
 export 'src/api/context/context.dart'
     show
         Context,
