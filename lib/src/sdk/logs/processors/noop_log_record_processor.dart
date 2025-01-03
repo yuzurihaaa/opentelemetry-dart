@@ -1,5 +1,4 @@
-import '../log_record.dart';
-import './log_record_processor.dart';
+import 'package:opentelemetry/src/experimental_sdk.dart';
 
 class NoopLogRecordProcessor implements LogRecordProcessor {
   const NoopLogRecordProcessor();

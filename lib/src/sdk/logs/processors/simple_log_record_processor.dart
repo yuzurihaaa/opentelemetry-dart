@@ -2,10 +2,7 @@ import 'dart:async';
 
 import 'package:logging/logging.dart' as logging;
 import 'package:opentelemetry/src/api/common/export_result.dart';
-import 'package:opentelemetry/src/sdk/logs/exporters/log_record_exporter.dart';
-
-import '../log_record.dart';
-import './log_record_processor.dart';
+import 'package:opentelemetry/src/experimental_sdk.dart';
 
 class SimpleLogRecordProcessor implements LogRecordProcessor {
   final logger = logging.Logger('opentelemetry.sdk.logs.simplelogrecordprocessor');

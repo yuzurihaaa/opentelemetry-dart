@@ -1,8 +1,6 @@
 import 'package:meta/meta.dart';
 import 'package:opentelemetry/api.dart' as api;
-
-import './log_record_exporter.dart';
-import './readable_log_record.dart';
+import 'package:opentelemetry/src/experimental_sdk.dart';
 
 /// This class can be used for testing purposes. It stores the exported LogRecords
 /// in a list in memory that can be retrieved using the `getFinishedLogRecords()`

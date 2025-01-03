@@ -1,14 +1,12 @@
 import 'package:fixnum/fixnum.dart';
-import 'package:opentelemetry/api.dart';
+import 'package:opentelemetry/api.dart' as api;
 import 'package:opentelemetry/src/experimental_api.dart' as api;
-import 'package:opentelemetry/src/sdk/common/attributes.dart';
-import 'package:opentelemetry/src/sdk/common/instrumentation_scope.dart';
-import 'package:opentelemetry/src/sdk/logs/exporters/readable_log_record.dart';
-import 'package:opentelemetry/src/sdk/resource/resource.dart';
+import 'package:opentelemetry/src/experimental_sdk.dart' as sdk;
+import 'package:opentelemetry/sdk.dart' as sdk;
 
-class LogRecord implements ReadableLogRecord {
+class LogRecord implements sdk.ReadableLogRecord {
   @override
-  final Attributes? attributes;
+  final sdk.Attributes? attributes;
 
   @override
   final dynamic body;
@@ -23,10 +21,10 @@ class LogRecord implements ReadableLogRecord {
   final Int64? hrTimeObserved;
 
   @override
-  final InstrumentationScope instrumentationScope;
+  final sdk.InstrumentationScope instrumentationScope;
 
   @override
-  final Resource resource;
+  final sdk.Resource resource;
 
   @override
   final api.Severity? severityNumber;
@@ -35,7 +33,7 @@ class LogRecord implements ReadableLogRecord {
   final String? severityText;
 
   @override
-  final Context? context;
+  final api.Context? context;
 
   LogRecord({
     required this.attributes,

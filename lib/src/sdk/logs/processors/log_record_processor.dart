@@ -1,5 +1,4 @@
-
-import '../log_record.dart';
+import 'package:opentelemetry/src/experimental_sdk.dart';
 
 abstract class LogRecordProcessor {
   void onEmit(LogRecord logRecord);

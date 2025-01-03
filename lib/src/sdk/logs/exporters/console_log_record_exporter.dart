@@ -1,6 +1,5 @@
 import 'package:opentelemetry/api.dart';
-import 'package:opentelemetry/src/sdk/logs/exporters/log_record_exporter.dart';
-import 'package:opentelemetry/src/sdk/logs/exporters/readable_log_record.dart';
+import 'package:opentelemetry/src/experimental_sdk.dart';
 
 /// This is implementation of [LogRecordExporter] that prints LogRecords to the
 /// console. This class can be used for diagnostic purposes.
