@@ -1,5 +1,6 @@
 import 'package:fixnum/fixnum.dart';
 import 'package:opentelemetry/api.dart';
+import 'package:opentelemetry/sdk.dart';
 
 enum Severity {
   UNSPECIFIED,
@@ -30,11 +31,69 @@ enum Severity {
 }
 
 abstract class LogRecord {
-  Severity? get severityNumber;
+  factory LogRecord({
+    Attributes? attributes,
+    Context? context,
+    dynamic logBody,
+    Int64? observedTimestamp,
+    Severity? severityNumber,
+    String? severityText,
+    Int64? timeStamp,
+  }) =>
+      _LogRecord(
+        attributes: attributes,
+        severityText: severityText,
+        context: context,
+        logBody: logBody,
+        observedTimestamp: observedTimestamp,
+        severityNumber: severityNumber,
+        timeStamp: timeStamp,
+      );
+
   Int64? get timeStamp;
+
   Int64? get observedTimestamp;
-  String get severityText;
+
+  Severity? get severityNumber;
+
+  String? get severityText;
+
   dynamic get logBody;
-  List<Attribute> get attributes;
+
+  Attributes? get attributes;
+
   Context? get context;
+}
+
+class _LogRecord implements LogRecord {
+  @override
+  final Attributes? attributes;
+
+  @override
+  final Context? context;
+
+  @override
+  final dynamic logBody;
+
+  @override
+  final Int64? observedTimestamp;
+
+  @override
+  final Severity? severityNumber;
+
+  @override
+  final String? severityText;
+
+  @override
+  final Int64? timeStamp;
+
+  const _LogRecord({
+    this.attributes,
+    this.severityText,
+    this.context,
+    this.logBody,
+    this.observedTimestamp,
+    this.severityNumber,
+    this.timeStamp,
+  });
 }

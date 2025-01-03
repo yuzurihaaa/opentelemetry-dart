@@ -3,7 +3,7 @@ import 'package:opentelemetry/sdk.dart';
 import 'package:opentelemetry/src/api/common/attribute.dart';
 import 'package:opentelemetry/src/experimental_api.dart' as api;
 import 'package:opentelemetry/src/experimental_sdk.dart' as sdk;
-import 'package:opentelemetry/src/sdk/logs/exporters/log_record_processor.dart';
+import 'package:opentelemetry/src/sdk/logs/processors/log_record_processor.dart';
 import 'package:quiver/core.dart';
 
 const defaultLoggerName = 'unknown';

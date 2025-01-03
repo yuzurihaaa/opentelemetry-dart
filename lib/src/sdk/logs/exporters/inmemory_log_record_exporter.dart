@@ -16,20 +16,17 @@ class InMemoryLogRecordExporter implements LogRecordExporter {
   bool _stopped = false;
 
   @override
-  void export(List<ReadableLogRecord> logs, void Function(api.ExportResult result) resultCallback) {
+  Future<api.ExportResult> export(List<ReadableLogRecord> logs) async {
     if (_stopped) {
-      return resultCallback(
-        api.ExportResult(
-          code: api.ExportResultCode.failed,
-          error: Exception('Exporter has been stopped'),
-        ),
+      return api.ExportResult(
+        code: api.ExportResultCode.failed,
+        error: Exception('Exporter has been stopped'),
+        stackTrace: StackTrace.current,
       );
     }
     _finishedLogRecords.addAll(logs);
 
-    resultCallback(api.ExportResult(
-      code: api.ExportResultCode.success,
-    ));
+    return api.ExportResult(code: api.ExportResultCode.success);
   }
 
   @override

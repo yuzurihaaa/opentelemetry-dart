@@ -1,13 +1,14 @@
+import 'package:fixnum/fixnum.dart';
 import 'package:opentelemetry/api.dart' as api;
 import 'package:opentelemetry/sdk.dart' as sdk;
 import 'package:opentelemetry/src/experimental_api.dart';
 
 abstract class ReadableLogRecord {
-  DateTime get hrTime;
+  Int64? get hrTime;
 
-  DateTime get hrTimeObserved;
+  Int64? get hrTimeObserved;
 
-  api.SpanContext? get spanContext;
+  api.Context? get context;
 
   String? get severityText;
 
@@ -15,11 +16,56 @@ abstract class ReadableLogRecord {
 
   dynamic get body;
 
-  sdk.Resource get resource;
+  sdk.Resource? get resource;
 
-  sdk.InstrumentationScope get instrumentationScope;
+  sdk.InstrumentationScope? get instrumentationScope;
 
-  api.Attribute get attributes;
+  sdk.Attributes? get attributes;
 
   int get droppedAttributesCount;
+}
+
+class _ReadableLogRecord implements ReadableLogRecord {
+  @override
+  final Int64? hrTime;
+
+  @override
+  final Int64? hrTimeObserved;
+
+  @override
+  final api.Context? context;
+
+  @override
+  final String? severityText;
+
+  @override
+  final Severity? severityNumber;
+
+  @override
+  final dynamic body;
+
+  @override
+  final sdk.Resource? resource;
+
+  @override
+  final sdk.InstrumentationScope? instrumentationScope;
+
+  @override
+  final sdk.Attributes? attributes;
+
+  @override
+  final int droppedAttributesCount;
+
+  _ReadableLogRecord({
+    this.hrTime,
+    this.hrTimeObserved,
+    this.context,
+    this.severityText,
+    this.severityNumber,
+    this.body,
+    this.resource,
+    this.instrumentationScope,
+    this.attributes,
+    this.droppedAttributesCount = 0,
+  });
 }

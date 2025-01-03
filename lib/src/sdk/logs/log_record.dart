@@ -1,50 +1,52 @@
 import 'package:fixnum/fixnum.dart';
 import 'package:opentelemetry/api.dart';
 import 'package:opentelemetry/src/experimental_api.dart' as api;
+import 'package:opentelemetry/src/sdk/common/attributes.dart';
+import 'package:opentelemetry/src/sdk/common/instrumentation_scope.dart';
+import 'package:opentelemetry/src/sdk/logs/exporters/readable_log_record.dart';
+import 'package:opentelemetry/src/sdk/resource/resource.dart';
 
-class LogRecord implements api.LogRecord {
-  final api.Severity? _severityNumber;
-  final Int64? _timeStamp;
-  final Int64? _observedTimestamp;
-  final String _severityText;
-  final dynamic _logBody;
-  final List<Attribute> _attributes;
-  final Context _context;
+class LogRecord implements ReadableLogRecord {
+  @override
+  final Attributes? attributes;
+
+  @override
+  final dynamic body;
+
+  @override
+  final int droppedAttributesCount;
+
+  @override
+  final Int64? hrTime;
+
+  @override
+  final Int64? hrTimeObserved;
+
+  @override
+  final InstrumentationScope instrumentationScope;
+
+  @override
+  final Resource resource;
+
+  @override
+  final api.Severity? severityNumber;
+
+  @override
+  final String? severityText;
+
+  @override
+  final Context? context;
 
   LogRecord({
-    required Context context,
-    required String severityText,
-    Int64? observedTimestamp,
-    Int64? timeStamp,
-    api.Severity? severityNumber,
-    dynamic logBody,
-    List<Attribute> attributes = const <Attribute>[],
-  })  : _context = context,
-        _severityNumber = severityNumber,
-        _timeStamp = timeStamp,
-        _observedTimestamp = observedTimestamp,
-        _logBody = logBody,
-        _attributes = attributes,
-        _severityText = severityText;
-
-  @override
-  Context? get context => _context;
-
-  @override
-  List<Attribute> get attributes => _attributes;
-
-  @override
-  dynamic get logBody => _logBody;
-
-  @override
-  String get severityText => _severityText;
-
-  @override
-  Int64? get observedTimestamp => _observedTimestamp;
-
-  @override
-  Int64? get timeStamp => _timeStamp;
-
-  @override
-  api.Severity? get severityNumber => _severityNumber;
+    required this.attributes,
+    required this.droppedAttributesCount,
+    required this.hrTime,
+    required this.hrTimeObserved,
+    required this.instrumentationScope,
+    required this.resource,
+    this.body,
+    this.severityNumber,
+    this.severityText,
+    this.context,
+  });
 }

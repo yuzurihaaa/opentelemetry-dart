@@ -7,7 +7,7 @@ import 'log_record.dart';
 class Logger extends api.Logger {
   final InstrumentationScope instrumentationScope;
   final TimeProvider _timeProvider;
-  final Function(api.LogRecord)? onLogEmit;
+  final Function(LogRecord)? onLogEmit;
 
   Logger({
     required this.instrumentationScope,
@@ -20,12 +20,15 @@ class Logger extends api.Logger {
     final context = logRecord.context ?? Context.current;
     final log = LogRecord(
       attributes: logRecord.attributes,
-      context: context,
       severityText: logRecord.severityText,
-      logBody: logRecord.logBody,
-      observedTimestamp: logRecord.observedTimestamp,
+      context: context,
+      body: logRecord.logBody,
+      hrTimeObserved: logRecord.observedTimestamp,
       severityNumber: logRecord.severityNumber,
-      timeStamp: logRecord.timeStamp ?? _timeProvider.now,
+      hrTime: logRecord.timeStamp ?? _timeProvider.now,
+      instrumentationScope: instrumentationScope,
+      resource: Resource([]),
+      droppedAttributesCount: 0,
     );
     onLogEmit?.call(log);
   }
