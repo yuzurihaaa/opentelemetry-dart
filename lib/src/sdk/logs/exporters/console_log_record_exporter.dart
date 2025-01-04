@@ -26,11 +26,11 @@ class ConsoleLogRecordExporter implements LogRecordExporter {
   /// converts logRecord info into more readable format
   Map<String, dynamic> _makeObject(ReadableLogRecord log) {
     final contextInfo = {};
-    if (log.context != null) {
+    if (log.spanContext != null) {
       contextInfo.addAll({
-        'traceId': spanContextFromContext(log.context!).traceId,
-        'spanId': spanContextFromContext(log.context!).spanId,
-        'traceFlags': spanContextFromContext(log.context!).traceFlags,
+        'traceId': log.spanContext!.traceId,
+        'spanId': log.spanContext!.spanId,
+        'traceFlags': log.spanContext!.traceFlags,
       });
     }
     return {
