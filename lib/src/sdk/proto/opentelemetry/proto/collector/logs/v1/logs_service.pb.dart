@@ -13,9 +13,8 @@ import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
+import 'package:opentelemetry/src/sdk/proto/opentelemetry/proto/logs/v1/logs.pbserver.dart' as $0;
 import 'package:protobuf/protobuf.dart' as $pb;
-
-import '../../../../../opentelemetry-proto/opentelemetry/proto/logs/v1/logs.pb.dart' as $0;
 
 class ExportLogsServiceRequest extends $pb.GeneratedMessage {
   factory ExportLogsServiceRequest({

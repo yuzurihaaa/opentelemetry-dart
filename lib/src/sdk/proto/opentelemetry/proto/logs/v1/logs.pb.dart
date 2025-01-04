@@ -15,8 +15,8 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:opentelemetry/src/sdk/proto/opentelemetry/proto/logs/v1/logs.pbenum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../opentelemetry-proto/opentelemetry/proto/common/v1/common.pb.dart' as $1;
-import '../../../../opentelemetry-proto/opentelemetry/proto/resource/v1/resource.pb.dart' as $0;
+import 'package:opentelemetry/src/sdk/proto/opentelemetry/proto/common/v1/common.pb.dart' as $1;
+import 'package:opentelemetry/src/sdk/proto/opentelemetry/proto/resource/v1/resource.pb.dart' as $0;
 
 ///  LogsData represents the logs data that can be stored in a persistent storage,
 ///  OR can be embedded by other protocols that transfer OTLP logs data but do not
