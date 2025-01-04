@@ -1,6 +1,6 @@
-import 'package:opentelemetry/api.dart' as api;
 import 'package:opentelemetry/sdk.dart' as sdk;
 import 'package:opentelemetry/src/experimental_api.dart' as api;
+import 'package:opentelemetry/src/experimental_sdk.dart' as sdk;
 
 import 'log_record.dart';
 
@@ -27,9 +27,9 @@ class Logger extends api.Logger {
       severityNumber: logRecord.severityNumber,
       hrTime: logRecord.timeStamp ?? _timeProvider.now,
       instrumentationScope: instrumentationScope,
-      resource: sdk.Resource([]),
-      droppedAttributesCount: 0,
+      logRecord: logRecord,
     );
     onLogEmit?.call(log);
+    log.makeReadonly();
   }
 }
