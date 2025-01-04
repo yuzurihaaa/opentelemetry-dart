@@ -1,6 +1,5 @@
-import 'package:fixnum/fixnum.dart';
-import 'package:opentelemetry/api.dart';
-import 'package:opentelemetry/sdk.dart';
+import 'package:opentelemetry/api.dart' as api;
+import 'package:opentelemetry/sdk.dart' as sdk;
 
 enum Severity {
   UNSPECIFIED,
@@ -32,51 +31,51 @@ enum Severity {
 
 abstract class LogRecord {
   factory LogRecord({
-    Attributes? attributes,
-    Context? context,
-    dynamic logBody,
-    Int64? observedTimestamp,
+    sdk.Attributes? attributes,
+    api.Context? context,
+    dynamic body,
+    DateTime? observedTimestamp,
     Severity? severityNumber,
     String? severityText,
-    Int64? timeStamp,
+    DateTime? timeStamp,
   }) =>
       _LogRecord(
         attributes: attributes,
         severityText: severityText,
         context: context,
-        logBody: logBody,
+        body: body,
         observedTimestamp: observedTimestamp,
         severityNumber: severityNumber,
         timeStamp: timeStamp,
       );
 
-  Int64? get timeStamp;
+  DateTime? get timeStamp;
 
-  Int64? get observedTimestamp;
+  DateTime? get observedTimestamp;
 
   Severity? get severityNumber;
 
   String? get severityText;
 
-  dynamic get logBody;
+  dynamic get body;
 
-  Attributes? get attributes;
+  sdk.Attributes get attributes;
 
-  Context? get context;
+  api.Context get context;
 }
 
 class _LogRecord implements LogRecord {
   @override
-  final Attributes? attributes;
+  final sdk.Attributes attributes;
 
   @override
-  final Context? context;
+  final api.Context context;
 
   @override
-  final dynamic logBody;
+  final dynamic body;
 
   @override
-  final Int64? observedTimestamp;
+  final DateTime? observedTimestamp;
 
   @override
   final Severity? severityNumber;
@@ -85,15 +84,16 @@ class _LogRecord implements LogRecord {
   final String? severityText;
 
   @override
-  final Int64? timeStamp;
+  final DateTime? timeStamp;
 
-  const _LogRecord({
-    this.attributes,
+  _LogRecord({
     this.severityText,
-    this.context,
-    this.logBody,
+    this.body,
     this.observedTimestamp,
     this.severityNumber,
     this.timeStamp,
-  });
+    sdk.Attributes? attributes,
+    api.Context? context,
+  })  : attributes = attributes ?? sdk.Attributes.empty(),
+        context = context ?? api.Context.current;
 }

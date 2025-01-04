@@ -8,13 +8,19 @@ abstract class ReadableLogRecord {
 
   Int64? get hrTimeObserved;
 
-  api.Context? get context;
+  api.SpanContext? get spanContext;
 
   String? get severityText;
 
+  set severityText(String? severity);
+
   Severity? get severityNumber;
 
+  set severityNumber(Severity? severity);
+
   dynamic get body;
+
+  set body(dynamic severity);
 
   sdk.Resource? get resource;
 
