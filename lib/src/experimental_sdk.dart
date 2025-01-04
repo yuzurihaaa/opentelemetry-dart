@@ -12,6 +12,7 @@ export 'sdk/metrics/meter.dart' show Meter;
 export 'sdk/resource/resource.dart' show Resource;
 export 'sdk/logs/logger.dart' show Logger;
 export 'sdk/logs/log_record.dart' show LogRecord;
+export 'sdk/logs/log_record_limit.dart' show LogRecordLimits;
 export 'sdk/logs/exporters/log_record_exporter.dart' show LogRecordExporter;
 export 'sdk/logs/processors/log_record_processor.dart' show LogRecordProcessor;
 export 'sdk/logs/exporters/readable_log_record.dart' show ReadableLogRecord;

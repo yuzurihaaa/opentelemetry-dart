@@ -6,26 +6,22 @@ import 'log_record.dart';
 
 class Logger extends api.Logger {
   final sdk.InstrumentationScope instrumentationScope;
-  final sdk.TimeProvider _timeProvider;
+  final sdk.Resource? resource;
   final Function(LogRecord)? onLogEmit;
+  final sdk.LogRecordLimits logRecordLimits;
 
   Logger({
     required this.instrumentationScope,
+    required this.logRecordLimits,
     this.onLogEmit,
-    sdk.TimeProvider? timeProvider,
-  }) : _timeProvider = timeProvider ?? sdk.DateTimeTimeProvider();
+    this.resource,
+  });
 
   @override
   void emit(api.LogRecord logRecord) {
-    final context = logRecord.context ?? api.Context.current;
     final log = LogRecord(
-      attributes: logRecord.attributes,
-      severityText: logRecord.severityText,
-      context: context,
-      body: logRecord.logBody,
-      hrTimeObserved: logRecord.observedTimestamp,
-      severityNumber: logRecord.severityNumber,
-      hrTime: logRecord.timeStamp ?? _timeProvider.now,
+      logRecordLimits: logRecordLimits,
+      resource: resource,
       instrumentationScope: instrumentationScope,
       logRecord: logRecord,
     );
