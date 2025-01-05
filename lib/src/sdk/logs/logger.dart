@@ -24,6 +24,7 @@ class Logger extends api.Logger {
       resource: resource,
       instrumentationScope: instrumentationScope,
       logRecord: logRecord,
+      context: logRecord.context,
     );
     onLogEmit?.call(log);
     log.makeReadonly();

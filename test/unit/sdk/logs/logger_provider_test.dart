@@ -41,7 +41,7 @@ void main() {
     await Future.delayed(const Duration(seconds: 10));
   });
 
-  test('Test log collector 2', () async {
+  test('Test log collector 3', () async {
     final loggerProvider = LoggerProvider(
       resource: Resource([
         Attribute.fromString('app', 'test'),
