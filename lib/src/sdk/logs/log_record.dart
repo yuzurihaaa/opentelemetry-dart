@@ -40,10 +40,12 @@ class LogRecord implements sdk.ReadableLogRecord {
     sdk.TimeProvider? timeProvider,
   })  : _severityText = logRecord.severityText,
         _body = logRecord.body,
-        _attributes = logRecord.attributes,
+        _attributes = sdk.Attributes.empty(),
         _severityNumber = logRecord.severityNumber,
         _spanContext = context != null ? api.spanContextFromContext(context) : null,
-        _timeProvider = timeProvider ?? sdk.DateTimeTimeProvider();
+        _timeProvider = timeProvider ?? sdk.DateTimeTimeProvider() {
+    setAttributes(logRecord.attributes);
+  }
 
   @override
   sdk.Attributes? get attributes => _attributes;

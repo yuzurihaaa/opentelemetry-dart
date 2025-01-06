@@ -75,11 +75,3 @@ void main() {
     verify(mockProcessor2.shutdown).called(1);
   });
 }
-
-class FakeTimeProvider extends Mock implements TimeProvider {
-  FakeTimeProvider({required Int64 now}) : _now = now;
-  final Int64 _now;
-
-  @override
-  Int64 get now => _now;
-}
