@@ -45,6 +45,6 @@ void main() {
               it.instrumentationScope.version == 'library_version' &&
               it.instrumentationScope.schemaUrl == 'url://schema' &&
               it.resource?.attributes.keys.isEmpty == true;
-        }))));
+        })))).called(1);
   });
 }

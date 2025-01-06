@@ -50,7 +50,7 @@ void main() {
             if (a is! sdk.LogRecord) return false;
             return a.hrTime == 123 && a.hrTimeObserved == 123;
           }),
-        )));
+        ))).called(1);
   });
 
   test('loggerProvider force flushes all processors', () async {

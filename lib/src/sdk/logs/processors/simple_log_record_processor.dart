@@ -4,35 +4,42 @@
 import 'dart:async';
 
 import 'package:logging/logging.dart' as logging;
+import 'package:meta/meta.dart';
 import 'package:opentelemetry/src/api/common/export_result.dart';
-import 'package:opentelemetry/src/experimental_sdk.dart';
+import 'package:opentelemetry/src/experimental_sdk.dart' as sdk;
 
-class SimpleLogRecordProcessor implements LogRecordProcessor {
+class SimpleLogRecordProcessor implements sdk.LogRecordProcessor {
   final logger = logging.Logger('opentelemetry.sdk.logs.simplelogrecordprocessor');
-  final LogRecordExporter exporter;
+  final sdk.LogRecordExporter exporter;
   bool _shutDownOnce = false;
-  final _exportsCompletion = <Completer>[];
+
+  @visibleForTesting
+  final exportsCompletion = <Completer>[];
 
   SimpleLogRecordProcessor({required this.exporter});
 
+  bool _isForcedFlushed = false;
+
   @override
-  void onEmit(LogRecord logRecord) {
+  void onEmit(sdk.LogRecord logRecord) {
     if (_shutDownOnce) return;
     final completer = Completer();
-    _exportsCompletion.add(completer);
+    exportsCompletion.add(completer);
     exporter.export([logRecord]).then((result) {
       if (result.code != ExportResultCode.success) {
         logger.shout('SimpleLogRecordProcessor: log record export failed', result.error, result.stackTrace);
       }
     }).whenComplete(() {
       completer.complete();
-      _exportsCompletion.remove(completer);
+      if (_isForcedFlushed) return;
+      exportsCompletion.remove(completer);
     });
   }
 
   @override
   Future<void> forceFlush() async {
-    await Future.forEach(_exportsCompletion, (completer) => completer.future);
+    _isForcedFlushed = true;
+    await Future.forEach(exportsCompletion, (completer) => completer.future);
   }
 
   @override
