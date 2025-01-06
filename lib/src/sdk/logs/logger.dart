@@ -7,12 +7,14 @@ class Logger extends api.Logger {
   final sdk.Resource? resource;
   final Function(sdk.LogRecord)? onLogEmit;
   final sdk.LogRecordLimits logRecordLimits;
+  final sdk.TimeProvider? timeProvider;
 
   Logger({
     required this.instrumentationScope,
     required this.logRecordLimits,
     this.onLogEmit,
     this.resource,
+    this.timeProvider,
   });
 
   @override
@@ -23,6 +25,7 @@ class Logger extends api.Logger {
       instrumentationScope: instrumentationScope,
       logRecord: logRecord,
       context: logRecord.context,
+      timeProvider: timeProvider,
     );
     onLogEmit?.call(log);
     log.makeReadonly();

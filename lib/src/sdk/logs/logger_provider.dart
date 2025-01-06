@@ -13,15 +13,20 @@ class LoggerProvider implements api.LoggerProvider {
   @protected
   final Map<int, api.Logger> loggers = {};
 
-  final logRecordProcessors = <LogRecordProcessor>[];
+  final List<LogRecordProcessor> logRecordProcessors;
 
   final sdk.Resource? resource;
   final sdk.LogRecordLimits? logRecordLimits;
 
+  final sdk.TimeProvider _timeProvider;
+
   LoggerProvider({
     this.resource,
     this.logRecordLimits,
-  });
+    List<LogRecordProcessor>? processors,
+    sdk.TimeProvider? timeProvider,
+  })  : logRecordProcessors = processors ?? <LogRecordProcessor>[],
+        _timeProvider = timeProvider ?? sdk.DateTimeTimeProvider();
 
   @override
   api.Logger get(
@@ -36,14 +41,16 @@ class LoggerProvider implements api.LoggerProvider {
     return loggers.putIfAbsent(
       key,
       () => sdk.Logger(
-          logRecordLimits: logRecordLimits ?? sdk.LogRecordLimits(),
-          resource: resource,
-          instrumentationScope: InstrumentationScope(loggerName, version, schemaUrl, attributes),
-          onLogEmit: (log) {
-            for (final processor in logRecordProcessors) {
-              processor.onEmit(log);
-            }
-          }),
+        logRecordLimits: logRecordLimits ?? sdk.LogRecordLimits(),
+        resource: resource,
+        instrumentationScope: InstrumentationScope(loggerName, version, schemaUrl, attributes),
+        timeProvider: _timeProvider,
+        onLogEmit: (log) {
+          for (final processor in logRecordProcessors) {
+            processor.onEmit(log);
+          }
+        },
+      ),
     );
   }
 
