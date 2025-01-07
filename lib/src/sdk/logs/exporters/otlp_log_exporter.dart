@@ -17,7 +17,7 @@ import '../../proto/opentelemetry/proto/logs/v1/logs.pb.dart' as pb_logs;
 import '../../proto/opentelemetry/proto/logs/v1/logs.pbenum.dart' as pg_logs_enum;
 import '../../proto/opentelemetry/proto/resource/v1/resource.pb.dart' as pb_resource;
 
-class LogCollectorExporter implements sdk.LogRecordExporter {
+class OTLPLogExporter implements sdk.LogRecordExporter {
   final Logger _log = Logger('opentelemetry.LogCollectorExporter');
 
   final Uri uri;
@@ -25,7 +25,7 @@ class LogCollectorExporter implements sdk.LogRecordExporter {
   final Map<String, String> headers;
   var _isShutdown = false;
 
-  LogCollectorExporter(
+  OTLPLogExporter(
     this.uri, {
     http.Client? httpClient,
     this.headers = const {},

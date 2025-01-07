@@ -18,5 +18,5 @@ export 'sdk/logs/exporters/log_record_exporter.dart' show LogRecordExporter;
 export 'sdk/logs/processors/log_record_processor.dart' show LogRecordProcessor;
 export 'sdk/logs/processors/batch_log_record_processor.dart' show BatchLogRecordProcessor;
 export 'sdk/logs/exporters/readable_log_record.dart' show ReadableLogRecord;
-export 'sdk/logs/exporters/log_collector_exporter.dart' show LogCollectorExporter;
+export 'sdk/logs/exporters/otlp_log_exporter.dart' show OTLPLogExporter;
 export 'sdk/logs/exporters/console_log_record_exporter.dart' show ConsoleLogRecordExporter;

@@ -67,7 +67,7 @@ void main() {
         timeProvider: FakeTimeProvider(now: Int64(123)))
       ..setAttribute('key', 'value');
 
-    sdk.LogCollectorExporter(uri, httpClient: mockClient).export([log1, log2]);
+    sdk.OTLPLogExporter(uri, httpClient: mockClient).export([log1, log2]);
 
     final expected = pb_log_service.ExportLogsServiceRequest(resourceLogs: [
       pb_logs.ResourceLogs(
@@ -125,7 +125,7 @@ void main() {
         timeProvider: FakeTimeProvider(now: Int64(123)))
       ..setAttribute('key', 'value');
 
-    sdk.LogCollectorExporter(uri, httpClient: mockClient)
+    sdk.OTLPLogExporter(uri, httpClient: mockClient)
       ..shutdown()
       ..export([log1]);
 
@@ -162,7 +162,7 @@ void main() {
       ...suppliedHeaders,
     };
 
-    sdk.LogCollectorExporter(uri, httpClient: mockClient, headers: suppliedHeaders).export([log1]);
+    sdk.OTLPLogExporter(uri, httpClient: mockClient, headers: suppliedHeaders).export([log1]);
 
     verify(() => mockClient.post(uri, body: anything, headers: expectedHeaders)).called(1);
   });
