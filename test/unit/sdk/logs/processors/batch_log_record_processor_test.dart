@@ -33,7 +33,7 @@ void main() {
         timeProvider: FakeTimeProvider(now: Int64(123)));
     final logRecordA = logRecord
       ..body = 'test log'
-      ..severityNumber = api.Severity.FATAL3;
+      ..severityNumber = api.Severity.fatal3;
     processor.onEmit(logRecordA);
 
     await Future.delayed(const Duration(milliseconds: 100));
@@ -42,7 +42,7 @@ void main() {
             final first = a.first;
             return first.body == 'test log' &&
                 first.spanContext?.spanId == parent.spanContext.spanId &&
-                first.severityNumber == api.Severity.FATAL3;
+                first.severityNumber == api.Severity.fatal3;
           }),
         ))).called(1);
   });
@@ -77,7 +77,7 @@ void main() {
         logRecordLimits: sdk.LogRecordLimits());
     final logRecordA = logRecord
       ..body = 'test log'
-      ..severityNumber = api.Severity.FATAL3;
+      ..severityNumber = api.Severity.fatal3;
     processor.onEmit(logRecordA);
 
     await Future.delayed(const Duration(milliseconds: 100));
@@ -100,7 +100,7 @@ void main() {
         logRecordLimits: sdk.LogRecordLimits());
     final logRecordA = logRecord
       ..body = 'test log'
-      ..severityNumber = api.Severity.FATAL3;
+      ..severityNumber = api.Severity.fatal3;
     processor.onEmit(logRecordA);
 
     await processor.forceFlush();
@@ -108,7 +108,7 @@ void main() {
     verify(() => exporter.export(any<List<sdk.ReadableLogRecord>>(
           that: predicate<List<sdk.ReadableLogRecord>>((a) {
             final first = a.first;
-            return first.body == 'test log' && first.severityNumber == api.Severity.FATAL3;
+            return first.body == 'test log' && first.severityNumber == api.Severity.fatal3;
           }),
         ))).called(1);
   });

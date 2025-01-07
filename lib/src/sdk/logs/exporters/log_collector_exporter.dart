@@ -65,9 +65,6 @@ class LogCollectorExporter implements sdk.LogRecordExporter {
     try {
       final body = pb_logs_service.ExportLogsServiceRequest(resourceLogs: _logsToProtobuf(logRecords));
 
-      // final headers = {'Content-Type': 'application/json'}
-      //   ..addAll(this.headers);
-      // final json = jsonEncode(logRecords);
       final headers = {'Content-Type': 'application/x-protobuf'}..addAll(this.headers);
 
       await client.post(uri, body: body.writeToBuffer(), headers: headers);

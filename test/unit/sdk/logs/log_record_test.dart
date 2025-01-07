@@ -20,7 +20,7 @@ void main() {
         timeProvider: FakeTimeProvider(now: Int64(123)))
       ..makeReadonly()
       ..body = 'Log Message'
-      ..severityNumber = api.Severity.DEBUG
+      ..severityNumber = api.Severity.debug
       ..severityText = 'DEBUG'
       ..setAttributes(sdk.Attributes.empty()..add(api.Attribute.fromString('key', 'value')))
       ..setAttribute('key2', 'value2');
@@ -41,13 +41,13 @@ void main() {
         logRecordLimits: sdk.LogRecordLimits(),
         timeProvider: FakeTimeProvider(now: Int64(123)))
       ..body = 'Log Message'
-      ..severityNumber = api.Severity.DEBUG
+      ..severityNumber = api.Severity.debug
       ..severityText = 'DEBUG'
       ..setAttributes(sdk.Attributes.empty()..add(api.Attribute.fromString('key', 'value')))
       ..setAttribute('key2', 'value2');
 
     expect(logRecord.body, 'Log Message');
-    expect(logRecord.severityNumber, api.Severity.DEBUG);
+    expect(logRecord.severityNumber, api.Severity.debug);
     expect(logRecord.severityText, 'DEBUG');
     expect(logRecord.attributes?.keys, const <String>['key', 'key2']);
     expect(logRecord.droppedAttributesCount, 0);

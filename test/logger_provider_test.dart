@@ -23,7 +23,7 @@ void main() {
     final context = contextWithSpan(Context.current, parent);
     loggerProvider
         .get('Test Logger')
-        .emit(LogRecord(body: 'TESTTT!!!', context: context, severityNumber: Severity.FATAL4));
+        .emit(LogRecord(body: 'TESTTT!!!', context: context, severityNumber: Severity.fatal4));
 
     await Future.delayed(const Duration(seconds: 1));
   });
@@ -38,8 +38,8 @@ void main() {
     final parent = tracer.startSpan('parent');
     final context = contextWithSpan(Context.current, parent);
     loggerProvider.get('Test Logger')
-      ..emit(LogRecord(body: 'TESTTT!!!', context: context, severityNumber: Severity.FATAL4))
-      ..emit(LogRecord(body: 'TESTTT2!!!', context: context, severityNumber: Severity.FATAL4));
+      ..emit(LogRecord(body: 'TESTTT!!!', context: context, severityNumber: Severity.fatal4))
+      ..emit(LogRecord(body: 'TESTTT2!!!', context: context, severityNumber: Severity.fatal4));
 
     await Future.delayed(const Duration(seconds: 10));
   });
@@ -61,8 +61,8 @@ void main() {
     final parent = tracer.startSpan('parent');
     final context = contextWithSpan(Context.current, parent);
     loggerProvider.get('Test Logger')
-      ..emit(LogRecord(body: 'TESTTT!!!', context: context, severityNumber: Severity.FATAL4))
-      ..emit(LogRecord(body: 'TESTTT2!!!', context: context, severityNumber: Severity.FATAL4));
+      ..emit(LogRecord(body: 'TESTTT!!!', context: context, severityNumber: Severity.fatal4))
+      ..emit(LogRecord(body: 'TESTTT2!!!', context: context, severityNumber: Severity.fatal4));
 
     await Future.delayed(const Duration(seconds: 10));
   });
