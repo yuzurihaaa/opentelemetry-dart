@@ -150,45 +150,25 @@ class OTLPLogExporter implements sdk.LogRecordExporter {
   }
 
   pb_common.AnyValue _attributeValueToProtobuf(Object value) {
-    switch (value.runtimeType) {
-      case String:
-        return pb_common.AnyValue(stringValue: value as String);
-      case bool:
-        return pb_common.AnyValue(boolValue: value as bool);
-      case double:
-        return pb_common.AnyValue(doubleValue: value as double);
-      case int:
-        return pb_common.AnyValue(intValue: Int64(value as int));
-      case List:
-        final list = value as List;
-        if (list.isNotEmpty) {
-          switch (list[0].runtimeType) {
-            case String:
-              final values = [] as List<pb_common.AnyValue>;
-              for (final str in list) {
-                values.add(pb_common.AnyValue(stringValue: str));
-              }
-              return pb_common.AnyValue(arrayValue: pb_common.ArrayValue(values: values));
-            case bool:
-              final values = [] as List<pb_common.AnyValue>;
-              for (final b in list) {
-                values.add(pb_common.AnyValue(boolValue: b));
-              }
-              return pb_common.AnyValue(arrayValue: pb_common.ArrayValue(values: values));
-            case double:
-              final values = [] as List<pb_common.AnyValue>;
-              for (final d in list) {
-                values.add(pb_common.AnyValue(doubleValue: d));
-              }
-              return pb_common.AnyValue(arrayValue: pb_common.ArrayValue(values: values));
-            case int:
-              final values = [] as List<pb_common.AnyValue>;
-              for (final i in list) {
-                values.add(pb_common.AnyValue(intValue: i));
-              }
-              return pb_common.AnyValue(arrayValue: pb_common.ArrayValue(values: values));
-          }
-        }
+    if (value is String) {
+      return pb_common.AnyValue(stringValue: value);
+    }
+    if (value is bool) {
+      return pb_common.AnyValue(boolValue: value);
+    }
+    if (value is double) {
+      return pb_common.AnyValue(doubleValue: value);
+    }
+    if (value is int) {
+      return pb_common.AnyValue(intValue: Int64(value));
+    }
+    if (value is List<String> || value is List<bool> || value is List<double> || value is List<int>) {
+      final output = <pb_common.AnyValue>[];
+      final values = value as List;
+      for (final i in values) {
+        output.add(_attributeValueToProtobuf(i));
+      }
+      return pb_common.AnyValue(arrayValue: pb_common.ArrayValue(values: output));
     }
     return pb_common.AnyValue();
   }

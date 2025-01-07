@@ -59,7 +59,29 @@ void main() {
         instrumentationScope: instrumentationLibrary,
         logRecord: api.LogRecord(
           context: context,
-          body: 'test log',
+          body: 2,
+          severityNumber: api.Severity.fatal3,
+          attributes: sdk.Attributes.empty()
+            ..addAll([
+              api.Attribute.fromBoolean('fromBoolean', false),
+              api.Attribute.fromDouble('fromDouble', 1.1),
+              api.Attribute.fromInt('fromInt', 1),
+              api.Attribute.fromBooleanList('fromBooleanList', [false]),
+              api.Attribute.fromDoubleList('fromDoubleList', [1.1]),
+              api.Attribute.fromIntList('fromIntList', [1]),
+            ]),
+        ),
+        logRecordLimits: logLimit,
+        context: context,
+        timeProvider: FakeTimeProvider(now: Int64(123)))
+      ..setAttribute('key', 'value');
+
+    final log3 = sdk.LogRecord(
+        resource: resource,
+        instrumentationScope: instrumentationLibrary,
+        logRecord: api.LogRecord(
+          context: context,
+          body: 2.2,
           severityNumber: api.Severity.fatal3,
         ),
         logRecordLimits: logLimit,
@@ -67,33 +89,90 @@ void main() {
         timeProvider: FakeTimeProvider(now: Int64(123)))
       ..setAttribute('key', 'value');
 
-    sdk.OTLPLogExporter(uri, httpClient: mockClient).export([log1, log2]);
+    final log4 = sdk.LogRecord(
+        resource: resource,
+        instrumentationScope: instrumentationLibrary,
+        logRecord: api.LogRecord(
+          context: context,
+          body: true,
+          severityNumber: api.Severity.fatal3,
+        ),
+        logRecordLimits: logLimit,
+        context: context,
+        timeProvider: FakeTimeProvider(now: Int64(123)))
+      ..setAttribute('key', 'value');
+
+    sdk.OTLPLogExporter(uri, httpClient: mockClient).export([log1, log2, log3, log4]);
 
     final expected = pb_log_service.ExportLogsServiceRequest(resourceLogs: [
       pb_logs.ResourceLogs(
           resource: pb_resource.Resource(
               attributes: [pb_common.KeyValue(key: 'service.name', value: pb_common.AnyValue(stringValue: 'bar'))]),
           scopeLogs: [
-            pb_logs.ScopeLogs(logRecords: [
-              pb_logs.LogRecord(
-                timeUnixNano: Int64(123),
-                severityNumber: pg_logs_enum.SeverityNumber.valueOf(log1.severityNumber!.index),
-                attributes: [pb_common.KeyValue(key: 'key', value: pb_common.AnyValue(stringValue: 'value'))],
-                traceId: parent.spanContext.traceId.get(),
-                spanId: parent.spanContext.spanId.get(),
-                body: pb_common.AnyValue(stringValue: 'test log'),
-                observedTimeUnixNano: Int64(123),
-              ),
-              pb_logs.LogRecord(
-                timeUnixNano: Int64(123),
-                severityNumber: pg_logs_enum.SeverityNumber.valueOf(log2.severityNumber!.index),
-                attributes: [pb_common.KeyValue(key: 'key', value: pb_common.AnyValue(stringValue: 'value'))],
-                traceId: parent.spanContext.traceId.get(),
-                spanId: parent.spanContext.spanId.get(),
-                body: pb_common.AnyValue(stringValue: 'test log'),
-                observedTimeUnixNano: Int64(123),
-              )
-            ], scope: pb_common.InstrumentationScope(name: 'library_name', version: 'library_version'))
+            pb_logs.ScopeLogs(
+              logRecords: [
+                pb_logs.LogRecord(
+                  timeUnixNano: Int64(123),
+                  severityNumber: pg_logs_enum.SeverityNumber.valueOf(log1.severityNumber!.index),
+                  attributes: [pb_common.KeyValue(key: 'key', value: pb_common.AnyValue(stringValue: 'value'))],
+                  traceId: parent.spanContext.traceId.get(),
+                  spanId: parent.spanContext.spanId.get(),
+                  body: pb_common.AnyValue(stringValue: 'test log'),
+                  observedTimeUnixNano: Int64(123),
+                ),
+                pb_logs.LogRecord(
+                  timeUnixNano: Int64(123),
+                  severityNumber: pg_logs_enum.SeverityNumber.valueOf(log2.severityNumber!.index),
+                  attributes: [
+                    pb_common.KeyValue(key: 'fromBoolean', value: pb_common.AnyValue(boolValue: false)),
+                    pb_common.KeyValue(key: 'fromDouble', value: pb_common.AnyValue(doubleValue: 1.1)),
+                    pb_common.KeyValue(key: 'fromInt', value: pb_common.AnyValue(intValue: Int64(1))),
+                    pb_common.KeyValue(
+                      key: 'fromBooleanList',
+                      value: pb_common.AnyValue(
+                        arrayValue: pb_common.ArrayValue(values: [pb_common.AnyValue(boolValue: false)]),
+                      ),
+                    ),
+                    pb_common.KeyValue(
+                      key: 'fromDoubleList',
+                      value: pb_common.AnyValue(
+                        arrayValue: pb_common.ArrayValue(values: [pb_common.AnyValue(doubleValue: 1.1)]),
+                      ),
+                    ),
+                    pb_common.KeyValue(
+                      key: 'fromIntList',
+                      value: pb_common.AnyValue(
+                        arrayValue: pb_common.ArrayValue(values: [pb_common.AnyValue(intValue: Int64(1))]),
+                      ),
+                    ),
+                    pb_common.KeyValue(key: 'key', value: pb_common.AnyValue(stringValue: 'value')),
+                  ],
+                  traceId: parent.spanContext.traceId.get(),
+                  spanId: parent.spanContext.spanId.get(),
+                  body: pb_common.AnyValue(intValue: Int64(2)),
+                  observedTimeUnixNano: Int64(123),
+                ),
+                pb_logs.LogRecord(
+                  timeUnixNano: Int64(123),
+                  severityNumber: pg_logs_enum.SeverityNumber.valueOf(log1.severityNumber!.index),
+                  attributes: [pb_common.KeyValue(key: 'key', value: pb_common.AnyValue(stringValue: 'value'))],
+                  traceId: parent.spanContext.traceId.get(),
+                  spanId: parent.spanContext.spanId.get(),
+                  body: pb_common.AnyValue(doubleValue: 2.2),
+                  observedTimeUnixNano: Int64(123),
+                ),
+                pb_logs.LogRecord(
+                  timeUnixNano: Int64(123),
+                  severityNumber: pg_logs_enum.SeverityNumber.valueOf(log1.severityNumber!.index),
+                  attributes: [pb_common.KeyValue(key: 'key', value: pb_common.AnyValue(stringValue: 'value'))],
+                  traceId: parent.spanContext.traceId.get(),
+                  spanId: parent.spanContext.spanId.get(),
+                  body: pb_common.AnyValue(boolValue: true),
+                  observedTimeUnixNano: Int64(123),
+                ),
+              ],
+              scope: pb_common.InstrumentationScope(name: 'library_name', version: 'library_version'),
+            )
           ])
     ]);
     final verifyResult = verify(() =>
