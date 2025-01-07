@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:fixnum/fixnum.dart';
+import 'package:logging/logging.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:opentelemetry/sdk.dart' as sdk;
 import 'package:opentelemetry/src/api/common/export_result.dart';
@@ -32,6 +33,26 @@ void main() {
     processor.onEmit(logRecord);
 
     verify(() => exporter.export([logRecord])).called(1);
+  });
+
+  test('executes export and fail', () async {
+    var errorMessage = '';
+    Logger.root.onRecord.listen((data) {
+      errorMessage = data.message;
+    });
+    final logRecord = sdk.LogRecord(
+      instrumentationScope: sdk.InstrumentationScope('library_name', 'library_version', 'url://schema', []),
+      logRecord: api.LogRecord(),
+      logRecordLimits: sdk.LogRecordLimits(),
+    );
+
+    when(() => exporter.export(any())).thenAnswer((_) async => ExportResult(code: ExportResultCode.failed));
+
+    processor.onEmit(logRecord);
+
+    await Future.delayed(const Duration(milliseconds: 50));
+
+    expect(errorMessage, 'SimpleLogRecordProcessor: log record export failed');
   });
 
   test('shutdown exporters on forced flush', () async {
