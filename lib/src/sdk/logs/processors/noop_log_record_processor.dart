@@ -10,9 +10,7 @@ class NoopLogRecordProcessor implements LogRecordProcessor {
   Future<void> forceFlush() async {}
 
   @override
-  void onEmit(LogRecord logRecord) {
-    // TODO: implement onEmit
-  }
+  void onEmit(LogRecord logRecord) {}
 
   @override
   Future<void> shutdown() async {}
