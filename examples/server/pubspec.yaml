@@ -1,0 +1,16 @@
+name: server_example
+description: Example of using OpenTelemetry in a Dart server application.
+publish_to: none
+
+environment:
+  sdk: ^3.6.0
+
+resolution: workspace
+
+dependencies:
+  opentelemetry_api: ^0.1.0-dev
+  opentelemetry_sdk: ^0.1.0-dev
+  opentelemetry_semantic_conventions: ^0.1.0-dev
+
+dev_dependencies:
+  test: ^1.25.6
