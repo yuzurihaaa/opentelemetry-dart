@@ -9,8 +9,6 @@ workspace:
   - packages/opentelemetry_sdk
   - packages/opentelemetry_semantics
   - packages/opentelemetry
-  - examples/server
-  - examples/flutter
 
 dev_dependencies:
   lints: ^6.0.0

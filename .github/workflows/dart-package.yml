@@ -24,12 +24,8 @@ jobs:
         with:
           persist-credentials: false
 
-      # examples/flutter is a workspace member, so resolution needs the Flutter SDK.
-      - name: Set up Flutter
-        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
-        with:
-          channel: stable
-          cache: true
+      - name: Set up Dart
+        uses: dart-lang/setup-dart@6afc89df92d6eb3834022f73cd65adc8cdfcb92d # v1.8.1
 
       - name: Install dependencies
         run: dart pub get
