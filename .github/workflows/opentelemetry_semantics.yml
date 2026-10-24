@@ -21,6 +21,6 @@ concurrency:
 
 jobs:
   check:
-    uses: ./.github/workflows/dart-package.yml
+    uses: $/.github/workflows/dart-package.yml
     with:
       package: opentelemetry_semantics
