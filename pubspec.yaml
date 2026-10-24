@@ -7,7 +7,8 @@ environment:
 workspace:
   - packages/opentelemetry_api
   - packages/opentelemetry_sdk
-  - packages/opentelemetry_semantic_conventions
+  - packages/opentelemetry_semantics
+  - packages/opentelemetry
   - examples/server
   - examples/flutter
 

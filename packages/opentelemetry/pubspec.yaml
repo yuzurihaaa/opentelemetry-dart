@@ -1,5 +1,5 @@
-name: opentelemetry_semantic_conventions
-description: OpenTelemetry semantic conventions for Dart.
+name: opentelemetry
+description: OpenTelemetry for Dart, the entry point package.
 version: 0.1.0-dev
 repository: https://github.com/open-telemetry/opentelemetry-dart
 

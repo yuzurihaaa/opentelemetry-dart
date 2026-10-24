@@ -1,4 +1,4 @@
-import 'package:opentelemetry_semantic_conventions/opentelemetry_semantic_conventions.dart';
+import 'package:opentelemetry_semantics/opentelemetry_semantics.dart';
 import 'package:test/test.dart';
 
 void main() {

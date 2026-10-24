@@ -1,0 +1,26 @@
+name: opentelemetry_sdk
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'packages/opentelemetry_sdk/**'
+      - 'pubspec.yaml'
+      - 'analysis_options.yaml'
+      - '.github/workflows/opentelemetry_sdk.yml'
+      - '.github/workflows/dart-package.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    uses: ./.github/workflows/dart-package.yml
+    with:
+      package: opentelemetry_sdk

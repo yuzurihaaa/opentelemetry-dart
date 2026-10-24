@@ -1,0 +1,41 @@
+name: Dart package checks
+
+on:
+  workflow_call:
+    inputs:
+      package:
+        description: Package directory under packages/
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Format and test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/${{ inputs.package }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # examples/flutter is a workspace member, so resolution needs the Flutter SDK.
+      - name: Set up Flutter
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          channel: stable
+          cache: true
+
+      - name: Install dependencies
+        run: dart pub get
+
+      - name: Check formatting
+        run: dart format --output=none --set-exit-if-changed .
+
+      - name: Run tests
+        run: dart test

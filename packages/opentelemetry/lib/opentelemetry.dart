@@ -3,6 +3,6 @@
 /// More dartdocs go here.
 library;
 
-export 'src/opentelemetry_semantic_conventions_base.dart';
+export 'src/opentelemetry_base.dart';
 
 // TODO: Export any libraries intended for clients of this package.
