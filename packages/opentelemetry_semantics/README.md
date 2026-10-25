@@ -1,39 +1,40 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# opentelemetry_semantics
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+OpenTelemetry semantic conventions for Dart: attribute keys and values,
+metric names, event names and entity definitions, as Dart enums.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
 ```dart
-const like = 'sample';
+import 'package:opentelemetry_semantics/opentelemetry_semantics.dart';
+
+void main() {
+  print(HttpAttributes.httpRequestMethod.key); // http.request.method
+  print(HttpMetrics.httpServerRequestDuration.name);
+  print(HttpHeaderAttribute.request('content-type').key);
+}
 ```
 
-## Additional information
+Every attribute-key enum implements `OTelSemantic`, so your own
+app-specific enums can implement it too and mix into the same maps.
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+## Layout
+
+| Path | Contents |
+| --- | --- |
+| `lib/src/semantics_base.dart` | the `OTelSemantic`, `OTelMetric`, `OTelEvent` and `OTelEntity` base interfaces |
+| `lib/src/semconv/` | generated from the OpenTelemetry semantic-conventions registry — do not edit |
+| `lib/src/candidates/` | hand-maintained keys the registry does not define yet; unstable, see [doc/SEMCONV_CANDIDATES.md](doc/SEMCONV_CANDIDATES.md) |
+
+## Regenerating `semconv/`
+
+`lib/src/semconv/` and its audit fixtures in `test/semconv/` are produced by
+[OTel Weaver](https://github.com/open-telemetry/weaver) from the registry.
+Needs Docker and a
+[semantic-conventions](https://github.com/open-telemetry/semantic-conventions)
+checkout:
+
+```bash
+SEMCONV_REPO=~/dev/semantic-conventions tool/semconv/generate.sh
+SEMCONV_REPO=~/dev/semantic-conventions tool/semconv/generate.sh --check
+```
