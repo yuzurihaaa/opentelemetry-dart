@@ -8,7 +8,13 @@ params:
   # stable attribute keeps only its stable values (http.request.method
   # loses QUERY here and keeps it in the incubating library) -- the same
   # cut semantic-conventions-java makes.
-  unstable: ["development", "release_candidate", "alpha", "deprecated"]
+  # Every level docs/non-normative/code-generation.md enumerates except
+  # `stable`, plus `deprecated`. v1.44.0 uses no `beta` convention, but
+  # leaving it out would silently leak one into the stable library on a
+  # registry bump. stability_split_test.dart is the backstop if the
+  # registry ever adds a level this list does not name.
+  unstable:
+    ["development", "alpha", "beta", "release_candidate", "deprecated"]
 
 whitespace_control:
   trim_blocks: true
