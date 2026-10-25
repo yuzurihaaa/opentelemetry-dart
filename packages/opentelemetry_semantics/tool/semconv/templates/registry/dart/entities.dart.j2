@@ -13,7 +13,7 @@ import '../{{ root | snake_case }}.dart';
 /// `{{ ctx.root_namespace }}` entities from the OpenTelemetry semantic
 /// conventions. Each member carries the entity type string plus the
 /// attribute keys that identify and describe it.
-enum {{ ctx.root_namespace | pascal_case }}Entity implements OTelEntity {
+enum {{ m.signal_type_name(ctx.root_namespace, "Entity") }} implements OTelEntity {
 {% for entity in ctx.entities %}
 {{ m.doc(entity) }}{{ m.deprecated_annotation(entity) }}  {{ m.ident(entity.name) }}(
     '{{ entity.name }}',
@@ -31,7 +31,7 @@ enum {{ ctx.root_namespace | pascal_case }}Entity implements OTelEntity {
   @override
   final List<OTelSemantic> descriptive;
 
-  const {{ ctx.root_namespace | pascal_case }}Entity(
+  const {{ m.signal_type_name(ctx.root_namespace, "Entity") }}(
     this.name, {
     required this.identifying,
     required this.descriptive,

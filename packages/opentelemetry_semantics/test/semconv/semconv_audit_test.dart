@@ -12,3853 +12,4763 @@
 // Generated audit: asserts every attribute key and every value-enum
 // literal against the registry it was generated from.
 
-import 'package:opentelemetry_semantics/opentelemetry_semantics.dart';
+import 'package:opentelemetry_semantics/incubating.dart';
 import 'package:test/test.dart';
 
 void main() {
   group('android', () {
     test('attribute keys', () {
-      expect(Android.values.length, 3);
-      expect(Android.androidAppState.key, 'android.app.state');
-      expect(Android.androidOsApiLevel.key, 'android.os.api_level');
-      expect(Android.androidState.key, 'android.state');
+      expect(AndroidIncubating.values.length, 3);
+      expect(AndroidIncubating.androidAppState.key, 'android.app.state');
+      expect(AndroidIncubating.androidOsApiLevel.key, 'android.os.api_level');
+      expect(AndroidIncubating.androidState.key, 'android.state');
     });
     test('android.app.state values', () {
-      expect(AndroidAppState.values.length, 3);
-      expect(AndroidAppState.created.value, 'created');
-      expect(AndroidAppState.background.value, 'background');
-      expect(AndroidAppState.foreground.value, 'foreground');
+      expect(AndroidAppStateIncubating.values.length, 3);
+      expect(AndroidAppStateIncubating.created.value, 'created');
+      expect(AndroidAppStateIncubating.background.value, 'background');
+      expect(AndroidAppStateIncubating.foreground.value, 'foreground');
     });
     test('android.state values', () {
-      expect(AndroidState.values.length, 3);
-      expect(AndroidState.created.value, 'created');
-      expect(AndroidState.background.value, 'background');
-      expect(AndroidState.foreground.value, 'foreground');
+      expect(AndroidStateIncubating.values.length, 3);
+      expect(AndroidStateIncubating.created.value, 'created');
+      expect(AndroidStateIncubating.background.value, 'background');
+      expect(AndroidStateIncubating.foreground.value, 'foreground');
     });
   });
   group('app', () {
     test('attribute keys', () {
-      expect(App.values.length, 12);
-      expect(App.appBuildId.key, 'app.build_id');
-      expect(App.appCrashId.key, 'app.crash.id');
-      expect(App.appInstallationId.key, 'app.installation.id');
-      expect(App.appJankFrameCount.key, 'app.jank.frame_count');
-      expect(App.appJankPeriod.key, 'app.jank.period');
-      expect(App.appJankThreshold.key, 'app.jank.threshold');
-      expect(App.appScreenCoordinateX.key, 'app.screen.coordinate.x');
-      expect(App.appScreenCoordinateY.key, 'app.screen.coordinate.y');
-      expect(App.appScreenId.key, 'app.screen.id');
-      expect(App.appScreenName.key, 'app.screen.name');
-      expect(App.appWidgetId.key, 'app.widget.id');
-      expect(App.appWidgetName.key, 'app.widget.name');
+      expect(AppIncubating.values.length, 12);
+      expect(AppIncubating.appBuildId.key, 'app.build_id');
+      expect(AppIncubating.appCrashId.key, 'app.crash.id');
+      expect(AppIncubating.appInstallationId.key, 'app.installation.id');
+      expect(AppIncubating.appJankFrameCount.key, 'app.jank.frame_count');
+      expect(AppIncubating.appJankPeriod.key, 'app.jank.period');
+      expect(AppIncubating.appJankThreshold.key, 'app.jank.threshold');
+      expect(AppIncubating.appScreenCoordinateX.key, 'app.screen.coordinate.x');
+      expect(AppIncubating.appScreenCoordinateY.key, 'app.screen.coordinate.y');
+      expect(AppIncubating.appScreenId.key, 'app.screen.id');
+      expect(AppIncubating.appScreenName.key, 'app.screen.name');
+      expect(AppIncubating.appWidgetId.key, 'app.widget.id');
+      expect(AppIncubating.appWidgetName.key, 'app.widget.name');
     });
   });
   group('artifact', () {
     test('attribute keys', () {
-      expect(Artifact.values.length, 7);
+      expect(ArtifactIncubating.values.length, 7);
       expect(
-        Artifact.artifactAttestationFilename.key,
+        ArtifactIncubating.artifactAttestationFilename.key,
         'artifact.attestation.filename',
       );
-      expect(Artifact.artifactAttestationHash.key, 'artifact.attestation.hash');
-      expect(Artifact.artifactAttestationId.key, 'artifact.attestation.id');
-      expect(Artifact.artifactFilename.key, 'artifact.filename');
-      expect(Artifact.artifactHash.key, 'artifact.hash');
-      expect(Artifact.artifactPurl.key, 'artifact.purl');
-      expect(Artifact.artifactVersion.key, 'artifact.version');
+      expect(
+        ArtifactIncubating.artifactAttestationHash.key,
+        'artifact.attestation.hash',
+      );
+      expect(
+        ArtifactIncubating.artifactAttestationId.key,
+        'artifact.attestation.id',
+      );
+      expect(ArtifactIncubating.artifactFilename.key, 'artifact.filename');
+      expect(ArtifactIncubating.artifactHash.key, 'artifact.hash');
+      expect(ArtifactIncubating.artifactPurl.key, 'artifact.purl');
+      expect(ArtifactIncubating.artifactVersion.key, 'artifact.version');
     });
   });
   group('aspnetcore', () {
     test('attribute keys', () {
-      expect(Aspnetcore.values.length, 23);
+      expect(AspnetcoreIncubating.values.length, 23);
       expect(
-        Aspnetcore.aspnetcoreAuthenticationResult.key,
+        AspnetcoreIncubating.aspnetcoreAuthenticationResult.key,
         'aspnetcore.authentication.result',
       );
       expect(
-        Aspnetcore.aspnetcoreAuthenticationScheme.key,
+        AspnetcoreIncubating.aspnetcoreAuthenticationScheme.key,
         'aspnetcore.authentication.scheme',
       );
       expect(
-        Aspnetcore.aspnetcoreAuthorizationPolicy.key,
+        AspnetcoreIncubating.aspnetcoreAuthorizationPolicy.key,
         'aspnetcore.authorization.policy',
       );
       expect(
-        Aspnetcore.aspnetcoreAuthorizationResult.key,
+        AspnetcoreIncubating.aspnetcoreAuthorizationResult.key,
         'aspnetcore.authorization.result',
       );
       expect(
-        Aspnetcore.aspnetcoreDiagnosticsExceptionResult.key,
+        AspnetcoreIncubating.aspnetcoreDiagnosticsExceptionResult.key,
         'aspnetcore.diagnostics.exception.result',
       );
       expect(
-        Aspnetcore.aspnetcoreDiagnosticsHandlerType.key,
+        AspnetcoreIncubating.aspnetcoreDiagnosticsHandlerType.key,
         'aspnetcore.diagnostics.handler.type',
       );
       expect(
-        Aspnetcore.aspnetcoreIdentityErrorCode.key,
+        AspnetcoreIncubating.aspnetcoreIdentityErrorCode.key,
         'aspnetcore.identity.error_code',
       );
       expect(
-        Aspnetcore.aspnetcoreIdentityPasswordCheckResult.key,
+        AspnetcoreIncubating.aspnetcoreIdentityPasswordCheckResult.key,
         'aspnetcore.identity.password_check_result',
       );
       expect(
-        Aspnetcore.aspnetcoreIdentityResult.key,
+        AspnetcoreIncubating.aspnetcoreIdentityResult.key,
         'aspnetcore.identity.result',
       );
       expect(
-        Aspnetcore.aspnetcoreIdentitySignInResult.key,
+        AspnetcoreIncubating.aspnetcoreIdentitySignInResult.key,
         'aspnetcore.identity.sign_in.result',
       );
       expect(
-        Aspnetcore.aspnetcoreIdentitySignInType.key,
+        AspnetcoreIncubating.aspnetcoreIdentitySignInType.key,
         'aspnetcore.identity.sign_in.type',
       );
       expect(
-        Aspnetcore.aspnetcoreIdentityTokenPurpose.key,
+        AspnetcoreIncubating.aspnetcoreIdentityTokenPurpose.key,
         'aspnetcore.identity.token_purpose',
       );
       expect(
-        Aspnetcore.aspnetcoreIdentityTokenVerified.key,
+        AspnetcoreIncubating.aspnetcoreIdentityTokenVerified.key,
         'aspnetcore.identity.token_verified',
       );
       expect(
-        Aspnetcore.aspnetcoreIdentityUserUpdateType.key,
+        AspnetcoreIncubating.aspnetcoreIdentityUserUpdateType.key,
         'aspnetcore.identity.user.update_type',
       );
       expect(
-        Aspnetcore.aspnetcoreIdentityUserType.key,
+        AspnetcoreIncubating.aspnetcoreIdentityUserType.key,
         'aspnetcore.identity.user_type',
       );
       expect(
-        Aspnetcore.aspnetcoreMemoryPoolOwner.key,
+        AspnetcoreIncubating.aspnetcoreMemoryPoolOwner.key,
         'aspnetcore.memory_pool.owner',
       );
       expect(
-        Aspnetcore.aspnetcoreRateLimitingPolicy.key,
+        AspnetcoreIncubating.aspnetcoreRateLimitingPolicy.key,
         'aspnetcore.rate_limiting.policy',
       );
       expect(
-        Aspnetcore.aspnetcoreRateLimitingResult.key,
+        AspnetcoreIncubating.aspnetcoreRateLimitingResult.key,
         'aspnetcore.rate_limiting.result',
       );
       expect(
-        Aspnetcore.aspnetcoreRequestIsUnhandled.key,
+        AspnetcoreIncubating.aspnetcoreRequestIsUnhandled.key,
         'aspnetcore.request.is_unhandled',
       );
       expect(
-        Aspnetcore.aspnetcoreRoutingIsFallback.key,
+        AspnetcoreIncubating.aspnetcoreRoutingIsFallback.key,
         'aspnetcore.routing.is_fallback',
       );
       expect(
-        Aspnetcore.aspnetcoreRoutingMatchStatus.key,
+        AspnetcoreIncubating.aspnetcoreRoutingMatchStatus.key,
         'aspnetcore.routing.match_status',
       );
       expect(
-        Aspnetcore.aspnetcoreSignInIsPersistent.key,
+        AspnetcoreIncubating.aspnetcoreSignInIsPersistent.key,
         'aspnetcore.sign_in.is_persistent',
       );
       expect(
-        Aspnetcore.aspnetcoreUserIsAuthenticated.key,
+        AspnetcoreIncubating.aspnetcoreUserIsAuthenticated.key,
         'aspnetcore.user.is_authenticated',
       );
     });
     test('aspnetcore.authentication.result values', () {
-      expect(AspnetcoreAuthenticationResult.values.length, 3);
-      expect(AspnetcoreAuthenticationResult.success.value, 'success');
-      expect(AspnetcoreAuthenticationResult.failure.value, 'failure');
-      expect(AspnetcoreAuthenticationResult.none.value, 'none');
+      expect(AspnetcoreAuthenticationResultIncubating.values.length, 3);
+      expect(AspnetcoreAuthenticationResultIncubating.success.value, 'success');
+      expect(AspnetcoreAuthenticationResultIncubating.failure.value, 'failure');
+      expect(AspnetcoreAuthenticationResultIncubating.none.value, 'none');
     });
     test('aspnetcore.authorization.result values', () {
-      expect(AspnetcoreAuthorizationResult.values.length, 2);
-      expect(AspnetcoreAuthorizationResult.success.value, 'success');
-      expect(AspnetcoreAuthorizationResult.failure.value, 'failure');
+      expect(AspnetcoreAuthorizationResultIncubating.values.length, 2);
+      expect(AspnetcoreAuthorizationResultIncubating.success.value, 'success');
+      expect(AspnetcoreAuthorizationResultIncubating.failure.value, 'failure');
     });
     test('aspnetcore.diagnostics.exception.result values', () {
-      expect(AspnetcoreDiagnosticsExceptionResult.values.length, 4);
-      expect(AspnetcoreDiagnosticsExceptionResult.handled.value, 'handled');
-      expect(AspnetcoreDiagnosticsExceptionResult.unhandled.value, 'unhandled');
-      expect(AspnetcoreDiagnosticsExceptionResult.skipped.value, 'skipped');
-      expect(AspnetcoreDiagnosticsExceptionResult.aborted.value, 'aborted');
+      expect(AspnetcoreDiagnosticsExceptionResultIncubating.values.length, 4);
+      expect(
+        AspnetcoreDiagnosticsExceptionResultIncubating.handled.value,
+        'handled',
+      );
+      expect(
+        AspnetcoreDiagnosticsExceptionResultIncubating.unhandled.value,
+        'unhandled',
+      );
+      expect(
+        AspnetcoreDiagnosticsExceptionResultIncubating.skipped.value,
+        'skipped',
+      );
+      expect(
+        AspnetcoreDiagnosticsExceptionResultIncubating.aborted.value,
+        'aborted',
+      );
     });
     test('aspnetcore.identity.password_check_result values', () {
-      expect(AspnetcoreIdentityPasswordCheckResult.values.length, 5);
-      expect(AspnetcoreIdentityPasswordCheckResult.success.value, 'success');
+      expect(AspnetcoreIdentityPasswordCheckResultIncubating.values.length, 5);
       expect(
-        AspnetcoreIdentityPasswordCheckResult.successRehashNeeded.value,
+        AspnetcoreIdentityPasswordCheckResultIncubating.success.value,
+        'success',
+      );
+      expect(
+        AspnetcoreIdentityPasswordCheckResultIncubating
+            .successRehashNeeded
+            .value,
         'success_rehash_needed',
       );
-      expect(AspnetcoreIdentityPasswordCheckResult.failure.value, 'failure');
       expect(
-        AspnetcoreIdentityPasswordCheckResult.passwordMissing.value,
+        AspnetcoreIdentityPasswordCheckResultIncubating.failure.value,
+        'failure',
+      );
+      expect(
+        AspnetcoreIdentityPasswordCheckResultIncubating.passwordMissing.value,
         'password_missing',
       );
       expect(
-        AspnetcoreIdentityPasswordCheckResult.userMissing.value,
+        AspnetcoreIdentityPasswordCheckResultIncubating.userMissing.value,
         'user_missing',
       );
     });
     test('aspnetcore.identity.result values', () {
-      expect(AspnetcoreIdentityResult.values.length, 2);
-      expect(AspnetcoreIdentityResult.success.value, 'success');
-      expect(AspnetcoreIdentityResult.failure.value, 'failure');
+      expect(AspnetcoreIdentityResultIncubating.values.length, 2);
+      expect(AspnetcoreIdentityResultIncubating.success.value, 'success');
+      expect(AspnetcoreIdentityResultIncubating.failure.value, 'failure');
     });
     test('aspnetcore.identity.sign_in.result values', () {
-      expect(AspnetcoreIdentitySignInResult.values.length, 5);
-      expect(AspnetcoreIdentitySignInResult.success.value, 'success');
-      expect(AspnetcoreIdentitySignInResult.lockedOut.value, 'locked_out');
-      expect(AspnetcoreIdentitySignInResult.notAllowed.value, 'not_allowed');
+      expect(AspnetcoreIdentitySignInResultIncubating.values.length, 5);
+      expect(AspnetcoreIdentitySignInResultIncubating.success.value, 'success');
       expect(
-        AspnetcoreIdentitySignInResult.requiresTwoFactor.value,
+        AspnetcoreIdentitySignInResultIncubating.lockedOut.value,
+        'locked_out',
+      );
+      expect(
+        AspnetcoreIdentitySignInResultIncubating.notAllowed.value,
+        'not_allowed',
+      );
+      expect(
+        AspnetcoreIdentitySignInResultIncubating.requiresTwoFactor.value,
         'requires_two_factor',
       );
-      expect(AspnetcoreIdentitySignInResult.failure.value, 'failure');
+      expect(AspnetcoreIdentitySignInResultIncubating.failure.value, 'failure');
     });
     test('aspnetcore.identity.sign_in.type values', () {
-      expect(AspnetcoreIdentitySignInType.values.length, 6);
-      expect(AspnetcoreIdentitySignInType.password.value, 'password');
+      expect(AspnetcoreIdentitySignInTypeIncubating.values.length, 6);
+      expect(AspnetcoreIdentitySignInTypeIncubating.password.value, 'password');
       expect(
-        AspnetcoreIdentitySignInType.twoFactorRecoveryCode.value,
+        AspnetcoreIdentitySignInTypeIncubating.twoFactorRecoveryCode.value,
         'two_factor_recovery_code',
       );
       expect(
-        AspnetcoreIdentitySignInType.twoFactorAuthenticator.value,
+        AspnetcoreIdentitySignInTypeIncubating.twoFactorAuthenticator.value,
         'two_factor_authenticator',
       );
-      expect(AspnetcoreIdentitySignInType.twoFactor.value, 'two_factor');
-      expect(AspnetcoreIdentitySignInType.external.value, 'external');
-      expect(AspnetcoreIdentitySignInType.passkey.value, 'passkey');
+      expect(
+        AspnetcoreIdentitySignInTypeIncubating.twoFactor.value,
+        'two_factor',
+      );
+      expect(AspnetcoreIdentitySignInTypeIncubating.external.value, 'external');
+      expect(AspnetcoreIdentitySignInTypeIncubating.passkey.value, 'passkey');
     });
     test('aspnetcore.identity.token_purpose values', () {
-      expect(AspnetcoreIdentityTokenPurpose.values.length, 6);
+      expect(AspnetcoreIdentityTokenPurposeIncubating.values.length, 6);
       expect(
-        AspnetcoreIdentityTokenPurpose.resetPassword.value,
+        AspnetcoreIdentityTokenPurposeIncubating.resetPassword.value,
         'reset_password',
       );
       expect(
-        AspnetcoreIdentityTokenPurpose.changePhoneNumber.value,
+        AspnetcoreIdentityTokenPurposeIncubating.changePhoneNumber.value,
         'change_phone_number',
       );
       expect(
-        AspnetcoreIdentityTokenPurpose.emailConfirmation.value,
+        AspnetcoreIdentityTokenPurposeIncubating.emailConfirmation.value,
         'email_confirmation',
       );
-      expect(AspnetcoreIdentityTokenPurpose.changeEmail.value, 'change_email');
-      expect(AspnetcoreIdentityTokenPurpose.twoFactor.value, 'two_factor');
-      expect(AspnetcoreIdentityTokenPurpose.other.value, '_OTHER');
-    });
-    test('aspnetcore.identity.token_verified values', () {
-      expect(AspnetcoreIdentityTokenVerified.values.length, 2);
-      expect(AspnetcoreIdentityTokenVerified.success.value, 'success');
-      expect(AspnetcoreIdentityTokenVerified.failure.value, 'failure');
-    });
-    test('aspnetcore.identity.user.update_type values', () {
-      expect(AspnetcoreIdentityUserUpdateType.values.length, 33);
-      expect(AspnetcoreIdentityUserUpdateType.update.value, 'update');
-      expect(AspnetcoreIdentityUserUpdateType.userName.value, 'user_name');
       expect(
-        AspnetcoreIdentityUserUpdateType.addPassword.value,
-        'add_password',
-      );
-      expect(
-        AspnetcoreIdentityUserUpdateType.changePassword.value,
-        'change_password',
-      );
-      expect(
-        AspnetcoreIdentityUserUpdateType.securityStamp.value,
-        'security_stamp',
-      );
-      expect(
-        AspnetcoreIdentityUserUpdateType.resetPassword.value,
-        'reset_password',
-      );
-      expect(
-        AspnetcoreIdentityUserUpdateType.removeLogin.value,
-        'remove_login',
-      );
-      expect(AspnetcoreIdentityUserUpdateType.addLogin.value, 'add_login');
-      expect(AspnetcoreIdentityUserUpdateType.addClaims.value, 'add_claims');
-      expect(
-        AspnetcoreIdentityUserUpdateType.replaceClaim.value,
-        'replace_claim',
-      );
-      expect(
-        AspnetcoreIdentityUserUpdateType.removeClaims.value,
-        'remove_claims',
-      );
-      expect(AspnetcoreIdentityUserUpdateType.addToRoles.value, 'add_to_roles');
-      expect(
-        AspnetcoreIdentityUserUpdateType.removeFromRoles.value,
-        'remove_from_roles',
-      );
-      expect(AspnetcoreIdentityUserUpdateType.setEmail.value, 'set_email');
-      expect(
-        AspnetcoreIdentityUserUpdateType.confirmEmail.value,
-        'confirm_email',
-      );
-      expect(
-        AspnetcoreIdentityUserUpdateType.passwordRehash.value,
-        'password_rehash',
-      );
-      expect(
-        AspnetcoreIdentityUserUpdateType.removePassword.value,
-        'remove_password',
-      );
-      expect(
-        AspnetcoreIdentityUserUpdateType.changeEmail.value,
+        AspnetcoreIdentityTokenPurposeIncubating.changeEmail.value,
         'change_email',
       );
       expect(
-        AspnetcoreIdentityUserUpdateType.setPhoneNumber.value,
+        AspnetcoreIdentityTokenPurposeIncubating.twoFactor.value,
+        'two_factor',
+      );
+      expect(AspnetcoreIdentityTokenPurposeIncubating.other.value, '_OTHER');
+    });
+    test('aspnetcore.identity.token_verified values', () {
+      expect(AspnetcoreIdentityTokenVerifiedIncubating.values.length, 2);
+      expect(
+        AspnetcoreIdentityTokenVerifiedIncubating.success.value,
+        'success',
+      );
+      expect(
+        AspnetcoreIdentityTokenVerifiedIncubating.failure.value,
+        'failure',
+      );
+    });
+    test('aspnetcore.identity.user.update_type values', () {
+      expect(AspnetcoreIdentityUserUpdateTypeIncubating.values.length, 33);
+      expect(AspnetcoreIdentityUserUpdateTypeIncubating.update.value, 'update');
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.userName.value,
+        'user_name',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.addPassword.value,
+        'add_password',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.changePassword.value,
+        'change_password',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.securityStamp.value,
+        'security_stamp',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.resetPassword.value,
+        'reset_password',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.removeLogin.value,
+        'remove_login',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.addLogin.value,
+        'add_login',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.addClaims.value,
+        'add_claims',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.replaceClaim.value,
+        'replace_claim',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.removeClaims.value,
+        'remove_claims',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.addToRoles.value,
+        'add_to_roles',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.removeFromRoles.value,
+        'remove_from_roles',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.setEmail.value,
+        'set_email',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.confirmEmail.value,
+        'confirm_email',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.passwordRehash.value,
+        'password_rehash',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.removePassword.value,
+        'remove_password',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.changeEmail.value,
+        'change_email',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.setPhoneNumber.value,
         'set_phone_number',
       );
       expect(
-        AspnetcoreIdentityUserUpdateType.changePhoneNumber.value,
+        AspnetcoreIdentityUserUpdateTypeIncubating.changePhoneNumber.value,
         'change_phone_number',
       );
       expect(
-        AspnetcoreIdentityUserUpdateType.setTwoFactorEnabled.value,
+        AspnetcoreIdentityUserUpdateTypeIncubating.setTwoFactorEnabled.value,
         'set_two_factor_enabled',
       );
       expect(
-        AspnetcoreIdentityUserUpdateType.setLockoutEnabled.value,
+        AspnetcoreIdentityUserUpdateTypeIncubating.setLockoutEnabled.value,
         'set_lockout_enabled',
       );
       expect(
-        AspnetcoreIdentityUserUpdateType.setLockoutEndDate.value,
+        AspnetcoreIdentityUserUpdateTypeIncubating.setLockoutEndDate.value,
         'set_lockout_end_date',
       );
       expect(
-        AspnetcoreIdentityUserUpdateType.accessFailed.value,
+        AspnetcoreIdentityUserUpdateTypeIncubating.accessFailed.value,
         'access_failed',
       );
       expect(
-        AspnetcoreIdentityUserUpdateType.resetAccessFailedCount.value,
+        AspnetcoreIdentityUserUpdateTypeIncubating.resetAccessFailedCount.value,
         'reset_access_failed_count',
       );
       expect(
-        AspnetcoreIdentityUserUpdateType.setAuthenticationToken.value,
+        AspnetcoreIdentityUserUpdateTypeIncubating.setAuthenticationToken.value,
         'set_authentication_token',
       );
       expect(
-        AspnetcoreIdentityUserUpdateType.removeAuthenticationToken.value,
+        AspnetcoreIdentityUserUpdateTypeIncubating
+            .removeAuthenticationToken
+            .value,
         'remove_authentication_token',
       );
       expect(
-        AspnetcoreIdentityUserUpdateType.resetAuthenticatorKey.value,
+        AspnetcoreIdentityUserUpdateTypeIncubating.resetAuthenticatorKey.value,
         'reset_authenticator_key',
       );
       expect(
-        AspnetcoreIdentityUserUpdateType
+        AspnetcoreIdentityUserUpdateTypeIncubating
             .generateNewTwoFactorRecoveryCodes
             .value,
         'generate_new_two_factor_recovery_codes',
       );
       expect(
-        AspnetcoreIdentityUserUpdateType.redeemTwoFactorRecoveryCode.value,
+        AspnetcoreIdentityUserUpdateTypeIncubating
+            .redeemTwoFactorRecoveryCode
+            .value,
         'redeem_two_factor_recovery_code',
       );
-      expect(AspnetcoreIdentityUserUpdateType.setPasskey.value, 'set_passkey');
       expect(
-        AspnetcoreIdentityUserUpdateType.removePasskey.value,
+        AspnetcoreIdentityUserUpdateTypeIncubating.setPasskey.value,
+        'set_passkey',
+      );
+      expect(
+        AspnetcoreIdentityUserUpdateTypeIncubating.removePasskey.value,
         'remove_passkey',
       );
-      expect(AspnetcoreIdentityUserUpdateType.other.value, '_OTHER');
+      expect(AspnetcoreIdentityUserUpdateTypeIncubating.other.value, '_OTHER');
     });
     test('aspnetcore.rate_limiting.result values', () {
-      expect(AspnetcoreRateLimitingResult.values.length, 4);
-      expect(AspnetcoreRateLimitingResult.acquired.value, 'acquired');
+      expect(AspnetcoreRateLimitingResultIncubating.values.length, 4);
+      expect(AspnetcoreRateLimitingResultIncubating.acquired.value, 'acquired');
       expect(
-        AspnetcoreRateLimitingResult.endpointLimiter.value,
+        AspnetcoreRateLimitingResultIncubating.endpointLimiter.value,
         'endpoint_limiter',
       );
       expect(
-        AspnetcoreRateLimitingResult.globalLimiter.value,
+        AspnetcoreRateLimitingResultIncubating.globalLimiter.value,
         'global_limiter',
       );
       expect(
-        AspnetcoreRateLimitingResult.requestCanceled.value,
+        AspnetcoreRateLimitingResultIncubating.requestCanceled.value,
         'request_canceled',
       );
     });
     test('aspnetcore.routing.match_status values', () {
-      expect(AspnetcoreRoutingMatchStatus.values.length, 2);
-      expect(AspnetcoreRoutingMatchStatus.success.value, 'success');
-      expect(AspnetcoreRoutingMatchStatus.failure.value, 'failure');
+      expect(AspnetcoreRoutingMatchStatusIncubating.values.length, 2);
+      expect(AspnetcoreRoutingMatchStatusIncubating.success.value, 'success');
+      expect(AspnetcoreRoutingMatchStatusIncubating.failure.value, 'failure');
     });
   });
   group('aws', () {
     test('attribute keys', () {
-      expect(Aws.values.length, 52);
-      expect(Aws.awsBedrockGuardrailId.key, 'aws.bedrock.guardrail.id');
+      expect(AwsIncubating.values.length, 52);
       expect(
-        Aws.awsBedrockKnowledgeBaseId.key,
+        AwsIncubating.awsBedrockGuardrailId.key,
+        'aws.bedrock.guardrail.id',
+      );
+      expect(
+        AwsIncubating.awsBedrockKnowledgeBaseId.key,
         'aws.bedrock.knowledge_base.id',
       );
       expect(
-        Aws.awsDynamodbAttributeDefinitions.key,
+        AwsIncubating.awsDynamodbAttributeDefinitions.key,
         'aws.dynamodb.attribute_definitions',
       );
       expect(
-        Aws.awsDynamodbAttributesToGet.key,
+        AwsIncubating.awsDynamodbAttributesToGet.key,
         'aws.dynamodb.attributes_to_get',
       );
-      expect(Aws.awsDynamodbConsistentRead.key, 'aws.dynamodb.consistent_read');
       expect(
-        Aws.awsDynamodbConsumedCapacity.key,
+        AwsIncubating.awsDynamodbConsistentRead.key,
+        'aws.dynamodb.consistent_read',
+      );
+      expect(
+        AwsIncubating.awsDynamodbConsumedCapacity.key,
         'aws.dynamodb.consumed_capacity',
       );
-      expect(Aws.awsDynamodbCount.key, 'aws.dynamodb.count');
+      expect(AwsIncubating.awsDynamodbCount.key, 'aws.dynamodb.count');
       expect(
-        Aws.awsDynamodbExclusiveStartTable.key,
+        AwsIncubating.awsDynamodbExclusiveStartTable.key,
         'aws.dynamodb.exclusive_start_table',
       );
       expect(
-        Aws.awsDynamodbGlobalSecondaryIndexUpdates.key,
+        AwsIncubating.awsDynamodbGlobalSecondaryIndexUpdates.key,
         'aws.dynamodb.global_secondary_index_updates',
       );
       expect(
-        Aws.awsDynamodbGlobalSecondaryIndexes.key,
+        AwsIncubating.awsDynamodbGlobalSecondaryIndexes.key,
         'aws.dynamodb.global_secondary_indexes',
       );
-      expect(Aws.awsDynamodbIndexName.key, 'aws.dynamodb.index_name');
+      expect(AwsIncubating.awsDynamodbIndexName.key, 'aws.dynamodb.index_name');
       expect(
-        Aws.awsDynamodbItemCollectionMetrics.key,
+        AwsIncubating.awsDynamodbItemCollectionMetrics.key,
         'aws.dynamodb.item_collection_metrics',
       );
-      expect(Aws.awsDynamodbLimit.key, 'aws.dynamodb.limit');
+      expect(AwsIncubating.awsDynamodbLimit.key, 'aws.dynamodb.limit');
       expect(
-        Aws.awsDynamodbLocalSecondaryIndexes.key,
+        AwsIncubating.awsDynamodbLocalSecondaryIndexes.key,
         'aws.dynamodb.local_secondary_indexes',
       );
-      expect(Aws.awsDynamodbProjection.key, 'aws.dynamodb.projection');
       expect(
-        Aws.awsDynamodbProvisionedReadCapacity.key,
+        AwsIncubating.awsDynamodbProjection.key,
+        'aws.dynamodb.projection',
+      );
+      expect(
+        AwsIncubating.awsDynamodbProvisionedReadCapacity.key,
         'aws.dynamodb.provisioned_read_capacity',
       );
       expect(
-        Aws.awsDynamodbProvisionedWriteCapacity.key,
+        AwsIncubating.awsDynamodbProvisionedWriteCapacity.key,
         'aws.dynamodb.provisioned_write_capacity',
       );
-      expect(Aws.awsDynamodbScanForward.key, 'aws.dynamodb.scan_forward');
-      expect(Aws.awsDynamodbScannedCount.key, 'aws.dynamodb.scanned_count');
-      expect(Aws.awsDynamodbSegment.key, 'aws.dynamodb.segment');
-      expect(Aws.awsDynamodbSelect.key, 'aws.dynamodb.select');
-      expect(Aws.awsDynamodbTableCount.key, 'aws.dynamodb.table_count');
-      expect(Aws.awsDynamodbTableNames.key, 'aws.dynamodb.table_names');
-      expect(Aws.awsDynamodbTotalSegments.key, 'aws.dynamodb.total_segments');
-      expect(Aws.awsEcsClusterArn.key, 'aws.ecs.cluster.arn');
-      expect(Aws.awsEcsContainerArn.key, 'aws.ecs.container.arn');
-      expect(Aws.awsEcsLaunchtype.key, 'aws.ecs.launchtype');
-      expect(Aws.awsEcsTaskArn.key, 'aws.ecs.task.arn');
-      expect(Aws.awsEcsTaskFamily.key, 'aws.ecs.task.family');
-      expect(Aws.awsEcsTaskId.key, 'aws.ecs.task.id');
-      expect(Aws.awsEcsTaskRevision.key, 'aws.ecs.task.revision');
-      expect(Aws.awsEksClusterArn.key, 'aws.eks.cluster.arn');
-      expect(Aws.awsExtendedRequestId.key, 'aws.extended_request_id');
-      expect(Aws.awsKinesisStreamName.key, 'aws.kinesis.stream_name');
-      expect(Aws.awsLambdaInvokedArn.key, 'aws.lambda.invoked_arn');
       expect(
-        Aws.awsLambdaResourceMappingId.key,
+        AwsIncubating.awsDynamodbScanForward.key,
+        'aws.dynamodb.scan_forward',
+      );
+      expect(
+        AwsIncubating.awsDynamodbScannedCount.key,
+        'aws.dynamodb.scanned_count',
+      );
+      expect(AwsIncubating.awsDynamodbSegment.key, 'aws.dynamodb.segment');
+      expect(AwsIncubating.awsDynamodbSelect.key, 'aws.dynamodb.select');
+      expect(
+        AwsIncubating.awsDynamodbTableCount.key,
+        'aws.dynamodb.table_count',
+      );
+      expect(
+        AwsIncubating.awsDynamodbTableNames.key,
+        'aws.dynamodb.table_names',
+      );
+      expect(
+        AwsIncubating.awsDynamodbTotalSegments.key,
+        'aws.dynamodb.total_segments',
+      );
+      expect(AwsIncubating.awsEcsClusterArn.key, 'aws.ecs.cluster.arn');
+      expect(AwsIncubating.awsEcsContainerArn.key, 'aws.ecs.container.arn');
+      expect(AwsIncubating.awsEcsLaunchtype.key, 'aws.ecs.launchtype');
+      expect(AwsIncubating.awsEcsTaskArn.key, 'aws.ecs.task.arn');
+      expect(AwsIncubating.awsEcsTaskFamily.key, 'aws.ecs.task.family');
+      expect(AwsIncubating.awsEcsTaskId.key, 'aws.ecs.task.id');
+      expect(AwsIncubating.awsEcsTaskRevision.key, 'aws.ecs.task.revision');
+      expect(AwsIncubating.awsEksClusterArn.key, 'aws.eks.cluster.arn');
+      expect(AwsIncubating.awsExtendedRequestId.key, 'aws.extended_request_id');
+      expect(AwsIncubating.awsKinesisStreamName.key, 'aws.kinesis.stream_name');
+      expect(AwsIncubating.awsLambdaInvokedArn.key, 'aws.lambda.invoked_arn');
+      expect(
+        AwsIncubating.awsLambdaResourceMappingId.key,
         'aws.lambda.resource_mapping.id',
       );
-      expect(Aws.awsLogGroupArns.key, 'aws.log.group.arns');
-      expect(Aws.awsLogGroupNames.key, 'aws.log.group.names');
-      expect(Aws.awsLogStreamArns.key, 'aws.log.stream.arns');
-      expect(Aws.awsLogStreamNames.key, 'aws.log.stream.names');
-      expect(Aws.awsRequestId.key, 'aws.request_id');
-      expect(Aws.awsS3Bucket.key, 'aws.s3.bucket');
-      expect(Aws.awsS3CopySource.key, 'aws.s3.copy_source');
-      expect(Aws.awsS3Delete.key, 'aws.s3.delete');
-      expect(Aws.awsS3Key.key, 'aws.s3.key');
-      expect(Aws.awsS3PartNumber.key, 'aws.s3.part_number');
-      expect(Aws.awsS3UploadId.key, 'aws.s3.upload_id');
+      expect(AwsIncubating.awsLogGroupArns.key, 'aws.log.group.arns');
+      expect(AwsIncubating.awsLogGroupNames.key, 'aws.log.group.names');
+      expect(AwsIncubating.awsLogStreamArns.key, 'aws.log.stream.arns');
+      expect(AwsIncubating.awsLogStreamNames.key, 'aws.log.stream.names');
+      expect(AwsIncubating.awsRequestId.key, 'aws.request_id');
+      expect(AwsIncubating.awsS3Bucket.key, 'aws.s3.bucket');
+      expect(AwsIncubating.awsS3CopySource.key, 'aws.s3.copy_source');
+      expect(AwsIncubating.awsS3Delete.key, 'aws.s3.delete');
+      expect(AwsIncubating.awsS3Key.key, 'aws.s3.key');
+      expect(AwsIncubating.awsS3PartNumber.key, 'aws.s3.part_number');
+      expect(AwsIncubating.awsS3UploadId.key, 'aws.s3.upload_id');
       expect(
-        Aws.awsSecretsmanagerSecretArn.key,
+        AwsIncubating.awsSecretsmanagerSecretArn.key,
         'aws.secretsmanager.secret.arn',
       );
-      expect(Aws.awsSnsTopicArn.key, 'aws.sns.topic.arn');
-      expect(Aws.awsSqsQueueUrl.key, 'aws.sqs.queue.url');
+      expect(AwsIncubating.awsSnsTopicArn.key, 'aws.sns.topic.arn');
+      expect(AwsIncubating.awsSqsQueueUrl.key, 'aws.sqs.queue.url');
       expect(
-        Aws.awsStepFunctionsActivityArn.key,
+        AwsIncubating.awsStepFunctionsActivityArn.key,
         'aws.step_functions.activity.arn',
       );
       expect(
-        Aws.awsStepFunctionsStateMachineArn.key,
+        AwsIncubating.awsStepFunctionsStateMachineArn.key,
         'aws.step_functions.state_machine.arn',
       );
     });
     test('aws.ecs.launchtype values', () {
-      expect(AwsEcsLaunchtype.values.length, 2);
-      expect(AwsEcsLaunchtype.ec2.value, 'ec2');
-      expect(AwsEcsLaunchtype.fargate.value, 'fargate');
+      expect(AwsEcsLaunchtypeIncubating.values.length, 2);
+      expect(AwsEcsLaunchtypeIncubating.ec2.value, 'ec2');
+      expect(AwsEcsLaunchtypeIncubating.fargate.value, 'fargate');
     });
   });
   group('az', () {
     test('attribute keys', () {
-      expect(Az.values.length, 2);
-      expect(Az.azNamespace.key, 'az.namespace');
-      expect(Az.azServiceRequestId.key, 'az.service_request_id');
+      expect(AzIncubating.values.length, 2);
+      expect(AzIncubating.azNamespace.key, 'az.namespace');
+      expect(AzIncubating.azServiceRequestId.key, 'az.service_request_id');
     });
   });
   group('azure', () {
     test('attribute keys', () {
-      expect(Azure.values.length, 10);
-      expect(Azure.azureClientId.key, 'azure.client.id');
+      expect(AzureIncubating.values.length, 10);
+      expect(AzureIncubating.azureClientId.key, 'azure.client.id');
       expect(
-        Azure.azureCosmosdbConnectionMode.key,
+        AzureIncubating.azureCosmosdbConnectionMode.key,
         'azure.cosmosdb.connection.mode',
       );
       expect(
-        Azure.azureCosmosdbConsistencyLevel.key,
+        AzureIncubating.azureCosmosdbConsistencyLevel.key,
         'azure.cosmosdb.consistency.level',
       );
       expect(
-        Azure.azureCosmosdbOperationContactedRegions.key,
+        AzureIncubating.azureCosmosdbOperationContactedRegions.key,
         'azure.cosmosdb.operation.contacted_regions',
       );
       expect(
-        Azure.azureCosmosdbOperationRequestCharge.key,
+        AzureIncubating.azureCosmosdbOperationRequestCharge.key,
         'azure.cosmosdb.operation.request_charge',
       );
       expect(
-        Azure.azureCosmosdbRequestBodySize.key,
+        AzureIncubating.azureCosmosdbRequestBodySize.key,
         'azure.cosmosdb.request.body.size',
       );
       expect(
-        Azure.azureCosmosdbResponseSubStatusCode.key,
+        AzureIncubating.azureCosmosdbResponseSubStatusCode.key,
         'azure.cosmosdb.response.sub_status_code',
       );
-      expect(Azure.azureResourceGroupName.key, 'azure.resource_group.name');
       expect(
-        Azure.azureResourceProviderNamespace.key,
+        AzureIncubating.azureResourceGroupName.key,
+        'azure.resource_group.name',
+      );
+      expect(
+        AzureIncubating.azureResourceProviderNamespace.key,
         'azure.resource_provider.namespace',
       );
-      expect(Azure.azureServiceRequestId.key, 'azure.service.request.id');
+      expect(
+        AzureIncubating.azureServiceRequestId.key,
+        'azure.service.request.id',
+      );
     });
     test('azure.cosmosdb.connection.mode values', () {
-      expect(AzureCosmosdbConnectionMode.values.length, 2);
-      expect(AzureCosmosdbConnectionMode.gateway.value, 'gateway');
-      expect(AzureCosmosdbConnectionMode.direct.value, 'direct');
+      expect(AzureCosmosdbConnectionModeIncubating.values.length, 2);
+      expect(AzureCosmosdbConnectionModeIncubating.gateway.value, 'gateway');
+      expect(AzureCosmosdbConnectionModeIncubating.direct.value, 'direct');
     });
     test('azure.cosmosdb.consistency.level values', () {
-      expect(AzureCosmosdbConsistencyLevel.values.length, 5);
-      expect(AzureCosmosdbConsistencyLevel.strong.value, 'Strong');
+      expect(AzureCosmosdbConsistencyLevelIncubating.values.length, 5);
+      expect(AzureCosmosdbConsistencyLevelIncubating.strong.value, 'Strong');
       expect(
-        AzureCosmosdbConsistencyLevel.boundedStaleness.value,
+        AzureCosmosdbConsistencyLevelIncubating.boundedStaleness.value,
         'BoundedStaleness',
       );
-      expect(AzureCosmosdbConsistencyLevel.session.value, 'Session');
-      expect(AzureCosmosdbConsistencyLevel.eventual.value, 'Eventual');
+      expect(AzureCosmosdbConsistencyLevelIncubating.session.value, 'Session');
       expect(
-        AzureCosmosdbConsistencyLevel.consistentPrefix.value,
+        AzureCosmosdbConsistencyLevelIncubating.eventual.value,
+        'Eventual',
+      );
+      expect(
+        AzureCosmosdbConsistencyLevelIncubating.consistentPrefix.value,
         'ConsistentPrefix',
       );
     });
   });
   group('browser', () {
     test('attribute keys', () {
-      expect(Browser.values.length, 11);
-      expect(Browser.browserBrands.key, 'browser.brands');
-      expect(Browser.browserDocumentUrlFull.key, 'browser.document.url.full');
-      expect(Browser.browserLanguage.key, 'browser.language');
-      expect(Browser.browserMobile.key, 'browser.mobile');
-      expect(Browser.browserPlatform.key, 'browser.platform');
-      expect(Browser.browserWebVitalDelta.key, 'browser.web_vital.delta');
-      expect(Browser.browserWebVitalId.key, 'browser.web_vital.id');
-      expect(Browser.browserWebVitalName.key, 'browser.web_vital.name');
+      expect(BrowserIncubating.values.length, 11);
+      expect(BrowserIncubating.browserBrands.key, 'browser.brands');
       expect(
-        Browser.browserWebVitalNavigationType.key,
+        BrowserIncubating.browserDocumentUrlFull.key,
+        'browser.document.url.full',
+      );
+      expect(BrowserIncubating.browserLanguage.key, 'browser.language');
+      expect(BrowserIncubating.browserMobile.key, 'browser.mobile');
+      expect(BrowserIncubating.browserPlatform.key, 'browser.platform');
+      expect(
+        BrowserIncubating.browserWebVitalDelta.key,
+        'browser.web_vital.delta',
+      );
+      expect(BrowserIncubating.browserWebVitalId.key, 'browser.web_vital.id');
+      expect(
+        BrowserIncubating.browserWebVitalName.key,
+        'browser.web_vital.name',
+      );
+      expect(
+        BrowserIncubating.browserWebVitalNavigationType.key,
         'browser.web_vital.navigation_type',
       );
-      expect(Browser.browserWebVitalRating.key, 'browser.web_vital.rating');
-      expect(Browser.browserWebVitalValue.key, 'browser.web_vital.value');
+      expect(
+        BrowserIncubating.browserWebVitalRating.key,
+        'browser.web_vital.rating',
+      );
+      expect(
+        BrowserIncubating.browserWebVitalValue.key,
+        'browser.web_vital.value',
+      );
     });
     test('browser.web_vital.name values', () {
-      expect(BrowserWebVitalName.values.length, 6);
-      expect(BrowserWebVitalName.cls.value, 'cls');
-      expect(BrowserWebVitalName.lcp.value, 'lcp');
-      expect(BrowserWebVitalName.fcp.value, 'fcp');
-      expect(BrowserWebVitalName.inp.value, 'inp');
-      expect(BrowserWebVitalName.ttfb.value, 'ttfb');
-      expect(BrowserWebVitalName.fid.value, 'fid');
+      expect(BrowserWebVitalNameIncubating.values.length, 6);
+      expect(BrowserWebVitalNameIncubating.cls.value, 'cls');
+      expect(BrowserWebVitalNameIncubating.lcp.value, 'lcp');
+      expect(BrowserWebVitalNameIncubating.fcp.value, 'fcp');
+      expect(BrowserWebVitalNameIncubating.inp.value, 'inp');
+      expect(BrowserWebVitalNameIncubating.ttfb.value, 'ttfb');
+      expect(BrowserWebVitalNameIncubating.fid.value, 'fid');
     });
     test('browser.web_vital.navigation_type values', () {
-      expect(BrowserWebVitalNavigationType.values.length, 6);
-      expect(BrowserWebVitalNavigationType.navigate.value, 'navigate');
-      expect(BrowserWebVitalNavigationType.reload.value, 'reload');
-      expect(BrowserWebVitalNavigationType.backForward.value, 'back-forward');
+      expect(BrowserWebVitalNavigationTypeIncubating.values.length, 6);
       expect(
-        BrowserWebVitalNavigationType.backForwardCache.value,
+        BrowserWebVitalNavigationTypeIncubating.navigate.value,
+        'navigate',
+      );
+      expect(BrowserWebVitalNavigationTypeIncubating.reload.value, 'reload');
+      expect(
+        BrowserWebVitalNavigationTypeIncubating.backForward.value,
+        'back-forward',
+      );
+      expect(
+        BrowserWebVitalNavigationTypeIncubating.backForwardCache.value,
         'back-forward-cache',
       );
-      expect(BrowserWebVitalNavigationType.prerender.value, 'prerender');
-      expect(BrowserWebVitalNavigationType.restore.value, 'restore');
+      expect(
+        BrowserWebVitalNavigationTypeIncubating.prerender.value,
+        'prerender',
+      );
+      expect(BrowserWebVitalNavigationTypeIncubating.restore.value, 'restore');
     });
     test('browser.web_vital.rating values', () {
-      expect(BrowserWebVitalRating.values.length, 3);
-      expect(BrowserWebVitalRating.good.value, 'good');
-      expect(BrowserWebVitalRating.needsImprovement.value, 'needs-improvement');
-      expect(BrowserWebVitalRating.poor.value, 'poor');
+      expect(BrowserWebVitalRatingIncubating.values.length, 3);
+      expect(BrowserWebVitalRatingIncubating.good.value, 'good');
+      expect(
+        BrowserWebVitalRatingIncubating.needsImprovement.value,
+        'needs-improvement',
+      );
+      expect(BrowserWebVitalRatingIncubating.poor.value, 'poor');
     });
   });
   group('cassandra', () {
     test('attribute keys', () {
-      expect(Cassandra.values.length, 6);
+      expect(CassandraIncubating.values.length, 6);
       expect(
-        Cassandra.cassandraConsistencyLevel.key,
+        CassandraIncubating.cassandraConsistencyLevel.key,
         'cassandra.consistency.level',
       );
-      expect(Cassandra.cassandraCoordinatorDc.key, 'cassandra.coordinator.dc');
-      expect(Cassandra.cassandraCoordinatorId.key, 'cassandra.coordinator.id');
-      expect(Cassandra.cassandraPageSize.key, 'cassandra.page.size');
       expect(
-        Cassandra.cassandraQueryIdempotent.key,
+        CassandraIncubating.cassandraCoordinatorDc.key,
+        'cassandra.coordinator.dc',
+      );
+      expect(
+        CassandraIncubating.cassandraCoordinatorId.key,
+        'cassandra.coordinator.id',
+      );
+      expect(CassandraIncubating.cassandraPageSize.key, 'cassandra.page.size');
+      expect(
+        CassandraIncubating.cassandraQueryIdempotent.key,
         'cassandra.query.idempotent',
       );
       expect(
-        Cassandra.cassandraSpeculativeExecutionCount.key,
+        CassandraIncubating.cassandraSpeculativeExecutionCount.key,
         'cassandra.speculative_execution.count',
       );
     });
     test('cassandra.consistency.level values', () {
-      expect(CassandraConsistencyLevel.values.length, 11);
-      expect(CassandraConsistencyLevel.all.value, 'all');
-      expect(CassandraConsistencyLevel.eachQuorum.value, 'each_quorum');
-      expect(CassandraConsistencyLevel.quorum.value, 'quorum');
-      expect(CassandraConsistencyLevel.localQuorum.value, 'local_quorum');
-      expect(CassandraConsistencyLevel.one.value, 'one');
-      expect(CassandraConsistencyLevel.two.value, 'two');
-      expect(CassandraConsistencyLevel.three.value, 'three');
-      expect(CassandraConsistencyLevel.localOne.value, 'local_one');
-      expect(CassandraConsistencyLevel.any.value, 'any');
-      expect(CassandraConsistencyLevel.serial.value, 'serial');
-      expect(CassandraConsistencyLevel.localSerial.value, 'local_serial');
+      expect(CassandraConsistencyLevelIncubating.values.length, 11);
+      expect(CassandraConsistencyLevelIncubating.all.value, 'all');
+      expect(
+        CassandraConsistencyLevelIncubating.eachQuorum.value,
+        'each_quorum',
+      );
+      expect(CassandraConsistencyLevelIncubating.quorum.value, 'quorum');
+      expect(
+        CassandraConsistencyLevelIncubating.localQuorum.value,
+        'local_quorum',
+      );
+      expect(CassandraConsistencyLevelIncubating.one.value, 'one');
+      expect(CassandraConsistencyLevelIncubating.two.value, 'two');
+      expect(CassandraConsistencyLevelIncubating.three.value, 'three');
+      expect(CassandraConsistencyLevelIncubating.localOne.value, 'local_one');
+      expect(CassandraConsistencyLevelIncubating.any.value, 'any');
+      expect(CassandraConsistencyLevelIncubating.serial.value, 'serial');
+      expect(
+        CassandraConsistencyLevelIncubating.localSerial.value,
+        'local_serial',
+      );
     });
   });
   group('cicd', () {
     test('attribute keys', () {
-      expect(Cicd.values.length, 16);
-      expect(Cicd.cicdPipelineActionName.key, 'cicd.pipeline.action.name');
-      expect(Cicd.cicdPipelineName.key, 'cicd.pipeline.name');
-      expect(Cicd.cicdPipelineResult.key, 'cicd.pipeline.result');
-      expect(Cicd.cicdPipelineRunId.key, 'cicd.pipeline.run.id');
-      expect(Cicd.cicdPipelineRunState.key, 'cicd.pipeline.run.state');
-      expect(Cicd.cicdPipelineRunUrlFull.key, 'cicd.pipeline.run.url.full');
-      expect(Cicd.cicdPipelineTaskName.key, 'cicd.pipeline.task.name');
-      expect(Cicd.cicdPipelineTaskRunId.key, 'cicd.pipeline.task.run.id');
+      expect(CicdIncubating.values.length, 16);
       expect(
-        Cicd.cicdPipelineTaskRunResult.key,
+        CicdIncubating.cicdPipelineActionName.key,
+        'cicd.pipeline.action.name',
+      );
+      expect(CicdIncubating.cicdPipelineName.key, 'cicd.pipeline.name');
+      expect(CicdIncubating.cicdPipelineResult.key, 'cicd.pipeline.result');
+      expect(CicdIncubating.cicdPipelineRunId.key, 'cicd.pipeline.run.id');
+      expect(
+        CicdIncubating.cicdPipelineRunState.key,
+        'cicd.pipeline.run.state',
+      );
+      expect(
+        CicdIncubating.cicdPipelineRunUrlFull.key,
+        'cicd.pipeline.run.url.full',
+      );
+      expect(
+        CicdIncubating.cicdPipelineTaskName.key,
+        'cicd.pipeline.task.name',
+      );
+      expect(
+        CicdIncubating.cicdPipelineTaskRunId.key,
+        'cicd.pipeline.task.run.id',
+      );
+      expect(
+        CicdIncubating.cicdPipelineTaskRunResult.key,
         'cicd.pipeline.task.run.result',
       );
       expect(
-        Cicd.cicdPipelineTaskRunUrlFull.key,
+        CicdIncubating.cicdPipelineTaskRunUrlFull.key,
         'cicd.pipeline.task.run.url.full',
       );
-      expect(Cicd.cicdPipelineTaskType.key, 'cicd.pipeline.task.type');
-      expect(Cicd.cicdSystemComponent.key, 'cicd.system.component');
-      expect(Cicd.cicdWorkerId.key, 'cicd.worker.id');
-      expect(Cicd.cicdWorkerName.key, 'cicd.worker.name');
-      expect(Cicd.cicdWorkerState.key, 'cicd.worker.state');
-      expect(Cicd.cicdWorkerUrlFull.key, 'cicd.worker.url.full');
+      expect(
+        CicdIncubating.cicdPipelineTaskType.key,
+        'cicd.pipeline.task.type',
+      );
+      expect(CicdIncubating.cicdSystemComponent.key, 'cicd.system.component');
+      expect(CicdIncubating.cicdWorkerId.key, 'cicd.worker.id');
+      expect(CicdIncubating.cicdWorkerName.key, 'cicd.worker.name');
+      expect(CicdIncubating.cicdWorkerState.key, 'cicd.worker.state');
+      expect(CicdIncubating.cicdWorkerUrlFull.key, 'cicd.worker.url.full');
     });
     test('cicd.pipeline.action.name values', () {
-      expect(CicdPipelineActionName.values.length, 3);
-      expect(CicdPipelineActionName.build.value, 'BUILD');
-      expect(CicdPipelineActionName.run.value, 'RUN');
-      expect(CicdPipelineActionName.sync.value, 'SYNC');
+      expect(CicdPipelineActionNameIncubating.values.length, 3);
+      expect(CicdPipelineActionNameIncubating.build.value, 'BUILD');
+      expect(CicdPipelineActionNameIncubating.run.value, 'RUN');
+      expect(CicdPipelineActionNameIncubating.sync.value, 'SYNC');
     });
     test('cicd.pipeline.result values', () {
-      expect(CicdPipelineResult.values.length, 6);
-      expect(CicdPipelineResult.success.value, 'success');
-      expect(CicdPipelineResult.failure.value, 'failure');
-      expect(CicdPipelineResult.error.value, 'error');
-      expect(CicdPipelineResult.timeout.value, 'timeout');
-      expect(CicdPipelineResult.cancellation.value, 'cancellation');
-      expect(CicdPipelineResult.skip.value, 'skip');
+      expect(CicdPipelineResultIncubating.values.length, 6);
+      expect(CicdPipelineResultIncubating.success.value, 'success');
+      expect(CicdPipelineResultIncubating.failure.value, 'failure');
+      expect(CicdPipelineResultIncubating.error.value, 'error');
+      expect(CicdPipelineResultIncubating.timeout.value, 'timeout');
+      expect(CicdPipelineResultIncubating.cancellation.value, 'cancellation');
+      expect(CicdPipelineResultIncubating.skip.value, 'skip');
     });
     test('cicd.pipeline.run.state values', () {
-      expect(CicdPipelineRunState.values.length, 3);
-      expect(CicdPipelineRunState.pending.value, 'pending');
-      expect(CicdPipelineRunState.executing.value, 'executing');
-      expect(CicdPipelineRunState.finalizing.value, 'finalizing');
+      expect(CicdPipelineRunStateIncubating.values.length, 3);
+      expect(CicdPipelineRunStateIncubating.pending.value, 'pending');
+      expect(CicdPipelineRunStateIncubating.executing.value, 'executing');
+      expect(CicdPipelineRunStateIncubating.finalizing.value, 'finalizing');
     });
     test('cicd.pipeline.task.run.result values', () {
-      expect(CicdPipelineTaskRunResult.values.length, 6);
-      expect(CicdPipelineTaskRunResult.success.value, 'success');
-      expect(CicdPipelineTaskRunResult.failure.value, 'failure');
-      expect(CicdPipelineTaskRunResult.error.value, 'error');
-      expect(CicdPipelineTaskRunResult.timeout.value, 'timeout');
-      expect(CicdPipelineTaskRunResult.cancellation.value, 'cancellation');
-      expect(CicdPipelineTaskRunResult.skip.value, 'skip');
+      expect(CicdPipelineTaskRunResultIncubating.values.length, 6);
+      expect(CicdPipelineTaskRunResultIncubating.success.value, 'success');
+      expect(CicdPipelineTaskRunResultIncubating.failure.value, 'failure');
+      expect(CicdPipelineTaskRunResultIncubating.error.value, 'error');
+      expect(CicdPipelineTaskRunResultIncubating.timeout.value, 'timeout');
+      expect(
+        CicdPipelineTaskRunResultIncubating.cancellation.value,
+        'cancellation',
+      );
+      expect(CicdPipelineTaskRunResultIncubating.skip.value, 'skip');
     });
     test('cicd.pipeline.task.type values', () {
-      expect(CicdPipelineTaskType.values.length, 3);
-      expect(CicdPipelineTaskType.build.value, 'build');
-      expect(CicdPipelineTaskType.test.value, 'test');
-      expect(CicdPipelineTaskType.deploy.value, 'deploy');
+      expect(CicdPipelineTaskTypeIncubating.values.length, 3);
+      expect(CicdPipelineTaskTypeIncubating.build.value, 'build');
+      expect(CicdPipelineTaskTypeIncubating.test.value, 'test');
+      expect(CicdPipelineTaskTypeIncubating.deploy.value, 'deploy');
     });
     test('cicd.worker.state values', () {
-      expect(CicdWorkerState.values.length, 3);
-      expect(CicdWorkerState.available.value, 'available');
-      expect(CicdWorkerState.busy.value, 'busy');
-      expect(CicdWorkerState.offline.value, 'offline');
+      expect(CicdWorkerStateIncubating.values.length, 3);
+      expect(CicdWorkerStateIncubating.available.value, 'available');
+      expect(CicdWorkerStateIncubating.busy.value, 'busy');
+      expect(CicdWorkerStateIncubating.offline.value, 'offline');
     });
   });
   group('client', () {
     test('attribute keys', () {
-      expect(Client.values.length, 2);
-      expect(Client.clientAddress.key, 'client.address');
-      expect(Client.clientPort.key, 'client.port');
+      expect(ClientIncubating.values.length, 2);
+      expect(ClientIncubating.clientAddress.key, 'client.address');
+      expect(ClientIncubating.clientPort.key, 'client.port');
     });
   });
   group('cloud', () {
     test('attribute keys', () {
-      expect(Cloud.values.length, 6);
-      expect(Cloud.cloudAccountId.key, 'cloud.account.id');
-      expect(Cloud.cloudAvailabilityZone.key, 'cloud.availability_zone');
-      expect(Cloud.cloudPlatform.key, 'cloud.platform');
-      expect(Cloud.cloudProvider.key, 'cloud.provider');
-      expect(Cloud.cloudRegion.key, 'cloud.region');
-      expect(Cloud.cloudResourceId.key, 'cloud.resource_id');
+      expect(CloudIncubating.values.length, 6);
+      expect(CloudIncubating.cloudAccountId.key, 'cloud.account.id');
+      expect(
+        CloudIncubating.cloudAvailabilityZone.key,
+        'cloud.availability_zone',
+      );
+      expect(CloudIncubating.cloudPlatform.key, 'cloud.platform');
+      expect(CloudIncubating.cloudProvider.key, 'cloud.provider');
+      expect(CloudIncubating.cloudRegion.key, 'cloud.region');
+      expect(CloudIncubating.cloudResourceId.key, 'cloud.resource_id');
     });
     test('cloud.platform values', () {
-      expect(CloudPlatform.values.length, 35);
-      expect(CloudPlatform.akamaiCloudCompute.value, 'akamai_cloud.compute');
-      expect(CloudPlatform.alibabaCloudEcs.value, 'alibaba_cloud_ecs');
-      expect(CloudPlatform.alibabaCloudFc.value, 'alibaba_cloud_fc');
+      expect(CloudPlatformIncubating.values.length, 35);
       expect(
-        CloudPlatform.alibabaCloudOpenshift.value,
+        CloudPlatformIncubating.akamaiCloudCompute.value,
+        'akamai_cloud.compute',
+      );
+      expect(
+        CloudPlatformIncubating.alibabaCloudEcs.value,
+        'alibaba_cloud_ecs',
+      );
+      expect(CloudPlatformIncubating.alibabaCloudFc.value, 'alibaba_cloud_fc');
+      expect(
+        CloudPlatformIncubating.alibabaCloudOpenshift.value,
         'alibaba_cloud_openshift',
       );
-      expect(CloudPlatform.awsEc2.value, 'aws_ec2');
-      expect(CloudPlatform.awsEcs.value, 'aws_ecs');
-      expect(CloudPlatform.awsEks.value, 'aws_eks');
-      expect(CloudPlatform.awsLambda.value, 'aws_lambda');
-      expect(CloudPlatform.awsElasticBeanstalk.value, 'aws_elastic_beanstalk');
-      expect(CloudPlatform.awsAppRunner.value, 'aws_app_runner');
-      expect(CloudPlatform.awsOpenshift.value, 'aws_openshift');
-      expect(CloudPlatform.azureVm.value, 'azure.vm');
-      expect(CloudPlatform.azureContainerApps.value, 'azure.container_apps');
+      expect(CloudPlatformIncubating.awsEc2.value, 'aws_ec2');
+      expect(CloudPlatformIncubating.awsEcs.value, 'aws_ecs');
+      expect(CloudPlatformIncubating.awsEks.value, 'aws_eks');
+      expect(CloudPlatformIncubating.awsLambda.value, 'aws_lambda');
       expect(
-        CloudPlatform.azureContainerInstances.value,
+        CloudPlatformIncubating.awsElasticBeanstalk.value,
+        'aws_elastic_beanstalk',
+      );
+      expect(CloudPlatformIncubating.awsAppRunner.value, 'aws_app_runner');
+      expect(CloudPlatformIncubating.awsOpenshift.value, 'aws_openshift');
+      expect(CloudPlatformIncubating.azureVm.value, 'azure.vm');
+      expect(
+        CloudPlatformIncubating.azureContainerApps.value,
+        'azure.container_apps',
+      );
+      expect(
+        CloudPlatformIncubating.azureContainerInstances.value,
         'azure.container_instances',
       );
-      expect(CloudPlatform.azureAks.value, 'azure.aks');
-      expect(CloudPlatform.azureFunctions.value, 'azure.functions');
-      expect(CloudPlatform.azureAppService.value, 'azure.app_service');
-      expect(CloudPlatform.azureOpenshift.value, 'azure.openshift');
-      expect(CloudPlatform.gcpAgentEngine.value, 'gcp.agent_engine');
+      expect(CloudPlatformIncubating.azureAks.value, 'azure.aks');
+      expect(CloudPlatformIncubating.azureFunctions.value, 'azure.functions');
       expect(
-        CloudPlatform.gcpBareMetalSolution.value,
+        CloudPlatformIncubating.azureAppService.value,
+        'azure.app_service',
+      );
+      expect(CloudPlatformIncubating.azureOpenshift.value, 'azure.openshift');
+      expect(CloudPlatformIncubating.gcpAgentEngine.value, 'gcp.agent_engine');
+      expect(
+        CloudPlatformIncubating.gcpBareMetalSolution.value,
         'gcp_bare_metal_solution',
       );
-      expect(CloudPlatform.gcpComputeEngine.value, 'gcp_compute_engine');
-      expect(CloudPlatform.gcpCloudRun.value, 'gcp_cloud_run');
-      expect(CloudPlatform.gcpKubernetesEngine.value, 'gcp_kubernetes_engine');
-      expect(CloudPlatform.gcpCloudFunctions.value, 'gcp_cloud_functions');
-      expect(CloudPlatform.gcpAppEngine.value, 'gcp_app_engine');
-      expect(CloudPlatform.gcpOpenshift.value, 'gcp_openshift');
-      expect(CloudPlatform.hetznerCloudServer.value, 'hetzner.cloud_server');
-      expect(CloudPlatform.ibmCloudOpenshift.value, 'ibm_cloud_openshift');
-      expect(CloudPlatform.oracleCloudCompute.value, 'oracle_cloud_compute');
-      expect(CloudPlatform.oracleCloudOke.value, 'oracle_cloud_oke');
       expect(
-        CloudPlatform.scalewayCloudCompute.value,
+        CloudPlatformIncubating.gcpComputeEngine.value,
+        'gcp_compute_engine',
+      );
+      expect(CloudPlatformIncubating.gcpCloudRun.value, 'gcp_cloud_run');
+      expect(
+        CloudPlatformIncubating.gcpKubernetesEngine.value,
+        'gcp_kubernetes_engine',
+      );
+      expect(
+        CloudPlatformIncubating.gcpCloudFunctions.value,
+        'gcp_cloud_functions',
+      );
+      expect(CloudPlatformIncubating.gcpAppEngine.value, 'gcp_app_engine');
+      expect(CloudPlatformIncubating.gcpOpenshift.value, 'gcp_openshift');
+      expect(
+        CloudPlatformIncubating.hetznerCloudServer.value,
+        'hetzner.cloud_server',
+      );
+      expect(
+        CloudPlatformIncubating.ibmCloudOpenshift.value,
+        'ibm_cloud_openshift',
+      );
+      expect(
+        CloudPlatformIncubating.oracleCloudCompute.value,
+        'oracle_cloud_compute',
+      );
+      expect(CloudPlatformIncubating.oracleCloudOke.value, 'oracle_cloud_oke');
+      expect(
+        CloudPlatformIncubating.scalewayCloudCompute.value,
         'scaleway_cloud_compute',
       );
-      expect(CloudPlatform.tencentCloudCvm.value, 'tencent_cloud_cvm');
-      expect(CloudPlatform.tencentCloudEks.value, 'tencent_cloud_eks');
-      expect(CloudPlatform.tencentCloudScf.value, 'tencent_cloud_scf');
-      expect(CloudPlatform.vultrCloudCompute.value, 'vultr.cloud_compute');
+      expect(
+        CloudPlatformIncubating.tencentCloudCvm.value,
+        'tencent_cloud_cvm',
+      );
+      expect(
+        CloudPlatformIncubating.tencentCloudEks.value,
+        'tencent_cloud_eks',
+      );
+      expect(
+        CloudPlatformIncubating.tencentCloudScf.value,
+        'tencent_cloud_scf',
+      );
+      expect(
+        CloudPlatformIncubating.vultrCloudCompute.value,
+        'vultr.cloud_compute',
+      );
     });
     test('cloud.provider values', () {
-      expect(CloudProvider.values.length, 12);
-      expect(CloudProvider.akamaiCloud.value, 'akamai_cloud');
-      expect(CloudProvider.alibabaCloud.value, 'alibaba_cloud');
-      expect(CloudProvider.aws.value, 'aws');
-      expect(CloudProvider.azure.value, 'azure');
-      expect(CloudProvider.gcp.value, 'gcp');
-      expect(CloudProvider.heroku.value, 'heroku');
-      expect(CloudProvider.hetzner.value, 'hetzner');
-      expect(CloudProvider.ibmCloud.value, 'ibm_cloud');
-      expect(CloudProvider.oracleCloud.value, 'oracle_cloud');
-      expect(CloudProvider.scalewayCloud.value, 'scaleway_cloud');
-      expect(CloudProvider.tencentCloud.value, 'tencent_cloud');
-      expect(CloudProvider.vultr.value, 'vultr');
+      expect(CloudProviderIncubating.values.length, 12);
+      expect(CloudProviderIncubating.akamaiCloud.value, 'akamai_cloud');
+      expect(CloudProviderIncubating.alibabaCloud.value, 'alibaba_cloud');
+      expect(CloudProviderIncubating.aws.value, 'aws');
+      expect(CloudProviderIncubating.azure.value, 'azure');
+      expect(CloudProviderIncubating.gcp.value, 'gcp');
+      expect(CloudProviderIncubating.heroku.value, 'heroku');
+      expect(CloudProviderIncubating.hetzner.value, 'hetzner');
+      expect(CloudProviderIncubating.ibmCloud.value, 'ibm_cloud');
+      expect(CloudProviderIncubating.oracleCloud.value, 'oracle_cloud');
+      expect(CloudProviderIncubating.scalewayCloud.value, 'scaleway_cloud');
+      expect(CloudProviderIncubating.tencentCloud.value, 'tencent_cloud');
+      expect(CloudProviderIncubating.vultr.value, 'vultr');
     });
   });
   group('cloudevents', () {
     test('attribute keys', () {
-      expect(Cloudevents.values.length, 5);
-      expect(Cloudevents.cloudeventsEventId.key, 'cloudevents.event_id');
+      expect(CloudeventsIncubating.values.length, 5);
       expect(
-        Cloudevents.cloudeventsEventSource.key,
+        CloudeventsIncubating.cloudeventsEventId.key,
+        'cloudevents.event_id',
+      );
+      expect(
+        CloudeventsIncubating.cloudeventsEventSource.key,
         'cloudevents.event_source',
       );
       expect(
-        Cloudevents.cloudeventsEventSpecVersion.key,
+        CloudeventsIncubating.cloudeventsEventSpecVersion.key,
         'cloudevents.event_spec_version',
       );
       expect(
-        Cloudevents.cloudeventsEventSubject.key,
+        CloudeventsIncubating.cloudeventsEventSubject.key,
         'cloudevents.event_subject',
       );
-      expect(Cloudevents.cloudeventsEventType.key, 'cloudevents.event_type');
+      expect(
+        CloudeventsIncubating.cloudeventsEventType.key,
+        'cloudevents.event_type',
+      );
     });
   });
   group('cloudfoundry', () {
     test('attribute keys', () {
-      expect(Cloudfoundry.values.length, 11);
-      expect(Cloudfoundry.cloudfoundryAppId.key, 'cloudfoundry.app.id');
+      expect(CloudfoundryIncubating.values.length, 11);
       expect(
-        Cloudfoundry.cloudfoundryAppInstanceId.key,
+        CloudfoundryIncubating.cloudfoundryAppId.key,
+        'cloudfoundry.app.id',
+      );
+      expect(
+        CloudfoundryIncubating.cloudfoundryAppInstanceId.key,
         'cloudfoundry.app.instance.id',
       );
-      expect(Cloudfoundry.cloudfoundryAppName.key, 'cloudfoundry.app.name');
-      expect(Cloudfoundry.cloudfoundryOrgId.key, 'cloudfoundry.org.id');
-      expect(Cloudfoundry.cloudfoundryOrgName.key, 'cloudfoundry.org.name');
-      expect(Cloudfoundry.cloudfoundryProcessId.key, 'cloudfoundry.process.id');
       expect(
-        Cloudfoundry.cloudfoundryProcessType.key,
+        CloudfoundryIncubating.cloudfoundryAppName.key,
+        'cloudfoundry.app.name',
+      );
+      expect(
+        CloudfoundryIncubating.cloudfoundryOrgId.key,
+        'cloudfoundry.org.id',
+      );
+      expect(
+        CloudfoundryIncubating.cloudfoundryOrgName.key,
+        'cloudfoundry.org.name',
+      );
+      expect(
+        CloudfoundryIncubating.cloudfoundryProcessId.key,
+        'cloudfoundry.process.id',
+      );
+      expect(
+        CloudfoundryIncubating.cloudfoundryProcessType.key,
         'cloudfoundry.process.type',
       );
-      expect(Cloudfoundry.cloudfoundrySpaceId.key, 'cloudfoundry.space.id');
-      expect(Cloudfoundry.cloudfoundrySpaceName.key, 'cloudfoundry.space.name');
-      expect(Cloudfoundry.cloudfoundrySystemId.key, 'cloudfoundry.system.id');
       expect(
-        Cloudfoundry.cloudfoundrySystemInstanceId.key,
+        CloudfoundryIncubating.cloudfoundrySpaceId.key,
+        'cloudfoundry.space.id',
+      );
+      expect(
+        CloudfoundryIncubating.cloudfoundrySpaceName.key,
+        'cloudfoundry.space.name',
+      );
+      expect(
+        CloudfoundryIncubating.cloudfoundrySystemId.key,
+        'cloudfoundry.system.id',
+      );
+      expect(
+        CloudfoundryIncubating.cloudfoundrySystemInstanceId.key,
         'cloudfoundry.system.instance.id',
       );
     });
   });
   group('code', () {
     test('attribute keys', () {
-      expect(Code.values.length, 10);
-      expect(Code.codeColumn.key, 'code.column');
-      expect(Code.codeColumnNumber.key, 'code.column.number');
-      expect(Code.codeFilePath.key, 'code.file.path');
-      expect(Code.codeFilepath.key, 'code.filepath');
-      expect(Code.codeFunction.key, 'code.function');
-      expect(Code.codeFunctionName.key, 'code.function.name');
-      expect(Code.codeLineNumber.key, 'code.line.number');
-      expect(Code.codeLineno.key, 'code.lineno');
-      expect(Code.codeNamespace.key, 'code.namespace');
-      expect(Code.codeStacktrace.key, 'code.stacktrace');
+      expect(CodeIncubating.values.length, 10);
+      expect(CodeIncubating.codeColumn.key, 'code.column');
+      expect(CodeIncubating.codeColumnNumber.key, 'code.column.number');
+      expect(CodeIncubating.codeFilePath.key, 'code.file.path');
+      expect(CodeIncubating.codeFilepath.key, 'code.filepath');
+      expect(CodeIncubating.codeFunction.key, 'code.function');
+      expect(CodeIncubating.codeFunctionName.key, 'code.function.name');
+      expect(CodeIncubating.codeLineNumber.key, 'code.line.number');
+      expect(CodeIncubating.codeLineno.key, 'code.lineno');
+      expect(CodeIncubating.codeNamespace.key, 'code.namespace');
+      expect(CodeIncubating.codeStacktrace.key, 'code.stacktrace');
     });
   });
   group('container', () {
     test('attribute keys', () {
-      expect(ContainerAttributes.values.length, 18);
-      expect(ContainerAttributes.containerCommand.key, 'container.command');
+      expect(ContainerAttributesIncubating.values.length, 18);
       expect(
-        ContainerAttributes.containerCommandArgs.key,
+        ContainerAttributesIncubating.containerCommand.key,
+        'container.command',
+      );
+      expect(
+        ContainerAttributesIncubating.containerCommandArgs.key,
         'container.command_args',
       );
       expect(
-        ContainerAttributes.containerCommandLine.key,
+        ContainerAttributesIncubating.containerCommandLine.key,
         'container.command_line',
       );
-      expect(ContainerAttributes.containerCpuState.key, 'container.cpu.state');
       expect(
-        ContainerAttributes.containerCsiPluginName.key,
+        ContainerAttributesIncubating.containerCpuState.key,
+        'container.cpu.state',
+      );
+      expect(
+        ContainerAttributesIncubating.containerCsiPluginName.key,
         'container.csi.plugin.name',
       );
       expect(
-        ContainerAttributes.containerCsiVolumeId.key,
+        ContainerAttributesIncubating.containerCsiVolumeId.key,
         'container.csi.volume.id',
       );
-      expect(ContainerAttributes.containerId.key, 'container.id');
-      expect(ContainerAttributes.containerImageId.key, 'container.image.id');
+      expect(ContainerAttributesIncubating.containerId.key, 'container.id');
       expect(
-        ContainerAttributes.containerImageName.key,
+        ContainerAttributesIncubating.containerImageId.key,
+        'container.image.id',
+      );
+      expect(
+        ContainerAttributesIncubating.containerImageName.key,
         'container.image.name',
       );
       expect(
-        ContainerAttributes.containerImageRepoDigests.key,
+        ContainerAttributesIncubating.containerImageRepoDigests.key,
         'container.image.repo_digests',
       );
       expect(
-        ContainerAttributes.containerImageTags.key,
+        ContainerAttributesIncubating.containerImageTags.key,
         'container.image.tags',
       );
-      expect(ContainerAttributes.containerLabel.key, 'container.label');
-      expect(ContainerAttributes.containerLabels.key, 'container.labels');
-      expect(ContainerAttributes.containerName.key, 'container.name');
-      expect(ContainerAttributes.containerRuntime.key, 'container.runtime');
       expect(
-        ContainerAttributes.containerRuntimeDescription.key,
+        ContainerAttributesIncubating.containerLabel.key,
+        'container.label',
+      );
+      expect(
+        ContainerAttributesIncubating.containerLabels.key,
+        'container.labels',
+      );
+      expect(ContainerAttributesIncubating.containerName.key, 'container.name');
+      expect(
+        ContainerAttributesIncubating.containerRuntime.key,
+        'container.runtime',
+      );
+      expect(
+        ContainerAttributesIncubating.containerRuntimeDescription.key,
         'container.runtime.description',
       );
       expect(
-        ContainerAttributes.containerRuntimeName.key,
+        ContainerAttributesIncubating.containerRuntimeName.key,
         'container.runtime.name',
       );
       expect(
-        ContainerAttributes.containerRuntimeVersion.key,
+        ContainerAttributesIncubating.containerRuntimeVersion.key,
         'container.runtime.version',
       );
     });
     test('container.cpu.state values', () {
-      expect(ContainerCpuState.values.length, 3);
-      expect(ContainerCpuState.user.value, 'user');
-      expect(ContainerCpuState.system.value, 'system');
-      expect(ContainerCpuState.kernel.value, 'kernel');
+      expect(ContainerCpuStateIncubating.values.length, 3);
+      expect(ContainerCpuStateIncubating.user.value, 'user');
+      expect(ContainerCpuStateIncubating.system.value, 'system');
+      expect(ContainerCpuStateIncubating.kernel.value, 'kernel');
     });
   });
   group('cpu', () {
     test('attribute keys', () {
-      expect(Cpu.values.length, 2);
-      expect(Cpu.cpuLogicalNumber.key, 'cpu.logical_number');
-      expect(Cpu.cpuMode.key, 'cpu.mode');
+      expect(CpuIncubating.values.length, 2);
+      expect(CpuIncubating.cpuLogicalNumber.key, 'cpu.logical_number');
+      expect(CpuIncubating.cpuMode.key, 'cpu.mode');
     });
     test('cpu.mode values', () {
-      expect(CpuMode.values.length, 8);
-      expect(CpuMode.user.value, 'user');
-      expect(CpuMode.system.value, 'system');
-      expect(CpuMode.nice.value, 'nice');
-      expect(CpuMode.idle.value, 'idle');
-      expect(CpuMode.iowait.value, 'iowait');
-      expect(CpuMode.interrupt.value, 'interrupt');
-      expect(CpuMode.steal.value, 'steal');
-      expect(CpuMode.kernel.value, 'kernel');
+      expect(CpuModeIncubating.values.length, 8);
+      expect(CpuModeIncubating.user.value, 'user');
+      expect(CpuModeIncubating.system.value, 'system');
+      expect(CpuModeIncubating.nice.value, 'nice');
+      expect(CpuModeIncubating.idle.value, 'idle');
+      expect(CpuModeIncubating.iowait.value, 'iowait');
+      expect(CpuModeIncubating.interrupt.value, 'interrupt');
+      expect(CpuModeIncubating.steal.value, 'steal');
+      expect(CpuModeIncubating.kernel.value, 'kernel');
     });
   });
   group('cpython', () {
     test('attribute keys', () {
-      expect(Cpython.values.length, 1);
-      expect(Cpython.cpythonGcGeneration.key, 'cpython.gc.generation');
+      expect(CpythonIncubating.values.length, 1);
+      expect(
+        CpythonIncubating.cpythonGcGeneration.key,
+        'cpython.gc.generation',
+      );
     });
     test('cpython.gc.generation values', () {
-      expect(CpythonGcGeneration.values.length, 3);
-      expect(CpythonGcGeneration.generation0.value, 0);
-      expect(CpythonGcGeneration.generation1.value, 1);
-      expect(CpythonGcGeneration.generation2.value, 2);
+      expect(CpythonGcGenerationIncubating.values.length, 3);
+      expect(CpythonGcGenerationIncubating.generation0.value, 0);
+      expect(CpythonGcGenerationIncubating.generation1.value, 1);
+      expect(CpythonGcGenerationIncubating.generation2.value, 2);
     });
   });
   group('db', () {
     test('attribute keys', () {
-      expect(Db.values.length, 48);
+      expect(DbIncubating.values.length, 48);
       expect(
-        Db.dbCassandraConsistencyLevel.key,
+        DbIncubating.dbCassandraConsistencyLevel.key,
         'db.cassandra.consistency_level',
       );
-      expect(Db.dbCassandraCoordinatorDc.key, 'db.cassandra.coordinator.dc');
-      expect(Db.dbCassandraCoordinatorId.key, 'db.cassandra.coordinator.id');
-      expect(Db.dbCassandraIdempotence.key, 'db.cassandra.idempotence');
-      expect(Db.dbCassandraPageSize.key, 'db.cassandra.page_size');
       expect(
-        Db.dbCassandraSpeculativeExecutionCount.key,
+        DbIncubating.dbCassandraCoordinatorDc.key,
+        'db.cassandra.coordinator.dc',
+      );
+      expect(
+        DbIncubating.dbCassandraCoordinatorId.key,
+        'db.cassandra.coordinator.id',
+      );
+      expect(
+        DbIncubating.dbCassandraIdempotence.key,
+        'db.cassandra.idempotence',
+      );
+      expect(DbIncubating.dbCassandraPageSize.key, 'db.cassandra.page_size');
+      expect(
+        DbIncubating.dbCassandraSpeculativeExecutionCount.key,
         'db.cassandra.speculative_execution_count',
       );
-      expect(Db.dbCassandraTable.key, 'db.cassandra.table');
+      expect(DbIncubating.dbCassandraTable.key, 'db.cassandra.table');
       expect(
-        Db.dbClientConnectionPoolName.key,
+        DbIncubating.dbClientConnectionPoolName.key,
         'db.client.connection.pool.name',
       );
-      expect(Db.dbClientConnectionState.key, 'db.client.connection.state');
       expect(
-        Db.dbClientConnectionsPoolName.key,
+        DbIncubating.dbClientConnectionState.key,
+        'db.client.connection.state',
+      );
+      expect(
+        DbIncubating.dbClientConnectionsPoolName.key,
         'db.client.connections.pool.name',
       );
-      expect(Db.dbClientConnectionsState.key, 'db.client.connections.state');
-      expect(Db.dbCollectionName.key, 'db.collection.name');
-      expect(Db.dbConnectionString.key, 'db.connection_string');
-      expect(Db.dbCosmosdbClientId.key, 'db.cosmosdb.client_id');
-      expect(Db.dbCosmosdbConnectionMode.key, 'db.cosmosdb.connection_mode');
       expect(
-        Db.dbCosmosdbConsistencyLevel.key,
+        DbIncubating.dbClientConnectionsState.key,
+        'db.client.connections.state',
+      );
+      expect(DbIncubating.dbCollectionName.key, 'db.collection.name');
+      expect(DbIncubating.dbConnectionString.key, 'db.connection_string');
+      expect(DbIncubating.dbCosmosdbClientId.key, 'db.cosmosdb.client_id');
+      expect(
+        DbIncubating.dbCosmosdbConnectionMode.key,
+        'db.cosmosdb.connection_mode',
+      );
+      expect(
+        DbIncubating.dbCosmosdbConsistencyLevel.key,
         'db.cosmosdb.consistency_level',
       );
-      expect(Db.dbCosmosdbContainer.key, 'db.cosmosdb.container');
-      expect(Db.dbCosmosdbOperationType.key, 'db.cosmosdb.operation_type');
+      expect(DbIncubating.dbCosmosdbContainer.key, 'db.cosmosdb.container');
       expect(
-        Db.dbCosmosdbRegionsContacted.key,
+        DbIncubating.dbCosmosdbOperationType.key,
+        'db.cosmosdb.operation_type',
+      );
+      expect(
+        DbIncubating.dbCosmosdbRegionsContacted.key,
         'db.cosmosdb.regions_contacted',
       );
-      expect(Db.dbCosmosdbRequestCharge.key, 'db.cosmosdb.request_charge');
       expect(
-        Db.dbCosmosdbRequestContentLength.key,
+        DbIncubating.dbCosmosdbRequestCharge.key,
+        'db.cosmosdb.request_charge',
+      );
+      expect(
+        DbIncubating.dbCosmosdbRequestContentLength.key,
         'db.cosmosdb.request_content_length',
       );
-      expect(Db.dbCosmosdbStatusCode.key, 'db.cosmosdb.status_code');
-      expect(Db.dbCosmosdbSubStatusCode.key, 'db.cosmosdb.sub_status_code');
+      expect(DbIncubating.dbCosmosdbStatusCode.key, 'db.cosmosdb.status_code');
       expect(
-        Db.dbElasticsearchClusterName.key,
+        DbIncubating.dbCosmosdbSubStatusCode.key,
+        'db.cosmosdb.sub_status_code',
+      );
+      expect(
+        DbIncubating.dbElasticsearchClusterName.key,
         'db.elasticsearch.cluster.name',
       );
-      expect(Db.dbElasticsearchNodeName.key, 'db.elasticsearch.node.name');
-      expect(Db.dbElasticsearchPathParts.key, 'db.elasticsearch.path_parts');
-      expect(Db.dbInstanceId.key, 'db.instance.id');
-      expect(Db.dbJdbcDriverClassname.key, 'db.jdbc.driver_classname');
-      expect(Db.dbMongodbCollection.key, 'db.mongodb.collection');
-      expect(Db.dbMssqlInstanceName.key, 'db.mssql.instance_name');
-      expect(Db.dbName.key, 'db.name');
-      expect(Db.dbNamespace.key, 'db.namespace');
-      expect(Db.dbOperation.key, 'db.operation');
-      expect(Db.dbOperationBatchSize.key, 'db.operation.batch.size');
-      expect(Db.dbOperationName.key, 'db.operation.name');
-      expect(Db.dbOperationParameter.key, 'db.operation.parameter');
-      expect(Db.dbQueryParameter.key, 'db.query.parameter');
-      expect(Db.dbQuerySummary.key, 'db.query.summary');
-      expect(Db.dbQueryText.key, 'db.query.text');
-      expect(Db.dbRedisDatabaseIndex.key, 'db.redis.database_index');
-      expect(Db.dbResponseReturnedRows.key, 'db.response.returned_rows');
-      expect(Db.dbResponseStatusCode.key, 'db.response.status_code');
-      expect(Db.dbSqlTable.key, 'db.sql.table');
-      expect(Db.dbStatement.key, 'db.statement');
-      expect(Db.dbStoredProcedureName.key, 'db.stored_procedure.name');
-      expect(Db.dbSystem.key, 'db.system');
-      expect(Db.dbSystemName.key, 'db.system.name');
-      expect(Db.dbUser.key, 'db.user');
+      expect(
+        DbIncubating.dbElasticsearchNodeName.key,
+        'db.elasticsearch.node.name',
+      );
+      expect(
+        DbIncubating.dbElasticsearchPathParts.key,
+        'db.elasticsearch.path_parts',
+      );
+      expect(DbIncubating.dbInstanceId.key, 'db.instance.id');
+      expect(
+        DbIncubating.dbJdbcDriverClassname.key,
+        'db.jdbc.driver_classname',
+      );
+      expect(DbIncubating.dbMongodbCollection.key, 'db.mongodb.collection');
+      expect(DbIncubating.dbMssqlInstanceName.key, 'db.mssql.instance_name');
+      expect(DbIncubating.dbName.key, 'db.name');
+      expect(DbIncubating.dbNamespace.key, 'db.namespace');
+      expect(DbIncubating.dbOperation.key, 'db.operation');
+      expect(DbIncubating.dbOperationBatchSize.key, 'db.operation.batch.size');
+      expect(DbIncubating.dbOperationName.key, 'db.operation.name');
+      expect(DbIncubating.dbOperationParameter.key, 'db.operation.parameter');
+      expect(DbIncubating.dbQueryParameter.key, 'db.query.parameter');
+      expect(DbIncubating.dbQuerySummary.key, 'db.query.summary');
+      expect(DbIncubating.dbQueryText.key, 'db.query.text');
+      expect(DbIncubating.dbRedisDatabaseIndex.key, 'db.redis.database_index');
+      expect(
+        DbIncubating.dbResponseReturnedRows.key,
+        'db.response.returned_rows',
+      );
+      expect(DbIncubating.dbResponseStatusCode.key, 'db.response.status_code');
+      expect(DbIncubating.dbSqlTable.key, 'db.sql.table');
+      expect(DbIncubating.dbStatement.key, 'db.statement');
+      expect(
+        DbIncubating.dbStoredProcedureName.key,
+        'db.stored_procedure.name',
+      );
+      expect(DbIncubating.dbSystem.key, 'db.system');
+      expect(DbIncubating.dbSystemName.key, 'db.system.name');
+      expect(DbIncubating.dbUser.key, 'db.user');
     });
     test('db.cassandra.consistency_level values', () {
-      expect(DbCassandraConsistencyLevel.values.length, 11);
-      expect(DbCassandraConsistencyLevel.all.value, 'all');
-      expect(DbCassandraConsistencyLevel.eachQuorum.value, 'each_quorum');
-      expect(DbCassandraConsistencyLevel.quorum.value, 'quorum');
-      expect(DbCassandraConsistencyLevel.localQuorum.value, 'local_quorum');
-      expect(DbCassandraConsistencyLevel.one.value, 'one');
-      expect(DbCassandraConsistencyLevel.two.value, 'two');
-      expect(DbCassandraConsistencyLevel.three.value, 'three');
-      expect(DbCassandraConsistencyLevel.localOne.value, 'local_one');
-      expect(DbCassandraConsistencyLevel.any.value, 'any');
-      expect(DbCassandraConsistencyLevel.serial.value, 'serial');
-      expect(DbCassandraConsistencyLevel.localSerial.value, 'local_serial');
+      expect(DbCassandraConsistencyLevelIncubating.values.length, 11);
+      expect(DbCassandraConsistencyLevelIncubating.all.value, 'all');
+      expect(
+        DbCassandraConsistencyLevelIncubating.eachQuorum.value,
+        'each_quorum',
+      );
+      expect(DbCassandraConsistencyLevelIncubating.quorum.value, 'quorum');
+      expect(
+        DbCassandraConsistencyLevelIncubating.localQuorum.value,
+        'local_quorum',
+      );
+      expect(DbCassandraConsistencyLevelIncubating.one.value, 'one');
+      expect(DbCassandraConsistencyLevelIncubating.two.value, 'two');
+      expect(DbCassandraConsistencyLevelIncubating.three.value, 'three');
+      expect(DbCassandraConsistencyLevelIncubating.localOne.value, 'local_one');
+      expect(DbCassandraConsistencyLevelIncubating.any.value, 'any');
+      expect(DbCassandraConsistencyLevelIncubating.serial.value, 'serial');
+      expect(
+        DbCassandraConsistencyLevelIncubating.localSerial.value,
+        'local_serial',
+      );
     });
     test('db.client.connection.state values', () {
-      expect(DbClientConnectionState.values.length, 2);
-      expect(DbClientConnectionState.idle.value, 'idle');
-      expect(DbClientConnectionState.used.value, 'used');
+      expect(DbClientConnectionStateIncubating.values.length, 2);
+      expect(DbClientConnectionStateIncubating.idle.value, 'idle');
+      expect(DbClientConnectionStateIncubating.used.value, 'used');
     });
     test('db.client.connections.state values', () {
-      expect(DbClientConnectionsState.values.length, 2);
-      expect(DbClientConnectionsState.idle.value, 'idle');
-      expect(DbClientConnectionsState.used.value, 'used');
+      expect(DbClientConnectionsStateIncubating.values.length, 2);
+      expect(DbClientConnectionsStateIncubating.idle.value, 'idle');
+      expect(DbClientConnectionsStateIncubating.used.value, 'used');
     });
     test('db.cosmosdb.connection_mode values', () {
-      expect(DbCosmosdbConnectionMode.values.length, 2);
-      expect(DbCosmosdbConnectionMode.gateway.value, 'gateway');
-      expect(DbCosmosdbConnectionMode.direct.value, 'direct');
+      expect(DbCosmosdbConnectionModeIncubating.values.length, 2);
+      expect(DbCosmosdbConnectionModeIncubating.gateway.value, 'gateway');
+      expect(DbCosmosdbConnectionModeIncubating.direct.value, 'direct');
     });
     test('db.cosmosdb.consistency_level values', () {
-      expect(DbCosmosdbConsistencyLevel.values.length, 5);
-      expect(DbCosmosdbConsistencyLevel.strong.value, 'Strong');
+      expect(DbCosmosdbConsistencyLevelIncubating.values.length, 5);
+      expect(DbCosmosdbConsistencyLevelIncubating.strong.value, 'Strong');
       expect(
-        DbCosmosdbConsistencyLevel.boundedStaleness.value,
+        DbCosmosdbConsistencyLevelIncubating.boundedStaleness.value,
         'BoundedStaleness',
       );
-      expect(DbCosmosdbConsistencyLevel.session.value, 'Session');
-      expect(DbCosmosdbConsistencyLevel.eventual.value, 'Eventual');
+      expect(DbCosmosdbConsistencyLevelIncubating.session.value, 'Session');
+      expect(DbCosmosdbConsistencyLevelIncubating.eventual.value, 'Eventual');
       expect(
-        DbCosmosdbConsistencyLevel.consistentPrefix.value,
+        DbCosmosdbConsistencyLevelIncubating.consistentPrefix.value,
         'ConsistentPrefix',
       );
     });
     test('db.cosmosdb.operation_type values', () {
-      expect(DbCosmosdbOperationType.values.length, 15);
-      expect(DbCosmosdbOperationType.batch.value, 'batch');
-      expect(DbCosmosdbOperationType.create.value, 'create');
-      expect(DbCosmosdbOperationType.delete.value, 'delete');
-      expect(DbCosmosdbOperationType.execute.value, 'execute');
+      expect(DbCosmosdbOperationTypeIncubating.values.length, 15);
+      expect(DbCosmosdbOperationTypeIncubating.batch.value, 'batch');
+      expect(DbCosmosdbOperationTypeIncubating.create.value, 'create');
+      expect(DbCosmosdbOperationTypeIncubating.delete.value, 'delete');
+      expect(DbCosmosdbOperationTypeIncubating.execute.value, 'execute');
       expect(
-        DbCosmosdbOperationType.executeJavascript.value,
+        DbCosmosdbOperationTypeIncubating.executeJavascript.value,
         'execute_javascript',
       );
-      expect(DbCosmosdbOperationType.invalid.value, 'invalid');
-      expect(DbCosmosdbOperationType.head.value, 'head');
-      expect(DbCosmosdbOperationType.headFeed.value, 'head_feed');
-      expect(DbCosmosdbOperationType.patch.value, 'patch');
-      expect(DbCosmosdbOperationType.query.value, 'query');
-      expect(DbCosmosdbOperationType.queryPlan.value, 'query_plan');
-      expect(DbCosmosdbOperationType.read.value, 'read');
-      expect(DbCosmosdbOperationType.readFeed.value, 'read_feed');
-      expect(DbCosmosdbOperationType.replace.value, 'replace');
-      expect(DbCosmosdbOperationType.upsert.value, 'upsert');
+      expect(DbCosmosdbOperationTypeIncubating.invalid.value, 'invalid');
+      expect(DbCosmosdbOperationTypeIncubating.head.value, 'head');
+      expect(DbCosmosdbOperationTypeIncubating.headFeed.value, 'head_feed');
+      expect(DbCosmosdbOperationTypeIncubating.patch.value, 'patch');
+      expect(DbCosmosdbOperationTypeIncubating.query.value, 'query');
+      expect(DbCosmosdbOperationTypeIncubating.queryPlan.value, 'query_plan');
+      expect(DbCosmosdbOperationTypeIncubating.read.value, 'read');
+      expect(DbCosmosdbOperationTypeIncubating.readFeed.value, 'read_feed');
+      expect(DbCosmosdbOperationTypeIncubating.replace.value, 'replace');
+      expect(DbCosmosdbOperationTypeIncubating.upsert.value, 'upsert');
     });
     test('db.system values', () {
-      expect(DbSystem.values.length, 54);
-      expect(DbSystem.otherSql.value, 'other_sql');
-      expect(DbSystem.adabas.value, 'adabas');
-      expect(DbSystem.cache.value, 'cache');
-      expect(DbSystem.intersystemsCache.value, 'intersystems_cache');
-      expect(DbSystem.cassandra.value, 'cassandra');
-      expect(DbSystem.clickhouse.value, 'clickhouse');
-      expect(DbSystem.cloudscape.value, 'cloudscape');
-      expect(DbSystem.cockroachdb.value, 'cockroachdb');
-      expect(DbSystem.coldfusion.value, 'coldfusion');
-      expect(DbSystem.cosmosdb.value, 'cosmosdb');
-      expect(DbSystem.couchbase.value, 'couchbase');
-      expect(DbSystem.couchdb.value, 'couchdb');
-      expect(DbSystem.db2.value, 'db2');
-      expect(DbSystem.derby.value, 'derby');
-      expect(DbSystem.dynamodb.value, 'dynamodb');
-      expect(DbSystem.edb.value, 'edb');
-      expect(DbSystem.elasticsearch.value, 'elasticsearch');
-      expect(DbSystem.filemaker.value, 'filemaker');
-      expect(DbSystem.firebird.value, 'firebird');
-      expect(DbSystem.firstsql.value, 'firstsql');
-      expect(DbSystem.geode.value, 'geode');
-      expect(DbSystem.h2.value, 'h2');
-      expect(DbSystem.hanadb.value, 'hanadb');
-      expect(DbSystem.hbase.value, 'hbase');
-      expect(DbSystem.hive.value, 'hive');
-      expect(DbSystem.hsqldb.value, 'hsqldb');
-      expect(DbSystem.influxdb.value, 'influxdb');
-      expect(DbSystem.informix.value, 'informix');
-      expect(DbSystem.ingres.value, 'ingres');
-      expect(DbSystem.instantdb.value, 'instantdb');
-      expect(DbSystem.interbase.value, 'interbase');
-      expect(DbSystem.mariadb.value, 'mariadb');
-      expect(DbSystem.maxdb.value, 'maxdb');
-      expect(DbSystem.memcached.value, 'memcached');
-      expect(DbSystem.mongodb.value, 'mongodb');
-      expect(DbSystem.mssql.value, 'mssql');
-      expect(DbSystem.mssqlcompact.value, 'mssqlcompact');
-      expect(DbSystem.mysql.value, 'mysql');
-      expect(DbSystem.neo4j.value, 'neo4j');
-      expect(DbSystem.netezza.value, 'netezza');
-      expect(DbSystem.opensearch.value, 'opensearch');
-      expect(DbSystem.oracle.value, 'oracle');
-      expect(DbSystem.pervasive.value, 'pervasive');
-      expect(DbSystem.pointbase.value, 'pointbase');
-      expect(DbSystem.postgresql.value, 'postgresql');
-      expect(DbSystem.progress.value, 'progress');
-      expect(DbSystem.redis.value, 'redis');
-      expect(DbSystem.redshift.value, 'redshift');
-      expect(DbSystem.spanner.value, 'spanner');
-      expect(DbSystem.sqlite.value, 'sqlite');
-      expect(DbSystem.sybase.value, 'sybase');
-      expect(DbSystem.teradata.value, 'teradata');
-      expect(DbSystem.trino.value, 'trino');
-      expect(DbSystem.vertica.value, 'vertica');
+      expect(DbSystemIncubating.values.length, 54);
+      expect(DbSystemIncubating.otherSql.value, 'other_sql');
+      expect(DbSystemIncubating.adabas.value, 'adabas');
+      expect(DbSystemIncubating.cache.value, 'cache');
+      expect(DbSystemIncubating.intersystemsCache.value, 'intersystems_cache');
+      expect(DbSystemIncubating.cassandra.value, 'cassandra');
+      expect(DbSystemIncubating.clickhouse.value, 'clickhouse');
+      expect(DbSystemIncubating.cloudscape.value, 'cloudscape');
+      expect(DbSystemIncubating.cockroachdb.value, 'cockroachdb');
+      expect(DbSystemIncubating.coldfusion.value, 'coldfusion');
+      expect(DbSystemIncubating.cosmosdb.value, 'cosmosdb');
+      expect(DbSystemIncubating.couchbase.value, 'couchbase');
+      expect(DbSystemIncubating.couchdb.value, 'couchdb');
+      expect(DbSystemIncubating.db2.value, 'db2');
+      expect(DbSystemIncubating.derby.value, 'derby');
+      expect(DbSystemIncubating.dynamodb.value, 'dynamodb');
+      expect(DbSystemIncubating.edb.value, 'edb');
+      expect(DbSystemIncubating.elasticsearch.value, 'elasticsearch');
+      expect(DbSystemIncubating.filemaker.value, 'filemaker');
+      expect(DbSystemIncubating.firebird.value, 'firebird');
+      expect(DbSystemIncubating.firstsql.value, 'firstsql');
+      expect(DbSystemIncubating.geode.value, 'geode');
+      expect(DbSystemIncubating.h2.value, 'h2');
+      expect(DbSystemIncubating.hanadb.value, 'hanadb');
+      expect(DbSystemIncubating.hbase.value, 'hbase');
+      expect(DbSystemIncubating.hive.value, 'hive');
+      expect(DbSystemIncubating.hsqldb.value, 'hsqldb');
+      expect(DbSystemIncubating.influxdb.value, 'influxdb');
+      expect(DbSystemIncubating.informix.value, 'informix');
+      expect(DbSystemIncubating.ingres.value, 'ingres');
+      expect(DbSystemIncubating.instantdb.value, 'instantdb');
+      expect(DbSystemIncubating.interbase.value, 'interbase');
+      expect(DbSystemIncubating.mariadb.value, 'mariadb');
+      expect(DbSystemIncubating.maxdb.value, 'maxdb');
+      expect(DbSystemIncubating.memcached.value, 'memcached');
+      expect(DbSystemIncubating.mongodb.value, 'mongodb');
+      expect(DbSystemIncubating.mssql.value, 'mssql');
+      expect(DbSystemIncubating.mssqlcompact.value, 'mssqlcompact');
+      expect(DbSystemIncubating.mysql.value, 'mysql');
+      expect(DbSystemIncubating.neo4j.value, 'neo4j');
+      expect(DbSystemIncubating.netezza.value, 'netezza');
+      expect(DbSystemIncubating.opensearch.value, 'opensearch');
+      expect(DbSystemIncubating.oracle.value, 'oracle');
+      expect(DbSystemIncubating.pervasive.value, 'pervasive');
+      expect(DbSystemIncubating.pointbase.value, 'pointbase');
+      expect(DbSystemIncubating.postgresql.value, 'postgresql');
+      expect(DbSystemIncubating.progress.value, 'progress');
+      expect(DbSystemIncubating.redis.value, 'redis');
+      expect(DbSystemIncubating.redshift.value, 'redshift');
+      expect(DbSystemIncubating.spanner.value, 'spanner');
+      expect(DbSystemIncubating.sqlite.value, 'sqlite');
+      expect(DbSystemIncubating.sybase.value, 'sybase');
+      expect(DbSystemIncubating.teradata.value, 'teradata');
+      expect(DbSystemIncubating.trino.value, 'trino');
+      expect(DbSystemIncubating.vertica.value, 'vertica');
     });
     test('db.system.name values', () {
-      expect(DbSystemName.values.length, 41);
-      expect(DbSystemName.otherSql.value, 'other_sql');
-      expect(DbSystemName.softwareagAdabas.value, 'softwareag.adabas');
-      expect(DbSystemName.actianIngres.value, 'actian.ingres');
-      expect(DbSystemName.awsDynamodb.value, 'aws.dynamodb');
-      expect(DbSystemName.awsRedshift.value, 'aws.redshift');
-      expect(DbSystemName.azureCosmosdb.value, 'azure.cosmosdb');
-      expect(DbSystemName.intersystemsCache.value, 'intersystems.cache');
-      expect(DbSystemName.cassandra.value, 'cassandra');
-      expect(DbSystemName.clickhouse.value, 'clickhouse');
-      expect(DbSystemName.cockroachdb.value, 'cockroachdb');
-      expect(DbSystemName.couchbase.value, 'couchbase');
-      expect(DbSystemName.couchdb.value, 'couchdb');
-      expect(DbSystemName.derby.value, 'derby');
-      expect(DbSystemName.elasticsearch.value, 'elasticsearch');
-      expect(DbSystemName.firebirdsql.value, 'firebirdsql');
-      expect(DbSystemName.gcpSpanner.value, 'gcp.spanner');
-      expect(DbSystemName.geode.value, 'geode');
-      expect(DbSystemName.h2database.value, 'h2database');
-      expect(DbSystemName.hbase.value, 'hbase');
-      expect(DbSystemName.hive.value, 'hive');
-      expect(DbSystemName.hsqldb.value, 'hsqldb');
-      expect(DbSystemName.ibmDb2.value, 'ibm.db2');
-      expect(DbSystemName.ibmInformix.value, 'ibm.informix');
-      expect(DbSystemName.ibmNetezza.value, 'ibm.netezza');
-      expect(DbSystemName.influxdb.value, 'influxdb');
-      expect(DbSystemName.instantdb.value, 'instantdb');
-      expect(DbSystemName.mariadb.value, 'mariadb');
-      expect(DbSystemName.memcached.value, 'memcached');
-      expect(DbSystemName.mongodb.value, 'mongodb');
-      expect(DbSystemName.microsoftSqlServer.value, 'microsoft.sql_server');
-      expect(DbSystemName.mysql.value, 'mysql');
-      expect(DbSystemName.neo4j.value, 'neo4j');
-      expect(DbSystemName.opensearch.value, 'opensearch');
-      expect(DbSystemName.oracleDb.value, 'oracle.db');
-      expect(DbSystemName.postgresql.value, 'postgresql');
-      expect(DbSystemName.redis.value, 'redis');
-      expect(DbSystemName.sapHana.value, 'sap.hana');
-      expect(DbSystemName.sapMaxdb.value, 'sap.maxdb');
-      expect(DbSystemName.sqlite.value, 'sqlite');
-      expect(DbSystemName.teradata.value, 'teradata');
-      expect(DbSystemName.trino.value, 'trino');
+      expect(DbSystemNameIncubating.values.length, 41);
+      expect(DbSystemNameIncubating.otherSql.value, 'other_sql');
+      expect(
+        DbSystemNameIncubating.softwareagAdabas.value,
+        'softwareag.adabas',
+      );
+      expect(DbSystemNameIncubating.actianIngres.value, 'actian.ingres');
+      expect(DbSystemNameIncubating.awsDynamodb.value, 'aws.dynamodb');
+      expect(DbSystemNameIncubating.awsRedshift.value, 'aws.redshift');
+      expect(DbSystemNameIncubating.azureCosmosdb.value, 'azure.cosmosdb');
+      expect(
+        DbSystemNameIncubating.intersystemsCache.value,
+        'intersystems.cache',
+      );
+      expect(DbSystemNameIncubating.cassandra.value, 'cassandra');
+      expect(DbSystemNameIncubating.clickhouse.value, 'clickhouse');
+      expect(DbSystemNameIncubating.cockroachdb.value, 'cockroachdb');
+      expect(DbSystemNameIncubating.couchbase.value, 'couchbase');
+      expect(DbSystemNameIncubating.couchdb.value, 'couchdb');
+      expect(DbSystemNameIncubating.derby.value, 'derby');
+      expect(DbSystemNameIncubating.elasticsearch.value, 'elasticsearch');
+      expect(DbSystemNameIncubating.firebirdsql.value, 'firebirdsql');
+      expect(DbSystemNameIncubating.gcpSpanner.value, 'gcp.spanner');
+      expect(DbSystemNameIncubating.geode.value, 'geode');
+      expect(DbSystemNameIncubating.h2database.value, 'h2database');
+      expect(DbSystemNameIncubating.hbase.value, 'hbase');
+      expect(DbSystemNameIncubating.hive.value, 'hive');
+      expect(DbSystemNameIncubating.hsqldb.value, 'hsqldb');
+      expect(DbSystemNameIncubating.ibmDb2.value, 'ibm.db2');
+      expect(DbSystemNameIncubating.ibmInformix.value, 'ibm.informix');
+      expect(DbSystemNameIncubating.ibmNetezza.value, 'ibm.netezza');
+      expect(DbSystemNameIncubating.influxdb.value, 'influxdb');
+      expect(DbSystemNameIncubating.instantdb.value, 'instantdb');
+      expect(DbSystemNameIncubating.mariadb.value, 'mariadb');
+      expect(DbSystemNameIncubating.memcached.value, 'memcached');
+      expect(DbSystemNameIncubating.mongodb.value, 'mongodb');
+      expect(
+        DbSystemNameIncubating.microsoftSqlServer.value,
+        'microsoft.sql_server',
+      );
+      expect(DbSystemNameIncubating.mysql.value, 'mysql');
+      expect(DbSystemNameIncubating.neo4j.value, 'neo4j');
+      expect(DbSystemNameIncubating.opensearch.value, 'opensearch');
+      expect(DbSystemNameIncubating.oracleDb.value, 'oracle.db');
+      expect(DbSystemNameIncubating.postgresql.value, 'postgresql');
+      expect(DbSystemNameIncubating.redis.value, 'redis');
+      expect(DbSystemNameIncubating.sapHana.value, 'sap.hana');
+      expect(DbSystemNameIncubating.sapMaxdb.value, 'sap.maxdb');
+      expect(DbSystemNameIncubating.sqlite.value, 'sqlite');
+      expect(DbSystemNameIncubating.teradata.value, 'teradata');
+      expect(DbSystemNameIncubating.trino.value, 'trino');
     });
   });
   group('deployment', () {
     test('attribute keys', () {
-      expect(Deployment.values.length, 5);
-      expect(Deployment.deploymentEnvironment.key, 'deployment.environment');
+      expect(DeploymentIncubating.values.length, 5);
       expect(
-        Deployment.deploymentEnvironmentName.key,
+        DeploymentIncubating.deploymentEnvironment.key,
+        'deployment.environment',
+      );
+      expect(
+        DeploymentIncubating.deploymentEnvironmentName.key,
         'deployment.environment.name',
       );
-      expect(Deployment.deploymentId.key, 'deployment.id');
-      expect(Deployment.deploymentName.key, 'deployment.name');
-      expect(Deployment.deploymentStatus.key, 'deployment.status');
+      expect(DeploymentIncubating.deploymentId.key, 'deployment.id');
+      expect(DeploymentIncubating.deploymentName.key, 'deployment.name');
+      expect(DeploymentIncubating.deploymentStatus.key, 'deployment.status');
     });
     test('deployment.environment.name values', () {
-      expect(DeploymentEnvironmentName.values.length, 4);
-      expect(DeploymentEnvironmentName.production.value, 'production');
-      expect(DeploymentEnvironmentName.staging.value, 'staging');
-      expect(DeploymentEnvironmentName.test.value, 'test');
-      expect(DeploymentEnvironmentName.development.value, 'development');
+      expect(DeploymentEnvironmentNameIncubating.values.length, 4);
+      expect(
+        DeploymentEnvironmentNameIncubating.production.value,
+        'production',
+      );
+      expect(DeploymentEnvironmentNameIncubating.staging.value, 'staging');
+      expect(DeploymentEnvironmentNameIncubating.test.value, 'test');
+      expect(
+        DeploymentEnvironmentNameIncubating.development.value,
+        'development',
+      );
     });
     test('deployment.status values', () {
-      expect(DeploymentStatus.values.length, 2);
-      expect(DeploymentStatus.failed.value, 'failed');
-      expect(DeploymentStatus.succeeded.value, 'succeeded');
+      expect(DeploymentStatusIncubating.values.length, 2);
+      expect(DeploymentStatusIncubating.failed.value, 'failed');
+      expect(DeploymentStatusIncubating.succeeded.value, 'succeeded');
     });
   });
   group('destination', () {
     test('attribute keys', () {
-      expect(Destination.values.length, 2);
-      expect(Destination.destinationAddress.key, 'destination.address');
-      expect(Destination.destinationPort.key, 'destination.port');
+      expect(DestinationIncubating.values.length, 2);
+      expect(
+        DestinationIncubating.destinationAddress.key,
+        'destination.address',
+      );
+      expect(DestinationIncubating.destinationPort.key, 'destination.port');
     });
   });
   group('device', () {
     test('attribute keys', () {
-      expect(Device.values.length, 4);
-      expect(Device.deviceId.key, 'device.id');
-      expect(Device.deviceManufacturer.key, 'device.manufacturer');
-      expect(Device.deviceModelIdentifier.key, 'device.model.identifier');
-      expect(Device.deviceModelName.key, 'device.model.name');
+      expect(DeviceIncubating.values.length, 4);
+      expect(DeviceIncubating.deviceId.key, 'device.id');
+      expect(DeviceIncubating.deviceManufacturer.key, 'device.manufacturer');
+      expect(
+        DeviceIncubating.deviceModelIdentifier.key,
+        'device.model.identifier',
+      );
+      expect(DeviceIncubating.deviceModelName.key, 'device.model.name');
     });
   });
   group('disk', () {
     test('attribute keys', () {
-      expect(Disk.values.length, 1);
-      expect(Disk.diskIoDirection.key, 'disk.io.direction');
+      expect(DiskIncubating.values.length, 1);
+      expect(DiskIncubating.diskIoDirection.key, 'disk.io.direction');
     });
     test('disk.io.direction values', () {
-      expect(DiskIoDirection.values.length, 2);
-      expect(DiskIoDirection.read.value, 'read');
-      expect(DiskIoDirection.write.value, 'write');
+      expect(DiskIoDirectionIncubating.values.length, 2);
+      expect(DiskIoDirectionIncubating.read.value, 'read');
+      expect(DiskIoDirectionIncubating.write.value, 'write');
     });
   });
   group('dns', () {
     test('attribute keys', () {
-      expect(Dns.values.length, 2);
-      expect(Dns.dnsAnswers.key, 'dns.answers');
-      expect(Dns.dnsQuestionName.key, 'dns.question.name');
+      expect(DnsIncubating.values.length, 2);
+      expect(DnsIncubating.dnsAnswers.key, 'dns.answers');
+      expect(DnsIncubating.dnsQuestionName.key, 'dns.question.name');
     });
   });
   group('dotnet', () {
     test('attribute keys', () {
-      expect(Dotnet.values.length, 1);
-      expect(Dotnet.dotnetGcHeapGeneration.key, 'dotnet.gc.heap.generation');
+      expect(DotnetIncubating.values.length, 1);
+      expect(
+        DotnetIncubating.dotnetGcHeapGeneration.key,
+        'dotnet.gc.heap.generation',
+      );
     });
     test('dotnet.gc.heap.generation values', () {
-      expect(DotnetGcHeapGeneration.values.length, 5);
-      expect(DotnetGcHeapGeneration.gen0.value, 'gen0');
-      expect(DotnetGcHeapGeneration.gen1.value, 'gen1');
-      expect(DotnetGcHeapGeneration.gen2.value, 'gen2');
-      expect(DotnetGcHeapGeneration.loh.value, 'loh');
-      expect(DotnetGcHeapGeneration.poh.value, 'poh');
+      expect(DotnetGcHeapGenerationIncubating.values.length, 5);
+      expect(DotnetGcHeapGenerationIncubating.gen0.value, 'gen0');
+      expect(DotnetGcHeapGenerationIncubating.gen1.value, 'gen1');
+      expect(DotnetGcHeapGenerationIncubating.gen2.value, 'gen2');
+      expect(DotnetGcHeapGenerationIncubating.loh.value, 'loh');
+      expect(DotnetGcHeapGenerationIncubating.poh.value, 'poh');
     });
   });
   group('elasticsearch', () {
     test('attribute keys', () {
-      expect(Elasticsearch.values.length, 1);
+      expect(ElasticsearchIncubating.values.length, 1);
       expect(
-        Elasticsearch.elasticsearchNodeName.key,
+        ElasticsearchIncubating.elasticsearchNodeName.key,
         'elasticsearch.node.name',
       );
     });
   });
   group('enduser', () {
     test('attribute keys', () {
-      expect(Enduser.values.length, 4);
-      expect(Enduser.enduserId.key, 'enduser.id');
-      expect(Enduser.enduserPseudoId.key, 'enduser.pseudo.id');
-      expect(Enduser.enduserRole.key, 'enduser.role');
-      expect(Enduser.enduserScope.key, 'enduser.scope');
+      expect(EnduserIncubating.values.length, 4);
+      expect(EnduserIncubating.enduserId.key, 'enduser.id');
+      expect(EnduserIncubating.enduserPseudoId.key, 'enduser.pseudo.id');
+      expect(EnduserIncubating.enduserRole.key, 'enduser.role');
+      expect(EnduserIncubating.enduserScope.key, 'enduser.scope');
     });
   });
   group('error', () {
     test('attribute keys', () {
-      expect(ErrorAttributes.values.length, 2);
-      expect(ErrorAttributes.errorMessage.key, 'error.message');
-      expect(ErrorAttributes.errorType.key, 'error.type');
+      expect(ErrorAttributesIncubating.values.length, 2);
+      expect(ErrorAttributesIncubating.errorMessage.key, 'error.message');
+      expect(ErrorAttributesIncubating.errorType.key, 'error.type');
     });
     test('error.type values', () {
-      expect(ErrorType.values.length, 1);
-      expect(ErrorType.other.value, '_OTHER');
+      expect(ErrorTypeIncubating.values.length, 1);
+      expect(ErrorTypeIncubating.other.value, '_OTHER');
     });
   });
   group('event', () {
     test('attribute keys', () {
-      expect(EventAttributes.values.length, 1);
-      expect(EventAttributes.eventName.key, 'event.name');
+      expect(EventAttributesIncubating.values.length, 1);
+      expect(EventAttributesIncubating.eventName.key, 'event.name');
     });
   });
   group('exception', () {
     test('attribute keys', () {
-      expect(ExceptionAttributes.values.length, 4);
-      expect(ExceptionAttributes.exceptionEscaped.key, 'exception.escaped');
-      expect(ExceptionAttributes.exceptionMessage.key, 'exception.message');
+      expect(ExceptionAttributesIncubating.values.length, 4);
       expect(
-        ExceptionAttributes.exceptionStacktrace.key,
+        ExceptionAttributesIncubating.exceptionEscaped.key,
+        'exception.escaped',
+      );
+      expect(
+        ExceptionAttributesIncubating.exceptionMessage.key,
+        'exception.message',
+      );
+      expect(
+        ExceptionAttributesIncubating.exceptionStacktrace.key,
         'exception.stacktrace',
       );
-      expect(ExceptionAttributes.exceptionType.key, 'exception.type');
+      expect(ExceptionAttributesIncubating.exceptionType.key, 'exception.type');
     });
   });
   group('faas', () {
     test('attribute keys', () {
-      expect(Faas.values.length, 16);
-      expect(Faas.faasColdstart.key, 'faas.coldstart');
-      expect(Faas.faasCron.key, 'faas.cron');
-      expect(Faas.faasDocumentCollection.key, 'faas.document.collection');
-      expect(Faas.faasDocumentName.key, 'faas.document.name');
-      expect(Faas.faasDocumentOperation.key, 'faas.document.operation');
-      expect(Faas.faasDocumentTime.key, 'faas.document.time');
-      expect(Faas.faasInstance.key, 'faas.instance');
-      expect(Faas.faasInvocationId.key, 'faas.invocation_id');
-      expect(Faas.faasInvokedName.key, 'faas.invoked_name');
-      expect(Faas.faasInvokedProvider.key, 'faas.invoked_provider');
-      expect(Faas.faasInvokedRegion.key, 'faas.invoked_region');
-      expect(Faas.faasMaxMemory.key, 'faas.max_memory');
-      expect(Faas.faasName.key, 'faas.name');
-      expect(Faas.faasTime.key, 'faas.time');
-      expect(Faas.faasTrigger.key, 'faas.trigger');
-      expect(Faas.faasVersion.key, 'faas.version');
+      expect(FaasIncubating.values.length, 16);
+      expect(FaasIncubating.faasColdstart.key, 'faas.coldstart');
+      expect(FaasIncubating.faasCron.key, 'faas.cron');
+      expect(
+        FaasIncubating.faasDocumentCollection.key,
+        'faas.document.collection',
+      );
+      expect(FaasIncubating.faasDocumentName.key, 'faas.document.name');
+      expect(
+        FaasIncubating.faasDocumentOperation.key,
+        'faas.document.operation',
+      );
+      expect(FaasIncubating.faasDocumentTime.key, 'faas.document.time');
+      expect(FaasIncubating.faasInstance.key, 'faas.instance');
+      expect(FaasIncubating.faasInvocationId.key, 'faas.invocation_id');
+      expect(FaasIncubating.faasInvokedName.key, 'faas.invoked_name');
+      expect(FaasIncubating.faasInvokedProvider.key, 'faas.invoked_provider');
+      expect(FaasIncubating.faasInvokedRegion.key, 'faas.invoked_region');
+      expect(FaasIncubating.faasMaxMemory.key, 'faas.max_memory');
+      expect(FaasIncubating.faasName.key, 'faas.name');
+      expect(FaasIncubating.faasTime.key, 'faas.time');
+      expect(FaasIncubating.faasTrigger.key, 'faas.trigger');
+      expect(FaasIncubating.faasVersion.key, 'faas.version');
     });
     test('faas.document.operation values', () {
-      expect(FaasDocumentOperation.values.length, 3);
-      expect(FaasDocumentOperation.insert.value, 'insert');
-      expect(FaasDocumentOperation.edit.value, 'edit');
-      expect(FaasDocumentOperation.delete.value, 'delete');
+      expect(FaasDocumentOperationIncubating.values.length, 3);
+      expect(FaasDocumentOperationIncubating.insert.value, 'insert');
+      expect(FaasDocumentOperationIncubating.edit.value, 'edit');
+      expect(FaasDocumentOperationIncubating.delete.value, 'delete');
     });
     test('faas.invoked_provider values', () {
-      expect(FaasInvokedProvider.values.length, 5);
-      expect(FaasInvokedProvider.alibabaCloud.value, 'alibaba_cloud');
-      expect(FaasInvokedProvider.aws.value, 'aws');
-      expect(FaasInvokedProvider.azure.value, 'azure');
-      expect(FaasInvokedProvider.gcp.value, 'gcp');
-      expect(FaasInvokedProvider.tencentCloud.value, 'tencent_cloud');
+      expect(FaasInvokedProviderIncubating.values.length, 5);
+      expect(FaasInvokedProviderIncubating.alibabaCloud.value, 'alibaba_cloud');
+      expect(FaasInvokedProviderIncubating.aws.value, 'aws');
+      expect(FaasInvokedProviderIncubating.azure.value, 'azure');
+      expect(FaasInvokedProviderIncubating.gcp.value, 'gcp');
+      expect(FaasInvokedProviderIncubating.tencentCloud.value, 'tencent_cloud');
     });
     test('faas.trigger values', () {
-      expect(FaasTrigger.values.length, 5);
-      expect(FaasTrigger.datasource.value, 'datasource');
-      expect(FaasTrigger.http.value, 'http');
-      expect(FaasTrigger.pubsub.value, 'pubsub');
-      expect(FaasTrigger.timer.value, 'timer');
-      expect(FaasTrigger.other.value, 'other');
+      expect(FaasTriggerIncubating.values.length, 5);
+      expect(FaasTriggerIncubating.datasource.value, 'datasource');
+      expect(FaasTriggerIncubating.http.value, 'http');
+      expect(FaasTriggerIncubating.pubsub.value, 'pubsub');
+      expect(FaasTriggerIncubating.timer.value, 'timer');
+      expect(FaasTriggerIncubating.other.value, 'other');
     });
   });
   group('feature_flag', () {
     test('attribute keys', () {
-      expect(FeatureFlag.values.length, 12);
-      expect(FeatureFlag.featureFlagContextId.key, 'feature_flag.context.id');
+      expect(FeatureFlagIncubating.values.length, 12);
       expect(
-        FeatureFlag.featureFlagErrorMessage.key,
+        FeatureFlagIncubating.featureFlagContextId.key,
+        'feature_flag.context.id',
+      );
+      expect(
+        FeatureFlagIncubating.featureFlagErrorMessage.key,
         'feature_flag.error.message',
       );
       expect(
-        FeatureFlag.featureFlagEvaluationErrorMessage.key,
+        FeatureFlagIncubating.featureFlagEvaluationErrorMessage.key,
         'feature_flag.evaluation.error.message',
       );
       expect(
-        FeatureFlag.featureFlagEvaluationReason.key,
+        FeatureFlagIncubating.featureFlagEvaluationReason.key,
         'feature_flag.evaluation.reason',
       );
-      expect(FeatureFlag.featureFlagKey.key, 'feature_flag.key');
+      expect(FeatureFlagIncubating.featureFlagKey.key, 'feature_flag.key');
       expect(
-        FeatureFlag.featureFlagProviderName.key,
+        FeatureFlagIncubating.featureFlagProviderName.key,
         'feature_flag.provider.name',
       );
       expect(
-        FeatureFlag.featureFlagResultReason.key,
+        FeatureFlagIncubating.featureFlagResultReason.key,
         'feature_flag.result.reason',
       );
       expect(
-        FeatureFlag.featureFlagResultValue.key,
+        FeatureFlagIncubating.featureFlagResultValue.key,
         'feature_flag.result.value',
       );
       expect(
-        FeatureFlag.featureFlagResultVariant.key,
+        FeatureFlagIncubating.featureFlagResultVariant.key,
         'feature_flag.result.variant',
       );
-      expect(FeatureFlag.featureFlagSetId.key, 'feature_flag.set.id');
-      expect(FeatureFlag.featureFlagVariant.key, 'feature_flag.variant');
-      expect(FeatureFlag.featureFlagVersion.key, 'feature_flag.version');
+      expect(FeatureFlagIncubating.featureFlagSetId.key, 'feature_flag.set.id');
+      expect(
+        FeatureFlagIncubating.featureFlagVariant.key,
+        'feature_flag.variant',
+      );
+      expect(
+        FeatureFlagIncubating.featureFlagVersion.key,
+        'feature_flag.version',
+      );
     });
     test('feature_flag.evaluation.reason values', () {
-      expect(FeatureFlagEvaluationReason.values.length, 9);
-      expect(FeatureFlagEvaluationReason.static.value, 'static');
-      expect(FeatureFlagEvaluationReason.default$.value, 'default');
+      expect(FeatureFlagEvaluationReasonIncubating.values.length, 9);
+      expect(FeatureFlagEvaluationReasonIncubating.static.value, 'static');
+      expect(FeatureFlagEvaluationReasonIncubating.default$.value, 'default');
       expect(
-        FeatureFlagEvaluationReason.targetingMatch.value,
+        FeatureFlagEvaluationReasonIncubating.targetingMatch.value,
         'targeting_match',
       );
-      expect(FeatureFlagEvaluationReason.split.value, 'split');
-      expect(FeatureFlagEvaluationReason.cached.value, 'cached');
-      expect(FeatureFlagEvaluationReason.disabled.value, 'disabled');
-      expect(FeatureFlagEvaluationReason.unknown.value, 'unknown');
-      expect(FeatureFlagEvaluationReason.stale.value, 'stale');
-      expect(FeatureFlagEvaluationReason.error.value, 'error');
+      expect(FeatureFlagEvaluationReasonIncubating.split.value, 'split');
+      expect(FeatureFlagEvaluationReasonIncubating.cached.value, 'cached');
+      expect(FeatureFlagEvaluationReasonIncubating.disabled.value, 'disabled');
+      expect(FeatureFlagEvaluationReasonIncubating.unknown.value, 'unknown');
+      expect(FeatureFlagEvaluationReasonIncubating.stale.value, 'stale');
+      expect(FeatureFlagEvaluationReasonIncubating.error.value, 'error');
     });
     test('feature_flag.result.reason values', () {
-      expect(FeatureFlagResultReason.values.length, 9);
-      expect(FeatureFlagResultReason.static.value, 'static');
-      expect(FeatureFlagResultReason.default$.value, 'default');
-      expect(FeatureFlagResultReason.targetingMatch.value, 'targeting_match');
-      expect(FeatureFlagResultReason.split.value, 'split');
-      expect(FeatureFlagResultReason.cached.value, 'cached');
-      expect(FeatureFlagResultReason.disabled.value, 'disabled');
-      expect(FeatureFlagResultReason.unknown.value, 'unknown');
-      expect(FeatureFlagResultReason.stale.value, 'stale');
-      expect(FeatureFlagResultReason.error.value, 'error');
+      expect(FeatureFlagResultReasonIncubating.values.length, 9);
+      expect(FeatureFlagResultReasonIncubating.static.value, 'static');
+      expect(FeatureFlagResultReasonIncubating.default$.value, 'default');
+      expect(
+        FeatureFlagResultReasonIncubating.targetingMatch.value,
+        'targeting_match',
+      );
+      expect(FeatureFlagResultReasonIncubating.split.value, 'split');
+      expect(FeatureFlagResultReasonIncubating.cached.value, 'cached');
+      expect(FeatureFlagResultReasonIncubating.disabled.value, 'disabled');
+      expect(FeatureFlagResultReasonIncubating.unknown.value, 'unknown');
+      expect(FeatureFlagResultReasonIncubating.stale.value, 'stale');
+      expect(FeatureFlagResultReasonIncubating.error.value, 'error');
     });
   });
   group('file', () {
     test('attribute keys', () {
-      expect(FileAttributes.values.length, 21);
-      expect(FileAttributes.fileAccessed.key, 'file.accessed');
-      expect(FileAttributes.fileAttributes.key, 'file.attributes');
-      expect(FileAttributes.fileChanged.key, 'file.changed');
-      expect(FileAttributes.fileCreated.key, 'file.created');
-      expect(FileAttributes.fileDirectory.key, 'file.directory');
-      expect(FileAttributes.fileExtension.key, 'file.extension');
-      expect(FileAttributes.fileForkName.key, 'file.fork_name');
-      expect(FileAttributes.fileGroupId.key, 'file.group.id');
-      expect(FileAttributes.fileGroupName.key, 'file.group.name');
-      expect(FileAttributes.fileInode.key, 'file.inode');
-      expect(FileAttributes.fileLockMechanism.key, 'file.lock.mechanism');
-      expect(FileAttributes.fileLockMode.key, 'file.lock.mode');
-      expect(FileAttributes.fileLockType.key, 'file.lock.type');
-      expect(FileAttributes.fileMode.key, 'file.mode');
-      expect(FileAttributes.fileModified.key, 'file.modified');
-      expect(FileAttributes.fileName.key, 'file.name');
-      expect(FileAttributes.fileOwnerId.key, 'file.owner.id');
-      expect(FileAttributes.fileOwnerName.key, 'file.owner.name');
-      expect(FileAttributes.filePath.key, 'file.path');
-      expect(FileAttributes.fileSize.key, 'file.size');
+      expect(FileAttributesIncubating.values.length, 21);
+      expect(FileAttributesIncubating.fileAccessed.key, 'file.accessed');
+      expect(FileAttributesIncubating.fileAttributes.key, 'file.attributes');
+      expect(FileAttributesIncubating.fileChanged.key, 'file.changed');
+      expect(FileAttributesIncubating.fileCreated.key, 'file.created');
+      expect(FileAttributesIncubating.fileDirectory.key, 'file.directory');
+      expect(FileAttributesIncubating.fileExtension.key, 'file.extension');
+      expect(FileAttributesIncubating.fileForkName.key, 'file.fork_name');
+      expect(FileAttributesIncubating.fileGroupId.key, 'file.group.id');
+      expect(FileAttributesIncubating.fileGroupName.key, 'file.group.name');
+      expect(FileAttributesIncubating.fileInode.key, 'file.inode');
       expect(
-        FileAttributes.fileSymbolicLinkTargetPath.key,
+        FileAttributesIncubating.fileLockMechanism.key,
+        'file.lock.mechanism',
+      );
+      expect(FileAttributesIncubating.fileLockMode.key, 'file.lock.mode');
+      expect(FileAttributesIncubating.fileLockType.key, 'file.lock.type');
+      expect(FileAttributesIncubating.fileMode.key, 'file.mode');
+      expect(FileAttributesIncubating.fileModified.key, 'file.modified');
+      expect(FileAttributesIncubating.fileName.key, 'file.name');
+      expect(FileAttributesIncubating.fileOwnerId.key, 'file.owner.id');
+      expect(FileAttributesIncubating.fileOwnerName.key, 'file.owner.name');
+      expect(FileAttributesIncubating.filePath.key, 'file.path');
+      expect(FileAttributesIncubating.fileSize.key, 'file.size');
+      expect(
+        FileAttributesIncubating.fileSymbolicLinkTargetPath.key,
         'file.symbolic_link.target_path',
       );
     });
     test('file.lock.type values', () {
-      expect(FileLockType.values.length, 2);
-      expect(FileLockType.read.value, 'read');
-      expect(FileLockType.write.value, 'write');
+      expect(FileLockTypeIncubating.values.length, 2);
+      expect(FileLockTypeIncubating.read.value, 'read');
+      expect(FileLockTypeIncubating.write.value, 'write');
     });
   });
   group('gcp', () {
     test('attribute keys', () {
-      expect(Gcp.values.length, 27);
+      expect(GcpIncubating.values.length, 27);
       expect(
-        Gcp.gcpApphubApplicationContainer.key,
+        GcpIncubating.gcpApphubApplicationContainer.key,
         'gcp.apphub.application.container',
       );
-      expect(Gcp.gcpApphubApplicationId.key, 'gcp.apphub.application.id');
       expect(
-        Gcp.gcpApphubApplicationLocation.key,
+        GcpIncubating.gcpApphubApplicationId.key,
+        'gcp.apphub.application.id',
+      );
+      expect(
+        GcpIncubating.gcpApphubApplicationLocation.key,
         'gcp.apphub.application.location',
       );
       expect(
-        Gcp.gcpApphubServiceCriticalityType.key,
+        GcpIncubating.gcpApphubServiceCriticalityType.key,
         'gcp.apphub.service.criticality_type',
       );
       expect(
-        Gcp.gcpApphubServiceEnvironmentType.key,
+        GcpIncubating.gcpApphubServiceEnvironmentType.key,
         'gcp.apphub.service.environment_type',
       );
-      expect(Gcp.gcpApphubServiceId.key, 'gcp.apphub.service.id');
+      expect(GcpIncubating.gcpApphubServiceId.key, 'gcp.apphub.service.id');
       expect(
-        Gcp.gcpApphubWorkloadCriticalityType.key,
+        GcpIncubating.gcpApphubWorkloadCriticalityType.key,
         'gcp.apphub.workload.criticality_type',
       );
       expect(
-        Gcp.gcpApphubWorkloadEnvironmentType.key,
+        GcpIncubating.gcpApphubWorkloadEnvironmentType.key,
         'gcp.apphub.workload.environment_type',
       );
-      expect(Gcp.gcpApphubWorkloadId.key, 'gcp.apphub.workload.id');
+      expect(GcpIncubating.gcpApphubWorkloadId.key, 'gcp.apphub.workload.id');
       expect(
-        Gcp.gcpApphubDestinationApplicationContainer.key,
+        GcpIncubating.gcpApphubDestinationApplicationContainer.key,
         'gcp.apphub_destination.application.container',
       );
       expect(
-        Gcp.gcpApphubDestinationApplicationId.key,
+        GcpIncubating.gcpApphubDestinationApplicationId.key,
         'gcp.apphub_destination.application.id',
       );
       expect(
-        Gcp.gcpApphubDestinationApplicationLocation.key,
+        GcpIncubating.gcpApphubDestinationApplicationLocation.key,
         'gcp.apphub_destination.application.location',
       );
       expect(
-        Gcp.gcpApphubDestinationServiceCriticalityType.key,
+        GcpIncubating.gcpApphubDestinationServiceCriticalityType.key,
         'gcp.apphub_destination.service.criticality_type',
       );
       expect(
-        Gcp.gcpApphubDestinationServiceEnvironmentType.key,
+        GcpIncubating.gcpApphubDestinationServiceEnvironmentType.key,
         'gcp.apphub_destination.service.environment_type',
       );
       expect(
-        Gcp.gcpApphubDestinationServiceId.key,
+        GcpIncubating.gcpApphubDestinationServiceId.key,
         'gcp.apphub_destination.service.id',
       );
       expect(
-        Gcp.gcpApphubDestinationWorkloadCriticalityType.key,
+        GcpIncubating.gcpApphubDestinationWorkloadCriticalityType.key,
         'gcp.apphub_destination.workload.criticality_type',
       );
       expect(
-        Gcp.gcpApphubDestinationWorkloadEnvironmentType.key,
+        GcpIncubating.gcpApphubDestinationWorkloadEnvironmentType.key,
         'gcp.apphub_destination.workload.environment_type',
       );
       expect(
-        Gcp.gcpApphubDestinationWorkloadId.key,
+        GcpIncubating.gcpApphubDestinationWorkloadId.key,
         'gcp.apphub_destination.workload.id',
       );
-      expect(Gcp.gcpClientService.key, 'gcp.client.service');
-      expect(Gcp.gcpCloudRunJobExecution.key, 'gcp.cloud_run.job.execution');
-      expect(Gcp.gcpCloudRunJobTaskIndex.key, 'gcp.cloud_run.job.task_index');
-      expect(Gcp.gcpGceInstanceHostname.key, 'gcp.gce.instance.hostname');
-      expect(Gcp.gcpGceInstanceLabels.key, 'gcp.gce.instance.labels');
-      expect(Gcp.gcpGceInstanceName.key, 'gcp.gce.instance.name');
+      expect(GcpIncubating.gcpClientService.key, 'gcp.client.service');
       expect(
-        Gcp.gcpGceInstanceGroupManagerName.key,
+        GcpIncubating.gcpCloudRunJobExecution.key,
+        'gcp.cloud_run.job.execution',
+      );
+      expect(
+        GcpIncubating.gcpCloudRunJobTaskIndex.key,
+        'gcp.cloud_run.job.task_index',
+      );
+      expect(
+        GcpIncubating.gcpGceInstanceHostname.key,
+        'gcp.gce.instance.hostname',
+      );
+      expect(GcpIncubating.gcpGceInstanceLabels.key, 'gcp.gce.instance.labels');
+      expect(GcpIncubating.gcpGceInstanceName.key, 'gcp.gce.instance.name');
+      expect(
+        GcpIncubating.gcpGceInstanceGroupManagerName.key,
         'gcp.gce.instance_group_manager.name',
       );
       expect(
-        Gcp.gcpGceInstanceGroupManagerRegion.key,
+        GcpIncubating.gcpGceInstanceGroupManagerRegion.key,
         'gcp.gce.instance_group_manager.region',
       );
       expect(
-        Gcp.gcpGceInstanceGroupManagerZone.key,
+        GcpIncubating.gcpGceInstanceGroupManagerZone.key,
         'gcp.gce.instance_group_manager.zone',
       );
     });
     test('gcp.apphub.service.criticality_type values', () {
-      expect(GcpApphubServiceCriticalityType.values.length, 4);
+      expect(GcpApphubServiceCriticalityTypeIncubating.values.length, 4);
       expect(
-        GcpApphubServiceCriticalityType.missionCritical.value,
+        GcpApphubServiceCriticalityTypeIncubating.missionCritical.value,
         'MISSION_CRITICAL',
       );
-      expect(GcpApphubServiceCriticalityType.high.value, 'HIGH');
-      expect(GcpApphubServiceCriticalityType.medium.value, 'MEDIUM');
-      expect(GcpApphubServiceCriticalityType.low.value, 'LOW');
+      expect(GcpApphubServiceCriticalityTypeIncubating.high.value, 'HIGH');
+      expect(GcpApphubServiceCriticalityTypeIncubating.medium.value, 'MEDIUM');
+      expect(GcpApphubServiceCriticalityTypeIncubating.low.value, 'LOW');
     });
     test('gcp.apphub.service.environment_type values', () {
-      expect(GcpApphubServiceEnvironmentType.values.length, 4);
-      expect(GcpApphubServiceEnvironmentType.production.value, 'PRODUCTION');
-      expect(GcpApphubServiceEnvironmentType.staging.value, 'STAGING');
-      expect(GcpApphubServiceEnvironmentType.test.value, 'TEST');
-      expect(GcpApphubServiceEnvironmentType.development.value, 'DEVELOPMENT');
-    });
-    test('gcp.apphub.workload.criticality_type values', () {
-      expect(GcpApphubWorkloadCriticalityType.values.length, 4);
+      expect(GcpApphubServiceEnvironmentTypeIncubating.values.length, 4);
       expect(
-        GcpApphubWorkloadCriticalityType.missionCritical.value,
-        'MISSION_CRITICAL',
-      );
-      expect(GcpApphubWorkloadCriticalityType.high.value, 'HIGH');
-      expect(GcpApphubWorkloadCriticalityType.medium.value, 'MEDIUM');
-      expect(GcpApphubWorkloadCriticalityType.low.value, 'LOW');
-    });
-    test('gcp.apphub.workload.environment_type values', () {
-      expect(GcpApphubWorkloadEnvironmentType.values.length, 4);
-      expect(GcpApphubWorkloadEnvironmentType.production.value, 'PRODUCTION');
-      expect(GcpApphubWorkloadEnvironmentType.staging.value, 'STAGING');
-      expect(GcpApphubWorkloadEnvironmentType.test.value, 'TEST');
-      expect(GcpApphubWorkloadEnvironmentType.development.value, 'DEVELOPMENT');
-    });
-    test('gcp.apphub_destination.service.criticality_type values', () {
-      expect(GcpApphubDestinationServiceCriticalityType.values.length, 4);
-      expect(
-        GcpApphubDestinationServiceCriticalityType.missionCritical.value,
-        'MISSION_CRITICAL',
-      );
-      expect(GcpApphubDestinationServiceCriticalityType.high.value, 'HIGH');
-      expect(GcpApphubDestinationServiceCriticalityType.medium.value, 'MEDIUM');
-      expect(GcpApphubDestinationServiceCriticalityType.low.value, 'LOW');
-    });
-    test('gcp.apphub_destination.service.environment_type values', () {
-      expect(GcpApphubDestinationServiceEnvironmentType.values.length, 4);
-      expect(
-        GcpApphubDestinationServiceEnvironmentType.production.value,
+        GcpApphubServiceEnvironmentTypeIncubating.production.value,
         'PRODUCTION',
       );
       expect(
-        GcpApphubDestinationServiceEnvironmentType.staging.value,
+        GcpApphubServiceEnvironmentTypeIncubating.staging.value,
         'STAGING',
       );
-      expect(GcpApphubDestinationServiceEnvironmentType.test.value, 'TEST');
+      expect(GcpApphubServiceEnvironmentTypeIncubating.test.value, 'TEST');
       expect(
-        GcpApphubDestinationServiceEnvironmentType.development.value,
+        GcpApphubServiceEnvironmentTypeIncubating.development.value,
+        'DEVELOPMENT',
+      );
+    });
+    test('gcp.apphub.workload.criticality_type values', () {
+      expect(GcpApphubWorkloadCriticalityTypeIncubating.values.length, 4);
+      expect(
+        GcpApphubWorkloadCriticalityTypeIncubating.missionCritical.value,
+        'MISSION_CRITICAL',
+      );
+      expect(GcpApphubWorkloadCriticalityTypeIncubating.high.value, 'HIGH');
+      expect(GcpApphubWorkloadCriticalityTypeIncubating.medium.value, 'MEDIUM');
+      expect(GcpApphubWorkloadCriticalityTypeIncubating.low.value, 'LOW');
+    });
+    test('gcp.apphub.workload.environment_type values', () {
+      expect(GcpApphubWorkloadEnvironmentTypeIncubating.values.length, 4);
+      expect(
+        GcpApphubWorkloadEnvironmentTypeIncubating.production.value,
+        'PRODUCTION',
+      );
+      expect(
+        GcpApphubWorkloadEnvironmentTypeIncubating.staging.value,
+        'STAGING',
+      );
+      expect(GcpApphubWorkloadEnvironmentTypeIncubating.test.value, 'TEST');
+      expect(
+        GcpApphubWorkloadEnvironmentTypeIncubating.development.value,
+        'DEVELOPMENT',
+      );
+    });
+    test('gcp.apphub_destination.service.criticality_type values', () {
+      expect(
+        GcpApphubDestinationServiceCriticalityTypeIncubating.values.length,
+        4,
+      );
+      expect(
+        GcpApphubDestinationServiceCriticalityTypeIncubating
+            .missionCritical
+            .value,
+        'MISSION_CRITICAL',
+      );
+      expect(
+        GcpApphubDestinationServiceCriticalityTypeIncubating.high.value,
+        'HIGH',
+      );
+      expect(
+        GcpApphubDestinationServiceCriticalityTypeIncubating.medium.value,
+        'MEDIUM',
+      );
+      expect(
+        GcpApphubDestinationServiceCriticalityTypeIncubating.low.value,
+        'LOW',
+      );
+    });
+    test('gcp.apphub_destination.service.environment_type values', () {
+      expect(
+        GcpApphubDestinationServiceEnvironmentTypeIncubating.values.length,
+        4,
+      );
+      expect(
+        GcpApphubDestinationServiceEnvironmentTypeIncubating.production.value,
+        'PRODUCTION',
+      );
+      expect(
+        GcpApphubDestinationServiceEnvironmentTypeIncubating.staging.value,
+        'STAGING',
+      );
+      expect(
+        GcpApphubDestinationServiceEnvironmentTypeIncubating.test.value,
+        'TEST',
+      );
+      expect(
+        GcpApphubDestinationServiceEnvironmentTypeIncubating.development.value,
         'DEVELOPMENT',
       );
     });
     test('gcp.apphub_destination.workload.criticality_type values', () {
-      expect(GcpApphubDestinationWorkloadCriticalityType.values.length, 4);
       expect(
-        GcpApphubDestinationWorkloadCriticalityType.missionCritical.value,
+        GcpApphubDestinationWorkloadCriticalityTypeIncubating.values.length,
+        4,
+      );
+      expect(
+        GcpApphubDestinationWorkloadCriticalityTypeIncubating
+            .missionCritical
+            .value,
         'MISSION_CRITICAL',
       );
-      expect(GcpApphubDestinationWorkloadCriticalityType.high.value, 'HIGH');
       expect(
-        GcpApphubDestinationWorkloadCriticalityType.medium.value,
+        GcpApphubDestinationWorkloadCriticalityTypeIncubating.high.value,
+        'HIGH',
+      );
+      expect(
+        GcpApphubDestinationWorkloadCriticalityTypeIncubating.medium.value,
         'MEDIUM',
       );
-      expect(GcpApphubDestinationWorkloadCriticalityType.low.value, 'LOW');
+      expect(
+        GcpApphubDestinationWorkloadCriticalityTypeIncubating.low.value,
+        'LOW',
+      );
     });
     test('gcp.apphub_destination.workload.environment_type values', () {
-      expect(GcpApphubDestinationWorkloadEnvironmentType.values.length, 4);
       expect(
-        GcpApphubDestinationWorkloadEnvironmentType.production.value,
+        GcpApphubDestinationWorkloadEnvironmentTypeIncubating.values.length,
+        4,
+      );
+      expect(
+        GcpApphubDestinationWorkloadEnvironmentTypeIncubating.production.value,
         'PRODUCTION',
       );
       expect(
-        GcpApphubDestinationWorkloadEnvironmentType.staging.value,
+        GcpApphubDestinationWorkloadEnvironmentTypeIncubating.staging.value,
         'STAGING',
       );
-      expect(GcpApphubDestinationWorkloadEnvironmentType.test.value, 'TEST');
       expect(
-        GcpApphubDestinationWorkloadEnvironmentType.development.value,
+        GcpApphubDestinationWorkloadEnvironmentTypeIncubating.test.value,
+        'TEST',
+      );
+      expect(
+        GcpApphubDestinationWorkloadEnvironmentTypeIncubating.development.value,
         'DEVELOPMENT',
       );
     });
   });
   group('gen_ai', () {
     test('attribute keys', () {
-      expect(GenAi.values.length, 60);
-      expect(GenAi.genAiAgentDescription.key, 'gen_ai.agent.description');
-      expect(GenAi.genAiAgentId.key, 'gen_ai.agent.id');
-      expect(GenAi.genAiAgentName.key, 'gen_ai.agent.name');
-      expect(GenAi.genAiAgentVersion.key, 'gen_ai.agent.version');
-      expect(GenAi.genAiCompletion.key, 'gen_ai.completion');
-      expect(GenAi.genAiConversationId.key, 'gen_ai.conversation.id');
-      expect(GenAi.genAiDataSourceId.key, 'gen_ai.data_source.id');
+      expect(GenAiIncubating.values.length, 60);
       expect(
-        GenAi.genAiEmbeddingsDimensionCount.key,
+        GenAiIncubating.genAiAgentDescription.key,
+        'gen_ai.agent.description',
+      );
+      expect(GenAiIncubating.genAiAgentId.key, 'gen_ai.agent.id');
+      expect(GenAiIncubating.genAiAgentName.key, 'gen_ai.agent.name');
+      expect(GenAiIncubating.genAiAgentVersion.key, 'gen_ai.agent.version');
+      expect(GenAiIncubating.genAiCompletion.key, 'gen_ai.completion');
+      expect(GenAiIncubating.genAiConversationId.key, 'gen_ai.conversation.id');
+      expect(GenAiIncubating.genAiDataSourceId.key, 'gen_ai.data_source.id');
+      expect(
+        GenAiIncubating.genAiEmbeddingsDimensionCount.key,
         'gen_ai.embeddings.dimension.count',
       );
       expect(
-        GenAi.genAiEvaluationExplanation.key,
+        GenAiIncubating.genAiEvaluationExplanation.key,
         'gen_ai.evaluation.explanation',
       );
-      expect(GenAi.genAiEvaluationName.key, 'gen_ai.evaluation.name');
+      expect(GenAiIncubating.genAiEvaluationName.key, 'gen_ai.evaluation.name');
       expect(
-        GenAi.genAiEvaluationScoreLabel.key,
+        GenAiIncubating.genAiEvaluationScoreLabel.key,
         'gen_ai.evaluation.score.label',
       );
       expect(
-        GenAi.genAiEvaluationScoreValue.key,
+        GenAiIncubating.genAiEvaluationScoreValue.key,
         'gen_ai.evaluation.score.value',
       );
-      expect(GenAi.genAiInputMessages.key, 'gen_ai.input.messages');
+      expect(GenAiIncubating.genAiInputMessages.key, 'gen_ai.input.messages');
       expect(
-        GenAi.genAiOpenaiRequestResponseFormat.key,
+        GenAiIncubating.genAiOpenaiRequestResponseFormat.key,
         'gen_ai.openai.request.response_format',
       );
-      expect(GenAi.genAiOpenaiRequestSeed.key, 'gen_ai.openai.request.seed');
       expect(
-        GenAi.genAiOpenaiRequestServiceTier.key,
+        GenAiIncubating.genAiOpenaiRequestSeed.key,
+        'gen_ai.openai.request.seed',
+      );
+      expect(
+        GenAiIncubating.genAiOpenaiRequestServiceTier.key,
         'gen_ai.openai.request.service_tier',
       );
       expect(
-        GenAi.genAiOpenaiResponseServiceTier.key,
+        GenAiIncubating.genAiOpenaiResponseServiceTier.key,
         'gen_ai.openai.response.service_tier',
       );
       expect(
-        GenAi.genAiOpenaiResponseSystemFingerprint.key,
+        GenAiIncubating.genAiOpenaiResponseSystemFingerprint.key,
         'gen_ai.openai.response.system_fingerprint',
       );
-      expect(GenAi.genAiOperationName.key, 'gen_ai.operation.name');
-      expect(GenAi.genAiOutputMessages.key, 'gen_ai.output.messages');
-      expect(GenAi.genAiOutputType.key, 'gen_ai.output.type');
-      expect(GenAi.genAiPrompt.key, 'gen_ai.prompt');
-      expect(GenAi.genAiPromptName.key, 'gen_ai.prompt.name');
-      expect(GenAi.genAiProviderName.key, 'gen_ai.provider.name');
-      expect(GenAi.genAiRequestChoiceCount.key, 'gen_ai.request.choice.count');
+      expect(GenAiIncubating.genAiOperationName.key, 'gen_ai.operation.name');
+      expect(GenAiIncubating.genAiOutputMessages.key, 'gen_ai.output.messages');
+      expect(GenAiIncubating.genAiOutputType.key, 'gen_ai.output.type');
+      expect(GenAiIncubating.genAiPrompt.key, 'gen_ai.prompt');
+      expect(GenAiIncubating.genAiPromptName.key, 'gen_ai.prompt.name');
+      expect(GenAiIncubating.genAiProviderName.key, 'gen_ai.provider.name');
       expect(
-        GenAi.genAiRequestEncodingFormats.key,
+        GenAiIncubating.genAiRequestChoiceCount.key,
+        'gen_ai.request.choice.count',
+      );
+      expect(
+        GenAiIncubating.genAiRequestEncodingFormats.key,
         'gen_ai.request.encoding_formats',
       );
       expect(
-        GenAi.genAiRequestFrequencyPenalty.key,
+        GenAiIncubating.genAiRequestFrequencyPenalty.key,
         'gen_ai.request.frequency_penalty',
       );
-      expect(GenAi.genAiRequestMaxTokens.key, 'gen_ai.request.max_tokens');
-      expect(GenAi.genAiRequestModel.key, 'gen_ai.request.model');
       expect(
-        GenAi.genAiRequestPresencePenalty.key,
+        GenAiIncubating.genAiRequestMaxTokens.key,
+        'gen_ai.request.max_tokens',
+      );
+      expect(GenAiIncubating.genAiRequestModel.key, 'gen_ai.request.model');
+      expect(
+        GenAiIncubating.genAiRequestPresencePenalty.key,
         'gen_ai.request.presence_penalty',
       );
-      expect(GenAi.genAiRequestSeed.key, 'gen_ai.request.seed');
+      expect(GenAiIncubating.genAiRequestSeed.key, 'gen_ai.request.seed');
       expect(
-        GenAi.genAiRequestStopSequences.key,
+        GenAiIncubating.genAiRequestStopSequences.key,
         'gen_ai.request.stop_sequences',
       );
-      expect(GenAi.genAiRequestStream.key, 'gen_ai.request.stream');
-      expect(GenAi.genAiRequestTemperature.key, 'gen_ai.request.temperature');
-      expect(GenAi.genAiRequestTopK.key, 'gen_ai.request.top_k');
-      expect(GenAi.genAiRequestTopP.key, 'gen_ai.request.top_p');
+      expect(GenAiIncubating.genAiRequestStream.key, 'gen_ai.request.stream');
       expect(
-        GenAi.genAiResponseFinishReasons.key,
+        GenAiIncubating.genAiRequestTemperature.key,
+        'gen_ai.request.temperature',
+      );
+      expect(GenAiIncubating.genAiRequestTopK.key, 'gen_ai.request.top_k');
+      expect(GenAiIncubating.genAiRequestTopP.key, 'gen_ai.request.top_p');
+      expect(
+        GenAiIncubating.genAiResponseFinishReasons.key,
         'gen_ai.response.finish_reasons',
       );
-      expect(GenAi.genAiResponseId.key, 'gen_ai.response.id');
-      expect(GenAi.genAiResponseModel.key, 'gen_ai.response.model');
+      expect(GenAiIncubating.genAiResponseId.key, 'gen_ai.response.id');
+      expect(GenAiIncubating.genAiResponseModel.key, 'gen_ai.response.model');
       expect(
-        GenAi.genAiResponseTimeToFirstChunk.key,
+        GenAiIncubating.genAiResponseTimeToFirstChunk.key,
         'gen_ai.response.time_to_first_chunk',
       );
-      expect(GenAi.genAiRetrievalDocuments.key, 'gen_ai.retrieval.documents');
-      expect(GenAi.genAiRetrievalQueryText.key, 'gen_ai.retrieval.query.text');
-      expect(GenAi.genAiSystem.key, 'gen_ai.system');
-      expect(GenAi.genAiSystemInstructions.key, 'gen_ai.system_instructions');
-      expect(GenAi.genAiTokenType.key, 'gen_ai.token.type');
-      expect(GenAi.genAiToolCallArguments.key, 'gen_ai.tool.call.arguments');
-      expect(GenAi.genAiToolCallId.key, 'gen_ai.tool.call.id');
-      expect(GenAi.genAiToolCallResult.key, 'gen_ai.tool.call.result');
-      expect(GenAi.genAiToolDefinitions.key, 'gen_ai.tool.definitions');
-      expect(GenAi.genAiToolDescription.key, 'gen_ai.tool.description');
-      expect(GenAi.genAiToolName.key, 'gen_ai.tool.name');
-      expect(GenAi.genAiToolType.key, 'gen_ai.tool.type');
       expect(
-        GenAi.genAiUsageCacheCreationInputTokens.key,
+        GenAiIncubating.genAiRetrievalDocuments.key,
+        'gen_ai.retrieval.documents',
+      );
+      expect(
+        GenAiIncubating.genAiRetrievalQueryText.key,
+        'gen_ai.retrieval.query.text',
+      );
+      expect(GenAiIncubating.genAiSystem.key, 'gen_ai.system');
+      expect(
+        GenAiIncubating.genAiSystemInstructions.key,
+        'gen_ai.system_instructions',
+      );
+      expect(GenAiIncubating.genAiTokenType.key, 'gen_ai.token.type');
+      expect(
+        GenAiIncubating.genAiToolCallArguments.key,
+        'gen_ai.tool.call.arguments',
+      );
+      expect(GenAiIncubating.genAiToolCallId.key, 'gen_ai.tool.call.id');
+      expect(
+        GenAiIncubating.genAiToolCallResult.key,
+        'gen_ai.tool.call.result',
+      );
+      expect(
+        GenAiIncubating.genAiToolDefinitions.key,
+        'gen_ai.tool.definitions',
+      );
+      expect(
+        GenAiIncubating.genAiToolDescription.key,
+        'gen_ai.tool.description',
+      );
+      expect(GenAiIncubating.genAiToolName.key, 'gen_ai.tool.name');
+      expect(GenAiIncubating.genAiToolType.key, 'gen_ai.tool.type');
+      expect(
+        GenAiIncubating.genAiUsageCacheCreationInputTokens.key,
         'gen_ai.usage.cache_creation.input_tokens',
       );
       expect(
-        GenAi.genAiUsageCacheReadInputTokens.key,
+        GenAiIncubating.genAiUsageCacheReadInputTokens.key,
         'gen_ai.usage.cache_read.input_tokens',
       );
       expect(
-        GenAi.genAiUsageCompletionTokens.key,
+        GenAiIncubating.genAiUsageCompletionTokens.key,
         'gen_ai.usage.completion_tokens',
       );
-      expect(GenAi.genAiUsageInputTokens.key, 'gen_ai.usage.input_tokens');
-      expect(GenAi.genAiUsageOutputTokens.key, 'gen_ai.usage.output_tokens');
-      expect(GenAi.genAiUsagePromptTokens.key, 'gen_ai.usage.prompt_tokens');
       expect(
-        GenAi.genAiUsageReasoningOutputTokens.key,
+        GenAiIncubating.genAiUsageInputTokens.key,
+        'gen_ai.usage.input_tokens',
+      );
+      expect(
+        GenAiIncubating.genAiUsageOutputTokens.key,
+        'gen_ai.usage.output_tokens',
+      );
+      expect(
+        GenAiIncubating.genAiUsagePromptTokens.key,
+        'gen_ai.usage.prompt_tokens',
+      );
+      expect(
+        GenAiIncubating.genAiUsageReasoningOutputTokens.key,
         'gen_ai.usage.reasoning.output_tokens',
       );
-      expect(GenAi.genAiWorkflowName.key, 'gen_ai.workflow.name');
+      expect(GenAiIncubating.genAiWorkflowName.key, 'gen_ai.workflow.name');
     });
     test('gen_ai.openai.request.response_format values', () {
-      expect(GenAiOpenaiRequestResponseFormat.values.length, 3);
-      expect(GenAiOpenaiRequestResponseFormat.text.value, 'text');
-      expect(GenAiOpenaiRequestResponseFormat.jsonObject.value, 'json_object');
-      expect(GenAiOpenaiRequestResponseFormat.jsonSchema.value, 'json_schema');
+      expect(GenAiOpenaiRequestResponseFormatIncubating.values.length, 3);
+      expect(GenAiOpenaiRequestResponseFormatIncubating.text.value, 'text');
+      expect(
+        GenAiOpenaiRequestResponseFormatIncubating.jsonObject.value,
+        'json_object',
+      );
+      expect(
+        GenAiOpenaiRequestResponseFormatIncubating.jsonSchema.value,
+        'json_schema',
+      );
     });
     test('gen_ai.openai.request.service_tier values', () {
-      expect(GenAiOpenaiRequestServiceTier.values.length, 2);
-      expect(GenAiOpenaiRequestServiceTier.auto.value, 'auto');
-      expect(GenAiOpenaiRequestServiceTier.default$.value, 'default');
+      expect(GenAiOpenaiRequestServiceTierIncubating.values.length, 2);
+      expect(GenAiOpenaiRequestServiceTierIncubating.auto.value, 'auto');
+      expect(GenAiOpenaiRequestServiceTierIncubating.default$.value, 'default');
     });
     test('gen_ai.operation.name values', () {
-      expect(GenAiOperationName.values.length, 9);
-      expect(GenAiOperationName.chat.value, 'chat');
-      expect(GenAiOperationName.generateContent.value, 'generate_content');
-      expect(GenAiOperationName.textCompletion.value, 'text_completion');
-      expect(GenAiOperationName.embeddings.value, 'embeddings');
-      expect(GenAiOperationName.retrieval.value, 'retrieval');
-      expect(GenAiOperationName.createAgent.value, 'create_agent');
-      expect(GenAiOperationName.invokeAgent.value, 'invoke_agent');
-      expect(GenAiOperationName.executeTool.value, 'execute_tool');
-      expect(GenAiOperationName.invokeWorkflow.value, 'invoke_workflow');
+      expect(GenAiOperationNameIncubating.values.length, 9);
+      expect(GenAiOperationNameIncubating.chat.value, 'chat');
+      expect(
+        GenAiOperationNameIncubating.generateContent.value,
+        'generate_content',
+      );
+      expect(
+        GenAiOperationNameIncubating.textCompletion.value,
+        'text_completion',
+      );
+      expect(GenAiOperationNameIncubating.embeddings.value, 'embeddings');
+      expect(GenAiOperationNameIncubating.retrieval.value, 'retrieval');
+      expect(GenAiOperationNameIncubating.createAgent.value, 'create_agent');
+      expect(GenAiOperationNameIncubating.invokeAgent.value, 'invoke_agent');
+      expect(GenAiOperationNameIncubating.executeTool.value, 'execute_tool');
+      expect(
+        GenAiOperationNameIncubating.invokeWorkflow.value,
+        'invoke_workflow',
+      );
     });
     test('gen_ai.output.type values', () {
-      expect(GenAiOutputType.values.length, 4);
-      expect(GenAiOutputType.text.value, 'text');
-      expect(GenAiOutputType.json.value, 'json');
-      expect(GenAiOutputType.image.value, 'image');
-      expect(GenAiOutputType.speech.value, 'speech');
+      expect(GenAiOutputTypeIncubating.values.length, 4);
+      expect(GenAiOutputTypeIncubating.text.value, 'text');
+      expect(GenAiOutputTypeIncubating.json.value, 'json');
+      expect(GenAiOutputTypeIncubating.image.value, 'image');
+      expect(GenAiOutputTypeIncubating.speech.value, 'speech');
     });
     test('gen_ai.provider.name values', () {
-      expect(GenAiProviderName.values.length, 15);
-      expect(GenAiProviderName.openai.value, 'openai');
-      expect(GenAiProviderName.gcpGenAi.value, 'gcp.gen_ai');
-      expect(GenAiProviderName.gcpVertexAi.value, 'gcp.vertex_ai');
-      expect(GenAiProviderName.gcpGemini.value, 'gcp.gemini');
-      expect(GenAiProviderName.anthropic.value, 'anthropic');
-      expect(GenAiProviderName.cohere.value, 'cohere');
-      expect(GenAiProviderName.azureAiInference.value, 'azure.ai.inference');
-      expect(GenAiProviderName.azureAiOpenai.value, 'azure.ai.openai');
-      expect(GenAiProviderName.ibmWatsonxAi.value, 'ibm.watsonx.ai');
-      expect(GenAiProviderName.awsBedrock.value, 'aws.bedrock');
-      expect(GenAiProviderName.perplexity.value, 'perplexity');
-      expect(GenAiProviderName.xAi.value, 'x_ai');
-      expect(GenAiProviderName.deepseek.value, 'deepseek');
-      expect(GenAiProviderName.groq.value, 'groq');
-      expect(GenAiProviderName.mistralAi.value, 'mistral_ai');
+      expect(GenAiProviderNameIncubating.values.length, 15);
+      expect(GenAiProviderNameIncubating.openai.value, 'openai');
+      expect(GenAiProviderNameIncubating.gcpGenAi.value, 'gcp.gen_ai');
+      expect(GenAiProviderNameIncubating.gcpVertexAi.value, 'gcp.vertex_ai');
+      expect(GenAiProviderNameIncubating.gcpGemini.value, 'gcp.gemini');
+      expect(GenAiProviderNameIncubating.anthropic.value, 'anthropic');
+      expect(GenAiProviderNameIncubating.cohere.value, 'cohere');
+      expect(
+        GenAiProviderNameIncubating.azureAiInference.value,
+        'azure.ai.inference',
+      );
+      expect(
+        GenAiProviderNameIncubating.azureAiOpenai.value,
+        'azure.ai.openai',
+      );
+      expect(GenAiProviderNameIncubating.ibmWatsonxAi.value, 'ibm.watsonx.ai');
+      expect(GenAiProviderNameIncubating.awsBedrock.value, 'aws.bedrock');
+      expect(GenAiProviderNameIncubating.perplexity.value, 'perplexity');
+      expect(GenAiProviderNameIncubating.xAi.value, 'x_ai');
+      expect(GenAiProviderNameIncubating.deepseek.value, 'deepseek');
+      expect(GenAiProviderNameIncubating.groq.value, 'groq');
+      expect(GenAiProviderNameIncubating.mistralAi.value, 'mistral_ai');
     });
     test('gen_ai.system values', () {
-      expect(GenAiSystem.values.length, 19);
-      expect(GenAiSystem.openai.value, 'openai');
-      expect(GenAiSystem.gcpGenAi.value, 'gcp.gen_ai');
-      expect(GenAiSystem.gcpVertexAi.value, 'gcp.vertex_ai');
-      expect(GenAiSystem.gcpGemini.value, 'gcp.gemini');
-      expect(GenAiSystem.vertexAi.value, 'vertex_ai');
-      expect(GenAiSystem.gemini.value, 'gemini');
-      expect(GenAiSystem.anthropic.value, 'anthropic');
-      expect(GenAiSystem.cohere.value, 'cohere');
-      expect(GenAiSystem.azAiInference.value, 'az.ai.inference');
-      expect(GenAiSystem.azAiOpenai.value, 'az.ai.openai');
-      expect(GenAiSystem.azureAiInference.value, 'azure.ai.inference');
-      expect(GenAiSystem.azureAiOpenai.value, 'azure.ai.openai');
-      expect(GenAiSystem.ibmWatsonxAi.value, 'ibm.watsonx.ai');
-      expect(GenAiSystem.awsBedrock.value, 'aws.bedrock');
-      expect(GenAiSystem.perplexity.value, 'perplexity');
-      expect(GenAiSystem.xai.value, 'xai');
-      expect(GenAiSystem.deepseek.value, 'deepseek');
-      expect(GenAiSystem.groq.value, 'groq');
-      expect(GenAiSystem.mistralAi.value, 'mistral_ai');
+      expect(GenAiSystemIncubating.values.length, 19);
+      expect(GenAiSystemIncubating.openai.value, 'openai');
+      expect(GenAiSystemIncubating.gcpGenAi.value, 'gcp.gen_ai');
+      expect(GenAiSystemIncubating.gcpVertexAi.value, 'gcp.vertex_ai');
+      expect(GenAiSystemIncubating.gcpGemini.value, 'gcp.gemini');
+      expect(GenAiSystemIncubating.vertexAi.value, 'vertex_ai');
+      expect(GenAiSystemIncubating.gemini.value, 'gemini');
+      expect(GenAiSystemIncubating.anthropic.value, 'anthropic');
+      expect(GenAiSystemIncubating.cohere.value, 'cohere');
+      expect(GenAiSystemIncubating.azAiInference.value, 'az.ai.inference');
+      expect(GenAiSystemIncubating.azAiOpenai.value, 'az.ai.openai');
+      expect(
+        GenAiSystemIncubating.azureAiInference.value,
+        'azure.ai.inference',
+      );
+      expect(GenAiSystemIncubating.azureAiOpenai.value, 'azure.ai.openai');
+      expect(GenAiSystemIncubating.ibmWatsonxAi.value, 'ibm.watsonx.ai');
+      expect(GenAiSystemIncubating.awsBedrock.value, 'aws.bedrock');
+      expect(GenAiSystemIncubating.perplexity.value, 'perplexity');
+      expect(GenAiSystemIncubating.xai.value, 'xai');
+      expect(GenAiSystemIncubating.deepseek.value, 'deepseek');
+      expect(GenAiSystemIncubating.groq.value, 'groq');
+      expect(GenAiSystemIncubating.mistralAi.value, 'mistral_ai');
     });
     test('gen_ai.token.type values', () {
-      expect(GenAiTokenType.values.length, 3);
-      expect(GenAiTokenType.input.value, 'input');
-      expect(GenAiTokenType.completion.value, 'output');
-      expect(GenAiTokenType.output.value, 'output');
+      expect(GenAiTokenTypeIncubating.values.length, 3);
+      expect(GenAiTokenTypeIncubating.input.value, 'input');
+      expect(GenAiTokenTypeIncubating.completion.value, 'output');
+      expect(GenAiTokenTypeIncubating.output.value, 'output');
     });
   });
   group('geo', () {
     test('attribute keys', () {
-      expect(Geo.values.length, 7);
-      expect(Geo.geoContinentCode.key, 'geo.continent.code');
-      expect(Geo.geoCountryIsoCode.key, 'geo.country.iso_code');
-      expect(Geo.geoLocalityName.key, 'geo.locality.name');
-      expect(Geo.geoLocationLat.key, 'geo.location.lat');
-      expect(Geo.geoLocationLon.key, 'geo.location.lon');
-      expect(Geo.geoPostalCode.key, 'geo.postal_code');
-      expect(Geo.geoRegionIsoCode.key, 'geo.region.iso_code');
+      expect(GeoIncubating.values.length, 7);
+      expect(GeoIncubating.geoContinentCode.key, 'geo.continent.code');
+      expect(GeoIncubating.geoCountryIsoCode.key, 'geo.country.iso_code');
+      expect(GeoIncubating.geoLocalityName.key, 'geo.locality.name');
+      expect(GeoIncubating.geoLocationLat.key, 'geo.location.lat');
+      expect(GeoIncubating.geoLocationLon.key, 'geo.location.lon');
+      expect(GeoIncubating.geoPostalCode.key, 'geo.postal_code');
+      expect(GeoIncubating.geoRegionIsoCode.key, 'geo.region.iso_code');
     });
     test('geo.continent.code values', () {
-      expect(GeoContinentCode.values.length, 7);
-      expect(GeoContinentCode.af.value, 'AF');
-      expect(GeoContinentCode.an.value, 'AN');
-      expect(GeoContinentCode.as.value, 'AS');
-      expect(GeoContinentCode.eu.value, 'EU');
-      expect(GeoContinentCode.na.value, 'NA');
-      expect(GeoContinentCode.oc.value, 'OC');
-      expect(GeoContinentCode.sa.value, 'SA');
+      expect(GeoContinentCodeIncubating.values.length, 7);
+      expect(GeoContinentCodeIncubating.af.value, 'AF');
+      expect(GeoContinentCodeIncubating.an.value, 'AN');
+      expect(GeoContinentCodeIncubating.as.value, 'AS');
+      expect(GeoContinentCodeIncubating.eu.value, 'EU');
+      expect(GeoContinentCodeIncubating.na.value, 'NA');
+      expect(GeoContinentCodeIncubating.oc.value, 'OC');
+      expect(GeoContinentCodeIncubating.sa.value, 'SA');
     });
   });
   group('go', () {
     test('attribute keys', () {
-      expect(Go.values.length, 4);
-      expect(Go.goCpuDetailedState.key, 'go.cpu.detailed_state');
-      expect(Go.goCpuState.key, 'go.cpu.state');
-      expect(Go.goMemoryDetailedType.key, 'go.memory.detailed_type');
-      expect(Go.goMemoryType.key, 'go.memory.type');
+      expect(GoIncubating.values.length, 4);
+      expect(GoIncubating.goCpuDetailedState.key, 'go.cpu.detailed_state');
+      expect(GoIncubating.goCpuState.key, 'go.cpu.state');
+      expect(GoIncubating.goMemoryDetailedType.key, 'go.memory.detailed_type');
+      expect(GoIncubating.goMemoryType.key, 'go.memory.type');
     });
     test('go.cpu.state values', () {
-      expect(GoCpuState.values.length, 4);
-      expect(GoCpuState.user.value, 'user');
-      expect(GoCpuState.gc.value, 'gc');
-      expect(GoCpuState.scavenge.value, 'scavenge');
-      expect(GoCpuState.idle.value, 'idle');
+      expect(GoCpuStateIncubating.values.length, 4);
+      expect(GoCpuStateIncubating.user.value, 'user');
+      expect(GoCpuStateIncubating.gc.value, 'gc');
+      expect(GoCpuStateIncubating.scavenge.value, 'scavenge');
+      expect(GoCpuStateIncubating.idle.value, 'idle');
     });
     test('go.memory.type values', () {
-      expect(GoMemoryType.values.length, 2);
-      expect(GoMemoryType.stack.value, 'stack');
-      expect(GoMemoryType.other.value, 'other');
+      expect(GoMemoryTypeIncubating.values.length, 2);
+      expect(GoMemoryTypeIncubating.stack.value, 'stack');
+      expect(GoMemoryTypeIncubating.other.value, 'other');
     });
   });
   group('graphql', () {
     test('attribute keys', () {
-      expect(Graphql.values.length, 3);
-      expect(Graphql.graphqlDocument.key, 'graphql.document');
-      expect(Graphql.graphqlOperationName.key, 'graphql.operation.name');
-      expect(Graphql.graphqlOperationType.key, 'graphql.operation.type');
+      expect(GraphqlIncubating.values.length, 3);
+      expect(GraphqlIncubating.graphqlDocument.key, 'graphql.document');
+      expect(
+        GraphqlIncubating.graphqlOperationName.key,
+        'graphql.operation.name',
+      );
+      expect(
+        GraphqlIncubating.graphqlOperationType.key,
+        'graphql.operation.type',
+      );
     });
     test('graphql.operation.type values', () {
-      expect(GraphqlOperationType.values.length, 3);
-      expect(GraphqlOperationType.query.value, 'query');
-      expect(GraphqlOperationType.mutation.value, 'mutation');
-      expect(GraphqlOperationType.subscription.value, 'subscription');
+      expect(GraphqlOperationTypeIncubating.values.length, 3);
+      expect(GraphqlOperationTypeIncubating.query.value, 'query');
+      expect(GraphqlOperationTypeIncubating.mutation.value, 'mutation');
+      expect(GraphqlOperationTypeIncubating.subscription.value, 'subscription');
     });
   });
   group('heroku', () {
     test('attribute keys', () {
-      expect(Heroku.values.length, 3);
-      expect(Heroku.herokuAppId.key, 'heroku.app.id');
-      expect(Heroku.herokuReleaseCommit.key, 'heroku.release.commit');
+      expect(HerokuIncubating.values.length, 3);
+      expect(HerokuIncubating.herokuAppId.key, 'heroku.app.id');
+      expect(HerokuIncubating.herokuReleaseCommit.key, 'heroku.release.commit');
       expect(
-        Heroku.herokuReleaseCreationTimestamp.key,
+        HerokuIncubating.herokuReleaseCreationTimestamp.key,
         'heroku.release.creation_timestamp',
       );
     });
   });
   group('host', () {
     test('attribute keys', () {
-      expect(Host.values.length, 15);
-      expect(Host.hostArch.key, 'host.arch');
-      expect(Host.hostCpuCacheL2Size.key, 'host.cpu.cache.l2.size');
-      expect(Host.hostCpuFamily.key, 'host.cpu.family');
-      expect(Host.hostCpuModelId.key, 'host.cpu.model.id');
-      expect(Host.hostCpuModelName.key, 'host.cpu.model.name');
-      expect(Host.hostCpuStepping.key, 'host.cpu.stepping');
-      expect(Host.hostCpuVendorId.key, 'host.cpu.vendor.id');
-      expect(Host.hostId.key, 'host.id');
-      expect(Host.hostImageId.key, 'host.image.id');
-      expect(Host.hostImageName.key, 'host.image.name');
-      expect(Host.hostImageVersion.key, 'host.image.version');
-      expect(Host.hostIp.key, 'host.ip');
-      expect(Host.hostMac.key, 'host.mac');
-      expect(Host.hostName.key, 'host.name');
-      expect(Host.hostType.key, 'host.type');
+      expect(HostIncubating.values.length, 15);
+      expect(HostIncubating.hostArch.key, 'host.arch');
+      expect(HostIncubating.hostCpuCacheL2Size.key, 'host.cpu.cache.l2.size');
+      expect(HostIncubating.hostCpuFamily.key, 'host.cpu.family');
+      expect(HostIncubating.hostCpuModelId.key, 'host.cpu.model.id');
+      expect(HostIncubating.hostCpuModelName.key, 'host.cpu.model.name');
+      expect(HostIncubating.hostCpuStepping.key, 'host.cpu.stepping');
+      expect(HostIncubating.hostCpuVendorId.key, 'host.cpu.vendor.id');
+      expect(HostIncubating.hostId.key, 'host.id');
+      expect(HostIncubating.hostImageId.key, 'host.image.id');
+      expect(HostIncubating.hostImageName.key, 'host.image.name');
+      expect(HostIncubating.hostImageVersion.key, 'host.image.version');
+      expect(HostIncubating.hostIp.key, 'host.ip');
+      expect(HostIncubating.hostMac.key, 'host.mac');
+      expect(HostIncubating.hostName.key, 'host.name');
+      expect(HostIncubating.hostType.key, 'host.type');
     });
     test('host.arch values', () {
-      expect(HostArch.values.length, 8);
-      expect(HostArch.amd64.value, 'amd64');
-      expect(HostArch.arm32.value, 'arm32');
-      expect(HostArch.arm64.value, 'arm64');
-      expect(HostArch.ia64.value, 'ia64');
-      expect(HostArch.ppc32.value, 'ppc32');
-      expect(HostArch.ppc64.value, 'ppc64');
-      expect(HostArch.s390x.value, 's390x');
-      expect(HostArch.x86.value, 'x86');
+      expect(HostArchIncubating.values.length, 8);
+      expect(HostArchIncubating.amd64.value, 'amd64');
+      expect(HostArchIncubating.arm32.value, 'arm32');
+      expect(HostArchIncubating.arm64.value, 'arm64');
+      expect(HostArchIncubating.ia64.value, 'ia64');
+      expect(HostArchIncubating.ppc32.value, 'ppc32');
+      expect(HostArchIncubating.ppc64.value, 'ppc64');
+      expect(HostArchIncubating.s390x.value, 's390x');
+      expect(HostArchIncubating.x86.value, 'x86');
     });
   });
   group('http', () {
     test('attribute keys', () {
-      expect(Http.values.length, 26);
-      expect(Http.httpClientIp.key, 'http.client_ip');
-      expect(Http.httpConnectionState.key, 'http.connection.state');
-      expect(Http.httpFlavor.key, 'http.flavor');
-      expect(Http.httpHost.key, 'http.host');
-      expect(Http.httpMethod.key, 'http.method');
-      expect(Http.httpRequestBodySize.key, 'http.request.body.size');
-      expect(Http.httpRequestHeader.key, 'http.request.header');
-      expect(Http.httpRequestMethod.key, 'http.request.method');
+      expect(HttpIncubating.values.length, 26);
+      expect(HttpIncubating.httpClientIp.key, 'http.client_ip');
+      expect(HttpIncubating.httpConnectionState.key, 'http.connection.state');
+      expect(HttpIncubating.httpFlavor.key, 'http.flavor');
+      expect(HttpIncubating.httpHost.key, 'http.host');
+      expect(HttpIncubating.httpMethod.key, 'http.method');
+      expect(HttpIncubating.httpRequestBodySize.key, 'http.request.body.size');
+      expect(HttpIncubating.httpRequestHeader.key, 'http.request.header');
+      expect(HttpIncubating.httpRequestMethod.key, 'http.request.method');
       expect(
-        Http.httpRequestMethodOriginal.key,
+        HttpIncubating.httpRequestMethodOriginal.key,
         'http.request.method_original',
       );
-      expect(Http.httpRequestResendCount.key, 'http.request.resend_count');
-      expect(Http.httpRequestSize.key, 'http.request.size');
-      expect(Http.httpRequestContentLength.key, 'http.request_content_length');
       expect(
-        Http.httpRequestContentLengthUncompressed.key,
+        HttpIncubating.httpRequestResendCount.key,
+        'http.request.resend_count',
+      );
+      expect(HttpIncubating.httpRequestSize.key, 'http.request.size');
+      expect(
+        HttpIncubating.httpRequestContentLength.key,
+        'http.request_content_length',
+      );
+      expect(
+        HttpIncubating.httpRequestContentLengthUncompressed.key,
         'http.request_content_length_uncompressed',
       );
-      expect(Http.httpResponseBodySize.key, 'http.response.body.size');
-      expect(Http.httpResponseHeader.key, 'http.response.header');
-      expect(Http.httpResponseSize.key, 'http.response.size');
-      expect(Http.httpResponseStatusCode.key, 'http.response.status_code');
       expect(
-        Http.httpResponseContentLength.key,
+        HttpIncubating.httpResponseBodySize.key,
+        'http.response.body.size',
+      );
+      expect(HttpIncubating.httpResponseHeader.key, 'http.response.header');
+      expect(HttpIncubating.httpResponseSize.key, 'http.response.size');
+      expect(
+        HttpIncubating.httpResponseStatusCode.key,
+        'http.response.status_code',
+      );
+      expect(
+        HttpIncubating.httpResponseContentLength.key,
         'http.response_content_length',
       );
       expect(
-        Http.httpResponseContentLengthUncompressed.key,
+        HttpIncubating.httpResponseContentLengthUncompressed.key,
         'http.response_content_length_uncompressed',
       );
-      expect(Http.httpRoute.key, 'http.route');
-      expect(Http.httpScheme.key, 'http.scheme');
-      expect(Http.httpServerName.key, 'http.server_name');
-      expect(Http.httpStatusCode.key, 'http.status_code');
-      expect(Http.httpTarget.key, 'http.target');
-      expect(Http.httpUrl.key, 'http.url');
-      expect(Http.httpUserAgent.key, 'http.user_agent');
+      expect(HttpIncubating.httpRoute.key, 'http.route');
+      expect(HttpIncubating.httpScheme.key, 'http.scheme');
+      expect(HttpIncubating.httpServerName.key, 'http.server_name');
+      expect(HttpIncubating.httpStatusCode.key, 'http.status_code');
+      expect(HttpIncubating.httpTarget.key, 'http.target');
+      expect(HttpIncubating.httpUrl.key, 'http.url');
+      expect(HttpIncubating.httpUserAgent.key, 'http.user_agent');
     });
     test('http.connection.state values', () {
-      expect(HttpConnectionState.values.length, 2);
-      expect(HttpConnectionState.active.value, 'active');
-      expect(HttpConnectionState.idle.value, 'idle');
+      expect(HttpConnectionStateIncubating.values.length, 2);
+      expect(HttpConnectionStateIncubating.active.value, 'active');
+      expect(HttpConnectionStateIncubating.idle.value, 'idle');
     });
     test('http.flavor values', () {
-      expect(HttpFlavor.values.length, 6);
-      expect(HttpFlavor.http10.value, '1.0');
-      expect(HttpFlavor.http11.value, '1.1');
-      expect(HttpFlavor.http20.value, '2.0');
-      expect(HttpFlavor.http30.value, '3.0');
-      expect(HttpFlavor.spdy.value, 'SPDY');
-      expect(HttpFlavor.quic.value, 'QUIC');
+      expect(HttpFlavorIncubating.values.length, 6);
+      expect(HttpFlavorIncubating.http10.value, '1.0');
+      expect(HttpFlavorIncubating.http11.value, '1.1');
+      expect(HttpFlavorIncubating.http20.value, '2.0');
+      expect(HttpFlavorIncubating.http30.value, '3.0');
+      expect(HttpFlavorIncubating.spdy.value, 'SPDY');
+      expect(HttpFlavorIncubating.quic.value, 'QUIC');
     });
     test('http.request.method values', () {
-      expect(HttpRequestMethod.values.length, 11);
-      expect(HttpRequestMethod.connect.value, 'CONNECT');
-      expect(HttpRequestMethod.delete.value, 'DELETE');
-      expect(HttpRequestMethod.get.value, 'GET');
-      expect(HttpRequestMethod.head.value, 'HEAD');
-      expect(HttpRequestMethod.options.value, 'OPTIONS');
-      expect(HttpRequestMethod.patch.value, 'PATCH');
-      expect(HttpRequestMethod.post.value, 'POST');
-      expect(HttpRequestMethod.put.value, 'PUT');
-      expect(HttpRequestMethod.trace.value, 'TRACE');
-      expect(HttpRequestMethod.query.value, 'QUERY');
-      expect(HttpRequestMethod.other.value, '_OTHER');
+      expect(HttpRequestMethodIncubating.values.length, 11);
+      expect(HttpRequestMethodIncubating.connect.value, 'CONNECT');
+      expect(HttpRequestMethodIncubating.delete.value, 'DELETE');
+      expect(HttpRequestMethodIncubating.get.value, 'GET');
+      expect(HttpRequestMethodIncubating.head.value, 'HEAD');
+      expect(HttpRequestMethodIncubating.options.value, 'OPTIONS');
+      expect(HttpRequestMethodIncubating.patch.value, 'PATCH');
+      expect(HttpRequestMethodIncubating.post.value, 'POST');
+      expect(HttpRequestMethodIncubating.put.value, 'PUT');
+      expect(HttpRequestMethodIncubating.trace.value, 'TRACE');
+      expect(HttpRequestMethodIncubating.query.value, 'QUERY');
+      expect(HttpRequestMethodIncubating.other.value, '_OTHER');
     });
   });
   group('hw', () {
     test('attribute keys', () {
-      expect(Hw.values.length, 27);
-      expect(Hw.hwBatteryCapacity.key, 'hw.battery.capacity');
-      expect(Hw.hwBatteryChemistry.key, 'hw.battery.chemistry');
-      expect(Hw.hwBatteryState.key, 'hw.battery.state');
-      expect(Hw.hwBiosVersion.key, 'hw.bios_version');
-      expect(Hw.hwDriverVersion.key, 'hw.driver_version');
-      expect(Hw.hwEnclosureType.key, 'hw.enclosure.type');
-      expect(Hw.hwFirmwareVersion.key, 'hw.firmware_version');
-      expect(Hw.hwGpuTask.key, 'hw.gpu.task');
-      expect(Hw.hwId.key, 'hw.id');
-      expect(Hw.hwLimitType.key, 'hw.limit_type');
-      expect(Hw.hwLogicalDiskRaidLevel.key, 'hw.logical_disk.raid_level');
-      expect(Hw.hwLogicalDiskState.key, 'hw.logical_disk.state');
-      expect(Hw.hwMemoryType.key, 'hw.memory.type');
-      expect(Hw.hwModel.key, 'hw.model');
-      expect(Hw.hwName.key, 'hw.name');
-      expect(Hw.hwNetworkLogicalAddresses.key, 'hw.network.logical_addresses');
-      expect(Hw.hwNetworkPhysicalAddress.key, 'hw.network.physical_address');
-      expect(Hw.hwParent.key, 'hw.parent');
+      expect(HwIncubating.values.length, 27);
+      expect(HwIncubating.hwBatteryCapacity.key, 'hw.battery.capacity');
+      expect(HwIncubating.hwBatteryChemistry.key, 'hw.battery.chemistry');
+      expect(HwIncubating.hwBatteryState.key, 'hw.battery.state');
+      expect(HwIncubating.hwBiosVersion.key, 'hw.bios_version');
+      expect(HwIncubating.hwDriverVersion.key, 'hw.driver_version');
+      expect(HwIncubating.hwEnclosureType.key, 'hw.enclosure.type');
+      expect(HwIncubating.hwFirmwareVersion.key, 'hw.firmware_version');
+      expect(HwIncubating.hwGpuTask.key, 'hw.gpu.task');
+      expect(HwIncubating.hwId.key, 'hw.id');
+      expect(HwIncubating.hwLimitType.key, 'hw.limit_type');
       expect(
-        Hw.hwPhysicalDiskSmartAttribute.key,
+        HwIncubating.hwLogicalDiskRaidLevel.key,
+        'hw.logical_disk.raid_level',
+      );
+      expect(HwIncubating.hwLogicalDiskState.key, 'hw.logical_disk.state');
+      expect(HwIncubating.hwMemoryType.key, 'hw.memory.type');
+      expect(HwIncubating.hwModel.key, 'hw.model');
+      expect(HwIncubating.hwName.key, 'hw.name');
+      expect(
+        HwIncubating.hwNetworkLogicalAddresses.key,
+        'hw.network.logical_addresses',
+      );
+      expect(
+        HwIncubating.hwNetworkPhysicalAddress.key,
+        'hw.network.physical_address',
+      );
+      expect(HwIncubating.hwParent.key, 'hw.parent');
+      expect(
+        HwIncubating.hwPhysicalDiskSmartAttribute.key,
         'hw.physical_disk.smart_attribute',
       );
-      expect(Hw.hwPhysicalDiskState.key, 'hw.physical_disk.state');
-      expect(Hw.hwPhysicalDiskType.key, 'hw.physical_disk.type');
-      expect(Hw.hwSensorLocation.key, 'hw.sensor_location');
-      expect(Hw.hwSerialNumber.key, 'hw.serial_number');
-      expect(Hw.hwState.key, 'hw.state');
-      expect(Hw.hwTapeDriveOperationType.key, 'hw.tape_drive.operation_type');
-      expect(Hw.hwType.key, 'hw.type');
-      expect(Hw.hwVendor.key, 'hw.vendor');
+      expect(HwIncubating.hwPhysicalDiskState.key, 'hw.physical_disk.state');
+      expect(HwIncubating.hwPhysicalDiskType.key, 'hw.physical_disk.type');
+      expect(HwIncubating.hwSensorLocation.key, 'hw.sensor_location');
+      expect(HwIncubating.hwSerialNumber.key, 'hw.serial_number');
+      expect(HwIncubating.hwState.key, 'hw.state');
+      expect(
+        HwIncubating.hwTapeDriveOperationType.key,
+        'hw.tape_drive.operation_type',
+      );
+      expect(HwIncubating.hwType.key, 'hw.type');
+      expect(HwIncubating.hwVendor.key, 'hw.vendor');
     });
     test('hw.battery.state values', () {
-      expect(HwBatteryState.values.length, 2);
-      expect(HwBatteryState.charging.value, 'charging');
-      expect(HwBatteryState.discharging.value, 'discharging');
+      expect(HwBatteryStateIncubating.values.length, 2);
+      expect(HwBatteryStateIncubating.charging.value, 'charging');
+      expect(HwBatteryStateIncubating.discharging.value, 'discharging');
     });
     test('hw.gpu.task values', () {
-      expect(HwGpuTask.values.length, 3);
-      expect(HwGpuTask.decoder.value, 'decoder');
-      expect(HwGpuTask.encoder.value, 'encoder');
-      expect(HwGpuTask.general.value, 'general');
+      expect(HwGpuTaskIncubating.values.length, 3);
+      expect(HwGpuTaskIncubating.decoder.value, 'decoder');
+      expect(HwGpuTaskIncubating.encoder.value, 'encoder');
+      expect(HwGpuTaskIncubating.general.value, 'general');
     });
     test('hw.limit_type values', () {
-      expect(HwLimitType.values.length, 9);
-      expect(HwLimitType.critical.value, 'critical');
-      expect(HwLimitType.degraded.value, 'degraded');
-      expect(HwLimitType.highCritical.value, 'high.critical');
-      expect(HwLimitType.highDegraded.value, 'high.degraded');
-      expect(HwLimitType.lowCritical.value, 'low.critical');
-      expect(HwLimitType.lowDegraded.value, 'low.degraded');
-      expect(HwLimitType.max.value, 'max');
-      expect(HwLimitType.throttled.value, 'throttled');
-      expect(HwLimitType.turbo.value, 'turbo');
+      expect(HwLimitTypeIncubating.values.length, 9);
+      expect(HwLimitTypeIncubating.critical.value, 'critical');
+      expect(HwLimitTypeIncubating.degraded.value, 'degraded');
+      expect(HwLimitTypeIncubating.highCritical.value, 'high.critical');
+      expect(HwLimitTypeIncubating.highDegraded.value, 'high.degraded');
+      expect(HwLimitTypeIncubating.lowCritical.value, 'low.critical');
+      expect(HwLimitTypeIncubating.lowDegraded.value, 'low.degraded');
+      expect(HwLimitTypeIncubating.max.value, 'max');
+      expect(HwLimitTypeIncubating.throttled.value, 'throttled');
+      expect(HwLimitTypeIncubating.turbo.value, 'turbo');
     });
     test('hw.logical_disk.state values', () {
-      expect(HwLogicalDiskState.values.length, 2);
-      expect(HwLogicalDiskState.used.value, 'used');
-      expect(HwLogicalDiskState.free.value, 'free');
+      expect(HwLogicalDiskStateIncubating.values.length, 2);
+      expect(HwLogicalDiskStateIncubating.used.value, 'used');
+      expect(HwLogicalDiskStateIncubating.free.value, 'free');
     });
     test('hw.physical_disk.state values', () {
-      expect(HwPhysicalDiskState.values.length, 1);
-      expect(HwPhysicalDiskState.remaining.value, 'remaining');
+      expect(HwPhysicalDiskStateIncubating.values.length, 1);
+      expect(HwPhysicalDiskStateIncubating.remaining.value, 'remaining');
     });
     test('hw.state values', () {
-      expect(HwState.values.length, 5);
-      expect(HwState.degraded.value, 'degraded');
-      expect(HwState.failed.value, 'failed');
-      expect(HwState.needsCleaning.value, 'needs_cleaning');
-      expect(HwState.ok.value, 'ok');
-      expect(HwState.predictedFailure.value, 'predicted_failure');
+      expect(HwStateIncubating.values.length, 5);
+      expect(HwStateIncubating.degraded.value, 'degraded');
+      expect(HwStateIncubating.failed.value, 'failed');
+      expect(HwStateIncubating.needsCleaning.value, 'needs_cleaning');
+      expect(HwStateIncubating.ok.value, 'ok');
+      expect(HwStateIncubating.predictedFailure.value, 'predicted_failure');
     });
     test('hw.tape_drive.operation_type values', () {
-      expect(HwTapeDriveOperationType.values.length, 3);
-      expect(HwTapeDriveOperationType.mount.value, 'mount');
-      expect(HwTapeDriveOperationType.unmount.value, 'unmount');
-      expect(HwTapeDriveOperationType.clean.value, 'clean');
+      expect(HwTapeDriveOperationTypeIncubating.values.length, 3);
+      expect(HwTapeDriveOperationTypeIncubating.mount.value, 'mount');
+      expect(HwTapeDriveOperationTypeIncubating.unmount.value, 'unmount');
+      expect(HwTapeDriveOperationTypeIncubating.clean.value, 'clean');
     });
     test('hw.type values', () {
-      expect(HwType.values.length, 14);
-      expect(HwType.battery.value, 'battery');
-      expect(HwType.cpu.value, 'cpu');
-      expect(HwType.diskController.value, 'disk_controller');
-      expect(HwType.enclosure.value, 'enclosure');
-      expect(HwType.fan.value, 'fan');
-      expect(HwType.gpu.value, 'gpu');
-      expect(HwType.logicalDisk.value, 'logical_disk');
-      expect(HwType.memory.value, 'memory');
-      expect(HwType.network.value, 'network');
-      expect(HwType.physicalDisk.value, 'physical_disk');
-      expect(HwType.powerSupply.value, 'power_supply');
-      expect(HwType.tapeDrive.value, 'tape_drive');
-      expect(HwType.temperature.value, 'temperature');
-      expect(HwType.voltage.value, 'voltage');
+      expect(HwTypeIncubating.values.length, 14);
+      expect(HwTypeIncubating.battery.value, 'battery');
+      expect(HwTypeIncubating.cpu.value, 'cpu');
+      expect(HwTypeIncubating.diskController.value, 'disk_controller');
+      expect(HwTypeIncubating.enclosure.value, 'enclosure');
+      expect(HwTypeIncubating.fan.value, 'fan');
+      expect(HwTypeIncubating.gpu.value, 'gpu');
+      expect(HwTypeIncubating.logicalDisk.value, 'logical_disk');
+      expect(HwTypeIncubating.memory.value, 'memory');
+      expect(HwTypeIncubating.network.value, 'network');
+      expect(HwTypeIncubating.physicalDisk.value, 'physical_disk');
+      expect(HwTypeIncubating.powerSupply.value, 'power_supply');
+      expect(HwTypeIncubating.tapeDrive.value, 'tape_drive');
+      expect(HwTypeIncubating.temperature.value, 'temperature');
+      expect(HwTypeIncubating.voltage.value, 'voltage');
     });
   });
   group('ios', () {
     test('attribute keys', () {
-      expect(Ios.values.length, 2);
-      expect(Ios.iosAppState.key, 'ios.app.state');
-      expect(Ios.iosState.key, 'ios.state');
+      expect(IosIncubating.values.length, 2);
+      expect(IosIncubating.iosAppState.key, 'ios.app.state');
+      expect(IosIncubating.iosState.key, 'ios.state');
     });
     test('ios.app.state values', () {
-      expect(IosAppState.values.length, 5);
-      expect(IosAppState.active.value, 'active');
-      expect(IosAppState.inactive.value, 'inactive');
-      expect(IosAppState.background.value, 'background');
-      expect(IosAppState.foreground.value, 'foreground');
-      expect(IosAppState.terminate.value, 'terminate');
+      expect(IosAppStateIncubating.values.length, 5);
+      expect(IosAppStateIncubating.active.value, 'active');
+      expect(IosAppStateIncubating.inactive.value, 'inactive');
+      expect(IosAppStateIncubating.background.value, 'background');
+      expect(IosAppStateIncubating.foreground.value, 'foreground');
+      expect(IosAppStateIncubating.terminate.value, 'terminate');
     });
     test('ios.state values', () {
-      expect(IosState.values.length, 5);
-      expect(IosState.active.value, 'active');
-      expect(IosState.inactive.value, 'inactive');
-      expect(IosState.background.value, 'background');
-      expect(IosState.foreground.value, 'foreground');
-      expect(IosState.terminate.value, 'terminate');
+      expect(IosStateIncubating.values.length, 5);
+      expect(IosStateIncubating.active.value, 'active');
+      expect(IosStateIncubating.inactive.value, 'inactive');
+      expect(IosStateIncubating.background.value, 'background');
+      expect(IosStateIncubating.foreground.value, 'foreground');
+      expect(IosStateIncubating.terminate.value, 'terminate');
     });
   });
   group('jsonrpc', () {
     test('attribute keys', () {
-      expect(Jsonrpc.values.length, 2);
-      expect(Jsonrpc.jsonrpcProtocolVersion.key, 'jsonrpc.protocol.version');
-      expect(Jsonrpc.jsonrpcRequestId.key, 'jsonrpc.request.id');
+      expect(JsonrpcIncubating.values.length, 2);
+      expect(
+        JsonrpcIncubating.jsonrpcProtocolVersion.key,
+        'jsonrpc.protocol.version',
+      );
+      expect(JsonrpcIncubating.jsonrpcRequestId.key, 'jsonrpc.request.id');
     });
   });
   group('jvm', () {
     test('attribute keys', () {
-      expect(Jvm.values.length, 8);
-      expect(Jvm.jvmBufferPoolName.key, 'jvm.buffer.pool.name');
-      expect(Jvm.jvmGcAction.key, 'jvm.gc.action');
-      expect(Jvm.jvmGcCause.key, 'jvm.gc.cause');
-      expect(Jvm.jvmGcName.key, 'jvm.gc.name');
-      expect(Jvm.jvmMemoryPoolName.key, 'jvm.memory.pool.name');
-      expect(Jvm.jvmMemoryType.key, 'jvm.memory.type');
-      expect(Jvm.jvmThreadDaemon.key, 'jvm.thread.daemon');
-      expect(Jvm.jvmThreadState.key, 'jvm.thread.state');
+      expect(JvmIncubating.values.length, 8);
+      expect(JvmIncubating.jvmBufferPoolName.key, 'jvm.buffer.pool.name');
+      expect(JvmIncubating.jvmGcAction.key, 'jvm.gc.action');
+      expect(JvmIncubating.jvmGcCause.key, 'jvm.gc.cause');
+      expect(JvmIncubating.jvmGcName.key, 'jvm.gc.name');
+      expect(JvmIncubating.jvmMemoryPoolName.key, 'jvm.memory.pool.name');
+      expect(JvmIncubating.jvmMemoryType.key, 'jvm.memory.type');
+      expect(JvmIncubating.jvmThreadDaemon.key, 'jvm.thread.daemon');
+      expect(JvmIncubating.jvmThreadState.key, 'jvm.thread.state');
     });
     test('jvm.memory.type values', () {
-      expect(JvmMemoryType.values.length, 2);
-      expect(JvmMemoryType.heap.value, 'heap');
-      expect(JvmMemoryType.nonHeap.value, 'non_heap');
+      expect(JvmMemoryTypeIncubating.values.length, 2);
+      expect(JvmMemoryTypeIncubating.heap.value, 'heap');
+      expect(JvmMemoryTypeIncubating.nonHeap.value, 'non_heap');
     });
     test('jvm.thread.state values', () {
-      expect(JvmThreadState.values.length, 6);
-      expect(JvmThreadState.new$.value, 'new');
-      expect(JvmThreadState.runnable.value, 'runnable');
-      expect(JvmThreadState.blocked.value, 'blocked');
-      expect(JvmThreadState.waiting.value, 'waiting');
-      expect(JvmThreadState.timedWaiting.value, 'timed_waiting');
-      expect(JvmThreadState.terminated.value, 'terminated');
+      expect(JvmThreadStateIncubating.values.length, 6);
+      expect(JvmThreadStateIncubating.new$.value, 'new');
+      expect(JvmThreadStateIncubating.runnable.value, 'runnable');
+      expect(JvmThreadStateIncubating.blocked.value, 'blocked');
+      expect(JvmThreadStateIncubating.waiting.value, 'waiting');
+      expect(JvmThreadStateIncubating.timedWaiting.value, 'timed_waiting');
+      expect(JvmThreadStateIncubating.terminated.value, 'terminated');
     });
   });
   group('k8s', () {
     test('attribute keys', () {
-      expect(K8s.values.length, 90);
-      expect(K8s.k8sClusterName.key, 'k8s.cluster.name');
-      expect(K8s.k8sClusterUid.key, 'k8s.cluster.uid');
+      expect(K8sIncubating.values.length, 90);
+      expect(K8sIncubating.k8sClusterName.key, 'k8s.cluster.name');
+      expect(K8sIncubating.k8sClusterUid.key, 'k8s.cluster.uid');
       expect(
-        K8s.k8sContainerEphemeralStorageFsType.key,
+        K8sIncubating.k8sContainerEphemeralStorageFsType.key,
         'k8s.container.ephemeral_storage.fs_type',
       );
-      expect(K8s.k8sContainerName.key, 'k8s.container.name');
-      expect(K8s.k8sContainerRestartCount.key, 'k8s.container.restart_count');
+      expect(K8sIncubating.k8sContainerName.key, 'k8s.container.name');
       expect(
-        K8s.k8sContainerStatusLastTerminatedReason.key,
+        K8sIncubating.k8sContainerRestartCount.key,
+        'k8s.container.restart_count',
+      );
+      expect(
+        K8sIncubating.k8sContainerStatusLastTerminatedReason.key,
         'k8s.container.status.last_terminated_reason',
       );
-      expect(K8s.k8sContainerStatusReason.key, 'k8s.container.status.reason');
-      expect(K8s.k8sContainerStatusState.key, 'k8s.container.status.state');
-      expect(K8s.k8sCronjobAnnotation.key, 'k8s.cronjob.annotation');
-      expect(K8s.k8sCronjobLabel.key, 'k8s.cronjob.label');
-      expect(K8s.k8sCronjobName.key, 'k8s.cronjob.name');
-      expect(K8s.k8sCronjobUid.key, 'k8s.cronjob.uid');
-      expect(K8s.k8sDaemonsetAnnotation.key, 'k8s.daemonset.annotation');
-      expect(K8s.k8sDaemonsetLabel.key, 'k8s.daemonset.label');
-      expect(K8s.k8sDaemonsetName.key, 'k8s.daemonset.name');
-      expect(K8s.k8sDaemonsetUid.key, 'k8s.daemonset.uid');
-      expect(K8s.k8sDeploymentAnnotation.key, 'k8s.deployment.annotation');
-      expect(K8s.k8sDeploymentLabel.key, 'k8s.deployment.label');
-      expect(K8s.k8sDeploymentName.key, 'k8s.deployment.name');
-      expect(K8s.k8sDeploymentUid.key, 'k8s.deployment.uid');
-      expect(K8s.k8sHpaMetricType.key, 'k8s.hpa.metric.type');
-      expect(K8s.k8sHpaName.key, 'k8s.hpa.name');
       expect(
-        K8s.k8sHpaScaletargetrefApiVersion.key,
+        K8sIncubating.k8sContainerStatusReason.key,
+        'k8s.container.status.reason',
+      );
+      expect(
+        K8sIncubating.k8sContainerStatusState.key,
+        'k8s.container.status.state',
+      );
+      expect(K8sIncubating.k8sCronjobAnnotation.key, 'k8s.cronjob.annotation');
+      expect(K8sIncubating.k8sCronjobLabel.key, 'k8s.cronjob.label');
+      expect(K8sIncubating.k8sCronjobName.key, 'k8s.cronjob.name');
+      expect(K8sIncubating.k8sCronjobUid.key, 'k8s.cronjob.uid');
+      expect(
+        K8sIncubating.k8sDaemonsetAnnotation.key,
+        'k8s.daemonset.annotation',
+      );
+      expect(K8sIncubating.k8sDaemonsetLabel.key, 'k8s.daemonset.label');
+      expect(K8sIncubating.k8sDaemonsetName.key, 'k8s.daemonset.name');
+      expect(K8sIncubating.k8sDaemonsetUid.key, 'k8s.daemonset.uid');
+      expect(
+        K8sIncubating.k8sDeploymentAnnotation.key,
+        'k8s.deployment.annotation',
+      );
+      expect(K8sIncubating.k8sDeploymentLabel.key, 'k8s.deployment.label');
+      expect(K8sIncubating.k8sDeploymentName.key, 'k8s.deployment.name');
+      expect(K8sIncubating.k8sDeploymentUid.key, 'k8s.deployment.uid');
+      expect(K8sIncubating.k8sHpaMetricType.key, 'k8s.hpa.metric.type');
+      expect(K8sIncubating.k8sHpaName.key, 'k8s.hpa.name');
+      expect(
+        K8sIncubating.k8sHpaScaletargetrefApiVersion.key,
         'k8s.hpa.scaletargetref.api_version',
       );
-      expect(K8s.k8sHpaScaletargetrefKind.key, 'k8s.hpa.scaletargetref.kind');
-      expect(K8s.k8sHpaScaletargetrefName.key, 'k8s.hpa.scaletargetref.name');
-      expect(K8s.k8sHpaUid.key, 'k8s.hpa.uid');
-      expect(K8s.k8sHugepageSize.key, 'k8s.hugepage.size');
-      expect(K8s.k8sJobAnnotation.key, 'k8s.job.annotation');
-      expect(K8s.k8sJobLabel.key, 'k8s.job.label');
-      expect(K8s.k8sJobName.key, 'k8s.job.name');
-      expect(K8s.k8sJobUid.key, 'k8s.job.uid');
-      expect(K8s.k8sNamespaceAnnotation.key, 'k8s.namespace.annotation');
-      expect(K8s.k8sNamespaceLabel.key, 'k8s.namespace.label');
-      expect(K8s.k8sNamespaceName.key, 'k8s.namespace.name');
-      expect(K8s.k8sNamespacePhase.key, 'k8s.namespace.phase');
-      expect(K8s.k8sNodeAnnotation.key, 'k8s.node.annotation');
-      expect(K8s.k8sNodeConditionStatus.key, 'k8s.node.condition.status');
-      expect(K8s.k8sNodeConditionType.key, 'k8s.node.condition.type');
-      expect(K8s.k8sNodeLabel.key, 'k8s.node.label');
-      expect(K8s.k8sNodeName.key, 'k8s.node.name');
       expect(
-        K8s.k8sNodeSystemContainerName.key,
+        K8sIncubating.k8sHpaScaletargetrefKind.key,
+        'k8s.hpa.scaletargetref.kind',
+      );
+      expect(
+        K8sIncubating.k8sHpaScaletargetrefName.key,
+        'k8s.hpa.scaletargetref.name',
+      );
+      expect(K8sIncubating.k8sHpaUid.key, 'k8s.hpa.uid');
+      expect(K8sIncubating.k8sHugepageSize.key, 'k8s.hugepage.size');
+      expect(K8sIncubating.k8sJobAnnotation.key, 'k8s.job.annotation');
+      expect(K8sIncubating.k8sJobLabel.key, 'k8s.job.label');
+      expect(K8sIncubating.k8sJobName.key, 'k8s.job.name');
+      expect(K8sIncubating.k8sJobUid.key, 'k8s.job.uid');
+      expect(
+        K8sIncubating.k8sNamespaceAnnotation.key,
+        'k8s.namespace.annotation',
+      );
+      expect(K8sIncubating.k8sNamespaceLabel.key, 'k8s.namespace.label');
+      expect(K8sIncubating.k8sNamespaceName.key, 'k8s.namespace.name');
+      expect(K8sIncubating.k8sNamespacePhase.key, 'k8s.namespace.phase');
+      expect(K8sIncubating.k8sNodeAnnotation.key, 'k8s.node.annotation');
+      expect(
+        K8sIncubating.k8sNodeConditionStatus.key,
+        'k8s.node.condition.status',
+      );
+      expect(K8sIncubating.k8sNodeConditionType.key, 'k8s.node.condition.type');
+      expect(K8sIncubating.k8sNodeLabel.key, 'k8s.node.label');
+      expect(K8sIncubating.k8sNodeName.key, 'k8s.node.name');
+      expect(
+        K8sIncubating.k8sNodeSystemContainerName.key,
         'k8s.node.system_container.name',
       );
-      expect(K8s.k8sNodeUid.key, 'k8s.node.uid');
+      expect(K8sIncubating.k8sNodeUid.key, 'k8s.node.uid');
       expect(
-        K8s.k8sPersistentvolumeAnnotation.key,
+        K8sIncubating.k8sPersistentvolumeAnnotation.key,
         'k8s.persistentvolume.annotation',
       );
-      expect(K8s.k8sPersistentvolumeLabel.key, 'k8s.persistentvolume.label');
-      expect(K8s.k8sPersistentvolumeName.key, 'k8s.persistentvolume.name');
       expect(
-        K8s.k8sPersistentvolumeReclaimPolicy.key,
+        K8sIncubating.k8sPersistentvolumeLabel.key,
+        'k8s.persistentvolume.label',
+      );
+      expect(
+        K8sIncubating.k8sPersistentvolumeName.key,
+        'k8s.persistentvolume.name',
+      );
+      expect(
+        K8sIncubating.k8sPersistentvolumeReclaimPolicy.key,
         'k8s.persistentvolume.reclaim_policy',
       );
       expect(
-        K8s.k8sPersistentvolumeStatusPhase.key,
+        K8sIncubating.k8sPersistentvolumeStatusPhase.key,
         'k8s.persistentvolume.status.phase',
       );
-      expect(K8s.k8sPersistentvolumeUid.key, 'k8s.persistentvolume.uid');
       expect(
-        K8s.k8sPersistentvolumeclaimAnnotation.key,
+        K8sIncubating.k8sPersistentvolumeUid.key,
+        'k8s.persistentvolume.uid',
+      );
+      expect(
+        K8sIncubating.k8sPersistentvolumeclaimAnnotation.key,
         'k8s.persistentvolumeclaim.annotation',
       );
       expect(
-        K8s.k8sPersistentvolumeclaimLabel.key,
+        K8sIncubating.k8sPersistentvolumeclaimLabel.key,
         'k8s.persistentvolumeclaim.label',
       );
       expect(
-        K8s.k8sPersistentvolumeclaimName.key,
+        K8sIncubating.k8sPersistentvolumeclaimName.key,
         'k8s.persistentvolumeclaim.name',
       );
       expect(
-        K8s.k8sPersistentvolumeclaimStatusPhase.key,
+        K8sIncubating.k8sPersistentvolumeclaimStatusPhase.key,
         'k8s.persistentvolumeclaim.status.phase',
       );
       expect(
-        K8s.k8sPersistentvolumeclaimUid.key,
+        K8sIncubating.k8sPersistentvolumeclaimUid.key,
         'k8s.persistentvolumeclaim.uid',
       );
-      expect(K8s.k8sPodAnnotation.key, 'k8s.pod.annotation');
-      expect(K8s.k8sPodHostname.key, 'k8s.pod.hostname');
-      expect(K8s.k8sPodIp.key, 'k8s.pod.ip');
-      expect(K8s.k8sPodLabel.key, 'k8s.pod.label');
-      expect(K8s.k8sPodLabels.key, 'k8s.pod.labels');
-      expect(K8s.k8sPodName.key, 'k8s.pod.name');
-      expect(K8s.k8sPodStartTime.key, 'k8s.pod.start_time');
-      expect(K8s.k8sPodStatusPhase.key, 'k8s.pod.status.phase');
-      expect(K8s.k8sPodStatusReason.key, 'k8s.pod.status.reason');
-      expect(K8s.k8sPodUid.key, 'k8s.pod.uid');
-      expect(K8s.k8sReplicasetAnnotation.key, 'k8s.replicaset.annotation');
-      expect(K8s.k8sReplicasetLabel.key, 'k8s.replicaset.label');
-      expect(K8s.k8sReplicasetName.key, 'k8s.replicaset.name');
-      expect(K8s.k8sReplicasetUid.key, 'k8s.replicaset.uid');
+      expect(K8sIncubating.k8sPodAnnotation.key, 'k8s.pod.annotation');
+      expect(K8sIncubating.k8sPodHostname.key, 'k8s.pod.hostname');
+      expect(K8sIncubating.k8sPodIp.key, 'k8s.pod.ip');
+      expect(K8sIncubating.k8sPodLabel.key, 'k8s.pod.label');
+      expect(K8sIncubating.k8sPodLabels.key, 'k8s.pod.labels');
+      expect(K8sIncubating.k8sPodName.key, 'k8s.pod.name');
+      expect(K8sIncubating.k8sPodStartTime.key, 'k8s.pod.start_time');
+      expect(K8sIncubating.k8sPodStatusPhase.key, 'k8s.pod.status.phase');
+      expect(K8sIncubating.k8sPodStatusReason.key, 'k8s.pod.status.reason');
+      expect(K8sIncubating.k8sPodUid.key, 'k8s.pod.uid');
       expect(
-        K8s.k8sReplicationcontrollerName.key,
+        K8sIncubating.k8sReplicasetAnnotation.key,
+        'k8s.replicaset.annotation',
+      );
+      expect(K8sIncubating.k8sReplicasetLabel.key, 'k8s.replicaset.label');
+      expect(K8sIncubating.k8sReplicasetName.key, 'k8s.replicaset.name');
+      expect(K8sIncubating.k8sReplicasetUid.key, 'k8s.replicaset.uid');
+      expect(
+        K8sIncubating.k8sReplicationcontrollerName.key,
         'k8s.replicationcontroller.name',
       );
       expect(
-        K8s.k8sReplicationcontrollerUid.key,
+        K8sIncubating.k8sReplicationcontrollerUid.key,
         'k8s.replicationcontroller.uid',
       );
-      expect(K8s.k8sResourcequotaName.key, 'k8s.resourcequota.name');
+      expect(K8sIncubating.k8sResourcequotaName.key, 'k8s.resourcequota.name');
       expect(
-        K8s.k8sResourcequotaResourceName.key,
+        K8sIncubating.k8sResourcequotaResourceName.key,
         'k8s.resourcequota.resource_name',
       );
-      expect(K8s.k8sResourcequotaUid.key, 'k8s.resourcequota.uid');
-      expect(K8s.k8sServiceAnnotation.key, 'k8s.service.annotation');
+      expect(K8sIncubating.k8sResourcequotaUid.key, 'k8s.resourcequota.uid');
+      expect(K8sIncubating.k8sServiceAnnotation.key, 'k8s.service.annotation');
       expect(
-        K8s.k8sServiceEndpointAddressType.key,
+        K8sIncubating.k8sServiceEndpointAddressType.key,
         'k8s.service.endpoint.address_type',
       );
       expect(
-        K8s.k8sServiceEndpointCondition.key,
+        K8sIncubating.k8sServiceEndpointCondition.key,
         'k8s.service.endpoint.condition',
       );
-      expect(K8s.k8sServiceEndpointZone.key, 'k8s.service.endpoint.zone');
-      expect(K8s.k8sServiceLabel.key, 'k8s.service.label');
-      expect(K8s.k8sServiceName.key, 'k8s.service.name');
       expect(
-        K8s.k8sServicePublishNotReadyAddresses.key,
+        K8sIncubating.k8sServiceEndpointZone.key,
+        'k8s.service.endpoint.zone',
+      );
+      expect(K8sIncubating.k8sServiceLabel.key, 'k8s.service.label');
+      expect(K8sIncubating.k8sServiceName.key, 'k8s.service.name');
+      expect(
+        K8sIncubating.k8sServicePublishNotReadyAddresses.key,
         'k8s.service.publish_not_ready_addresses',
       );
-      expect(K8s.k8sServiceSelector.key, 'k8s.service.selector');
+      expect(K8sIncubating.k8sServiceSelector.key, 'k8s.service.selector');
       expect(
-        K8s.k8sServiceTrafficDistribution.key,
+        K8sIncubating.k8sServiceTrafficDistribution.key,
         'k8s.service.traffic_distribution',
       );
-      expect(K8s.k8sServiceType.key, 'k8s.service.type');
-      expect(K8s.k8sServiceUid.key, 'k8s.service.uid');
-      expect(K8s.k8sStatefulsetAnnotation.key, 'k8s.statefulset.annotation');
-      expect(K8s.k8sStatefulsetLabel.key, 'k8s.statefulset.label');
-      expect(K8s.k8sStatefulsetName.key, 'k8s.statefulset.name');
-      expect(K8s.k8sStatefulsetUid.key, 'k8s.statefulset.uid');
-      expect(K8s.k8sStorageclassName.key, 'k8s.storageclass.name');
-      expect(K8s.k8sVolumeName.key, 'k8s.volume.name');
-      expect(K8s.k8sVolumeType.key, 'k8s.volume.type');
+      expect(K8sIncubating.k8sServiceType.key, 'k8s.service.type');
+      expect(K8sIncubating.k8sServiceUid.key, 'k8s.service.uid');
+      expect(
+        K8sIncubating.k8sStatefulsetAnnotation.key,
+        'k8s.statefulset.annotation',
+      );
+      expect(K8sIncubating.k8sStatefulsetLabel.key, 'k8s.statefulset.label');
+      expect(K8sIncubating.k8sStatefulsetName.key, 'k8s.statefulset.name');
+      expect(K8sIncubating.k8sStatefulsetUid.key, 'k8s.statefulset.uid');
+      expect(K8sIncubating.k8sStorageclassName.key, 'k8s.storageclass.name');
+      expect(K8sIncubating.k8sVolumeName.key, 'k8s.volume.name');
+      expect(K8sIncubating.k8sVolumeType.key, 'k8s.volume.type');
     });
     test('k8s.container.ephemeral_storage.fs_type values', () {
-      expect(K8sContainerEphemeralStorageFsType.values.length, 2);
-      expect(K8sContainerEphemeralStorageFsType.rootfs.value, 'rootfs');
-      expect(K8sContainerEphemeralStorageFsType.logs.value, 'logs');
+      expect(K8sContainerEphemeralStorageFsTypeIncubating.values.length, 2);
+      expect(
+        K8sContainerEphemeralStorageFsTypeIncubating.rootfs.value,
+        'rootfs',
+      );
+      expect(K8sContainerEphemeralStorageFsTypeIncubating.logs.value, 'logs');
     });
     test('k8s.container.status.reason values', () {
-      expect(K8sContainerStatusReason.values.length, 9);
+      expect(K8sContainerStatusReasonIncubating.values.length, 9);
       expect(
-        K8sContainerStatusReason.containerCreating.value,
+        K8sContainerStatusReasonIncubating.containerCreating.value,
         'ContainerCreating',
       );
       expect(
-        K8sContainerStatusReason.crashLoopBackOff.value,
+        K8sContainerStatusReasonIncubating.crashLoopBackOff.value,
         'CrashLoopBackOff',
       );
       expect(
-        K8sContainerStatusReason.createContainerConfigError.value,
+        K8sContainerStatusReasonIncubating.createContainerConfigError.value,
         'CreateContainerConfigError',
       );
-      expect(K8sContainerStatusReason.errImagePull.value, 'ErrImagePull');
       expect(
-        K8sContainerStatusReason.imagePullBackOff.value,
+        K8sContainerStatusReasonIncubating.errImagePull.value,
+        'ErrImagePull',
+      );
+      expect(
+        K8sContainerStatusReasonIncubating.imagePullBackOff.value,
         'ImagePullBackOff',
       );
-      expect(K8sContainerStatusReason.oomKilled.value, 'OOMKilled');
-      expect(K8sContainerStatusReason.completed.value, 'Completed');
-      expect(K8sContainerStatusReason.error.value, 'Error');
+      expect(K8sContainerStatusReasonIncubating.oomKilled.value, 'OOMKilled');
+      expect(K8sContainerStatusReasonIncubating.completed.value, 'Completed');
+      expect(K8sContainerStatusReasonIncubating.error.value, 'Error');
       expect(
-        K8sContainerStatusReason.containerCannotRun.value,
+        K8sContainerStatusReasonIncubating.containerCannotRun.value,
         'ContainerCannotRun',
       );
     });
     test('k8s.container.status.state values', () {
-      expect(K8sContainerStatusState.values.length, 3);
-      expect(K8sContainerStatusState.terminated.value, 'terminated');
-      expect(K8sContainerStatusState.running.value, 'running');
-      expect(K8sContainerStatusState.waiting.value, 'waiting');
+      expect(K8sContainerStatusStateIncubating.values.length, 3);
+      expect(K8sContainerStatusStateIncubating.terminated.value, 'terminated');
+      expect(K8sContainerStatusStateIncubating.running.value, 'running');
+      expect(K8sContainerStatusStateIncubating.waiting.value, 'waiting');
     });
     test('k8s.namespace.phase values', () {
-      expect(K8sNamespacePhase.values.length, 2);
-      expect(K8sNamespacePhase.active.value, 'active');
-      expect(K8sNamespacePhase.terminating.value, 'terminating');
+      expect(K8sNamespacePhaseIncubating.values.length, 2);
+      expect(K8sNamespacePhaseIncubating.active.value, 'active');
+      expect(K8sNamespacePhaseIncubating.terminating.value, 'terminating');
     });
     test('k8s.node.condition.status values', () {
-      expect(K8sNodeConditionStatus.values.length, 3);
-      expect(K8sNodeConditionStatus.conditionTrue.value, 'true');
-      expect(K8sNodeConditionStatus.conditionFalse.value, 'false');
-      expect(K8sNodeConditionStatus.conditionUnknown.value, 'unknown');
+      expect(K8sNodeConditionStatusIncubating.values.length, 3);
+      expect(K8sNodeConditionStatusIncubating.conditionTrue.value, 'true');
+      expect(K8sNodeConditionStatusIncubating.conditionFalse.value, 'false');
+      expect(
+        K8sNodeConditionStatusIncubating.conditionUnknown.value,
+        'unknown',
+      );
     });
     test('k8s.node.condition.type values', () {
-      expect(K8sNodeConditionType.values.length, 5);
-      expect(K8sNodeConditionType.ready.value, 'Ready');
-      expect(K8sNodeConditionType.diskPressure.value, 'DiskPressure');
-      expect(K8sNodeConditionType.memoryPressure.value, 'MemoryPressure');
-      expect(K8sNodeConditionType.pidPressure.value, 'PIDPressure');
+      expect(K8sNodeConditionTypeIncubating.values.length, 5);
+      expect(K8sNodeConditionTypeIncubating.ready.value, 'Ready');
+      expect(K8sNodeConditionTypeIncubating.diskPressure.value, 'DiskPressure');
       expect(
-        K8sNodeConditionType.networkUnavailable.value,
+        K8sNodeConditionTypeIncubating.memoryPressure.value,
+        'MemoryPressure',
+      );
+      expect(K8sNodeConditionTypeIncubating.pidPressure.value, 'PIDPressure');
+      expect(
+        K8sNodeConditionTypeIncubating.networkUnavailable.value,
         'NetworkUnavailable',
       );
     });
     test('k8s.persistentvolume.reclaim_policy values', () {
-      expect(K8sPersistentvolumeReclaimPolicy.values.length, 3);
-      expect(K8sPersistentvolumeReclaimPolicy.delete.value, 'Delete');
-      expect(K8sPersistentvolumeReclaimPolicy.recycle.value, 'Recycle');
-      expect(K8sPersistentvolumeReclaimPolicy.retain.value, 'Retain');
+      expect(K8sPersistentvolumeReclaimPolicyIncubating.values.length, 3);
+      expect(K8sPersistentvolumeReclaimPolicyIncubating.delete.value, 'Delete');
+      expect(
+        K8sPersistentvolumeReclaimPolicyIncubating.recycle.value,
+        'Recycle',
+      );
+      expect(K8sPersistentvolumeReclaimPolicyIncubating.retain.value, 'Retain');
     });
     test('k8s.persistentvolume.status.phase values', () {
-      expect(K8sPersistentvolumeStatusPhase.values.length, 5);
-      expect(K8sPersistentvolumeStatusPhase.available.value, 'Available');
-      expect(K8sPersistentvolumeStatusPhase.bound.value, 'Bound');
-      expect(K8sPersistentvolumeStatusPhase.failed.value, 'Failed');
-      expect(K8sPersistentvolumeStatusPhase.pending.value, 'Pending');
-      expect(K8sPersistentvolumeStatusPhase.released.value, 'Released');
+      expect(K8sPersistentvolumeStatusPhaseIncubating.values.length, 5);
+      expect(
+        K8sPersistentvolumeStatusPhaseIncubating.available.value,
+        'Available',
+      );
+      expect(K8sPersistentvolumeStatusPhaseIncubating.bound.value, 'Bound');
+      expect(K8sPersistentvolumeStatusPhaseIncubating.failed.value, 'Failed');
+      expect(K8sPersistentvolumeStatusPhaseIncubating.pending.value, 'Pending');
+      expect(
+        K8sPersistentvolumeStatusPhaseIncubating.released.value,
+        'Released',
+      );
     });
     test('k8s.persistentvolumeclaim.status.phase values', () {
-      expect(K8sPersistentvolumeclaimStatusPhase.values.length, 3);
-      expect(K8sPersistentvolumeclaimStatusPhase.bound.value, 'Bound');
-      expect(K8sPersistentvolumeclaimStatusPhase.lost.value, 'Lost');
-      expect(K8sPersistentvolumeclaimStatusPhase.pending.value, 'Pending');
+      expect(K8sPersistentvolumeclaimStatusPhaseIncubating.values.length, 3);
+      expect(
+        K8sPersistentvolumeclaimStatusPhaseIncubating.bound.value,
+        'Bound',
+      );
+      expect(K8sPersistentvolumeclaimStatusPhaseIncubating.lost.value, 'Lost');
+      expect(
+        K8sPersistentvolumeclaimStatusPhaseIncubating.pending.value,
+        'Pending',
+      );
     });
     test('k8s.pod.status.phase values', () {
-      expect(K8sPodStatusPhase.values.length, 5);
-      expect(K8sPodStatusPhase.pending.value, 'Pending');
-      expect(K8sPodStatusPhase.running.value, 'Running');
-      expect(K8sPodStatusPhase.succeeded.value, 'Succeeded');
-      expect(K8sPodStatusPhase.failed.value, 'Failed');
-      expect(K8sPodStatusPhase.unknown.value, 'Unknown');
+      expect(K8sPodStatusPhaseIncubating.values.length, 5);
+      expect(K8sPodStatusPhaseIncubating.pending.value, 'Pending');
+      expect(K8sPodStatusPhaseIncubating.running.value, 'Running');
+      expect(K8sPodStatusPhaseIncubating.succeeded.value, 'Succeeded');
+      expect(K8sPodStatusPhaseIncubating.failed.value, 'Failed');
+      expect(K8sPodStatusPhaseIncubating.unknown.value, 'Unknown');
     });
     test('k8s.pod.status.reason values', () {
-      expect(K8sPodStatusReason.values.length, 5);
-      expect(K8sPodStatusReason.evicted.value, 'Evicted');
-      expect(K8sPodStatusReason.nodeAffinity.value, 'NodeAffinity');
-      expect(K8sPodStatusReason.nodeLost.value, 'NodeLost');
-      expect(K8sPodStatusReason.shutdown.value, 'Shutdown');
+      expect(K8sPodStatusReasonIncubating.values.length, 5);
+      expect(K8sPodStatusReasonIncubating.evicted.value, 'Evicted');
+      expect(K8sPodStatusReasonIncubating.nodeAffinity.value, 'NodeAffinity');
+      expect(K8sPodStatusReasonIncubating.nodeLost.value, 'NodeLost');
+      expect(K8sPodStatusReasonIncubating.shutdown.value, 'Shutdown');
       expect(
-        K8sPodStatusReason.unexpectedAdmissionError.value,
+        K8sPodStatusReasonIncubating.unexpectedAdmissionError.value,
         'UnexpectedAdmissionError',
       );
     });
     test('k8s.service.endpoint.address_type values', () {
-      expect(K8sServiceEndpointAddressType.values.length, 3);
-      expect(K8sServiceEndpointAddressType.ipv4.value, 'IPv4');
-      expect(K8sServiceEndpointAddressType.ipv6.value, 'IPv6');
-      expect(K8sServiceEndpointAddressType.fqdn.value, 'FQDN');
+      expect(K8sServiceEndpointAddressTypeIncubating.values.length, 3);
+      expect(K8sServiceEndpointAddressTypeIncubating.ipv4.value, 'IPv4');
+      expect(K8sServiceEndpointAddressTypeIncubating.ipv6.value, 'IPv6');
+      expect(K8sServiceEndpointAddressTypeIncubating.fqdn.value, 'FQDN');
     });
     test('k8s.service.endpoint.condition values', () {
-      expect(K8sServiceEndpointCondition.values.length, 3);
-      expect(K8sServiceEndpointCondition.ready.value, 'ready');
-      expect(K8sServiceEndpointCondition.serving.value, 'serving');
-      expect(K8sServiceEndpointCondition.terminating.value, 'terminating');
+      expect(K8sServiceEndpointConditionIncubating.values.length, 3);
+      expect(K8sServiceEndpointConditionIncubating.ready.value, 'ready');
+      expect(K8sServiceEndpointConditionIncubating.serving.value, 'serving');
+      expect(
+        K8sServiceEndpointConditionIncubating.terminating.value,
+        'terminating',
+      );
     });
     test('k8s.service.type values', () {
-      expect(K8sServiceType.values.length, 4);
-      expect(K8sServiceType.clusterIp.value, 'ClusterIP');
-      expect(K8sServiceType.nodePort.value, 'NodePort');
-      expect(K8sServiceType.loadBalancer.value, 'LoadBalancer');
-      expect(K8sServiceType.externalName.value, 'ExternalName');
+      expect(K8sServiceTypeIncubating.values.length, 4);
+      expect(K8sServiceTypeIncubating.clusterIp.value, 'ClusterIP');
+      expect(K8sServiceTypeIncubating.nodePort.value, 'NodePort');
+      expect(K8sServiceTypeIncubating.loadBalancer.value, 'LoadBalancer');
+      expect(K8sServiceTypeIncubating.externalName.value, 'ExternalName');
     });
     test('k8s.volume.type values', () {
-      expect(K8sVolumeType.values.length, 6);
+      expect(K8sVolumeTypeIncubating.values.length, 6);
       expect(
-        K8sVolumeType.persistentVolumeClaim.value,
+        K8sVolumeTypeIncubating.persistentVolumeClaim.value,
         'persistentVolumeClaim',
       );
-      expect(K8sVolumeType.configMap.value, 'configMap');
-      expect(K8sVolumeType.downwardApi.value, 'downwardAPI');
-      expect(K8sVolumeType.emptyDir.value, 'emptyDir');
-      expect(K8sVolumeType.secret.value, 'secret');
-      expect(K8sVolumeType.local.value, 'local');
+      expect(K8sVolumeTypeIncubating.configMap.value, 'configMap');
+      expect(K8sVolumeTypeIncubating.downwardApi.value, 'downwardAPI');
+      expect(K8sVolumeTypeIncubating.emptyDir.value, 'emptyDir');
+      expect(K8sVolumeTypeIncubating.secret.value, 'secret');
+      expect(K8sVolumeTypeIncubating.local.value, 'local');
     });
   });
   group('linux', () {
     test('attribute keys', () {
-      expect(Linux.values.length, 1);
-      expect(Linux.linuxMemorySlabState.key, 'linux.memory.slab.state');
+      expect(LinuxIncubating.values.length, 1);
+      expect(
+        LinuxIncubating.linuxMemorySlabState.key,
+        'linux.memory.slab.state',
+      );
     });
     test('linux.memory.slab.state values', () {
-      expect(LinuxMemorySlabState.values.length, 2);
-      expect(LinuxMemorySlabState.reclaimable.value, 'reclaimable');
-      expect(LinuxMemorySlabState.unreclaimable.value, 'unreclaimable');
+      expect(LinuxMemorySlabStateIncubating.values.length, 2);
+      expect(LinuxMemorySlabStateIncubating.reclaimable.value, 'reclaimable');
+      expect(
+        LinuxMemorySlabStateIncubating.unreclaimable.value,
+        'unreclaimable',
+      );
     });
   });
   group('log', () {
     test('attribute keys', () {
-      expect(Log.values.length, 7);
-      expect(Log.logFileName.key, 'log.file.name');
-      expect(Log.logFileNameResolved.key, 'log.file.name_resolved');
-      expect(Log.logFilePath.key, 'log.file.path');
-      expect(Log.logFilePathResolved.key, 'log.file.path_resolved');
-      expect(Log.logIostream.key, 'log.iostream');
-      expect(Log.logRecordOriginal.key, 'log.record.original');
-      expect(Log.logRecordUid.key, 'log.record.uid');
+      expect(LogIncubating.values.length, 7);
+      expect(LogIncubating.logFileName.key, 'log.file.name');
+      expect(LogIncubating.logFileNameResolved.key, 'log.file.name_resolved');
+      expect(LogIncubating.logFilePath.key, 'log.file.path');
+      expect(LogIncubating.logFilePathResolved.key, 'log.file.path_resolved');
+      expect(LogIncubating.logIostream.key, 'log.iostream');
+      expect(LogIncubating.logRecordOriginal.key, 'log.record.original');
+      expect(LogIncubating.logRecordUid.key, 'log.record.uid');
     });
     test('log.iostream values', () {
-      expect(LogIostream.values.length, 2);
-      expect(LogIostream.stdout.value, 'stdout');
-      expect(LogIostream.stderr.value, 'stderr');
+      expect(LogIostreamIncubating.values.length, 2);
+      expect(LogIostreamIncubating.stdout.value, 'stdout');
+      expect(LogIostreamIncubating.stderr.value, 'stderr');
     });
   });
   group('mainframe', () {
     test('attribute keys', () {
-      expect(Mainframe.values.length, 1);
-      expect(Mainframe.mainframeLparName.key, 'mainframe.lpar.name');
+      expect(MainframeIncubating.values.length, 1);
+      expect(MainframeIncubating.mainframeLparName.key, 'mainframe.lpar.name');
     });
   });
   group('mcp', () {
     test('attribute keys', () {
-      expect(Mcp.values.length, 4);
-      expect(Mcp.mcpMethodName.key, 'mcp.method.name');
-      expect(Mcp.mcpProtocolVersion.key, 'mcp.protocol.version');
-      expect(Mcp.mcpResourceUri.key, 'mcp.resource.uri');
-      expect(Mcp.mcpSessionId.key, 'mcp.session.id');
+      expect(McpIncubating.values.length, 4);
+      expect(McpIncubating.mcpMethodName.key, 'mcp.method.name');
+      expect(McpIncubating.mcpProtocolVersion.key, 'mcp.protocol.version');
+      expect(McpIncubating.mcpResourceUri.key, 'mcp.resource.uri');
+      expect(McpIncubating.mcpSessionId.key, 'mcp.session.id');
     });
     test('mcp.method.name values', () {
-      expect(McpMethodName.values.length, 25);
+      expect(McpMethodNameIncubating.values.length, 25);
       expect(
-        McpMethodName.notificationsCancelled.value,
+        McpMethodNameIncubating.notificationsCancelled.value,
         'notifications/cancelled',
       );
-      expect(McpMethodName.initialize.value, 'initialize');
+      expect(McpMethodNameIncubating.initialize.value, 'initialize');
       expect(
-        McpMethodName.notificationsInitialized.value,
+        McpMethodNameIncubating.notificationsInitialized.value,
         'notifications/initialized',
       );
       expect(
-        McpMethodName.notificationsProgress.value,
+        McpMethodNameIncubating.notificationsProgress.value,
         'notifications/progress',
       );
-      expect(McpMethodName.ping.value, 'ping');
-      expect(McpMethodName.resourcesList.value, 'resources/list');
+      expect(McpMethodNameIncubating.ping.value, 'ping');
+      expect(McpMethodNameIncubating.resourcesList.value, 'resources/list');
       expect(
-        McpMethodName.resourcesTemplatesList.value,
+        McpMethodNameIncubating.resourcesTemplatesList.value,
         'resources/templates/list',
       );
-      expect(McpMethodName.resourcesRead.value, 'resources/read');
+      expect(McpMethodNameIncubating.resourcesRead.value, 'resources/read');
       expect(
-        McpMethodName.notificationsResourcesListChanged.value,
+        McpMethodNameIncubating.notificationsResourcesListChanged.value,
         'notifications/resources/list_changed',
       );
-      expect(McpMethodName.resourcesSubscribe.value, 'resources/subscribe');
-      expect(McpMethodName.resourcesUnsubscribe.value, 'resources/unsubscribe');
       expect(
-        McpMethodName.notificationsResourcesUpdated.value,
+        McpMethodNameIncubating.resourcesSubscribe.value,
+        'resources/subscribe',
+      );
+      expect(
+        McpMethodNameIncubating.resourcesUnsubscribe.value,
+        'resources/unsubscribe',
+      );
+      expect(
+        McpMethodNameIncubating.notificationsResourcesUpdated.value,
         'notifications/resources/updated',
       );
-      expect(McpMethodName.promptsList.value, 'prompts/list');
-      expect(McpMethodName.promptsGet.value, 'prompts/get');
+      expect(McpMethodNameIncubating.promptsList.value, 'prompts/list');
+      expect(McpMethodNameIncubating.promptsGet.value, 'prompts/get');
       expect(
-        McpMethodName.notificationsPromptsListChanged.value,
+        McpMethodNameIncubating.notificationsPromptsListChanged.value,
         'notifications/prompts/list_changed',
       );
-      expect(McpMethodName.toolsList.value, 'tools/list');
-      expect(McpMethodName.toolsCall.value, 'tools/call');
+      expect(McpMethodNameIncubating.toolsList.value, 'tools/list');
+      expect(McpMethodNameIncubating.toolsCall.value, 'tools/call');
       expect(
-        McpMethodName.notificationsToolsListChanged.value,
+        McpMethodNameIncubating.notificationsToolsListChanged.value,
         'notifications/tools/list_changed',
       );
-      expect(McpMethodName.loggingSetLevel.value, 'logging/setLevel');
-      expect(McpMethodName.notificationsMessage.value, 'notifications/message');
+      expect(McpMethodNameIncubating.loggingSetLevel.value, 'logging/setLevel');
       expect(
-        McpMethodName.samplingCreateMessage.value,
+        McpMethodNameIncubating.notificationsMessage.value,
+        'notifications/message',
+      );
+      expect(
+        McpMethodNameIncubating.samplingCreateMessage.value,
         'sampling/createMessage',
       );
-      expect(McpMethodName.completionComplete.value, 'completion/complete');
-      expect(McpMethodName.rootsList.value, 'roots/list');
       expect(
-        McpMethodName.notificationsRootsListChanged.value,
+        McpMethodNameIncubating.completionComplete.value,
+        'completion/complete',
+      );
+      expect(McpMethodNameIncubating.rootsList.value, 'roots/list');
+      expect(
+        McpMethodNameIncubating.notificationsRootsListChanged.value,
         'notifications/roots/list_changed',
       );
-      expect(McpMethodName.elicitationCreate.value, 'elicitation/create');
+      expect(
+        McpMethodNameIncubating.elicitationCreate.value,
+        'elicitation/create',
+      );
     });
   });
   group('message', () {
     test('attribute keys', () {
-      expect(Message.values.length, 4);
-      expect(Message.messageCompressedSize.key, 'message.compressed_size');
-      expect(Message.messageId.key, 'message.id');
-      expect(Message.messageType.key, 'message.type');
-      expect(Message.messageUncompressedSize.key, 'message.uncompressed_size');
+      expect(MessageIncubating.values.length, 4);
+      expect(
+        MessageIncubating.messageCompressedSize.key,
+        'message.compressed_size',
+      );
+      expect(MessageIncubating.messageId.key, 'message.id');
+      expect(MessageIncubating.messageType.key, 'message.type');
+      expect(
+        MessageIncubating.messageUncompressedSize.key,
+        'message.uncompressed_size',
+      );
     });
     test('message.type values', () {
-      expect(MessageType.values.length, 2);
-      expect(MessageType.sent.value, 'SENT');
-      expect(MessageType.received.value, 'RECEIVED');
+      expect(MessageTypeIncubating.values.length, 2);
+      expect(MessageTypeIncubating.sent.value, 'SENT');
+      expect(MessageTypeIncubating.received.value, 'RECEIVED');
     });
   });
   group('messaging', () {
     test('attribute keys', () {
-      expect(Messaging.values.length, 47);
+      expect(MessagingIncubating.values.length, 47);
       expect(
-        Messaging.messagingBatchMessageCount.key,
+        MessagingIncubating.messagingBatchMessageCount.key,
         'messaging.batch.message_count',
       );
-      expect(Messaging.messagingClientId.key, 'messaging.client.id');
+      expect(MessagingIncubating.messagingClientId.key, 'messaging.client.id');
       expect(
-        Messaging.messagingConsumerGroupName.key,
+        MessagingIncubating.messagingConsumerGroupName.key,
         'messaging.consumer.group.name',
       );
       expect(
-        Messaging.messagingDestinationAnonymous.key,
+        MessagingIncubating.messagingDestinationAnonymous.key,
         'messaging.destination.anonymous',
       );
       expect(
-        Messaging.messagingDestinationName.key,
+        MessagingIncubating.messagingDestinationName.key,
         'messaging.destination.name',
       );
       expect(
-        Messaging.messagingDestinationPartitionId.key,
+        MessagingIncubating.messagingDestinationPartitionId.key,
         'messaging.destination.partition.id',
       );
       expect(
-        Messaging.messagingDestinationSubscriptionName.key,
+        MessagingIncubating.messagingDestinationSubscriptionName.key,
         'messaging.destination.subscription.name',
       );
       expect(
-        Messaging.messagingDestinationTemplate.key,
+        MessagingIncubating.messagingDestinationTemplate.key,
         'messaging.destination.template',
       );
       expect(
-        Messaging.messagingDestinationTemporary.key,
+        MessagingIncubating.messagingDestinationTemporary.key,
         'messaging.destination.temporary',
       );
       expect(
-        Messaging.messagingDestinationPublishAnonymous.key,
+        MessagingIncubating.messagingDestinationPublishAnonymous.key,
         'messaging.destination_publish.anonymous',
       );
       expect(
-        Messaging.messagingDestinationPublishName.key,
+        MessagingIncubating.messagingDestinationPublishName.key,
         'messaging.destination_publish.name',
       );
       expect(
-        Messaging.messagingEventhubsConsumerGroup.key,
+        MessagingIncubating.messagingEventhubsConsumerGroup.key,
         'messaging.eventhubs.consumer.group',
       );
       expect(
-        Messaging.messagingEventhubsMessageEnqueuedTime.key,
+        MessagingIncubating.messagingEventhubsMessageEnqueuedTime.key,
         'messaging.eventhubs.message.enqueued_time',
       );
       expect(
-        Messaging.messagingGcpPubsubMessageAckDeadline.key,
+        MessagingIncubating.messagingGcpPubsubMessageAckDeadline.key,
         'messaging.gcp_pubsub.message.ack_deadline',
       );
       expect(
-        Messaging.messagingGcpPubsubMessageAckId.key,
+        MessagingIncubating.messagingGcpPubsubMessageAckId.key,
         'messaging.gcp_pubsub.message.ack_id',
       );
       expect(
-        Messaging.messagingGcpPubsubMessageDeliveryAttempt.key,
+        MessagingIncubating.messagingGcpPubsubMessageDeliveryAttempt.key,
         'messaging.gcp_pubsub.message.delivery_attempt',
       );
       expect(
-        Messaging.messagingGcpPubsubMessageOrderingKey.key,
+        MessagingIncubating.messagingGcpPubsubMessageOrderingKey.key,
         'messaging.gcp_pubsub.message.ordering_key',
       );
       expect(
-        Messaging.messagingKafkaClusterId.key,
+        MessagingIncubating.messagingKafkaClusterId.key,
         'messaging.kafka.cluster.id',
       );
       expect(
-        Messaging.messagingKafkaConsumerGroup.key,
+        MessagingIncubating.messagingKafkaConsumerGroup.key,
         'messaging.kafka.consumer.group',
       );
       expect(
-        Messaging.messagingKafkaDestinationPartition.key,
+        MessagingIncubating.messagingKafkaDestinationPartition.key,
         'messaging.kafka.destination.partition',
       );
       expect(
-        Messaging.messagingKafkaMessageKey.key,
+        MessagingIncubating.messagingKafkaMessageKey.key,
         'messaging.kafka.message.key',
       );
       expect(
-        Messaging.messagingKafkaMessageOffset.key,
+        MessagingIncubating.messagingKafkaMessageOffset.key,
         'messaging.kafka.message.offset',
       );
       expect(
-        Messaging.messagingKafkaMessageTombstone.key,
+        MessagingIncubating.messagingKafkaMessageTombstone.key,
         'messaging.kafka.message.tombstone',
       );
-      expect(Messaging.messagingKafkaOffset.key, 'messaging.kafka.offset');
       expect(
-        Messaging.messagingMessageBodySize.key,
+        MessagingIncubating.messagingKafkaOffset.key,
+        'messaging.kafka.offset',
+      );
+      expect(
+        MessagingIncubating.messagingMessageBodySize.key,
         'messaging.message.body.size',
       );
       expect(
-        Messaging.messagingMessageConversationId.key,
+        MessagingIncubating.messagingMessageConversationId.key,
         'messaging.message.conversation_id',
       );
       expect(
-        Messaging.messagingMessageEnvelopeSize.key,
+        MessagingIncubating.messagingMessageEnvelopeSize.key,
         'messaging.message.envelope.size',
       );
-      expect(Messaging.messagingMessageId.key, 'messaging.message.id');
-      expect(Messaging.messagingOperation.key, 'messaging.operation');
-      expect(Messaging.messagingOperationName.key, 'messaging.operation.name');
-      expect(Messaging.messagingOperationType.key, 'messaging.operation.type');
       expect(
-        Messaging.messagingRabbitmqDestinationRoutingKey.key,
+        MessagingIncubating.messagingMessageId.key,
+        'messaging.message.id',
+      );
+      expect(MessagingIncubating.messagingOperation.key, 'messaging.operation');
+      expect(
+        MessagingIncubating.messagingOperationName.key,
+        'messaging.operation.name',
+      );
+      expect(
+        MessagingIncubating.messagingOperationType.key,
+        'messaging.operation.type',
+      );
+      expect(
+        MessagingIncubating.messagingRabbitmqDestinationRoutingKey.key,
         'messaging.rabbitmq.destination.routing_key',
       );
       expect(
-        Messaging.messagingRabbitmqMessageDeliveryTag.key,
+        MessagingIncubating.messagingRabbitmqMessageDeliveryTag.key,
         'messaging.rabbitmq.message.delivery_tag',
       );
       expect(
-        Messaging.messagingRocketmqClientGroup.key,
+        MessagingIncubating.messagingRocketmqClientGroup.key,
         'messaging.rocketmq.client_group',
       );
       expect(
-        Messaging.messagingRocketmqConsumptionModel.key,
+        MessagingIncubating.messagingRocketmqConsumptionModel.key,
         'messaging.rocketmq.consumption_model',
       );
       expect(
-        Messaging.messagingRocketmqMessageDelayTimeLevel.key,
+        MessagingIncubating.messagingRocketmqMessageDelayTimeLevel.key,
         'messaging.rocketmq.message.delay_time_level',
       );
       expect(
-        Messaging.messagingRocketmqMessageDeliveryTimestamp.key,
+        MessagingIncubating.messagingRocketmqMessageDeliveryTimestamp.key,
         'messaging.rocketmq.message.delivery_timestamp',
       );
       expect(
-        Messaging.messagingRocketmqMessageGroup.key,
+        MessagingIncubating.messagingRocketmqMessageGroup.key,
         'messaging.rocketmq.message.group',
       );
       expect(
-        Messaging.messagingRocketmqMessageKeys.key,
+        MessagingIncubating.messagingRocketmqMessageKeys.key,
         'messaging.rocketmq.message.keys',
       );
       expect(
-        Messaging.messagingRocketmqMessageTag.key,
+        MessagingIncubating.messagingRocketmqMessageTag.key,
         'messaging.rocketmq.message.tag',
       );
       expect(
-        Messaging.messagingRocketmqMessageType.key,
+        MessagingIncubating.messagingRocketmqMessageType.key,
         'messaging.rocketmq.message.type',
       );
       expect(
-        Messaging.messagingRocketmqNamespace.key,
+        MessagingIncubating.messagingRocketmqNamespace.key,
         'messaging.rocketmq.namespace',
       );
       expect(
-        Messaging.messagingServicebusDestinationSubscriptionName.key,
+        MessagingIncubating.messagingServicebusDestinationSubscriptionName.key,
         'messaging.servicebus.destination.subscription_name',
       );
       expect(
-        Messaging.messagingServicebusDispositionStatus.key,
+        MessagingIncubating.messagingServicebusDispositionStatus.key,
         'messaging.servicebus.disposition_status',
       );
       expect(
-        Messaging.messagingServicebusMessageDeliveryCount.key,
+        MessagingIncubating.messagingServicebusMessageDeliveryCount.key,
         'messaging.servicebus.message.delivery_count',
       );
       expect(
-        Messaging.messagingServicebusMessageEnqueuedTime.key,
+        MessagingIncubating.messagingServicebusMessageEnqueuedTime.key,
         'messaging.servicebus.message.enqueued_time',
       );
-      expect(Messaging.messagingSystem.key, 'messaging.system');
+      expect(MessagingIncubating.messagingSystem.key, 'messaging.system');
     });
     test('messaging.operation.type values', () {
-      expect(MessagingOperationType.values.length, 7);
-      expect(MessagingOperationType.create.value, 'create');
-      expect(MessagingOperationType.send.value, 'send');
-      expect(MessagingOperationType.receive.value, 'receive');
-      expect(MessagingOperationType.process.value, 'process');
-      expect(MessagingOperationType.settle.value, 'settle');
-      expect(MessagingOperationType.deliver.value, 'deliver');
-      expect(MessagingOperationType.publish.value, 'publish');
+      expect(MessagingOperationTypeIncubating.values.length, 7);
+      expect(MessagingOperationTypeIncubating.create.value, 'create');
+      expect(MessagingOperationTypeIncubating.send.value, 'send');
+      expect(MessagingOperationTypeIncubating.receive.value, 'receive');
+      expect(MessagingOperationTypeIncubating.process.value, 'process');
+      expect(MessagingOperationTypeIncubating.settle.value, 'settle');
+      expect(MessagingOperationTypeIncubating.deliver.value, 'deliver');
+      expect(MessagingOperationTypeIncubating.publish.value, 'publish');
     });
     test('messaging.rocketmq.consumption_model values', () {
-      expect(MessagingRocketmqConsumptionModel.values.length, 2);
-      expect(MessagingRocketmqConsumptionModel.clustering.value, 'clustering');
+      expect(MessagingRocketmqConsumptionModelIncubating.values.length, 2);
       expect(
-        MessagingRocketmqConsumptionModel.broadcasting.value,
+        MessagingRocketmqConsumptionModelIncubating.clustering.value,
+        'clustering',
+      );
+      expect(
+        MessagingRocketmqConsumptionModelIncubating.broadcasting.value,
         'broadcasting',
       );
     });
     test('messaging.rocketmq.message.type values', () {
-      expect(MessagingRocketmqMessageType.values.length, 4);
-      expect(MessagingRocketmqMessageType.normal.value, 'normal');
-      expect(MessagingRocketmqMessageType.fifo.value, 'fifo');
-      expect(MessagingRocketmqMessageType.delay.value, 'delay');
-      expect(MessagingRocketmqMessageType.transaction.value, 'transaction');
+      expect(MessagingRocketmqMessageTypeIncubating.values.length, 4);
+      expect(MessagingRocketmqMessageTypeIncubating.normal.value, 'normal');
+      expect(MessagingRocketmqMessageTypeIncubating.fifo.value, 'fifo');
+      expect(MessagingRocketmqMessageTypeIncubating.delay.value, 'delay');
+      expect(
+        MessagingRocketmqMessageTypeIncubating.transaction.value,
+        'transaction',
+      );
     });
     test('messaging.servicebus.disposition_status values', () {
-      expect(MessagingServicebusDispositionStatus.values.length, 4);
-      expect(MessagingServicebusDispositionStatus.complete.value, 'complete');
-      expect(MessagingServicebusDispositionStatus.abandon.value, 'abandon');
+      expect(MessagingServicebusDispositionStatusIncubating.values.length, 4);
       expect(
-        MessagingServicebusDispositionStatus.deadLetter.value,
+        MessagingServicebusDispositionStatusIncubating.complete.value,
+        'complete',
+      );
+      expect(
+        MessagingServicebusDispositionStatusIncubating.abandon.value,
+        'abandon',
+      );
+      expect(
+        MessagingServicebusDispositionStatusIncubating.deadLetter.value,
         'dead_letter',
       );
-      expect(MessagingServicebusDispositionStatus.defer.value, 'defer');
+      expect(
+        MessagingServicebusDispositionStatusIncubating.defer.value,
+        'defer',
+      );
     });
     test('messaging.system values', () {
-      expect(MessagingSystem.values.length, 12);
-      expect(MessagingSystem.activemq.value, 'activemq');
-      expect(MessagingSystem.awsSns.value, 'aws.sns');
-      expect(MessagingSystem.awsSqs.value, 'aws_sqs');
-      expect(MessagingSystem.eventgrid.value, 'eventgrid');
-      expect(MessagingSystem.eventhubs.value, 'eventhubs');
-      expect(MessagingSystem.servicebus.value, 'servicebus');
-      expect(MessagingSystem.gcpPubsub.value, 'gcp_pubsub');
-      expect(MessagingSystem.jms.value, 'jms');
-      expect(MessagingSystem.kafka.value, 'kafka');
-      expect(MessagingSystem.rabbitmq.value, 'rabbitmq');
-      expect(MessagingSystem.rocketmq.value, 'rocketmq');
-      expect(MessagingSystem.pulsar.value, 'pulsar');
+      expect(MessagingSystemIncubating.values.length, 12);
+      expect(MessagingSystemIncubating.activemq.value, 'activemq');
+      expect(MessagingSystemIncubating.awsSns.value, 'aws.sns');
+      expect(MessagingSystemIncubating.awsSqs.value, 'aws_sqs');
+      expect(MessagingSystemIncubating.eventgrid.value, 'eventgrid');
+      expect(MessagingSystemIncubating.eventhubs.value, 'eventhubs');
+      expect(MessagingSystemIncubating.servicebus.value, 'servicebus');
+      expect(MessagingSystemIncubating.gcpPubsub.value, 'gcp_pubsub');
+      expect(MessagingSystemIncubating.jms.value, 'jms');
+      expect(MessagingSystemIncubating.kafka.value, 'kafka');
+      expect(MessagingSystemIncubating.rabbitmq.value, 'rabbitmq');
+      expect(MessagingSystemIncubating.rocketmq.value, 'rocketmq');
+      expect(MessagingSystemIncubating.pulsar.value, 'pulsar');
     });
   });
   group('net', () {
     test('attribute keys', () {
-      expect(Net.values.length, 15);
-      expect(Net.netHostIp.key, 'net.host.ip');
-      expect(Net.netHostName.key, 'net.host.name');
-      expect(Net.netHostPort.key, 'net.host.port');
-      expect(Net.netPeerIp.key, 'net.peer.ip');
-      expect(Net.netPeerName.key, 'net.peer.name');
-      expect(Net.netPeerPort.key, 'net.peer.port');
-      expect(Net.netProtocolName.key, 'net.protocol.name');
-      expect(Net.netProtocolVersion.key, 'net.protocol.version');
-      expect(Net.netSockFamily.key, 'net.sock.family');
-      expect(Net.netSockHostAddr.key, 'net.sock.host.addr');
-      expect(Net.netSockHostPort.key, 'net.sock.host.port');
-      expect(Net.netSockPeerAddr.key, 'net.sock.peer.addr');
-      expect(Net.netSockPeerName.key, 'net.sock.peer.name');
-      expect(Net.netSockPeerPort.key, 'net.sock.peer.port');
-      expect(Net.netTransport.key, 'net.transport');
+      expect(NetIncubating.values.length, 15);
+      expect(NetIncubating.netHostIp.key, 'net.host.ip');
+      expect(NetIncubating.netHostName.key, 'net.host.name');
+      expect(NetIncubating.netHostPort.key, 'net.host.port');
+      expect(NetIncubating.netPeerIp.key, 'net.peer.ip');
+      expect(NetIncubating.netPeerName.key, 'net.peer.name');
+      expect(NetIncubating.netPeerPort.key, 'net.peer.port');
+      expect(NetIncubating.netProtocolName.key, 'net.protocol.name');
+      expect(NetIncubating.netProtocolVersion.key, 'net.protocol.version');
+      expect(NetIncubating.netSockFamily.key, 'net.sock.family');
+      expect(NetIncubating.netSockHostAddr.key, 'net.sock.host.addr');
+      expect(NetIncubating.netSockHostPort.key, 'net.sock.host.port');
+      expect(NetIncubating.netSockPeerAddr.key, 'net.sock.peer.addr');
+      expect(NetIncubating.netSockPeerName.key, 'net.sock.peer.name');
+      expect(NetIncubating.netSockPeerPort.key, 'net.sock.peer.port');
+      expect(NetIncubating.netTransport.key, 'net.transport');
     });
     test('net.sock.family values', () {
-      expect(NetSockFamily.values.length, 3);
-      expect(NetSockFamily.inet.value, 'inet');
-      expect(NetSockFamily.inet6.value, 'inet6');
-      expect(NetSockFamily.unix.value, 'unix');
+      expect(NetSockFamilyIncubating.values.length, 3);
+      expect(NetSockFamilyIncubating.inet.value, 'inet');
+      expect(NetSockFamilyIncubating.inet6.value, 'inet6');
+      expect(NetSockFamilyIncubating.unix.value, 'unix');
     });
     test('net.transport values', () {
-      expect(NetTransport.values.length, 5);
-      expect(NetTransport.ipTcp.value, 'ip_tcp');
-      expect(NetTransport.ipUdp.value, 'ip_udp');
-      expect(NetTransport.pipe.value, 'pipe');
-      expect(NetTransport.inproc.value, 'inproc');
-      expect(NetTransport.other.value, 'other');
+      expect(NetTransportIncubating.values.length, 5);
+      expect(NetTransportIncubating.ipTcp.value, 'ip_tcp');
+      expect(NetTransportIncubating.ipUdp.value, 'ip_udp');
+      expect(NetTransportIncubating.pipe.value, 'pipe');
+      expect(NetTransportIncubating.inproc.value, 'inproc');
+      expect(NetTransportIncubating.other.value, 'other');
     });
   });
   group('network', () {
     test('attribute keys', () {
-      expect(Network.values.length, 17);
-      expect(Network.networkCarrierIcc.key, 'network.carrier.icc');
-      expect(Network.networkCarrierMcc.key, 'network.carrier.mcc');
-      expect(Network.networkCarrierMnc.key, 'network.carrier.mnc');
-      expect(Network.networkCarrierName.key, 'network.carrier.name');
-      expect(Network.networkConnectionState.key, 'network.connection.state');
+      expect(NetworkIncubating.values.length, 17);
+      expect(NetworkIncubating.networkCarrierIcc.key, 'network.carrier.icc');
+      expect(NetworkIncubating.networkCarrierMcc.key, 'network.carrier.mcc');
+      expect(NetworkIncubating.networkCarrierMnc.key, 'network.carrier.mnc');
+      expect(NetworkIncubating.networkCarrierName.key, 'network.carrier.name');
       expect(
-        Network.networkConnectionSubtype.key,
+        NetworkIncubating.networkConnectionState.key,
+        'network.connection.state',
+      );
+      expect(
+        NetworkIncubating.networkConnectionSubtype.key,
         'network.connection.subtype',
       );
-      expect(Network.networkConnectionType.key, 'network.connection.type');
-      expect(Network.networkInterfaceName.key, 'network.interface.name');
-      expect(Network.networkIoDirection.key, 'network.io.direction');
-      expect(Network.networkLocalAddress.key, 'network.local.address');
-      expect(Network.networkLocalPort.key, 'network.local.port');
-      expect(Network.networkPeerAddress.key, 'network.peer.address');
-      expect(Network.networkPeerPort.key, 'network.peer.port');
-      expect(Network.networkProtocolName.key, 'network.protocol.name');
-      expect(Network.networkProtocolVersion.key, 'network.protocol.version');
-      expect(Network.networkTransport.key, 'network.transport');
-      expect(Network.networkType.key, 'network.type');
+      expect(
+        NetworkIncubating.networkConnectionType.key,
+        'network.connection.type',
+      );
+      expect(
+        NetworkIncubating.networkInterfaceName.key,
+        'network.interface.name',
+      );
+      expect(NetworkIncubating.networkIoDirection.key, 'network.io.direction');
+      expect(
+        NetworkIncubating.networkLocalAddress.key,
+        'network.local.address',
+      );
+      expect(NetworkIncubating.networkLocalPort.key, 'network.local.port');
+      expect(NetworkIncubating.networkPeerAddress.key, 'network.peer.address');
+      expect(NetworkIncubating.networkPeerPort.key, 'network.peer.port');
+      expect(
+        NetworkIncubating.networkProtocolName.key,
+        'network.protocol.name',
+      );
+      expect(
+        NetworkIncubating.networkProtocolVersion.key,
+        'network.protocol.version',
+      );
+      expect(NetworkIncubating.networkTransport.key, 'network.transport');
+      expect(NetworkIncubating.networkType.key, 'network.type');
     });
     test('network.connection.state values', () {
-      expect(NetworkConnectionState.values.length, 11);
-      expect(NetworkConnectionState.closed.value, 'closed');
-      expect(NetworkConnectionState.closeWait.value, 'close_wait');
-      expect(NetworkConnectionState.closing.value, 'closing');
-      expect(NetworkConnectionState.established.value, 'established');
-      expect(NetworkConnectionState.finWait1.value, 'fin_wait_1');
-      expect(NetworkConnectionState.finWait2.value, 'fin_wait_2');
-      expect(NetworkConnectionState.lastAck.value, 'last_ack');
-      expect(NetworkConnectionState.listen.value, 'listen');
-      expect(NetworkConnectionState.synReceived.value, 'syn_received');
-      expect(NetworkConnectionState.synSent.value, 'syn_sent');
-      expect(NetworkConnectionState.timeWait.value, 'time_wait');
+      expect(NetworkConnectionStateIncubating.values.length, 11);
+      expect(NetworkConnectionStateIncubating.closed.value, 'closed');
+      expect(NetworkConnectionStateIncubating.closeWait.value, 'close_wait');
+      expect(NetworkConnectionStateIncubating.closing.value, 'closing');
+      expect(NetworkConnectionStateIncubating.established.value, 'established');
+      expect(NetworkConnectionStateIncubating.finWait1.value, 'fin_wait_1');
+      expect(NetworkConnectionStateIncubating.finWait2.value, 'fin_wait_2');
+      expect(NetworkConnectionStateIncubating.lastAck.value, 'last_ack');
+      expect(NetworkConnectionStateIncubating.listen.value, 'listen');
+      expect(
+        NetworkConnectionStateIncubating.synReceived.value,
+        'syn_received',
+      );
+      expect(NetworkConnectionStateIncubating.synSent.value, 'syn_sent');
+      expect(NetworkConnectionStateIncubating.timeWait.value, 'time_wait');
     });
     test('network.connection.subtype values', () {
-      expect(NetworkConnectionSubtype.values.length, 21);
-      expect(NetworkConnectionSubtype.gprs.value, 'gprs');
-      expect(NetworkConnectionSubtype.edge.value, 'edge');
-      expect(NetworkConnectionSubtype.umts.value, 'umts');
-      expect(NetworkConnectionSubtype.cdma.value, 'cdma');
-      expect(NetworkConnectionSubtype.evdo0.value, 'evdo_0');
-      expect(NetworkConnectionSubtype.evdoA.value, 'evdo_a');
-      expect(NetworkConnectionSubtype.cdma20001xrtt.value, 'cdma2000_1xrtt');
-      expect(NetworkConnectionSubtype.hsdpa.value, 'hsdpa');
-      expect(NetworkConnectionSubtype.hsupa.value, 'hsupa');
-      expect(NetworkConnectionSubtype.hspa.value, 'hspa');
-      expect(NetworkConnectionSubtype.iden.value, 'iden');
-      expect(NetworkConnectionSubtype.evdoB.value, 'evdo_b');
-      expect(NetworkConnectionSubtype.lte.value, 'lte');
-      expect(NetworkConnectionSubtype.ehrpd.value, 'ehrpd');
-      expect(NetworkConnectionSubtype.hspap.value, 'hspap');
-      expect(NetworkConnectionSubtype.gsm.value, 'gsm');
-      expect(NetworkConnectionSubtype.tdScdma.value, 'td_scdma');
-      expect(NetworkConnectionSubtype.iwlan.value, 'iwlan');
-      expect(NetworkConnectionSubtype.nr.value, 'nr');
-      expect(NetworkConnectionSubtype.nrnsa.value, 'nrnsa');
-      expect(NetworkConnectionSubtype.lteCa.value, 'lte_ca');
+      expect(NetworkConnectionSubtypeIncubating.values.length, 21);
+      expect(NetworkConnectionSubtypeIncubating.gprs.value, 'gprs');
+      expect(NetworkConnectionSubtypeIncubating.edge.value, 'edge');
+      expect(NetworkConnectionSubtypeIncubating.umts.value, 'umts');
+      expect(NetworkConnectionSubtypeIncubating.cdma.value, 'cdma');
+      expect(NetworkConnectionSubtypeIncubating.evdo0.value, 'evdo_0');
+      expect(NetworkConnectionSubtypeIncubating.evdoA.value, 'evdo_a');
+      expect(
+        NetworkConnectionSubtypeIncubating.cdma20001xrtt.value,
+        'cdma2000_1xrtt',
+      );
+      expect(NetworkConnectionSubtypeIncubating.hsdpa.value, 'hsdpa');
+      expect(NetworkConnectionSubtypeIncubating.hsupa.value, 'hsupa');
+      expect(NetworkConnectionSubtypeIncubating.hspa.value, 'hspa');
+      expect(NetworkConnectionSubtypeIncubating.iden.value, 'iden');
+      expect(NetworkConnectionSubtypeIncubating.evdoB.value, 'evdo_b');
+      expect(NetworkConnectionSubtypeIncubating.lte.value, 'lte');
+      expect(NetworkConnectionSubtypeIncubating.ehrpd.value, 'ehrpd');
+      expect(NetworkConnectionSubtypeIncubating.hspap.value, 'hspap');
+      expect(NetworkConnectionSubtypeIncubating.gsm.value, 'gsm');
+      expect(NetworkConnectionSubtypeIncubating.tdScdma.value, 'td_scdma');
+      expect(NetworkConnectionSubtypeIncubating.iwlan.value, 'iwlan');
+      expect(NetworkConnectionSubtypeIncubating.nr.value, 'nr');
+      expect(NetworkConnectionSubtypeIncubating.nrnsa.value, 'nrnsa');
+      expect(NetworkConnectionSubtypeIncubating.lteCa.value, 'lte_ca');
     });
     test('network.connection.type values', () {
-      expect(NetworkConnectionType.values.length, 5);
-      expect(NetworkConnectionType.wifi.value, 'wifi');
-      expect(NetworkConnectionType.wired.value, 'wired');
-      expect(NetworkConnectionType.cell.value, 'cell');
-      expect(NetworkConnectionType.unavailable.value, 'unavailable');
-      expect(NetworkConnectionType.unknown.value, 'unknown');
+      expect(NetworkConnectionTypeIncubating.values.length, 5);
+      expect(NetworkConnectionTypeIncubating.wifi.value, 'wifi');
+      expect(NetworkConnectionTypeIncubating.wired.value, 'wired');
+      expect(NetworkConnectionTypeIncubating.cell.value, 'cell');
+      expect(NetworkConnectionTypeIncubating.unavailable.value, 'unavailable');
+      expect(NetworkConnectionTypeIncubating.unknown.value, 'unknown');
     });
     test('network.io.direction values', () {
-      expect(NetworkIoDirection.values.length, 2);
-      expect(NetworkIoDirection.transmit.value, 'transmit');
-      expect(NetworkIoDirection.receive.value, 'receive');
+      expect(NetworkIoDirectionIncubating.values.length, 2);
+      expect(NetworkIoDirectionIncubating.transmit.value, 'transmit');
+      expect(NetworkIoDirectionIncubating.receive.value, 'receive');
     });
     test('network.transport values', () {
-      expect(NetworkTransport.values.length, 5);
-      expect(NetworkTransport.tcp.value, 'tcp');
-      expect(NetworkTransport.udp.value, 'udp');
-      expect(NetworkTransport.pipe.value, 'pipe');
-      expect(NetworkTransport.unix.value, 'unix');
-      expect(NetworkTransport.quic.value, 'quic');
+      expect(NetworkTransportIncubating.values.length, 5);
+      expect(NetworkTransportIncubating.tcp.value, 'tcp');
+      expect(NetworkTransportIncubating.udp.value, 'udp');
+      expect(NetworkTransportIncubating.pipe.value, 'pipe');
+      expect(NetworkTransportIncubating.unix.value, 'unix');
+      expect(NetworkTransportIncubating.quic.value, 'quic');
     });
     test('network.type values', () {
-      expect(NetworkType.values.length, 2);
-      expect(NetworkType.ipv4.value, 'ipv4');
-      expect(NetworkType.ipv6.value, 'ipv6');
+      expect(NetworkTypeIncubating.values.length, 2);
+      expect(NetworkTypeIncubating.ipv4.value, 'ipv4');
+      expect(NetworkTypeIncubating.ipv6.value, 'ipv6');
     });
   });
   group('nfs', () {
     test('attribute keys', () {
-      expect(Nfs.values.length, 2);
-      expect(Nfs.nfsOperationName.key, 'nfs.operation.name');
-      expect(Nfs.nfsServerRepcacheStatus.key, 'nfs.server.repcache.status');
+      expect(NfsIncubating.values.length, 2);
+      expect(NfsIncubating.nfsOperationName.key, 'nfs.operation.name');
+      expect(
+        NfsIncubating.nfsServerRepcacheStatus.key,
+        'nfs.server.repcache.status',
+      );
     });
   });
   group('nodejs', () {
     test('attribute keys', () {
-      expect(Nodejs.values.length, 1);
-      expect(Nodejs.nodejsEventloopState.key, 'nodejs.eventloop.state');
+      expect(NodejsIncubating.values.length, 1);
+      expect(
+        NodejsIncubating.nodejsEventloopState.key,
+        'nodejs.eventloop.state',
+      );
     });
     test('nodejs.eventloop.state values', () {
-      expect(NodejsEventloopState.values.length, 2);
-      expect(NodejsEventloopState.active.value, 'active');
-      expect(NodejsEventloopState.idle.value, 'idle');
+      expect(NodejsEventloopStateIncubating.values.length, 2);
+      expect(NodejsEventloopStateIncubating.active.value, 'active');
+      expect(NodejsEventloopStateIncubating.idle.value, 'idle');
     });
   });
   group('oci', () {
     test('attribute keys', () {
-      expect(Oci.values.length, 1);
-      expect(Oci.ociManifestDigest.key, 'oci.manifest.digest');
+      expect(OciIncubating.values.length, 1);
+      expect(OciIncubating.ociManifestDigest.key, 'oci.manifest.digest');
     });
   });
   group('onc_rpc', () {
     test('attribute keys', () {
-      expect(OncRpc.values.length, 4);
-      expect(OncRpc.oncRpcProcedureName.key, 'onc_rpc.procedure.name');
-      expect(OncRpc.oncRpcProcedureNumber.key, 'onc_rpc.procedure.number');
-      expect(OncRpc.oncRpcProgramName.key, 'onc_rpc.program.name');
-      expect(OncRpc.oncRpcVersion.key, 'onc_rpc.version');
+      expect(OncRpcIncubating.values.length, 4);
+      expect(
+        OncRpcIncubating.oncRpcProcedureName.key,
+        'onc_rpc.procedure.name',
+      );
+      expect(
+        OncRpcIncubating.oncRpcProcedureNumber.key,
+        'onc_rpc.procedure.number',
+      );
+      expect(OncRpcIncubating.oncRpcProgramName.key, 'onc_rpc.program.name');
+      expect(OncRpcIncubating.oncRpcVersion.key, 'onc_rpc.version');
     });
   });
   group('openai', () {
     test('attribute keys', () {
-      expect(Openai.values.length, 4);
-      expect(Openai.openaiApiType.key, 'openai.api.type');
+      expect(OpenaiIncubating.values.length, 4);
+      expect(OpenaiIncubating.openaiApiType.key, 'openai.api.type');
       expect(
-        Openai.openaiRequestServiceTier.key,
+        OpenaiIncubating.openaiRequestServiceTier.key,
         'openai.request.service_tier',
       );
       expect(
-        Openai.openaiResponseServiceTier.key,
+        OpenaiIncubating.openaiResponseServiceTier.key,
         'openai.response.service_tier',
       );
       expect(
-        Openai.openaiResponseSystemFingerprint.key,
+        OpenaiIncubating.openaiResponseSystemFingerprint.key,
         'openai.response.system_fingerprint',
       );
     });
     test('openai.api.type values', () {
-      expect(OpenaiApiType.values.length, 2);
-      expect(OpenaiApiType.chatCompletions.value, 'chat_completions');
-      expect(OpenaiApiType.responses.value, 'responses');
+      expect(OpenaiApiTypeIncubating.values.length, 2);
+      expect(OpenaiApiTypeIncubating.chatCompletions.value, 'chat_completions');
+      expect(OpenaiApiTypeIncubating.responses.value, 'responses');
     });
     test('openai.request.service_tier values', () {
-      expect(OpenaiRequestServiceTier.values.length, 2);
-      expect(OpenaiRequestServiceTier.auto.value, 'auto');
-      expect(OpenaiRequestServiceTier.default$.value, 'default');
+      expect(OpenaiRequestServiceTierIncubating.values.length, 2);
+      expect(OpenaiRequestServiceTierIncubating.auto.value, 'auto');
+      expect(OpenaiRequestServiceTierIncubating.default$.value, 'default');
     });
   });
   group('openshift', () {
     test('attribute keys', () {
-      expect(Openshift.values.length, 2);
+      expect(OpenshiftIncubating.values.length, 2);
       expect(
-        Openshift.openshiftClusterquotaName.key,
+        OpenshiftIncubating.openshiftClusterquotaName.key,
         'openshift.clusterquota.name',
       );
       expect(
-        Openshift.openshiftClusterquotaUid.key,
+        OpenshiftIncubating.openshiftClusterquotaUid.key,
         'openshift.clusterquota.uid',
       );
     });
   });
   group('opentracing', () {
     test('attribute keys', () {
-      expect(Opentracing.values.length, 1);
-      expect(Opentracing.opentracingRefType.key, 'opentracing.ref_type');
+      expect(OpentracingIncubating.values.length, 1);
+      expect(
+        OpentracingIncubating.opentracingRefType.key,
+        'opentracing.ref_type',
+      );
     });
     test('opentracing.ref_type values', () {
-      expect(OpentracingRefType.values.length, 2);
-      expect(OpentracingRefType.childOf.value, 'child_of');
-      expect(OpentracingRefType.followsFrom.value, 'follows_from');
+      expect(OpentracingRefTypeIncubating.values.length, 2);
+      expect(OpentracingRefTypeIncubating.childOf.value, 'child_of');
+      expect(OpentracingRefTypeIncubating.followsFrom.value, 'follows_from');
     });
   });
   group('oracle', () {
     test('attribute keys', () {
-      expect(Oracle.values.length, 5);
-      expect(Oracle.oracleDbDomain.key, 'oracle.db.domain');
-      expect(Oracle.oracleDbInstanceName.key, 'oracle.db.instance.name');
-      expect(Oracle.oracleDbName.key, 'oracle.db.name');
-      expect(Oracle.oracleDbPdb.key, 'oracle.db.pdb');
-      expect(Oracle.oracleDbService.key, 'oracle.db.service');
+      expect(OracleIncubating.values.length, 5);
+      expect(OracleIncubating.oracleDbDomain.key, 'oracle.db.domain');
+      expect(
+        OracleIncubating.oracleDbInstanceName.key,
+        'oracle.db.instance.name',
+      );
+      expect(OracleIncubating.oracleDbName.key, 'oracle.db.name');
+      expect(OracleIncubating.oracleDbPdb.key, 'oracle.db.pdb');
+      expect(OracleIncubating.oracleDbService.key, 'oracle.db.service');
     });
   });
   group('oracle_cloud', () {
     test('attribute keys', () {
-      expect(OracleCloud.values.length, 1);
-      expect(OracleCloud.oracleCloudRealm.key, 'oracle_cloud.realm');
+      expect(OracleCloudIncubating.values.length, 1);
+      expect(OracleCloudIncubating.oracleCloudRealm.key, 'oracle_cloud.realm');
     });
   });
   group('os', () {
     test('attribute keys', () {
-      expect(Os.values.length, 5);
-      expect(Os.osBuildId.key, 'os.build_id');
-      expect(Os.osDescription.key, 'os.description');
-      expect(Os.osName.key, 'os.name');
-      expect(Os.osType.key, 'os.type');
-      expect(Os.osVersion.key, 'os.version');
+      expect(OsIncubating.values.length, 5);
+      expect(OsIncubating.osBuildId.key, 'os.build_id');
+      expect(OsIncubating.osDescription.key, 'os.description');
+      expect(OsIncubating.osName.key, 'os.name');
+      expect(OsIncubating.osType.key, 'os.type');
+      expect(OsIncubating.osVersion.key, 'os.version');
     });
     test('os.type values', () {
-      expect(OsType.values.length, 12);
-      expect(OsType.windows.value, 'windows');
-      expect(OsType.linux.value, 'linux');
-      expect(OsType.darwin.value, 'darwin');
-      expect(OsType.freebsd.value, 'freebsd');
-      expect(OsType.netbsd.value, 'netbsd');
-      expect(OsType.openbsd.value, 'openbsd');
-      expect(OsType.dragonflybsd.value, 'dragonflybsd');
-      expect(OsType.hpux.value, 'hpux');
-      expect(OsType.aix.value, 'aix');
-      expect(OsType.solaris.value, 'solaris');
-      expect(OsType.zOs.value, 'z_os');
-      expect(OsType.zos.value, 'zos');
+      expect(OsTypeIncubating.values.length, 12);
+      expect(OsTypeIncubating.windows.value, 'windows');
+      expect(OsTypeIncubating.linux.value, 'linux');
+      expect(OsTypeIncubating.darwin.value, 'darwin');
+      expect(OsTypeIncubating.freebsd.value, 'freebsd');
+      expect(OsTypeIncubating.netbsd.value, 'netbsd');
+      expect(OsTypeIncubating.openbsd.value, 'openbsd');
+      expect(OsTypeIncubating.dragonflybsd.value, 'dragonflybsd');
+      expect(OsTypeIncubating.hpux.value, 'hpux');
+      expect(OsTypeIncubating.aix.value, 'aix');
+      expect(OsTypeIncubating.solaris.value, 'solaris');
+      expect(OsTypeIncubating.zOs.value, 'z_os');
+      expect(OsTypeIncubating.zos.value, 'zos');
     });
   });
   group('otel', () {
     test('attribute keys', () {
-      expect(Otel.values.length, 12);
-      expect(Otel.otelComponentName.key, 'otel.component.name');
-      expect(Otel.otelComponentType.key, 'otel.component.type');
-      expect(Otel.otelEventName.key, 'otel.event.name');
-      expect(Otel.otelLibraryName.key, 'otel.library.name');
-      expect(Otel.otelLibraryVersion.key, 'otel.library.version');
-      expect(Otel.otelScopeName.key, 'otel.scope.name');
-      expect(Otel.otelScopeSchemaUrl.key, 'otel.scope.schema_url');
-      expect(Otel.otelScopeVersion.key, 'otel.scope.version');
-      expect(Otel.otelSpanParentOrigin.key, 'otel.span.parent.origin');
-      expect(Otel.otelSpanSamplingResult.key, 'otel.span.sampling_result');
-      expect(Otel.otelStatusCode.key, 'otel.status_code');
-      expect(Otel.otelStatusDescription.key, 'otel.status_description');
+      expect(OtelIncubating.values.length, 12);
+      expect(OtelIncubating.otelComponentName.key, 'otel.component.name');
+      expect(OtelIncubating.otelComponentType.key, 'otel.component.type');
+      expect(OtelIncubating.otelEventName.key, 'otel.event.name');
+      expect(OtelIncubating.otelLibraryName.key, 'otel.library.name');
+      expect(OtelIncubating.otelLibraryVersion.key, 'otel.library.version');
+      expect(OtelIncubating.otelScopeName.key, 'otel.scope.name');
+      expect(OtelIncubating.otelScopeSchemaUrl.key, 'otel.scope.schema_url');
+      expect(OtelIncubating.otelScopeVersion.key, 'otel.scope.version');
+      expect(
+        OtelIncubating.otelSpanParentOrigin.key,
+        'otel.span.parent.origin',
+      );
+      expect(
+        OtelIncubating.otelSpanSamplingResult.key,
+        'otel.span.sampling_result',
+      );
+      expect(OtelIncubating.otelStatusCode.key, 'otel.status_code');
+      expect(
+        OtelIncubating.otelStatusDescription.key,
+        'otel.status_description',
+      );
     });
     test('otel.component.type values', () {
-      expect(OtelComponentType.values.length, 16);
+      expect(OtelComponentTypeIncubating.values.length, 16);
       expect(
-        OtelComponentType.batchingSpanProcessor.value,
+        OtelComponentTypeIncubating.batchingSpanProcessor.value,
         'batching_span_processor',
       );
       expect(
-        OtelComponentType.simpleSpanProcessor.value,
+        OtelComponentTypeIncubating.simpleSpanProcessor.value,
         'simple_span_processor',
       );
       expect(
-        OtelComponentType.batchingLogProcessor.value,
+        OtelComponentTypeIncubating.batchingLogProcessor.value,
         'batching_log_processor',
       );
       expect(
-        OtelComponentType.simpleLogProcessor.value,
+        OtelComponentTypeIncubating.simpleLogProcessor.value,
         'simple_log_processor',
       );
       expect(
-        OtelComponentType.otlpGrpcSpanExporter.value,
+        OtelComponentTypeIncubating.otlpGrpcSpanExporter.value,
         'otlp_grpc_span_exporter',
       );
       expect(
-        OtelComponentType.otlpHttpSpanExporter.value,
+        OtelComponentTypeIncubating.otlpHttpSpanExporter.value,
         'otlp_http_span_exporter',
       );
       expect(
-        OtelComponentType.otlpHttpJsonSpanExporter.value,
+        OtelComponentTypeIncubating.otlpHttpJsonSpanExporter.value,
         'otlp_http_json_span_exporter',
       );
       expect(
-        OtelComponentType.zipkinHttpSpanExporter.value,
+        OtelComponentTypeIncubating.zipkinHttpSpanExporter.value,
         'zipkin_http_span_exporter',
       );
       expect(
-        OtelComponentType.otlpGrpcLogExporter.value,
+        OtelComponentTypeIncubating.otlpGrpcLogExporter.value,
         'otlp_grpc_log_exporter',
       );
       expect(
-        OtelComponentType.otlpHttpLogExporter.value,
+        OtelComponentTypeIncubating.otlpHttpLogExporter.value,
         'otlp_http_log_exporter',
       );
       expect(
-        OtelComponentType.otlpHttpJsonLogExporter.value,
+        OtelComponentTypeIncubating.otlpHttpJsonLogExporter.value,
         'otlp_http_json_log_exporter',
       );
       expect(
-        OtelComponentType.periodicMetricReader.value,
+        OtelComponentTypeIncubating.periodicMetricReader.value,
         'periodic_metric_reader',
       );
       expect(
-        OtelComponentType.otlpGrpcMetricExporter.value,
+        OtelComponentTypeIncubating.otlpGrpcMetricExporter.value,
         'otlp_grpc_metric_exporter',
       );
       expect(
-        OtelComponentType.otlpHttpMetricExporter.value,
+        OtelComponentTypeIncubating.otlpHttpMetricExporter.value,
         'otlp_http_metric_exporter',
       );
       expect(
-        OtelComponentType.otlpHttpJsonMetricExporter.value,
+        OtelComponentTypeIncubating.otlpHttpJsonMetricExporter.value,
         'otlp_http_json_metric_exporter',
       );
       expect(
-        OtelComponentType.prometheusHttpTextMetricExporter.value,
+        OtelComponentTypeIncubating.prometheusHttpTextMetricExporter.value,
         'prometheus_http_text_metric_exporter',
       );
     });
     test('otel.span.parent.origin values', () {
-      expect(OtelSpanParentOrigin.values.length, 3);
-      expect(OtelSpanParentOrigin.none.value, 'none');
-      expect(OtelSpanParentOrigin.local.value, 'local');
-      expect(OtelSpanParentOrigin.remote.value, 'remote');
+      expect(OtelSpanParentOriginIncubating.values.length, 3);
+      expect(OtelSpanParentOriginIncubating.none.value, 'none');
+      expect(OtelSpanParentOriginIncubating.local.value, 'local');
+      expect(OtelSpanParentOriginIncubating.remote.value, 'remote');
     });
     test('otel.span.sampling_result values', () {
-      expect(OtelSpanSamplingResult.values.length, 3);
-      expect(OtelSpanSamplingResult.drop.value, 'DROP');
-      expect(OtelSpanSamplingResult.recordOnly.value, 'RECORD_ONLY');
-      expect(OtelSpanSamplingResult.recordAndSample.value, 'RECORD_AND_SAMPLE');
+      expect(OtelSpanSamplingResultIncubating.values.length, 3);
+      expect(OtelSpanSamplingResultIncubating.drop.value, 'DROP');
+      expect(OtelSpanSamplingResultIncubating.recordOnly.value, 'RECORD_ONLY');
+      expect(
+        OtelSpanSamplingResultIncubating.recordAndSample.value,
+        'RECORD_AND_SAMPLE',
+      );
     });
     test('otel.status_code values', () {
-      expect(OtelStatusCode.values.length, 2);
-      expect(OtelStatusCode.ok.value, 'OK');
-      expect(OtelStatusCode.error.value, 'ERROR');
+      expect(OtelStatusCodeIncubating.values.length, 2);
+      expect(OtelStatusCodeIncubating.ok.value, 'OK');
+      expect(OtelStatusCodeIncubating.error.value, 'ERROR');
     });
   });
   group('other', () {
     test('attribute keys', () {
-      expect(Other.values.length, 1);
-      expect(Other.state.key, 'state');
+      expect(OtherIncubating.values.length, 1);
+      expect(OtherIncubating.state.key, 'state');
     });
     test('state values', () {
-      expect(StateValue.values.length, 2);
-      expect(StateValue.idle.value, 'idle');
-      expect(StateValue.used.value, 'used');
+      expect(StateValueIncubating.values.length, 2);
+      expect(StateValueIncubating.idle.value, 'idle');
+      expect(StateValueIncubating.used.value, 'used');
     });
   });
   group('peer', () {
     test('attribute keys', () {
-      expect(Peer.values.length, 1);
-      expect(Peer.peerService.key, 'peer.service');
+      expect(PeerIncubating.values.length, 1);
+      expect(PeerIncubating.peerService.key, 'peer.service');
     });
   });
   group('pool', () {
     test('attribute keys', () {
-      expect(Pool.values.length, 1);
-      expect(Pool.poolName.key, 'pool.name');
+      expect(PoolIncubating.values.length, 1);
+      expect(PoolIncubating.poolName.key, 'pool.name');
     });
   });
   group('pprof', () {
     test('attribute keys', () {
-      expect(Pprof.values.length, 11);
-      expect(Pprof.pprofLocationIsFolded.key, 'pprof.location.is_folded');
-      expect(Pprof.pprofMappingHasFilenames.key, 'pprof.mapping.has_filenames');
-      expect(Pprof.pprofMappingHasFunctions.key, 'pprof.mapping.has_functions');
+      expect(PprofIncubating.values.length, 11);
       expect(
-        Pprof.pprofMappingHasInlineFrames.key,
+        PprofIncubating.pprofLocationIsFolded.key,
+        'pprof.location.is_folded',
+      );
+      expect(
+        PprofIncubating.pprofMappingHasFilenames.key,
+        'pprof.mapping.has_filenames',
+      );
+      expect(
+        PprofIncubating.pprofMappingHasFunctions.key,
+        'pprof.mapping.has_functions',
+      );
+      expect(
+        PprofIncubating.pprofMappingHasInlineFrames.key,
         'pprof.mapping.has_inline_frames',
       );
       expect(
-        Pprof.pprofMappingHasLineNumbers.key,
+        PprofIncubating.pprofMappingHasLineNumbers.key,
         'pprof.mapping.has_line_numbers',
       );
-      expect(Pprof.pprofProfileComment.key, 'pprof.profile.comment');
-      expect(Pprof.pprofProfileDocUrl.key, 'pprof.profile.doc_url');
-      expect(Pprof.pprofProfileDropFrames.key, 'pprof.profile.drop_frames');
-      expect(Pprof.pprofProfileKeepFrames.key, 'pprof.profile.keep_frames');
+      expect(PprofIncubating.pprofProfileComment.key, 'pprof.profile.comment');
+      expect(PprofIncubating.pprofProfileDocUrl.key, 'pprof.profile.doc_url');
       expect(
-        Pprof.pprofScopeDefaultSampleType.key,
+        PprofIncubating.pprofProfileDropFrames.key,
+        'pprof.profile.drop_frames',
+      );
+      expect(
+        PprofIncubating.pprofProfileKeepFrames.key,
+        'pprof.profile.keep_frames',
+      );
+      expect(
+        PprofIncubating.pprofScopeDefaultSampleType.key,
         'pprof.scope.default_sample_type',
       );
       expect(
-        Pprof.pprofScopeSampleTypeOrder.key,
+        PprofIncubating.pprofScopeSampleTypeOrder.key,
         'pprof.scope.sample_type_order',
       );
     });
   });
   group('process', () {
     test('attribute keys', () {
-      expect(ProcessAttributes.values.length, 37);
-      expect(ProcessAttributes.processArgsCount.key, 'process.args_count');
-      expect(ProcessAttributes.processCommand.key, 'process.command');
-      expect(ProcessAttributes.processCommandArgs.key, 'process.command_args');
-      expect(ProcessAttributes.processCommandLine.key, 'process.command_line');
+      expect(ProcessAttributesIncubating.values.length, 37);
       expect(
-        ProcessAttributes.processContextSwitchType.key,
+        ProcessAttributesIncubating.processArgsCount.key,
+        'process.args_count',
+      );
+      expect(ProcessAttributesIncubating.processCommand.key, 'process.command');
+      expect(
+        ProcessAttributesIncubating.processCommandArgs.key,
+        'process.command_args',
+      );
+      expect(
+        ProcessAttributesIncubating.processCommandLine.key,
+        'process.command_line',
+      );
+      expect(
+        ProcessAttributesIncubating.processContextSwitchType.key,
         'process.context_switch.type',
       );
-      expect(ProcessAttributes.processCpuState.key, 'process.cpu.state');
       expect(
-        ProcessAttributes.processCreationTime.key,
+        ProcessAttributesIncubating.processCpuState.key,
+        'process.cpu.state',
+      );
+      expect(
+        ProcessAttributesIncubating.processCreationTime.key,
         'process.creation.time',
       );
       expect(
-        ProcessAttributes.processEnvironmentVariable.key,
+        ProcessAttributesIncubating.processEnvironmentVariable.key,
         'process.environment_variable',
       );
       expect(
-        ProcessAttributes.processExecutableBuildIdGnu.key,
+        ProcessAttributesIncubating.processExecutableBuildIdGnu.key,
         'process.executable.build_id.gnu',
       );
       expect(
-        ProcessAttributes.processExecutableBuildIdGo.key,
+        ProcessAttributesIncubating.processExecutableBuildIdGo.key,
         'process.executable.build_id.go',
       );
       expect(
-        ProcessAttributes.processExecutableBuildIdHtlhash.key,
+        ProcessAttributesIncubating.processExecutableBuildIdHtlhash.key,
         'process.executable.build_id.htlhash',
       );
       expect(
-        ProcessAttributes.processExecutableBuildIdProfiling.key,
+        ProcessAttributesIncubating.processExecutableBuildIdProfiling.key,
         'process.executable.build_id.profiling',
       );
       expect(
-        ProcessAttributes.processExecutableName.key,
+        ProcessAttributesIncubating.processExecutableName.key,
         'process.executable.name',
       );
       expect(
-        ProcessAttributes.processExecutablePath.key,
+        ProcessAttributesIncubating.processExecutablePath.key,
         'process.executable.path',
       );
-      expect(ProcessAttributes.processExitCode.key, 'process.exit.code');
-      expect(ProcessAttributes.processExitTime.key, 'process.exit.time');
       expect(
-        ProcessAttributes.processGroupLeaderPid.key,
+        ProcessAttributesIncubating.processExitCode.key,
+        'process.exit.code',
+      );
+      expect(
+        ProcessAttributesIncubating.processExitTime.key,
+        'process.exit.time',
+      );
+      expect(
+        ProcessAttributesIncubating.processGroupLeaderPid.key,
         'process.group_leader.pid',
       );
-      expect(ProcessAttributes.processInteractive.key, 'process.interactive');
-      expect(ProcessAttributes.processLinuxCgroup.key, 'process.linux.cgroup');
-      expect(ProcessAttributes.processOwner.key, 'process.owner');
       expect(
-        ProcessAttributes.processPagingFaultType.key,
+        ProcessAttributesIncubating.processInteractive.key,
+        'process.interactive',
+      );
+      expect(
+        ProcessAttributesIncubating.processLinuxCgroup.key,
+        'process.linux.cgroup',
+      );
+      expect(ProcessAttributesIncubating.processOwner.key, 'process.owner');
+      expect(
+        ProcessAttributesIncubating.processPagingFaultType.key,
         'process.paging.fault_type',
       );
-      expect(ProcessAttributes.processParentPid.key, 'process.parent_pid');
-      expect(ProcessAttributes.processPid.key, 'process.pid');
-      expect(ProcessAttributes.processRealUserId.key, 'process.real_user.id');
       expect(
-        ProcessAttributes.processRealUserName.key,
+        ProcessAttributesIncubating.processParentPid.key,
+        'process.parent_pid',
+      );
+      expect(ProcessAttributesIncubating.processPid.key, 'process.pid');
+      expect(
+        ProcessAttributesIncubating.processRealUserId.key,
+        'process.real_user.id',
+      );
+      expect(
+        ProcessAttributesIncubating.processRealUserName.key,
         'process.real_user.name',
       );
       expect(
-        ProcessAttributes.processRuntimeDescription.key,
+        ProcessAttributesIncubating.processRuntimeDescription.key,
         'process.runtime.description',
       );
-      expect(ProcessAttributes.processRuntimeName.key, 'process.runtime.name');
       expect(
-        ProcessAttributes.processRuntimeVersion.key,
+        ProcessAttributesIncubating.processRuntimeName.key,
+        'process.runtime.name',
+      );
+      expect(
+        ProcessAttributesIncubating.processRuntimeVersion.key,
         'process.runtime.version',
       );
-      expect(ProcessAttributes.processSavedUserId.key, 'process.saved_user.id');
       expect(
-        ProcessAttributes.processSavedUserName.key,
+        ProcessAttributesIncubating.processSavedUserId.key,
+        'process.saved_user.id',
+      );
+      expect(
+        ProcessAttributesIncubating.processSavedUserName.key,
         'process.saved_user.name',
       );
       expect(
-        ProcessAttributes.processSessionLeaderPid.key,
+        ProcessAttributesIncubating.processSessionLeaderPid.key,
         'process.session_leader.pid',
       );
-      expect(ProcessAttributes.processState.key, 'process.state');
-      expect(ProcessAttributes.processTitle.key, 'process.title');
-      expect(ProcessAttributes.processUserId.key, 'process.user.id');
-      expect(ProcessAttributes.processUserName.key, 'process.user.name');
-      expect(ProcessAttributes.processVpid.key, 'process.vpid');
+      expect(ProcessAttributesIncubating.processState.key, 'process.state');
+      expect(ProcessAttributesIncubating.processTitle.key, 'process.title');
+      expect(ProcessAttributesIncubating.processUserId.key, 'process.user.id');
       expect(
-        ProcessAttributes.processWorkingDirectory.key,
+        ProcessAttributesIncubating.processUserName.key,
+        'process.user.name',
+      );
+      expect(ProcessAttributesIncubating.processVpid.key, 'process.vpid');
+      expect(
+        ProcessAttributesIncubating.processWorkingDirectory.key,
         'process.working_directory',
       );
     });
     test('process.context_switch.type values', () {
-      expect(ProcessContextSwitchType.values.length, 2);
-      expect(ProcessContextSwitchType.voluntary.value, 'voluntary');
-      expect(ProcessContextSwitchType.involuntary.value, 'involuntary');
+      expect(ProcessContextSwitchTypeIncubating.values.length, 2);
+      expect(ProcessContextSwitchTypeIncubating.voluntary.value, 'voluntary');
+      expect(
+        ProcessContextSwitchTypeIncubating.involuntary.value,
+        'involuntary',
+      );
     });
     test('process.cpu.state values', () {
-      expect(ProcessCpuState.values.length, 3);
-      expect(ProcessCpuState.system.value, 'system');
-      expect(ProcessCpuState.user.value, 'user');
-      expect(ProcessCpuState.wait.value, 'wait');
+      expect(ProcessCpuStateIncubating.values.length, 3);
+      expect(ProcessCpuStateIncubating.system.value, 'system');
+      expect(ProcessCpuStateIncubating.user.value, 'user');
+      expect(ProcessCpuStateIncubating.wait.value, 'wait');
     });
     test('process.paging.fault_type values', () {
-      expect(ProcessPagingFaultType.values.length, 2);
-      expect(ProcessPagingFaultType.major.value, 'major');
-      expect(ProcessPagingFaultType.minor.value, 'minor');
+      expect(ProcessPagingFaultTypeIncubating.values.length, 2);
+      expect(ProcessPagingFaultTypeIncubating.major.value, 'major');
+      expect(ProcessPagingFaultTypeIncubating.minor.value, 'minor');
     });
     test('process.state values', () {
-      expect(ProcessState.values.length, 4);
-      expect(ProcessState.running.value, 'running');
-      expect(ProcessState.sleeping.value, 'sleeping');
-      expect(ProcessState.stopped.value, 'stopped');
-      expect(ProcessState.defunct.value, 'defunct');
+      expect(ProcessStateIncubating.values.length, 4);
+      expect(ProcessStateIncubating.running.value, 'running');
+      expect(ProcessStateIncubating.sleeping.value, 'sleeping');
+      expect(ProcessStateIncubating.stopped.value, 'stopped');
+      expect(ProcessStateIncubating.defunct.value, 'defunct');
     });
   });
   group('profile', () {
     test('attribute keys', () {
-      expect(Profile.values.length, 1);
-      expect(Profile.profileFrameType.key, 'profile.frame.type');
+      expect(ProfileIncubating.values.length, 1);
+      expect(ProfileIncubating.profileFrameType.key, 'profile.frame.type');
     });
     test('profile.frame.type values', () {
-      expect(ProfileFrameType.values.length, 13);
-      expect(ProfileFrameType.dotnet.value, 'dotnet');
-      expect(ProfileFrameType.jvm.value, 'jvm');
-      expect(ProfileFrameType.kernel.value, 'kernel');
-      expect(ProfileFrameType.native.value, 'native');
-      expect(ProfileFrameType.perl.value, 'perl');
-      expect(ProfileFrameType.php.value, 'php');
-      expect(ProfileFrameType.cpython.value, 'cpython');
-      expect(ProfileFrameType.ruby.value, 'ruby');
-      expect(ProfileFrameType.v8js.value, 'v8js');
-      expect(ProfileFrameType.beam.value, 'beam');
-      expect(ProfileFrameType.go.value, 'go');
-      expect(ProfileFrameType.rust.value, 'rust');
-      expect(ProfileFrameType.luajit.value, 'luajit');
+      expect(ProfileFrameTypeIncubating.values.length, 13);
+      expect(ProfileFrameTypeIncubating.dotnet.value, 'dotnet');
+      expect(ProfileFrameTypeIncubating.jvm.value, 'jvm');
+      expect(ProfileFrameTypeIncubating.kernel.value, 'kernel');
+      expect(ProfileFrameTypeIncubating.native.value, 'native');
+      expect(ProfileFrameTypeIncubating.perl.value, 'perl');
+      expect(ProfileFrameTypeIncubating.php.value, 'php');
+      expect(ProfileFrameTypeIncubating.cpython.value, 'cpython');
+      expect(ProfileFrameTypeIncubating.ruby.value, 'ruby');
+      expect(ProfileFrameTypeIncubating.v8js.value, 'v8js');
+      expect(ProfileFrameTypeIncubating.beam.value, 'beam');
+      expect(ProfileFrameTypeIncubating.go.value, 'go');
+      expect(ProfileFrameTypeIncubating.rust.value, 'rust');
+      expect(ProfileFrameTypeIncubating.luajit.value, 'luajit');
     });
   });
   group('rpc', () {
     test('attribute keys', () {
-      expect(Rpc.values.length, 22);
-      expect(Rpc.rpcConnectRpcErrorCode.key, 'rpc.connect_rpc.error_code');
+      expect(RpcIncubating.values.length, 22);
       expect(
-        Rpc.rpcConnectRpcRequestMetadata.key,
+        RpcIncubating.rpcConnectRpcErrorCode.key,
+        'rpc.connect_rpc.error_code',
+      );
+      expect(
+        RpcIncubating.rpcConnectRpcRequestMetadata.key,
         'rpc.connect_rpc.request.metadata',
       );
       expect(
-        Rpc.rpcConnectRpcResponseMetadata.key,
+        RpcIncubating.rpcConnectRpcResponseMetadata.key,
         'rpc.connect_rpc.response.metadata',
       );
-      expect(Rpc.rpcGrpcRequestMetadata.key, 'rpc.grpc.request.metadata');
-      expect(Rpc.rpcGrpcResponseMetadata.key, 'rpc.grpc.response.metadata');
-      expect(Rpc.rpcGrpcStatusCode.key, 'rpc.grpc.status_code');
-      expect(Rpc.rpcJsonrpcErrorCode.key, 'rpc.jsonrpc.error_code');
-      expect(Rpc.rpcJsonrpcErrorMessage.key, 'rpc.jsonrpc.error_message');
-      expect(Rpc.rpcJsonrpcRequestId.key, 'rpc.jsonrpc.request_id');
-      expect(Rpc.rpcJsonrpcVersion.key, 'rpc.jsonrpc.version');
-      expect(Rpc.rpcMessageCompressedSize.key, 'rpc.message.compressed_size');
-      expect(Rpc.rpcMessageId.key, 'rpc.message.id');
-      expect(Rpc.rpcMessageType.key, 'rpc.message.type');
       expect(
-        Rpc.rpcMessageUncompressedSize.key,
+        RpcIncubating.rpcGrpcRequestMetadata.key,
+        'rpc.grpc.request.metadata',
+      );
+      expect(
+        RpcIncubating.rpcGrpcResponseMetadata.key,
+        'rpc.grpc.response.metadata',
+      );
+      expect(RpcIncubating.rpcGrpcStatusCode.key, 'rpc.grpc.status_code');
+      expect(RpcIncubating.rpcJsonrpcErrorCode.key, 'rpc.jsonrpc.error_code');
+      expect(
+        RpcIncubating.rpcJsonrpcErrorMessage.key,
+        'rpc.jsonrpc.error_message',
+      );
+      expect(RpcIncubating.rpcJsonrpcRequestId.key, 'rpc.jsonrpc.request_id');
+      expect(RpcIncubating.rpcJsonrpcVersion.key, 'rpc.jsonrpc.version');
+      expect(
+        RpcIncubating.rpcMessageCompressedSize.key,
+        'rpc.message.compressed_size',
+      );
+      expect(RpcIncubating.rpcMessageId.key, 'rpc.message.id');
+      expect(RpcIncubating.rpcMessageType.key, 'rpc.message.type');
+      expect(
+        RpcIncubating.rpcMessageUncompressedSize.key,
         'rpc.message.uncompressed_size',
       );
-      expect(Rpc.rpcMethod.key, 'rpc.method');
-      expect(Rpc.rpcMethodOriginal.key, 'rpc.method_original');
-      expect(Rpc.rpcRequestMetadata.key, 'rpc.request.metadata');
-      expect(Rpc.rpcResponseMetadata.key, 'rpc.response.metadata');
-      expect(Rpc.rpcResponseStatusCode.key, 'rpc.response.status_code');
-      expect(Rpc.rpcService.key, 'rpc.service');
-      expect(Rpc.rpcSystem.key, 'rpc.system');
-      expect(Rpc.rpcSystemName.key, 'rpc.system.name');
+      expect(RpcIncubating.rpcMethod.key, 'rpc.method');
+      expect(RpcIncubating.rpcMethodOriginal.key, 'rpc.method_original');
+      expect(RpcIncubating.rpcRequestMetadata.key, 'rpc.request.metadata');
+      expect(RpcIncubating.rpcResponseMetadata.key, 'rpc.response.metadata');
+      expect(
+        RpcIncubating.rpcResponseStatusCode.key,
+        'rpc.response.status_code',
+      );
+      expect(RpcIncubating.rpcService.key, 'rpc.service');
+      expect(RpcIncubating.rpcSystem.key, 'rpc.system');
+      expect(RpcIncubating.rpcSystemName.key, 'rpc.system.name');
     });
     test('rpc.connect_rpc.error_code values', () {
-      expect(RpcConnectRpcErrorCode.values.length, 16);
-      expect(RpcConnectRpcErrorCode.cancelled.value, 'cancelled');
-      expect(RpcConnectRpcErrorCode.unknown.value, 'unknown');
-      expect(RpcConnectRpcErrorCode.invalidArgument.value, 'invalid_argument');
+      expect(RpcConnectRpcErrorCodeIncubating.values.length, 16);
+      expect(RpcConnectRpcErrorCodeIncubating.cancelled.value, 'cancelled');
+      expect(RpcConnectRpcErrorCodeIncubating.unknown.value, 'unknown');
       expect(
-        RpcConnectRpcErrorCode.deadlineExceeded.value,
+        RpcConnectRpcErrorCodeIncubating.invalidArgument.value,
+        'invalid_argument',
+      );
+      expect(
+        RpcConnectRpcErrorCodeIncubating.deadlineExceeded.value,
         'deadline_exceeded',
       );
-      expect(RpcConnectRpcErrorCode.notFound.value, 'not_found');
-      expect(RpcConnectRpcErrorCode.alreadyExists.value, 'already_exists');
+      expect(RpcConnectRpcErrorCodeIncubating.notFound.value, 'not_found');
       expect(
-        RpcConnectRpcErrorCode.permissionDenied.value,
+        RpcConnectRpcErrorCodeIncubating.alreadyExists.value,
+        'already_exists',
+      );
+      expect(
+        RpcConnectRpcErrorCodeIncubating.permissionDenied.value,
         'permission_denied',
       );
       expect(
-        RpcConnectRpcErrorCode.resourceExhausted.value,
+        RpcConnectRpcErrorCodeIncubating.resourceExhausted.value,
         'resource_exhausted',
       );
       expect(
-        RpcConnectRpcErrorCode.failedPrecondition.value,
+        RpcConnectRpcErrorCodeIncubating.failedPrecondition.value,
         'failed_precondition',
       );
-      expect(RpcConnectRpcErrorCode.aborted.value, 'aborted');
-      expect(RpcConnectRpcErrorCode.outOfRange.value, 'out_of_range');
-      expect(RpcConnectRpcErrorCode.unimplemented.value, 'unimplemented');
-      expect(RpcConnectRpcErrorCode.internal.value, 'internal');
-      expect(RpcConnectRpcErrorCode.unavailable.value, 'unavailable');
-      expect(RpcConnectRpcErrorCode.dataLoss.value, 'data_loss');
-      expect(RpcConnectRpcErrorCode.unauthenticated.value, 'unauthenticated');
+      expect(RpcConnectRpcErrorCodeIncubating.aborted.value, 'aborted');
+      expect(RpcConnectRpcErrorCodeIncubating.outOfRange.value, 'out_of_range');
+      expect(
+        RpcConnectRpcErrorCodeIncubating.unimplemented.value,
+        'unimplemented',
+      );
+      expect(RpcConnectRpcErrorCodeIncubating.internal.value, 'internal');
+      expect(RpcConnectRpcErrorCodeIncubating.unavailable.value, 'unavailable');
+      expect(RpcConnectRpcErrorCodeIncubating.dataLoss.value, 'data_loss');
+      expect(
+        RpcConnectRpcErrorCodeIncubating.unauthenticated.value,
+        'unauthenticated',
+      );
     });
     test('rpc.grpc.status_code values', () {
-      expect(RpcGrpcStatusCode.values.length, 17);
-      expect(RpcGrpcStatusCode.ok.value, 0);
-      expect(RpcGrpcStatusCode.cancelled.value, 1);
-      expect(RpcGrpcStatusCode.unknown.value, 2);
-      expect(RpcGrpcStatusCode.invalidArgument.value, 3);
-      expect(RpcGrpcStatusCode.deadlineExceeded.value, 4);
-      expect(RpcGrpcStatusCode.notFound.value, 5);
-      expect(RpcGrpcStatusCode.alreadyExists.value, 6);
-      expect(RpcGrpcStatusCode.permissionDenied.value, 7);
-      expect(RpcGrpcStatusCode.resourceExhausted.value, 8);
-      expect(RpcGrpcStatusCode.failedPrecondition.value, 9);
-      expect(RpcGrpcStatusCode.aborted.value, 10);
-      expect(RpcGrpcStatusCode.outOfRange.value, 11);
-      expect(RpcGrpcStatusCode.unimplemented.value, 12);
-      expect(RpcGrpcStatusCode.internal.value, 13);
-      expect(RpcGrpcStatusCode.unavailable.value, 14);
-      expect(RpcGrpcStatusCode.dataLoss.value, 15);
-      expect(RpcGrpcStatusCode.unauthenticated.value, 16);
+      expect(RpcGrpcStatusCodeIncubating.values.length, 17);
+      expect(RpcGrpcStatusCodeIncubating.ok.value, 0);
+      expect(RpcGrpcStatusCodeIncubating.cancelled.value, 1);
+      expect(RpcGrpcStatusCodeIncubating.unknown.value, 2);
+      expect(RpcGrpcStatusCodeIncubating.invalidArgument.value, 3);
+      expect(RpcGrpcStatusCodeIncubating.deadlineExceeded.value, 4);
+      expect(RpcGrpcStatusCodeIncubating.notFound.value, 5);
+      expect(RpcGrpcStatusCodeIncubating.alreadyExists.value, 6);
+      expect(RpcGrpcStatusCodeIncubating.permissionDenied.value, 7);
+      expect(RpcGrpcStatusCodeIncubating.resourceExhausted.value, 8);
+      expect(RpcGrpcStatusCodeIncubating.failedPrecondition.value, 9);
+      expect(RpcGrpcStatusCodeIncubating.aborted.value, 10);
+      expect(RpcGrpcStatusCodeIncubating.outOfRange.value, 11);
+      expect(RpcGrpcStatusCodeIncubating.unimplemented.value, 12);
+      expect(RpcGrpcStatusCodeIncubating.internal.value, 13);
+      expect(RpcGrpcStatusCodeIncubating.unavailable.value, 14);
+      expect(RpcGrpcStatusCodeIncubating.dataLoss.value, 15);
+      expect(RpcGrpcStatusCodeIncubating.unauthenticated.value, 16);
     });
     test('rpc.message.type values', () {
-      expect(RpcMessageType.values.length, 2);
-      expect(RpcMessageType.sent.value, 'SENT');
-      expect(RpcMessageType.received.value, 'RECEIVED');
+      expect(RpcMessageTypeIncubating.values.length, 2);
+      expect(RpcMessageTypeIncubating.sent.value, 'SENT');
+      expect(RpcMessageTypeIncubating.received.value, 'RECEIVED');
     });
     test('rpc.system values', () {
-      expect(RpcSystem.values.length, 7);
-      expect(RpcSystem.grpc.value, 'grpc');
-      expect(RpcSystem.javaRmi.value, 'java_rmi');
-      expect(RpcSystem.dotnetWcf.value, 'dotnet_wcf');
-      expect(RpcSystem.apacheDubbo.value, 'apache_dubbo');
-      expect(RpcSystem.connectRpc.value, 'connect_rpc');
-      expect(RpcSystem.oncRpc.value, 'onc_rpc');
-      expect(RpcSystem.jsonrpc.value, 'jsonrpc');
+      expect(RpcSystemIncubating.values.length, 7);
+      expect(RpcSystemIncubating.grpc.value, 'grpc');
+      expect(RpcSystemIncubating.javaRmi.value, 'java_rmi');
+      expect(RpcSystemIncubating.dotnetWcf.value, 'dotnet_wcf');
+      expect(RpcSystemIncubating.apacheDubbo.value, 'apache_dubbo');
+      expect(RpcSystemIncubating.connectRpc.value, 'connect_rpc');
+      expect(RpcSystemIncubating.oncRpc.value, 'onc_rpc');
+      expect(RpcSystemIncubating.jsonrpc.value, 'jsonrpc');
     });
     test('rpc.system.name values', () {
-      expect(RpcSystemName.values.length, 4);
-      expect(RpcSystemName.grpc.value, 'grpc');
-      expect(RpcSystemName.dubbo.value, 'dubbo');
-      expect(RpcSystemName.connectrpc.value, 'connectrpc');
-      expect(RpcSystemName.jsonrpc.value, 'jsonrpc');
+      expect(RpcSystemNameIncubating.values.length, 4);
+      expect(RpcSystemNameIncubating.grpc.value, 'grpc');
+      expect(RpcSystemNameIncubating.dubbo.value, 'dubbo');
+      expect(RpcSystemNameIncubating.connectrpc.value, 'connectrpc');
+      expect(RpcSystemNameIncubating.jsonrpc.value, 'jsonrpc');
     });
   });
   group('security_rule', () {
     test('attribute keys', () {
-      expect(SecurityRule.values.length, 8);
-      expect(SecurityRule.securityRuleCategory.key, 'security_rule.category');
+      expect(SecurityRuleIncubating.values.length, 8);
       expect(
-        SecurityRule.securityRuleDescription.key,
+        SecurityRuleIncubating.securityRuleCategory.key,
+        'security_rule.category',
+      );
+      expect(
+        SecurityRuleIncubating.securityRuleDescription.key,
         'security_rule.description',
       );
-      expect(SecurityRule.securityRuleLicense.key, 'security_rule.license');
-      expect(SecurityRule.securityRuleName.key, 'security_rule.name');
-      expect(SecurityRule.securityRuleReference.key, 'security_rule.reference');
       expect(
-        SecurityRule.securityRuleRulesetName.key,
+        SecurityRuleIncubating.securityRuleLicense.key,
+        'security_rule.license',
+      );
+      expect(SecurityRuleIncubating.securityRuleName.key, 'security_rule.name');
+      expect(
+        SecurityRuleIncubating.securityRuleReference.key,
+        'security_rule.reference',
+      );
+      expect(
+        SecurityRuleIncubating.securityRuleRulesetName.key,
         'security_rule.ruleset.name',
       );
-      expect(SecurityRule.securityRuleUuid.key, 'security_rule.uuid');
-      expect(SecurityRule.securityRuleVersion.key, 'security_rule.version');
+      expect(SecurityRuleIncubating.securityRuleUuid.key, 'security_rule.uuid');
+      expect(
+        SecurityRuleIncubating.securityRuleVersion.key,
+        'security_rule.version',
+      );
     });
   });
   group('server', () {
     test('attribute keys', () {
-      expect(Server.values.length, 2);
-      expect(Server.serverAddress.key, 'server.address');
-      expect(Server.serverPort.key, 'server.port');
+      expect(ServerIncubating.values.length, 2);
+      expect(ServerIncubating.serverAddress.key, 'server.address');
+      expect(ServerIncubating.serverPort.key, 'server.port');
     });
   });
   group('service', () {
     test('attribute keys', () {
-      expect(Service.values.length, 7);
-      expect(Service.serviceCriticality.key, 'service.criticality');
-      expect(Service.serviceInstanceId.key, 'service.instance.id');
-      expect(Service.serviceName.key, 'service.name');
-      expect(Service.serviceNamespace.key, 'service.namespace');
-      expect(Service.servicePeerName.key, 'service.peer.name');
-      expect(Service.servicePeerNamespace.key, 'service.peer.namespace');
-      expect(Service.serviceVersion.key, 'service.version');
+      expect(ServiceIncubating.values.length, 7);
+      expect(ServiceIncubating.serviceCriticality.key, 'service.criticality');
+      expect(ServiceIncubating.serviceInstanceId.key, 'service.instance.id');
+      expect(ServiceIncubating.serviceName.key, 'service.name');
+      expect(ServiceIncubating.serviceNamespace.key, 'service.namespace');
+      expect(ServiceIncubating.servicePeerName.key, 'service.peer.name');
+      expect(
+        ServiceIncubating.servicePeerNamespace.key,
+        'service.peer.namespace',
+      );
+      expect(ServiceIncubating.serviceVersion.key, 'service.version');
     });
     test('service.criticality values', () {
-      expect(ServiceCriticality.values.length, 4);
-      expect(ServiceCriticality.critical.value, 'critical');
-      expect(ServiceCriticality.high.value, 'high');
-      expect(ServiceCriticality.medium.value, 'medium');
-      expect(ServiceCriticality.low.value, 'low');
+      expect(ServiceCriticalityIncubating.values.length, 4);
+      expect(ServiceCriticalityIncubating.critical.value, 'critical');
+      expect(ServiceCriticalityIncubating.high.value, 'high');
+      expect(ServiceCriticalityIncubating.medium.value, 'medium');
+      expect(ServiceCriticalityIncubating.low.value, 'low');
     });
   });
   group('session', () {
     test('attribute keys', () {
-      expect(Session.values.length, 2);
-      expect(Session.sessionId.key, 'session.id');
-      expect(Session.sessionPreviousId.key, 'session.previous_id');
+      expect(SessionIncubating.values.length, 2);
+      expect(SessionIncubating.sessionId.key, 'session.id');
+      expect(SessionIncubating.sessionPreviousId.key, 'session.previous_id');
     });
   });
   group('signalr', () {
     test('attribute keys', () {
-      expect(Signalr.values.length, 2);
-      expect(Signalr.signalrConnectionStatus.key, 'signalr.connection.status');
-      expect(Signalr.signalrTransport.key, 'signalr.transport');
+      expect(SignalrIncubating.values.length, 2);
+      expect(
+        SignalrIncubating.signalrConnectionStatus.key,
+        'signalr.connection.status',
+      );
+      expect(SignalrIncubating.signalrTransport.key, 'signalr.transport');
     });
     test('signalr.connection.status values', () {
-      expect(SignalrConnectionStatus.values.length, 3);
-      expect(SignalrConnectionStatus.normalClosure.value, 'normal_closure');
-      expect(SignalrConnectionStatus.timeout.value, 'timeout');
-      expect(SignalrConnectionStatus.appShutdown.value, 'app_shutdown');
+      expect(SignalrConnectionStatusIncubating.values.length, 3);
+      expect(
+        SignalrConnectionStatusIncubating.normalClosure.value,
+        'normal_closure',
+      );
+      expect(SignalrConnectionStatusIncubating.timeout.value, 'timeout');
+      expect(
+        SignalrConnectionStatusIncubating.appShutdown.value,
+        'app_shutdown',
+      );
     });
     test('signalr.transport values', () {
-      expect(SignalrTransport.values.length, 3);
-      expect(SignalrTransport.serverSentEvents.value, 'server_sent_events');
-      expect(SignalrTransport.longPolling.value, 'long_polling');
-      expect(SignalrTransport.webSockets.value, 'web_sockets');
+      expect(SignalrTransportIncubating.values.length, 3);
+      expect(
+        SignalrTransportIncubating.serverSentEvents.value,
+        'server_sent_events',
+      );
+      expect(SignalrTransportIncubating.longPolling.value, 'long_polling');
+      expect(SignalrTransportIncubating.webSockets.value, 'web_sockets');
     });
   });
   group('source', () {
     test('attribute keys', () {
-      expect(Source.values.length, 2);
-      expect(Source.sourceAddress.key, 'source.address');
-      expect(Source.sourcePort.key, 'source.port');
+      expect(SourceIncubating.values.length, 2);
+      expect(SourceIncubating.sourceAddress.key, 'source.address');
+      expect(SourceIncubating.sourcePort.key, 'source.port');
     });
   });
   group('system', () {
     test('attribute keys', () {
-      expect(System.values.length, 17);
-      expect(System.systemCpuLogicalNumber.key, 'system.cpu.logical_number');
-      expect(System.systemCpuState.key, 'system.cpu.state');
-      expect(System.systemDevice.key, 'system.device');
-      expect(System.systemFilesystemMode.key, 'system.filesystem.mode');
+      expect(SystemIncubating.values.length, 17);
       expect(
-        System.systemFilesystemMountpoint.key,
+        SystemIncubating.systemCpuLogicalNumber.key,
+        'system.cpu.logical_number',
+      );
+      expect(SystemIncubating.systemCpuState.key, 'system.cpu.state');
+      expect(SystemIncubating.systemDevice.key, 'system.device');
+      expect(
+        SystemIncubating.systemFilesystemMode.key,
+        'system.filesystem.mode',
+      );
+      expect(
+        SystemIncubating.systemFilesystemMountpoint.key,
         'system.filesystem.mountpoint',
       );
-      expect(System.systemFilesystemState.key, 'system.filesystem.state');
-      expect(System.systemFilesystemType.key, 'system.filesystem.type');
       expect(
-        System.systemMemoryLinuxHugepagesState.key,
+        SystemIncubating.systemFilesystemState.key,
+        'system.filesystem.state',
+      );
+      expect(
+        SystemIncubating.systemFilesystemType.key,
+        'system.filesystem.type',
+      );
+      expect(
+        SystemIncubating.systemMemoryLinuxHugepagesState.key,
         'system.memory.linux.hugepages.state',
       );
       expect(
-        System.systemMemoryLinuxSlabState.key,
+        SystemIncubating.systemMemoryLinuxSlabState.key,
         'system.memory.linux.slab.state',
       );
-      expect(System.systemMemoryState.key, 'system.memory.state');
-      expect(System.systemNetworkState.key, 'system.network.state');
-      expect(System.systemPagingDirection.key, 'system.paging.direction');
-      expect(System.systemPagingFaultType.key, 'system.paging.fault.type');
-      expect(System.systemPagingState.key, 'system.paging.state');
-      expect(System.systemPagingType.key, 'system.paging.type');
-      expect(System.systemProcessStatus.key, 'system.process.status');
-      expect(System.systemProcessesStatus.key, 'system.processes.status');
+      expect(SystemIncubating.systemMemoryState.key, 'system.memory.state');
+      expect(SystemIncubating.systemNetworkState.key, 'system.network.state');
+      expect(
+        SystemIncubating.systemPagingDirection.key,
+        'system.paging.direction',
+      );
+      expect(
+        SystemIncubating.systemPagingFaultType.key,
+        'system.paging.fault.type',
+      );
+      expect(SystemIncubating.systemPagingState.key, 'system.paging.state');
+      expect(SystemIncubating.systemPagingType.key, 'system.paging.type');
+      expect(SystemIncubating.systemProcessStatus.key, 'system.process.status');
+      expect(
+        SystemIncubating.systemProcessesStatus.key,
+        'system.processes.status',
+      );
     });
     test('system.cpu.state values', () {
-      expect(SystemCpuState.values.length, 7);
-      expect(SystemCpuState.user.value, 'user');
-      expect(SystemCpuState.system.value, 'system');
-      expect(SystemCpuState.nice.value, 'nice');
-      expect(SystemCpuState.idle.value, 'idle');
-      expect(SystemCpuState.iowait.value, 'iowait');
-      expect(SystemCpuState.interrupt.value, 'interrupt');
-      expect(SystemCpuState.steal.value, 'steal');
+      expect(SystemCpuStateIncubating.values.length, 7);
+      expect(SystemCpuStateIncubating.user.value, 'user');
+      expect(SystemCpuStateIncubating.system.value, 'system');
+      expect(SystemCpuStateIncubating.nice.value, 'nice');
+      expect(SystemCpuStateIncubating.idle.value, 'idle');
+      expect(SystemCpuStateIncubating.iowait.value, 'iowait');
+      expect(SystemCpuStateIncubating.interrupt.value, 'interrupt');
+      expect(SystemCpuStateIncubating.steal.value, 'steal');
     });
     test('system.filesystem.state values', () {
-      expect(SystemFilesystemState.values.length, 3);
-      expect(SystemFilesystemState.used.value, 'used');
-      expect(SystemFilesystemState.free.value, 'free');
-      expect(SystemFilesystemState.reserved.value, 'reserved');
+      expect(SystemFilesystemStateIncubating.values.length, 3);
+      expect(SystemFilesystemStateIncubating.used.value, 'used');
+      expect(SystemFilesystemStateIncubating.free.value, 'free');
+      expect(SystemFilesystemStateIncubating.reserved.value, 'reserved');
     });
     test('system.filesystem.type values', () {
-      expect(SystemFilesystemType.values.length, 6);
-      expect(SystemFilesystemType.fat32.value, 'fat32');
-      expect(SystemFilesystemType.exfat.value, 'exfat');
-      expect(SystemFilesystemType.ntfs.value, 'ntfs');
-      expect(SystemFilesystemType.refs.value, 'refs');
-      expect(SystemFilesystemType.hfsplus.value, 'hfsplus');
-      expect(SystemFilesystemType.ext4.value, 'ext4');
+      expect(SystemFilesystemTypeIncubating.values.length, 6);
+      expect(SystemFilesystemTypeIncubating.fat32.value, 'fat32');
+      expect(SystemFilesystemTypeIncubating.exfat.value, 'exfat');
+      expect(SystemFilesystemTypeIncubating.ntfs.value, 'ntfs');
+      expect(SystemFilesystemTypeIncubating.refs.value, 'refs');
+      expect(SystemFilesystemTypeIncubating.hfsplus.value, 'hfsplus');
+      expect(SystemFilesystemTypeIncubating.ext4.value, 'ext4');
     });
     test('system.memory.linux.hugepages.state values', () {
-      expect(SystemMemoryLinuxHugepagesState.values.length, 2);
-      expect(SystemMemoryLinuxHugepagesState.free.value, 'free');
-      expect(SystemMemoryLinuxHugepagesState.used.value, 'used');
+      expect(SystemMemoryLinuxHugepagesStateIncubating.values.length, 2);
+      expect(SystemMemoryLinuxHugepagesStateIncubating.free.value, 'free');
+      expect(SystemMemoryLinuxHugepagesStateIncubating.used.value, 'used');
     });
     test('system.memory.linux.slab.state values', () {
-      expect(SystemMemoryLinuxSlabState.values.length, 2);
-      expect(SystemMemoryLinuxSlabState.reclaimable.value, 'reclaimable');
-      expect(SystemMemoryLinuxSlabState.unreclaimable.value, 'unreclaimable');
+      expect(SystemMemoryLinuxSlabStateIncubating.values.length, 2);
+      expect(
+        SystemMemoryLinuxSlabStateIncubating.reclaimable.value,
+        'reclaimable',
+      );
+      expect(
+        SystemMemoryLinuxSlabStateIncubating.unreclaimable.value,
+        'unreclaimable',
+      );
     });
     test('system.memory.state values', () {
-      expect(SystemMemoryState.values.length, 5);
-      expect(SystemMemoryState.used.value, 'used');
-      expect(SystemMemoryState.free.value, 'free');
-      expect(SystemMemoryState.shared.value, 'shared');
-      expect(SystemMemoryState.buffers.value, 'buffers');
-      expect(SystemMemoryState.cached.value, 'cached');
+      expect(SystemMemoryStateIncubating.values.length, 5);
+      expect(SystemMemoryStateIncubating.used.value, 'used');
+      expect(SystemMemoryStateIncubating.free.value, 'free');
+      expect(SystemMemoryStateIncubating.shared.value, 'shared');
+      expect(SystemMemoryStateIncubating.buffers.value, 'buffers');
+      expect(SystemMemoryStateIncubating.cached.value, 'cached');
     });
     test('system.network.state values', () {
-      expect(SystemNetworkState.values.length, 12);
-      expect(SystemNetworkState.close.value, 'close');
-      expect(SystemNetworkState.closeWait.value, 'close_wait');
-      expect(SystemNetworkState.closing.value, 'closing');
-      expect(SystemNetworkState.delete.value, 'delete');
-      expect(SystemNetworkState.established.value, 'established');
-      expect(SystemNetworkState.finWait1.value, 'fin_wait_1');
-      expect(SystemNetworkState.finWait2.value, 'fin_wait_2');
-      expect(SystemNetworkState.lastAck.value, 'last_ack');
-      expect(SystemNetworkState.listen.value, 'listen');
-      expect(SystemNetworkState.synRecv.value, 'syn_recv');
-      expect(SystemNetworkState.synSent.value, 'syn_sent');
-      expect(SystemNetworkState.timeWait.value, 'time_wait');
+      expect(SystemNetworkStateIncubating.values.length, 12);
+      expect(SystemNetworkStateIncubating.close.value, 'close');
+      expect(SystemNetworkStateIncubating.closeWait.value, 'close_wait');
+      expect(SystemNetworkStateIncubating.closing.value, 'closing');
+      expect(SystemNetworkStateIncubating.delete.value, 'delete');
+      expect(SystemNetworkStateIncubating.established.value, 'established');
+      expect(SystemNetworkStateIncubating.finWait1.value, 'fin_wait_1');
+      expect(SystemNetworkStateIncubating.finWait2.value, 'fin_wait_2');
+      expect(SystemNetworkStateIncubating.lastAck.value, 'last_ack');
+      expect(SystemNetworkStateIncubating.listen.value, 'listen');
+      expect(SystemNetworkStateIncubating.synRecv.value, 'syn_recv');
+      expect(SystemNetworkStateIncubating.synSent.value, 'syn_sent');
+      expect(SystemNetworkStateIncubating.timeWait.value, 'time_wait');
     });
     test('system.paging.direction values', () {
-      expect(SystemPagingDirection.values.length, 2);
-      expect(SystemPagingDirection.in$.value, 'in');
-      expect(SystemPagingDirection.out.value, 'out');
+      expect(SystemPagingDirectionIncubating.values.length, 2);
+      expect(SystemPagingDirectionIncubating.in$.value, 'in');
+      expect(SystemPagingDirectionIncubating.out.value, 'out');
     });
     test('system.paging.fault.type values', () {
-      expect(SystemPagingFaultType.values.length, 2);
-      expect(SystemPagingFaultType.major.value, 'major');
-      expect(SystemPagingFaultType.minor.value, 'minor');
+      expect(SystemPagingFaultTypeIncubating.values.length, 2);
+      expect(SystemPagingFaultTypeIncubating.major.value, 'major');
+      expect(SystemPagingFaultTypeIncubating.minor.value, 'minor');
     });
     test('system.paging.state values', () {
-      expect(SystemPagingState.values.length, 2);
-      expect(SystemPagingState.used.value, 'used');
-      expect(SystemPagingState.free.value, 'free');
+      expect(SystemPagingStateIncubating.values.length, 2);
+      expect(SystemPagingStateIncubating.used.value, 'used');
+      expect(SystemPagingStateIncubating.free.value, 'free');
     });
     test('system.paging.type values', () {
-      expect(SystemPagingType.values.length, 2);
-      expect(SystemPagingType.major.value, 'major');
-      expect(SystemPagingType.minor.value, 'minor');
+      expect(SystemPagingTypeIncubating.values.length, 2);
+      expect(SystemPagingTypeIncubating.major.value, 'major');
+      expect(SystemPagingTypeIncubating.minor.value, 'minor');
     });
     test('system.process.status values', () {
-      expect(SystemProcessStatus.values.length, 4);
-      expect(SystemProcessStatus.running.value, 'running');
-      expect(SystemProcessStatus.sleeping.value, 'sleeping');
-      expect(SystemProcessStatus.stopped.value, 'stopped');
-      expect(SystemProcessStatus.defunct.value, 'defunct');
+      expect(SystemProcessStatusIncubating.values.length, 4);
+      expect(SystemProcessStatusIncubating.running.value, 'running');
+      expect(SystemProcessStatusIncubating.sleeping.value, 'sleeping');
+      expect(SystemProcessStatusIncubating.stopped.value, 'stopped');
+      expect(SystemProcessStatusIncubating.defunct.value, 'defunct');
     });
     test('system.processes.status values', () {
-      expect(SystemProcessesStatus.values.length, 4);
-      expect(SystemProcessesStatus.running.value, 'running');
-      expect(SystemProcessesStatus.sleeping.value, 'sleeping');
-      expect(SystemProcessesStatus.stopped.value, 'stopped');
-      expect(SystemProcessesStatus.defunct.value, 'defunct');
+      expect(SystemProcessesStatusIncubating.values.length, 4);
+      expect(SystemProcessesStatusIncubating.running.value, 'running');
+      expect(SystemProcessesStatusIncubating.sleeping.value, 'sleeping');
+      expect(SystemProcessesStatusIncubating.stopped.value, 'stopped');
+      expect(SystemProcessesStatusIncubating.defunct.value, 'defunct');
     });
   });
   group('telemetry', () {
     test('attribute keys', () {
-      expect(Telemetry.values.length, 5);
-      expect(Telemetry.telemetryDistroName.key, 'telemetry.distro.name');
-      expect(Telemetry.telemetryDistroVersion.key, 'telemetry.distro.version');
-      expect(Telemetry.telemetrySdkLanguage.key, 'telemetry.sdk.language');
-      expect(Telemetry.telemetrySdkName.key, 'telemetry.sdk.name');
-      expect(Telemetry.telemetrySdkVersion.key, 'telemetry.sdk.version');
+      expect(TelemetryIncubating.values.length, 5);
+      expect(
+        TelemetryIncubating.telemetryDistroName.key,
+        'telemetry.distro.name',
+      );
+      expect(
+        TelemetryIncubating.telemetryDistroVersion.key,
+        'telemetry.distro.version',
+      );
+      expect(
+        TelemetryIncubating.telemetrySdkLanguage.key,
+        'telemetry.sdk.language',
+      );
+      expect(TelemetryIncubating.telemetrySdkName.key, 'telemetry.sdk.name');
+      expect(
+        TelemetryIncubating.telemetrySdkVersion.key,
+        'telemetry.sdk.version',
+      );
     });
     test('telemetry.sdk.language values', () {
-      expect(TelemetrySdkLanguage.values.length, 13);
-      expect(TelemetrySdkLanguage.cpp.value, 'cpp');
-      expect(TelemetrySdkLanguage.dotnet.value, 'dotnet');
-      expect(TelemetrySdkLanguage.erlang.value, 'erlang');
-      expect(TelemetrySdkLanguage.go.value, 'go');
-      expect(TelemetrySdkLanguage.java.value, 'java');
-      expect(TelemetrySdkLanguage.kotlin.value, 'kotlin');
-      expect(TelemetrySdkLanguage.nodejs.value, 'nodejs');
-      expect(TelemetrySdkLanguage.php.value, 'php');
-      expect(TelemetrySdkLanguage.python.value, 'python');
-      expect(TelemetrySdkLanguage.ruby.value, 'ruby');
-      expect(TelemetrySdkLanguage.rust.value, 'rust');
-      expect(TelemetrySdkLanguage.swift.value, 'swift');
-      expect(TelemetrySdkLanguage.webjs.value, 'webjs');
+      expect(TelemetrySdkLanguageIncubating.values.length, 13);
+      expect(TelemetrySdkLanguageIncubating.cpp.value, 'cpp');
+      expect(TelemetrySdkLanguageIncubating.dotnet.value, 'dotnet');
+      expect(TelemetrySdkLanguageIncubating.erlang.value, 'erlang');
+      expect(TelemetrySdkLanguageIncubating.go.value, 'go');
+      expect(TelemetrySdkLanguageIncubating.java.value, 'java');
+      expect(TelemetrySdkLanguageIncubating.kotlin.value, 'kotlin');
+      expect(TelemetrySdkLanguageIncubating.nodejs.value, 'nodejs');
+      expect(TelemetrySdkLanguageIncubating.php.value, 'php');
+      expect(TelemetrySdkLanguageIncubating.python.value, 'python');
+      expect(TelemetrySdkLanguageIncubating.ruby.value, 'ruby');
+      expect(TelemetrySdkLanguageIncubating.rust.value, 'rust');
+      expect(TelemetrySdkLanguageIncubating.swift.value, 'swift');
+      expect(TelemetrySdkLanguageIncubating.webjs.value, 'webjs');
     });
   });
   group('test', () {
     test('attribute keys', () {
-      expect(Test.values.length, 4);
-      expect(Test.testCaseName.key, 'test.case.name');
-      expect(Test.testCaseResultStatus.key, 'test.case.result.status');
-      expect(Test.testSuiteName.key, 'test.suite.name');
-      expect(Test.testSuiteRunStatus.key, 'test.suite.run.status');
+      expect(TestIncubating.values.length, 4);
+      expect(TestIncubating.testCaseName.key, 'test.case.name');
+      expect(
+        TestIncubating.testCaseResultStatus.key,
+        'test.case.result.status',
+      );
+      expect(TestIncubating.testSuiteName.key, 'test.suite.name');
+      expect(TestIncubating.testSuiteRunStatus.key, 'test.suite.run.status');
     });
     test('test.case.result.status values', () {
-      expect(TestCaseResultStatus.values.length, 2);
-      expect(TestCaseResultStatus.pass.value, 'pass');
-      expect(TestCaseResultStatus.fail.value, 'fail');
+      expect(TestCaseResultStatusIncubating.values.length, 2);
+      expect(TestCaseResultStatusIncubating.pass.value, 'pass');
+      expect(TestCaseResultStatusIncubating.fail.value, 'fail');
     });
     test('test.suite.run.status values', () {
-      expect(TestSuiteRunStatus.values.length, 6);
-      expect(TestSuiteRunStatus.success.value, 'success');
-      expect(TestSuiteRunStatus.failure.value, 'failure');
-      expect(TestSuiteRunStatus.skipped.value, 'skipped');
-      expect(TestSuiteRunStatus.aborted.value, 'aborted');
-      expect(TestSuiteRunStatus.timedOut.value, 'timed_out');
-      expect(TestSuiteRunStatus.inProgress.value, 'in_progress');
+      expect(TestSuiteRunStatusIncubating.values.length, 6);
+      expect(TestSuiteRunStatusIncubating.success.value, 'success');
+      expect(TestSuiteRunStatusIncubating.failure.value, 'failure');
+      expect(TestSuiteRunStatusIncubating.skipped.value, 'skipped');
+      expect(TestSuiteRunStatusIncubating.aborted.value, 'aborted');
+      expect(TestSuiteRunStatusIncubating.timedOut.value, 'timed_out');
+      expect(TestSuiteRunStatusIncubating.inProgress.value, 'in_progress');
     });
   });
   group('thread', () {
     test('attribute keys', () {
-      expect(Thread.values.length, 2);
-      expect(Thread.threadId.key, 'thread.id');
-      expect(Thread.threadName.key, 'thread.name');
+      expect(ThreadIncubating.values.length, 2);
+      expect(ThreadIncubating.threadId.key, 'thread.id');
+      expect(ThreadIncubating.threadName.key, 'thread.name');
     });
   });
   group('tls', () {
     test('attribute keys', () {
-      expect(Tls.values.length, 29);
-      expect(Tls.tlsCipher.key, 'tls.cipher');
-      expect(Tls.tlsClientCertificate.key, 'tls.client.certificate');
-      expect(Tls.tlsClientCertificateChain.key, 'tls.client.certificate_chain');
-      expect(Tls.tlsClientHashMd5.key, 'tls.client.hash.md5');
-      expect(Tls.tlsClientHashSha1.key, 'tls.client.hash.sha1');
-      expect(Tls.tlsClientHashSha256.key, 'tls.client.hash.sha256');
-      expect(Tls.tlsClientIssuer.key, 'tls.client.issuer');
-      expect(Tls.tlsClientJa3.key, 'tls.client.ja3');
-      expect(Tls.tlsClientNotAfter.key, 'tls.client.not_after');
-      expect(Tls.tlsClientNotBefore.key, 'tls.client.not_before');
-      expect(Tls.tlsClientServerName.key, 'tls.client.server_name');
-      expect(Tls.tlsClientSubject.key, 'tls.client.subject');
-      expect(Tls.tlsClientSupportedCiphers.key, 'tls.client.supported_ciphers');
-      expect(Tls.tlsCurve.key, 'tls.curve');
-      expect(Tls.tlsEstablished.key, 'tls.established');
-      expect(Tls.tlsNextProtocol.key, 'tls.next_protocol');
-      expect(Tls.tlsProtocolName.key, 'tls.protocol.name');
-      expect(Tls.tlsProtocolVersion.key, 'tls.protocol.version');
-      expect(Tls.tlsResumed.key, 'tls.resumed');
-      expect(Tls.tlsServerCertificate.key, 'tls.server.certificate');
-      expect(Tls.tlsServerCertificateChain.key, 'tls.server.certificate_chain');
-      expect(Tls.tlsServerHashMd5.key, 'tls.server.hash.md5');
-      expect(Tls.tlsServerHashSha1.key, 'tls.server.hash.sha1');
-      expect(Tls.tlsServerHashSha256.key, 'tls.server.hash.sha256');
-      expect(Tls.tlsServerIssuer.key, 'tls.server.issuer');
-      expect(Tls.tlsServerJa3s.key, 'tls.server.ja3s');
-      expect(Tls.tlsServerNotAfter.key, 'tls.server.not_after');
-      expect(Tls.tlsServerNotBefore.key, 'tls.server.not_before');
-      expect(Tls.tlsServerSubject.key, 'tls.server.subject');
+      expect(TlsIncubating.values.length, 29);
+      expect(TlsIncubating.tlsCipher.key, 'tls.cipher');
+      expect(TlsIncubating.tlsClientCertificate.key, 'tls.client.certificate');
+      expect(
+        TlsIncubating.tlsClientCertificateChain.key,
+        'tls.client.certificate_chain',
+      );
+      expect(TlsIncubating.tlsClientHashMd5.key, 'tls.client.hash.md5');
+      expect(TlsIncubating.tlsClientHashSha1.key, 'tls.client.hash.sha1');
+      expect(TlsIncubating.tlsClientHashSha256.key, 'tls.client.hash.sha256');
+      expect(TlsIncubating.tlsClientIssuer.key, 'tls.client.issuer');
+      expect(TlsIncubating.tlsClientJa3.key, 'tls.client.ja3');
+      expect(TlsIncubating.tlsClientNotAfter.key, 'tls.client.not_after');
+      expect(TlsIncubating.tlsClientNotBefore.key, 'tls.client.not_before');
+      expect(TlsIncubating.tlsClientServerName.key, 'tls.client.server_name');
+      expect(TlsIncubating.tlsClientSubject.key, 'tls.client.subject');
+      expect(
+        TlsIncubating.tlsClientSupportedCiphers.key,
+        'tls.client.supported_ciphers',
+      );
+      expect(TlsIncubating.tlsCurve.key, 'tls.curve');
+      expect(TlsIncubating.tlsEstablished.key, 'tls.established');
+      expect(TlsIncubating.tlsNextProtocol.key, 'tls.next_protocol');
+      expect(TlsIncubating.tlsProtocolName.key, 'tls.protocol.name');
+      expect(TlsIncubating.tlsProtocolVersion.key, 'tls.protocol.version');
+      expect(TlsIncubating.tlsResumed.key, 'tls.resumed');
+      expect(TlsIncubating.tlsServerCertificate.key, 'tls.server.certificate');
+      expect(
+        TlsIncubating.tlsServerCertificateChain.key,
+        'tls.server.certificate_chain',
+      );
+      expect(TlsIncubating.tlsServerHashMd5.key, 'tls.server.hash.md5');
+      expect(TlsIncubating.tlsServerHashSha1.key, 'tls.server.hash.sha1');
+      expect(TlsIncubating.tlsServerHashSha256.key, 'tls.server.hash.sha256');
+      expect(TlsIncubating.tlsServerIssuer.key, 'tls.server.issuer');
+      expect(TlsIncubating.tlsServerJa3s.key, 'tls.server.ja3s');
+      expect(TlsIncubating.tlsServerNotAfter.key, 'tls.server.not_after');
+      expect(TlsIncubating.tlsServerNotBefore.key, 'tls.server.not_before');
+      expect(TlsIncubating.tlsServerSubject.key, 'tls.server.subject');
     });
     test('tls.protocol.name values', () {
-      expect(TlsProtocolName.values.length, 2);
-      expect(TlsProtocolName.ssl.value, 'ssl');
-      expect(TlsProtocolName.tls.value, 'tls');
+      expect(TlsProtocolNameIncubating.values.length, 2);
+      expect(TlsProtocolNameIncubating.ssl.value, 'ssl');
+      expect(TlsProtocolNameIncubating.tls.value, 'tls');
     });
   });
   group('url', () {
     test('attribute keys', () {
-      expect(Url.values.length, 13);
-      expect(Url.urlDomain.key, 'url.domain');
-      expect(Url.urlExtension.key, 'url.extension');
-      expect(Url.urlFragment.key, 'url.fragment');
-      expect(Url.urlFull.key, 'url.full');
-      expect(Url.urlOriginal.key, 'url.original');
-      expect(Url.urlPath.key, 'url.path');
-      expect(Url.urlPort.key, 'url.port');
-      expect(Url.urlQuery.key, 'url.query');
-      expect(Url.urlRegisteredDomain.key, 'url.registered_domain');
-      expect(Url.urlScheme.key, 'url.scheme');
-      expect(Url.urlSubdomain.key, 'url.subdomain');
-      expect(Url.urlTemplate.key, 'url.template');
-      expect(Url.urlTopLevelDomain.key, 'url.top_level_domain');
+      expect(UrlIncubating.values.length, 13);
+      expect(UrlIncubating.urlDomain.key, 'url.domain');
+      expect(UrlIncubating.urlExtension.key, 'url.extension');
+      expect(UrlIncubating.urlFragment.key, 'url.fragment');
+      expect(UrlIncubating.urlFull.key, 'url.full');
+      expect(UrlIncubating.urlOriginal.key, 'url.original');
+      expect(UrlIncubating.urlPath.key, 'url.path');
+      expect(UrlIncubating.urlPort.key, 'url.port');
+      expect(UrlIncubating.urlQuery.key, 'url.query');
+      expect(UrlIncubating.urlRegisteredDomain.key, 'url.registered_domain');
+      expect(UrlIncubating.urlScheme.key, 'url.scheme');
+      expect(UrlIncubating.urlSubdomain.key, 'url.subdomain');
+      expect(UrlIncubating.urlTemplate.key, 'url.template');
+      expect(UrlIncubating.urlTopLevelDomain.key, 'url.top_level_domain');
     });
   });
   group('user', () {
     test('attribute keys', () {
-      expect(User.values.length, 6);
-      expect(User.userEmail.key, 'user.email');
-      expect(User.userFullName.key, 'user.full_name');
-      expect(User.userHash.key, 'user.hash');
-      expect(User.userId.key, 'user.id');
-      expect(User.userName.key, 'user.name');
-      expect(User.userRoles.key, 'user.roles');
+      expect(UserIncubating.values.length, 6);
+      expect(UserIncubating.userEmail.key, 'user.email');
+      expect(UserIncubating.userFullName.key, 'user.full_name');
+      expect(UserIncubating.userHash.key, 'user.hash');
+      expect(UserIncubating.userId.key, 'user.id');
+      expect(UserIncubating.userName.key, 'user.name');
+      expect(UserIncubating.userRoles.key, 'user.roles');
     });
   });
   group('user_agent', () {
     test('attribute keys', () {
-      expect(UserAgent.values.length, 6);
-      expect(UserAgent.userAgentName.key, 'user_agent.name');
-      expect(UserAgent.userAgentOriginal.key, 'user_agent.original');
-      expect(UserAgent.userAgentOsName.key, 'user_agent.os.name');
-      expect(UserAgent.userAgentOsVersion.key, 'user_agent.os.version');
-      expect(UserAgent.userAgentSyntheticType.key, 'user_agent.synthetic.type');
-      expect(UserAgent.userAgentVersion.key, 'user_agent.version');
+      expect(UserAgentIncubating.values.length, 6);
+      expect(UserAgentIncubating.userAgentName.key, 'user_agent.name');
+      expect(UserAgentIncubating.userAgentOriginal.key, 'user_agent.original');
+      expect(UserAgentIncubating.userAgentOsName.key, 'user_agent.os.name');
+      expect(
+        UserAgentIncubating.userAgentOsVersion.key,
+        'user_agent.os.version',
+      );
+      expect(
+        UserAgentIncubating.userAgentSyntheticType.key,
+        'user_agent.synthetic.type',
+      );
+      expect(UserAgentIncubating.userAgentVersion.key, 'user_agent.version');
     });
     test('user_agent.synthetic.type values', () {
-      expect(UserAgentSyntheticType.values.length, 2);
-      expect(UserAgentSyntheticType.bot.value, 'bot');
-      expect(UserAgentSyntheticType.test.value, 'test');
+      expect(UserAgentSyntheticTypeIncubating.values.length, 2);
+      expect(UserAgentSyntheticTypeIncubating.bot.value, 'bot');
+      expect(UserAgentSyntheticTypeIncubating.test.value, 'test');
     });
   });
   group('v8js', () {
     test('attribute keys', () {
-      expect(V8js.values.length, 3);
-      expect(V8js.v8jsGcType.key, 'v8js.gc.type');
-      expect(V8js.v8jsHeapSpaceName.key, 'v8js.heap.space.name');
-      expect(V8js.v8jsResourceType.key, 'v8js.resource.type');
+      expect(V8jsIncubating.values.length, 3);
+      expect(V8jsIncubating.v8jsGcType.key, 'v8js.gc.type');
+      expect(V8jsIncubating.v8jsHeapSpaceName.key, 'v8js.heap.space.name');
+      expect(V8jsIncubating.v8jsResourceType.key, 'v8js.resource.type');
     });
     test('v8js.gc.type values', () {
-      expect(V8jsGcType.values.length, 4);
-      expect(V8jsGcType.major.value, 'major');
-      expect(V8jsGcType.minor.value, 'minor');
-      expect(V8jsGcType.incremental.value, 'incremental');
-      expect(V8jsGcType.weakcb.value, 'weakcb');
+      expect(V8jsGcTypeIncubating.values.length, 4);
+      expect(V8jsGcTypeIncubating.major.value, 'major');
+      expect(V8jsGcTypeIncubating.minor.value, 'minor');
+      expect(V8jsGcTypeIncubating.incremental.value, 'incremental');
+      expect(V8jsGcTypeIncubating.weakcb.value, 'weakcb');
     });
     test('v8js.heap.space.name values', () {
-      expect(V8jsHeapSpaceName.values.length, 5);
-      expect(V8jsHeapSpaceName.newSpace.value, 'new_space');
-      expect(V8jsHeapSpaceName.oldSpace.value, 'old_space');
-      expect(V8jsHeapSpaceName.codeSpace.value, 'code_space');
-      expect(V8jsHeapSpaceName.mapSpace.value, 'map_space');
-      expect(V8jsHeapSpaceName.largeObjectSpace.value, 'large_object_space');
+      expect(V8jsHeapSpaceNameIncubating.values.length, 5);
+      expect(V8jsHeapSpaceNameIncubating.newSpace.value, 'new_space');
+      expect(V8jsHeapSpaceNameIncubating.oldSpace.value, 'old_space');
+      expect(V8jsHeapSpaceNameIncubating.codeSpace.value, 'code_space');
+      expect(V8jsHeapSpaceNameIncubating.mapSpace.value, 'map_space');
+      expect(
+        V8jsHeapSpaceNameIncubating.largeObjectSpace.value,
+        'large_object_space',
+      );
     });
     test('v8js.resource.type values', () {
-      expect(V8jsResourceType.values.length, 5);
-      expect(V8jsResourceType.immediate.value, 'Immediate');
-      expect(V8jsResourceType.tcpserverwrap.value, 'TCPServerWrap');
-      expect(V8jsResourceType.tcpwrap.value, 'TCPWrap');
-      expect(V8jsResourceType.timeout.value, 'Timeout');
-      expect(V8jsResourceType.ttywrap.value, 'TTYWrap');
+      expect(V8jsResourceTypeIncubating.values.length, 5);
+      expect(V8jsResourceTypeIncubating.immediate.value, 'Immediate');
+      expect(V8jsResourceTypeIncubating.tcpserverwrap.value, 'TCPServerWrap');
+      expect(V8jsResourceTypeIncubating.tcpwrap.value, 'TCPWrap');
+      expect(V8jsResourceTypeIncubating.timeout.value, 'Timeout');
+      expect(V8jsResourceTypeIncubating.ttywrap.value, 'TTYWrap');
     });
   });
   group('vcs', () {
     test('attribute keys', () {
-      expect(Vcs.values.length, 21);
-      expect(Vcs.vcsChangeId.key, 'vcs.change.id');
-      expect(Vcs.vcsChangeState.key, 'vcs.change.state');
-      expect(Vcs.vcsChangeTitle.key, 'vcs.change.title');
-      expect(Vcs.vcsLineChangeType.key, 'vcs.line_change.type');
-      expect(Vcs.vcsOwnerName.key, 'vcs.owner.name');
-      expect(Vcs.vcsProviderName.key, 'vcs.provider.name');
-      expect(Vcs.vcsRefBaseName.key, 'vcs.ref.base.name');
-      expect(Vcs.vcsRefBaseRevision.key, 'vcs.ref.base.revision');
-      expect(Vcs.vcsRefBaseType.key, 'vcs.ref.base.type');
-      expect(Vcs.vcsRefHeadName.key, 'vcs.ref.head.name');
-      expect(Vcs.vcsRefHeadRevision.key, 'vcs.ref.head.revision');
-      expect(Vcs.vcsRefHeadType.key, 'vcs.ref.head.type');
-      expect(Vcs.vcsRefType.key, 'vcs.ref.type');
-      expect(Vcs.vcsRepositoryChangeId.key, 'vcs.repository.change.id');
-      expect(Vcs.vcsRepositoryChangeTitle.key, 'vcs.repository.change.title');
-      expect(Vcs.vcsRepositoryName.key, 'vcs.repository.name');
-      expect(Vcs.vcsRepositoryRefName.key, 'vcs.repository.ref.name');
-      expect(Vcs.vcsRepositoryRefRevision.key, 'vcs.repository.ref.revision');
-      expect(Vcs.vcsRepositoryRefType.key, 'vcs.repository.ref.type');
-      expect(Vcs.vcsRepositoryUrlFull.key, 'vcs.repository.url.full');
-      expect(Vcs.vcsRevisionDeltaDirection.key, 'vcs.revision_delta.direction');
+      expect(VcsIncubating.values.length, 21);
+      expect(VcsIncubating.vcsChangeId.key, 'vcs.change.id');
+      expect(VcsIncubating.vcsChangeState.key, 'vcs.change.state');
+      expect(VcsIncubating.vcsChangeTitle.key, 'vcs.change.title');
+      expect(VcsIncubating.vcsLineChangeType.key, 'vcs.line_change.type');
+      expect(VcsIncubating.vcsOwnerName.key, 'vcs.owner.name');
+      expect(VcsIncubating.vcsProviderName.key, 'vcs.provider.name');
+      expect(VcsIncubating.vcsRefBaseName.key, 'vcs.ref.base.name');
+      expect(VcsIncubating.vcsRefBaseRevision.key, 'vcs.ref.base.revision');
+      expect(VcsIncubating.vcsRefBaseType.key, 'vcs.ref.base.type');
+      expect(VcsIncubating.vcsRefHeadName.key, 'vcs.ref.head.name');
+      expect(VcsIncubating.vcsRefHeadRevision.key, 'vcs.ref.head.revision');
+      expect(VcsIncubating.vcsRefHeadType.key, 'vcs.ref.head.type');
+      expect(VcsIncubating.vcsRefType.key, 'vcs.ref.type');
+      expect(
+        VcsIncubating.vcsRepositoryChangeId.key,
+        'vcs.repository.change.id',
+      );
+      expect(
+        VcsIncubating.vcsRepositoryChangeTitle.key,
+        'vcs.repository.change.title',
+      );
+      expect(VcsIncubating.vcsRepositoryName.key, 'vcs.repository.name');
+      expect(VcsIncubating.vcsRepositoryRefName.key, 'vcs.repository.ref.name');
+      expect(
+        VcsIncubating.vcsRepositoryRefRevision.key,
+        'vcs.repository.ref.revision',
+      );
+      expect(VcsIncubating.vcsRepositoryRefType.key, 'vcs.repository.ref.type');
+      expect(VcsIncubating.vcsRepositoryUrlFull.key, 'vcs.repository.url.full');
+      expect(
+        VcsIncubating.vcsRevisionDeltaDirection.key,
+        'vcs.revision_delta.direction',
+      );
     });
     test('vcs.change.state values', () {
-      expect(VcsChangeState.values.length, 4);
-      expect(VcsChangeState.open.value, 'open');
-      expect(VcsChangeState.wip.value, 'wip');
-      expect(VcsChangeState.closed.value, 'closed');
-      expect(VcsChangeState.merged.value, 'merged');
+      expect(VcsChangeStateIncubating.values.length, 4);
+      expect(VcsChangeStateIncubating.open.value, 'open');
+      expect(VcsChangeStateIncubating.wip.value, 'wip');
+      expect(VcsChangeStateIncubating.closed.value, 'closed');
+      expect(VcsChangeStateIncubating.merged.value, 'merged');
     });
     test('vcs.line_change.type values', () {
-      expect(VcsLineChangeType.values.length, 2);
-      expect(VcsLineChangeType.added.value, 'added');
-      expect(VcsLineChangeType.removed.value, 'removed');
+      expect(VcsLineChangeTypeIncubating.values.length, 2);
+      expect(VcsLineChangeTypeIncubating.added.value, 'added');
+      expect(VcsLineChangeTypeIncubating.removed.value, 'removed');
     });
     test('vcs.provider.name values', () {
-      expect(VcsProviderName.values.length, 5);
-      expect(VcsProviderName.github.value, 'github');
-      expect(VcsProviderName.gitlab.value, 'gitlab');
-      expect(VcsProviderName.gittea.value, 'gittea');
-      expect(VcsProviderName.gitea.value, 'gitea');
-      expect(VcsProviderName.bitbucket.value, 'bitbucket');
+      expect(VcsProviderNameIncubating.values.length, 5);
+      expect(VcsProviderNameIncubating.github.value, 'github');
+      expect(VcsProviderNameIncubating.gitlab.value, 'gitlab');
+      expect(VcsProviderNameIncubating.gittea.value, 'gittea');
+      expect(VcsProviderNameIncubating.gitea.value, 'gitea');
+      expect(VcsProviderNameIncubating.bitbucket.value, 'bitbucket');
     });
     test('vcs.ref.base.type values', () {
-      expect(VcsRefBaseType.values.length, 2);
-      expect(VcsRefBaseType.branch.value, 'branch');
-      expect(VcsRefBaseType.tag.value, 'tag');
+      expect(VcsRefBaseTypeIncubating.values.length, 2);
+      expect(VcsRefBaseTypeIncubating.branch.value, 'branch');
+      expect(VcsRefBaseTypeIncubating.tag.value, 'tag');
     });
     test('vcs.ref.head.type values', () {
-      expect(VcsRefHeadType.values.length, 2);
-      expect(VcsRefHeadType.branch.value, 'branch');
-      expect(VcsRefHeadType.tag.value, 'tag');
+      expect(VcsRefHeadTypeIncubating.values.length, 2);
+      expect(VcsRefHeadTypeIncubating.branch.value, 'branch');
+      expect(VcsRefHeadTypeIncubating.tag.value, 'tag');
     });
     test('vcs.ref.type values', () {
-      expect(VcsRefType.values.length, 2);
-      expect(VcsRefType.branch.value, 'branch');
-      expect(VcsRefType.tag.value, 'tag');
+      expect(VcsRefTypeIncubating.values.length, 2);
+      expect(VcsRefTypeIncubating.branch.value, 'branch');
+      expect(VcsRefTypeIncubating.tag.value, 'tag');
     });
     test('vcs.repository.ref.type values', () {
-      expect(VcsRepositoryRefType.values.length, 2);
-      expect(VcsRepositoryRefType.branch.value, 'branch');
-      expect(VcsRepositoryRefType.tag.value, 'tag');
+      expect(VcsRepositoryRefTypeIncubating.values.length, 2);
+      expect(VcsRepositoryRefTypeIncubating.branch.value, 'branch');
+      expect(VcsRepositoryRefTypeIncubating.tag.value, 'tag');
     });
     test('vcs.revision_delta.direction values', () {
-      expect(VcsRevisionDeltaDirection.values.length, 2);
-      expect(VcsRevisionDeltaDirection.behind.value, 'behind');
-      expect(VcsRevisionDeltaDirection.ahead.value, 'ahead');
+      expect(VcsRevisionDeltaDirectionIncubating.values.length, 2);
+      expect(VcsRevisionDeltaDirectionIncubating.behind.value, 'behind');
+      expect(VcsRevisionDeltaDirectionIncubating.ahead.value, 'ahead');
     });
   });
   group('webengine', () {
     test('attribute keys', () {
-      expect(Webengine.values.length, 3);
-      expect(Webengine.webengineDescription.key, 'webengine.description');
-      expect(Webengine.webengineName.key, 'webengine.name');
-      expect(Webengine.webengineVersion.key, 'webengine.version');
+      expect(WebengineIncubating.values.length, 3);
+      expect(
+        WebengineIncubating.webengineDescription.key,
+        'webengine.description',
+      );
+      expect(WebengineIncubating.webengineName.key, 'webengine.name');
+      expect(WebengineIncubating.webengineVersion.key, 'webengine.version');
     });
   });
   group('zos', () {
     test('attribute keys', () {
-      expect(Zos.values.length, 2);
-      expect(Zos.zosSmfId.key, 'zos.smf.id');
-      expect(Zos.zosSysplexName.key, 'zos.sysplex.name');
+      expect(ZosIncubating.values.length, 2);
+      expect(ZosIncubating.zosSmfId.key, 'zos.smf.id');
+      expect(ZosIncubating.zosSysplexName.key, 'zos.sysplex.name');
     });
   });
 }

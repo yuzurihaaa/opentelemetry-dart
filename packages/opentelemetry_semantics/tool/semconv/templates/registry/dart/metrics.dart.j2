@@ -9,7 +9,7 @@ import '../../semantics_base.dart';
 
 /// `{{ ctx.root_namespace }}.*` metric instruments from the OpenTelemetry
 /// semantic conventions.
-enum {{ ctx.root_namespace | pascal_case }}Metric implements OTelMetric {
+enum {{ m.signal_type_name(ctx.root_namespace, "Metric") }} implements OTelMetric {
 {% for metric in ctx.metrics %}
 {{ m.doc(metric) }}{{ m.deprecated_annotation(metric) }}  {{ m.ident(metric.metric_name) }}('{{ metric.metric_name }}', SemanticInstrument.{{ metric.instrument | map_text("instrument_map") }}, '{{ m.dart_str(metric.unit) }}'){{ "," if not loop.last else ";" }}
 {% endfor %}
@@ -23,7 +23,7 @@ enum {{ ctx.root_namespace | pascal_case }}Metric implements OTelMetric {
   @override
   final String unit;
 
-  const {{ ctx.root_namespace | pascal_case }}Metric(this.name, this.instrument, this.unit);
+  const {{ m.signal_type_name(ctx.root_namespace, "Metric") }}(this.name, this.instrument, this.unit);
 
   @override
   String toString() => name;

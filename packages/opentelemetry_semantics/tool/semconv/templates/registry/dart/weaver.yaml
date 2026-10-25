@@ -2,6 +2,13 @@ params:
   semconv_version: unknown
   registry_commit: unknown
   registry_describe: unknown
+  type_suffix: ""
+  # Everything the registry does not call `stable`. `exclude_stability`
+  # drops both whole conventions and individual value members, so a
+  # stable attribute keeps only its stable values (http.request.method
+  # loses QUERY here and keeps it in the incubating library) -- the same
+  # cut semantic-conventions-java makes.
+  unstable: ["development", "release_candidate", "alpha", "deprecated"]
 
 whitespace_control:
   trim_blocks: true
@@ -50,7 +57,8 @@ text_maps:
 
 templates:
   - pattern: attributes.dart.j2
-    filter: semconv_grouped_attributes({})
+    filter: >-
+      semconv_grouped_attributes({"exclude_stability": $unstable})
     application_mode: each
     file_name: "{{ ctx.root_namespace | snake_case }}.dart"
 
@@ -61,7 +69,7 @@ templates:
     # kind, same unit — so collapse them, or the enum emits the identifier
     # 15 times and will not compile.
     filter: >-
-      semconv_grouped_metrics({})
+      semconv_grouped_metrics({"exclude_stability": $unstable})
       | map(. + {metrics: (.metrics | unique_by(.metric_name))})
     application_mode: each
     file_name: "metrics/{{ ctx.root_namespace | snake_case }}_metrics.dart"
@@ -69,7 +77,7 @@ templates:
   - pattern: events.dart.j2
     filter: >-
       .groups
-      | map(select(.type == "event"))
+      | map(select(.type == "event" and .stability == "stable"))
       | map(. + {root_namespace: (.name | split(".") | .[0])})
       | group_by(.root_namespace)
       | map({root_namespace: .[0].root_namespace, events: (. | sort_by(.name))})
@@ -79,24 +87,24 @@ templates:
   - pattern: entities.dart.j2
     filter: >-
       .groups
-      | map(select(.type == "entity"))
+      | map(select(.type == "entity" and .stability == "stable"))
       | map(. + {root_namespace: (.name | split(".") | .[0]),
-                 identifying: [.attributes[]? | select(.role == "identifying") | .name],
-                 descriptive: [.attributes[]? | select((.role // "descriptive") != "identifying") | .name]})
+                 identifying: [.attributes[]? | select(.role == "identifying" and .stability == "stable") | .name],
+                 descriptive: [.attributes[]? | select((.role // "descriptive") != "identifying" and .stability == "stable") | .name]})
       | group_by(.root_namespace)
       | map({root_namespace: .[0].root_namespace,
              entities: (. | sort_by(.name)),
-             attr_roots: ([.[] | .attributes[]? | .name | split(".")[0]] | unique)})
+             attr_roots: ([.[] | .attributes[]? | select(.stability == "stable") | .name | split(".")[0]] | unique)})
     application_mode: each
     file_name: "entities/{{ ctx.root_namespace | snake_case }}_entities.dart"
 
   - pattern: registry.dart.j2
     filter: >-
       {
-        attr_groups: semconv_grouped_attributes({}),
-        metric_roots: (semconv_grouped_metrics({}) | map(.root_namespace)),
-        event_roots: (.groups | map(select(.type == "event")) | map(.name | split(".") | .[0]) | unique),
-        entity_roots: (.groups | map(select(.type == "entity")) | map(.name | split(".") | .[0]) | unique)
+        attr_groups: semconv_grouped_attributes({"exclude_stability": $unstable}),
+        metric_roots: (semconv_grouped_metrics({"exclude_stability": $unstable}) | map(.root_namespace)),
+        event_roots: (.groups | map(select(.type == "event" and .stability == "stable")) | map(.name | split(".") | .[0]) | unique),
+        entity_roots: (.groups | map(select(.type == "entity" and .stability == "stable")) | map(.name | split(".") | .[0]) | unique)
       }
       | . + {imports: (((.attr_groups | map("\(.root_namespace).dart"))
             + (.metric_roots | map("metrics/\(.)_metrics.dart"))
@@ -108,10 +116,10 @@ templates:
   - pattern: barrel.dart.j2
     filter: >-
       {
-        attr_roots: (semconv_grouped_attributes({}) | map(.root_namespace)),
-        metric_roots: (semconv_grouped_metrics({}) | map(.root_namespace)),
-        event_roots: (.groups | map(select(.type == "event")) | map(.name | split(".") | .[0]) | unique),
-        entity_roots: (.groups | map(select(.type == "entity")) | map(.name | split(".") | .[0]) | unique)
+        attr_roots: (semconv_grouped_attributes({"exclude_stability": $unstable}) | map(.root_namespace)),
+        metric_roots: (semconv_grouped_metrics({"exclude_stability": $unstable}) | map(.root_namespace)),
+        event_roots: (.groups | map(select(.type == "event" and .stability == "stable")) | map(.name | split(".") | .[0]) | unique),
+        entity_roots: (.groups | map(select(.type == "entity" and .stability == "stable")) | map(.name | split(".") | .[0]) | unique)
       }
       | {exports: (((.attr_roots | map("\(.).dart"))
             + (.metric_roots | map("metrics/\(.)_metrics.dart"))

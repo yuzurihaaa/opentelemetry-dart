@@ -28,7 +28,7 @@ enum {{ m.type_name(ctx.root_namespace) }} implements OTelSemantic {
 }
 {% for attribute in ctx.attributes %}
 {% if attribute.type is mapping %}
-{% set value_enum = attribute.name | pascal_case | map_text("value_enum_name_overrides") %}
+{% set value_enum = m.value_type_name(attribute.name) %}
 {% set is_int = attribute.type.members[0].value is int %}
 
 /// Values for `{{ attribute.name }}`.

@@ -16,8 +16,20 @@
 
 {#- PascalCase Dart type name for a namespace root, with dart:core/io/
     Flutter clashes renamed via the enum_name_overrides text map. -#}
+{% macro suffix() -%}
+{{ params.type_suffix }}
+{%- endmacro %}
+
 {% macro type_name(root) -%}
-{{ root | pascal_case | map_text("enum_name_overrides") }}
+{{ root | pascal_case | map_text("enum_name_overrides") }}{{ suffix() }}
+{%- endmacro %}
+
+{% macro signal_type_name(root, kind) -%}
+{{ root | pascal_case }}{{ kind }}{{ suffix() }}
+{%- endmacro %}
+
+{% macro value_type_name(name) -%}
+{{ name | pascal_case | map_text("value_enum_name_overrides") }}{{ suffix() }}
 {%- endmacro %}
 
 {#- Single-line, single-quote-safe, interpolation-safe Dart string body. -#}

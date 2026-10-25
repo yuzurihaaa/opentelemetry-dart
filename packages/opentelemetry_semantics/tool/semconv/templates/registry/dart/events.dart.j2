@@ -9,7 +9,7 @@ import '../../semantics_base.dart';
 
 /// `{{ ctx.root_namespace }}` event names from the OpenTelemetry semantic
 /// conventions.
-enum {{ ctx.root_namespace | pascal_case }}Event implements OTelEvent {
+enum {{ m.signal_type_name(ctx.root_namespace, "Event") }} implements OTelEvent {
 {% for event in ctx.events %}
 {{ m.doc(event) }}{{ m.deprecated_annotation(event) }}  {{ m.ident(event.name) }}('{{ event.name }}'){{ "," if not loop.last else ";" }}
 {% endfor %}
@@ -17,7 +17,7 @@ enum {{ ctx.root_namespace | pascal_case }}Event implements OTelEvent {
   @override
   final String name;
 
-  const {{ ctx.root_namespace | pascal_case }}Event(this.name);
+  const {{ m.signal_type_name(ctx.root_namespace, "Event") }}(this.name);
 
   @override
   String toString() => name;

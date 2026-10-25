@@ -1,5 +1,6 @@
 params:
   semconv_version: unknown
+  type_suffix: "Incubating"
   registry_commit: unknown
   registry_describe: unknown
 

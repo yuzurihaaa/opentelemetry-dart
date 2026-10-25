@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-import 'package:opentelemetry_semantics/opentelemetry_semantics.dart';
+import 'package:opentelemetry_semantics/incubating.dart';
 import 'package:test/test.dart';
 
 /// Every candidate attribute key, flattened.
@@ -14,7 +14,7 @@ const _candidateEnums = <List<OTelSemantic>>[
 Iterable<String> get _candidateKeys =>
     _candidateEnums.expand((e) => e).map((a) => a.key);
 
-Set<String> get _registryKeys => SemconvRegistry.allAttributeEnums
+Set<String> get _registryKeys => SemconvRegistryIncubating.allAttributeEnums
     .expand((e) => e)
     .map((a) => a.key)
     .toSet();

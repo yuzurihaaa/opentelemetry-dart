@@ -30,7 +30,7 @@ void main() {
     final cache = <String, List<String>>{};
 
     List<String> linesFor(String root) => cache.putIfAbsent(root, () {
-      final file = File('lib/src/semconv/$root.dart');
+      final file = File('lib/src/incubating/$root.dart');
       expect(
         file.existsSync(),
         isTrue,
