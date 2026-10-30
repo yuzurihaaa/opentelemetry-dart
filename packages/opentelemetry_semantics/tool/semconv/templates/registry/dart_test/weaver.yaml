@@ -1,3 +1,6 @@
+# macros.j2 is not committed here: generate.sh copies it from
+# registry/dart, so the audits always name types the way the
+# libraries declare them.
 params:
   semconv_version: unknown
   type_suffix: "Incubating"

@@ -36,7 +36,10 @@ WEAVER_IMAGE="docker.io/otel/weaver:v0.24.2@sha256:d1fb16d279f39810c340fbbf1cf9e
 
 SEMCONV_REPO="${SEMCONV_REPO:-}"
 PKG_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
-TEMPLATES_DIR="$PKG_ROOT/tool/semconv/templates"
+TEMPLATES_SRC="$PKG_ROOT/tool/semconv/templates"
+# Weaver reads an assembled copy, not the committed tree: see the assembly
+# step below.
+TEMPLATES_DIR="$PKG_ROOT/tool/semconv/.templates"
 STABLE_OUT="$PKG_ROOT/lib/src/stable"
 INCUBATING_OUT="$PKG_ROOT/lib/src/incubating"
 TEST_OUT="$PKG_ROOT/test/semconv"
@@ -57,7 +60,7 @@ CHECK_ROOT="$PKG_ROOT/tool/semconv/.check-out"
 FETCHED_REGISTRY=
 cleanup() {
   [ -z "$FETCHED_REGISTRY" ] || rm -rf "$FETCHED_REGISTRY"
-  rm -rf "$CHECK_ROOT"
+  rm -rf "$CHECK_ROOT" "$TEMPLATES_DIR"
   return 0
 }
 trap cleanup EXIT
@@ -97,6 +100,20 @@ REGISTRY_COMMIT="$(git -C "$REGISTRY_SRC" rev-parse --short=8 HEAD 2>/dev/null |
 # From the pin rather than `git describe`, which a shallow fetch cannot
 # always resolve.
 REGISTRY_DESCRIBE="$SEMCONV_TAG"
+
+# Weaver resolves a target's `pattern:` and `{% import %}` inside that
+# target's own directory, so a shared template has to be present in each
+# one. Rather than commit copies that can drift apart, registry/dart holds
+# the single copy and the other targets are assembled here:
+#
+#   dart_incubating  every template; only its weaver.yaml differs, in the
+#                    type suffix and the stability filters
+#   dart_test        macros.j2 only; its own templates emit the audits
+rm -rf "$TEMPLATES_DIR"
+mkdir -p "$TEMPLATES_DIR"
+cp -R "$TEMPLATES_SRC/." "$TEMPLATES_DIR/"
+cp "$TEMPLATES_SRC/registry/dart/"*.j2 "$TEMPLATES_DIR/registry/dart_incubating/"
+cp "$TEMPLATES_SRC/registry/dart/macros.j2" "$TEMPLATES_DIR/registry/dart_test/"
 
 # Match host uid/gid inside the container on Linux so generated files aren't
 # root-owned. (Unnecessary on macOS Docker Desktop, which maps ownership.)

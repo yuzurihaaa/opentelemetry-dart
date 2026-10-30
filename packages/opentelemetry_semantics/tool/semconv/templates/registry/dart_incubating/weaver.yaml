@@ -1,3 +1,6 @@
+# This target has no templates of its own. generate.sh copies them from
+# registry/dart, which holds the single committed copy, so the two
+# cannot drift apart. Only this config differs.
 params:
   semconv_version: unknown
   registry_commit: unknown
