@@ -46,14 +46,30 @@ if [ "$MODE" != "generate" ] && [ "$MODE" != "--check" ]; then
   exit 2
 fi
 
+# Scratch directories. Both must live inside the repo, because paths
+# outside Docker Desktop's shared file systems cannot be bind-mounted.
+# They are removed on every exit, including a failure, so the working tree
+# is left as it was found and nothing needs to be gitignored.
+REGISTRY_DIR="$PKG_ROOT/tool/semconv/semantic-conventions"
+CHECK_ROOT="$PKG_ROOT/tool/semconv/.check-out"
+# Only set when this script created the clone, so that a registry passed in
+# through SEMCONV_REPO is never deleted.
+FETCHED_REGISTRY=
+cleanup() {
+  [ -z "$FETCHED_REGISTRY" ] || rm -rf "$FETCHED_REGISTRY"
+  rm -rf "$CHECK_ROOT"
+  return 0
+}
+trap cleanup EXIT
+
 # Fetch the pinned registry, unless a local one was given. Shallow, and
 # re-fetched each run so a stale directory cannot change the output.
-REGISTRY_DIR="$PKG_ROOT/tool/semconv/semantic-conventions"
 if [ -n "$SEMCONV_REPO" ]; then
   REGISTRY_SRC="$SEMCONV_REPO"
 else
   rm -rf "$REGISTRY_DIR"
   mkdir -p "$REGISTRY_DIR"
+  FETCHED_REGISTRY="$REGISTRY_DIR"
   git -C "$REGISTRY_DIR" init -q
   git -C "$REGISTRY_DIR" remote add origin "$SEMCONV_GIT_URL"
   git -C "$REGISTRY_DIR" fetch -q --depth=1 origin "$SEMCONV_TAG"
@@ -116,9 +132,6 @@ generate_into() { # $1 = stable out, $2 = incubating out, $3 = test out
 }
 
 if [ "$MODE" = "--check" ]; then
-  # Check dirs must live inside the repo: paths outside Docker Desktop's
-  # shared file systems cannot be bind-mounted.
-  CHECK_ROOT="$PKG_ROOT/tool/semconv/.check-out"
   rm -rf "$CHECK_ROOT"
   mkdir -p "$CHECK_ROOT/stable" "$CHECK_ROOT/incubating" "$CHECK_ROOT/test"
   generate_into "$CHECK_ROOT/stable" "$CHECK_ROOT/incubating" \
@@ -127,7 +140,6 @@ if [ "$MODE" = "--check" ]; then
   diff -ru "$STABLE_OUT" "$CHECK_ROOT/stable" || status=1
   diff -ru "$INCUBATING_OUT" "$CHECK_ROOT/incubating" || status=1
   diff -ru "$TEST_OUT" "$CHECK_ROOT/test" || status=1
-  rm -rf "$CHECK_ROOT"
   if [ "$status" -ne 0 ]; then
     echo "ERROR: generated semconv code is stale; run tool/semconv/generate.sh" >&2
     exit 1

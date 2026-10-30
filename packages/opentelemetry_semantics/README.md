@@ -63,7 +63,9 @@ app-specific enums can implement it too and mix into the same maps.
 [OTel Weaver](https://github.com/open-telemetry/weaver) from the
 [semantic-conventions](https://github.com/open-telemetry/semantic-conventions)
 registry. Docker is the only prerequisite. The script pins the registry
-version and fetches it, so no checkout is needed:
+version and fetches it, so no checkout is needed. It removes what it
+fetched on every exit, including a failure, so the working tree is left as
+it was found:
 
 ```bash
 tool/semconv/generate.sh          # regenerate in place
