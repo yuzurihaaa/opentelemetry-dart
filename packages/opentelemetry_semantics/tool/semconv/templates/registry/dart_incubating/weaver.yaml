@@ -3,8 +3,9 @@ params:
   registry_commit: unknown
   registry_describe: unknown
   # Suffixed so a consumer may import this library alongside the stable
-  # one: the 18 namespaces that hold both stable and unstable conventions
-  # are declared in both, and an enum cannot be split across libraries.
+  # one. An enum cannot be split across libraries, so a namespace holding
+  # both stable and unstable conventions is declared in each, and the two
+  # declarations need different names.
   type_suffix: "Incubating"
 
 whitespace_control:
