@@ -60,12 +60,21 @@ app-specific enums can implement it too and mix into the same maps.
 
 `lib/src/stable/`, `lib/src/incubating/` and the audit fixtures in
 `test/semconv/` are produced by
-[OTel Weaver](https://github.com/open-telemetry/weaver) from the registry.
-Needs Docker and a
+[OTel Weaver](https://github.com/open-telemetry/weaver) from the
 [semantic-conventions](https://github.com/open-telemetry/semantic-conventions)
-checkout:
+registry. Docker is the only prerequisite. The script pins the registry
+version and fetches it, so no checkout is needed:
 
 ```bash
-SEMCONV_REPO=~/dev/semantic-conventions tool/semconv/generate.sh
-SEMCONV_REPO=~/dev/semantic-conventions tool/semconv/generate.sh --check
+tool/semconv/generate.sh          # regenerate in place
+tool/semconv/generate.sh --check  # verify the committed output is fresh
 ```
+
+The pinned version is `SEMCONV_VERSION` at the top of
+`tool/semconv/generate.sh`. Bump it deliberately: it rewrites every
+generated file. The script refuses a registry whose schema version does not
+match the pin, so the committed output always corresponds to one registry
+release.
+
+To try a registry that has no release yet, point `SEMCONV_REPO` at a local
+checkout. Its schema version must still match the pin.

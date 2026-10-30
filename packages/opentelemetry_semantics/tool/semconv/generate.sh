@@ -18,9 +18,17 @@
 #   tool/semconv/generate.sh            # regenerate in place
 #   tool/semconv/generate.sh --check    # verify checked-in output is fresh
 #
-# Point SEMCONV_REPO at a semantic-conventions checkout, e.g.
-#   SEMCONV_REPO=~/dev/semantic-conventions tool/semconv/generate.sh
+# The registry version is pinned below and fetched automatically, so no
+# checkout is needed. To try an unreleased registry, point SEMCONV_REPO at a
+# local one; its schema version must still match the pin.
 set -euo pipefail
+
+# Pinned registry version. Bump deliberately: it rewrites every generated
+# file. Latest tag: `git tag -l --sort=version:refname | tail -1` in
+# https://github.com/open-telemetry/semantic-conventions
+SEMCONV_VERSION=1.44.0
+SEMCONV_TAG="v$SEMCONV_VERSION"
+SEMCONV_GIT_URL=https://github.com/open-telemetry/semantic-conventions.git
 
 # Pinned to the same image digest the semantic-conventions repo pins
 # (see its dependencies.Dockerfile).
@@ -38,22 +46,41 @@ if [ "$MODE" != "generate" ] && [ "$MODE" != "--check" ]; then
   exit 2
 fi
 
-if [ -z "$SEMCONV_REPO" ]; then
-  echo "Set SEMCONV_REPO to a semantic-conventions checkout" >&2
-  exit 2
+# Fetch the pinned registry, unless a local one was given. Shallow, and
+# re-fetched each run so a stale directory cannot change the output.
+REGISTRY_DIR="$PKG_ROOT/tool/semconv/semantic-conventions"
+if [ -n "$SEMCONV_REPO" ]; then
+  REGISTRY_SRC="$SEMCONV_REPO"
+else
+  rm -rf "$REGISTRY_DIR"
+  mkdir -p "$REGISTRY_DIR"
+  git -C "$REGISTRY_DIR" init -q
+  git -C "$REGISTRY_DIR" remote add origin "$SEMCONV_GIT_URL"
+  git -C "$REGISTRY_DIR" fetch -q --depth=1 origin "$SEMCONV_TAG"
+  git -C "$REGISTRY_DIR" reset -q --hard FETCH_HEAD
+  REGISTRY_SRC="$REGISTRY_DIR"
 fi
-if [ ! -f "$SEMCONV_REPO/model/manifest.yaml" ]; then
-  echo "SEMCONV_REPO does not look like a semantic-conventions checkout: $SEMCONV_REPO" >&2
+
+if [ ! -f "$REGISTRY_SRC/model/manifest.yaml" ]; then
+  echo "not a semantic-conventions registry: $REGISTRY_SRC" >&2
   exit 2
 fi
 
-# e.g. "1.44.0-unreleased" from the schema_url in model/manifest.yaml
-SEMCONV_VERSION="$(sed -n 's|^schema_url:.*/||p' "$SEMCONV_REPO/model/manifest.yaml" | tr -d '[:space:]')"
+# The registry must be the version this package pins, or the output would
+# not match what is committed. `schema_url` ends in the version.
+REGISTRY_VERSION="$(sed -n 's|^schema_url:.*/||p' "$REGISTRY_SRC/model/manifest.yaml" | tr -d '[:space:]')"
+if [ "$REGISTRY_VERSION" != "$SEMCONV_VERSION" ]; then
+  echo "registry is $REGISTRY_VERSION but this package pins $SEMCONV_VERSION" >&2
+  exit 2
+fi
+
 # --short=8 explicitly: the default abbreviation length scales with the
 # object count, so a shallow clone would otherwise write a shorter hash
 # than a full one and make --check report stale.
-REGISTRY_COMMIT="$(git -C "$SEMCONV_REPO" rev-parse --short=8 HEAD 2>/dev/null || echo unknown)"
-REGISTRY_DESCRIBE="$(git -C "$SEMCONV_REPO" describe --tags 2>/dev/null || echo unknown)"
+REGISTRY_COMMIT="$(git -C "$REGISTRY_SRC" rev-parse --short=8 HEAD 2>/dev/null || echo unknown)"
+# From the pin rather than `git describe`, which a shallow fetch cannot
+# always resolve.
+REGISTRY_DESCRIBE="$SEMCONV_TAG"
 
 # Match host uid/gid inside the container on Linux so generated files aren't
 # root-owned. (Unnecessary on macOS Docker Desktop, which maps ownership.)
@@ -66,7 +93,7 @@ run_weaver() { # $1 = target name (templates/registry/<target>), $2 = output dir
   # ${arr[@]+...} keeps `set -u` happy on bash 3.2 when the array is empty.
   docker run --rm ${DOCKER_USER_ARG[@]+"${DOCKER_USER_ARG[@]}"} --network=none \
     --mount "type=bind,source=$TEMPLATES_DIR,target=/home/weaver/templates,readonly" \
-    --mount "type=bind,source=$SEMCONV_REPO/model,target=/home/weaver/source,readonly" \
+    --mount "type=bind,source=$REGISTRY_SRC/model,target=/home/weaver/source,readonly" \
     --mount "type=bind,source=$out,target=/home/weaver/target" \
     "$WEAVER_IMAGE" registry generate \
     --registry=/home/weaver/source \
