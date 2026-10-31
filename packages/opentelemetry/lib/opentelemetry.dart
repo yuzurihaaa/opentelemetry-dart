@@ -1,8 +1,4 @@
-/// Support for doing something awesome.
+/// OpenTelemetry for Dart, the entry point package.
 ///
-/// More dartdocs go here.
+/// Not released yet. The package has no public API.
 library;
-
-export 'src/opentelemetry_base.dart';
-
-// TODO: Export any libraries intended for clients of this package.
